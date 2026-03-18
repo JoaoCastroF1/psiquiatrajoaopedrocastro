@@ -52,9 +52,9 @@ const ServicesSection = () => {
           <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
             Áreas de atuação
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-medium text-foreground leading-tight">
+          <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
             Do consultório ao mundo corporativo —{" "}
-            <span className="italic">com a mesma densidade</span>
+            <em className="text-lime">com a mesma densidade</em>
           </h2>
         </motion.div>
 

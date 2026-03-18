@@ -40,9 +40,9 @@ const DifferentialsSection = () => {
           <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
             Diferenciais
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-medium text-foreground leading-tight">
+          <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
             O que define esta{" "}
-            <span className="italic">prática clínica</span>
+            <em className="text-lime">prática clínica</em>
           </h2>
         </motion.div>
 

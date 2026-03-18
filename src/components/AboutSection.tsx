@@ -30,9 +30,9 @@ const AboutSection = () => {
             <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
               Sobre
             </p>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-medium text-foreground leading-tight mb-8">
+            <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-normal text-foreground leading-tight mb-8">
               Uma prática construída sobre consistência,{" "}
-              <span className="italic">escuta e repertório</span>
+              <em className="text-lime">escuta e repertório</em>
             </h2>
             <div className="space-y-5 font-body text-base text-muted-foreground leading-[1.8]">
               <p>

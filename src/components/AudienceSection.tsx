@@ -36,9 +36,9 @@ const AudienceSection = () => {
           <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
             Para quem é este trabalho
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-medium text-foreground leading-tight">
+          <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
             Quem procura um cuidado à altura da{" "}
-            <span className="italic">própria complexidade</span>
+            <em className="text-lime">própria complexidade</em>
           </h2>
         </motion.div>
 

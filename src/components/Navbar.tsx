@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
+const WA_LINK = "https://wa.me/5531991315958";
+
 const links = [
   { label: "Sobre", href: "#sobre" },
   { label: "Atuação", href: "#atuacao" },
@@ -28,8 +30,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <a href="#" className="font-display text-xl md:text-2xl font-medium text-foreground tracking-tight">
-          João Pedro Castro
+        <a href="#" className="font-display text-xl md:text-2xl text-foreground tracking-tight">
+          <em className="text-lime">Dr.</em> João Pedro Castro
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -43,7 +45,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="https://wa.me/5500000000000"
+            href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="font-body text-xs uppercase tracking-[0.15em] bg-primary text-primary-foreground px-5 py-2.5 hover:opacity-90 transition-opacity"
@@ -73,7 +75,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="https://wa.me/5500000000000"
+            href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="block font-body text-sm bg-primary text-primary-foreground text-center py-3 mt-4"

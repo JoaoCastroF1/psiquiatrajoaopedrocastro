@@ -35,9 +35,9 @@ const TestimonialsSection = () => {
           <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
             Confiança
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-medium text-foreground leading-tight">
+          <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
             O que dizem sobre{" "}
-            <span className="italic">este trabalho</span>
+            <em className="text-lime">este trabalho</em>
           </h2>
         </motion.div>
 

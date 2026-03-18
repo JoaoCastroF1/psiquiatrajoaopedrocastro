@@ -1,46 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 40 20% 97%;
-    --foreground: 220 15% 16%;
+    --background: 38 30% 95%;
+    --foreground: 220 8% 18%;
 
-    --card: 40 15% 99%;
-    --card-foreground: 220 15% 16%;
+    --card: 38 25% 97%;
+    --card-foreground: 220 8% 18%;
 
-    --popover: 40 15% 99%;
-    --popover-foreground: 220 15% 16%;
+    --popover: 38 25% 97%;
+    --popover-foreground: 220 8% 18%;
 
-    --primary: 160 25% 22%;
-    --primary-foreground: 40 20% 97%;
+    --primary: 160 35% 20%;
+    --primary-foreground: 38 30% 95%;
 
-    --secondary: 40 12% 93%;
-    --secondary-foreground: 220 15% 16%;
+    --secondary: 38 18% 90%;
+    --secondary-foreground: 220 8% 18%;
 
-    --muted: 40 10% 91%;
-    --muted-foreground: 220 8% 46%;
+    --muted: 38 15% 88%;
+    --muted-foreground: 220 6% 44%;
 
-    --accent: 35 30% 52%;
-    --accent-foreground: 40 20% 97%;
+    --accent: 68 72% 55%;
+    --accent-foreground: 220 8% 18%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 40 12% 88%;
-    --input: 40 12% 88%;
-    --ring: 160 25% 22%;
+    --border: 38 15% 85%;
+    --input: 38 15% 85%;
+    --ring: 160 35% 20%;
 
     --radius: 0.5rem;
 
-    --section-alt: 40 15% 95%;
-    --warm: 35 30% 52%;
-    --sand: 38 25% 90%;
-    --graphite: 220 10% 30%;
-    --deep-green: 160 30% 18%;
+    --section-alt: 38 22% 93%;
+    --warm: 20 65% 80%;
+    --salmon: 20 65% 80%;
+    --steel: 205 29% 39%;
+    --lime: 68 72% 55%;
+    --graphite: 220 8% 18%;
+    --deep-green: 160 40% 17%;
+    --sand: 38 25% 88%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -60,23 +61,23 @@
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Times New Roman', 'Georgia', serif;
   }
 
   h1, h2, h3, h4 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Times New Roman', 'Georgia', serif;
   }
 
   ::selection {
-    background: hsl(160 25% 22% / 0.15);
+    background: hsl(68 72% 55% / 0.25);
   }
 }
 
 @layer utilities {
   .font-display {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Times New Roman', 'Georgia', serif;
   }
   .font-body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'Times New Roman', 'Georgia', serif;
   }
 }

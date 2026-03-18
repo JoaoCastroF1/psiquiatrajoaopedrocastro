@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Plus Jakarta Sans", "sans-serif"],
-        display: ["Cormorant Garamond", "serif"],
+        sans: ["Times New Roman", "Georgia", "serif"],
+        display: ["Times New Roman", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -52,6 +52,9 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         warm: "hsl(var(--warm))",
+        salmon: "hsl(var(--salmon))",
+        steel: "hsl(var(--steel))",
+        lime: "hsl(var(--lime))",
         sand: "hsl(var(--sand))",
         graphite: "hsl(var(--graphite))",
         "deep-green": "hsl(var(--deep-green))",

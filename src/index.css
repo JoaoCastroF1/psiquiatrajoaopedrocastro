@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,39 +6,41 @@
 
 @layer base {
   :root {
-    --background: 180 20% 98%;
-    --foreground: 210 30% 15%;
+    --background: 40 20% 97%;
+    --foreground: 220 15% 16%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 30% 15%;
+    --card: 40 15% 99%;
+    --card-foreground: 220 15% 16%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 30% 15%;
+    --popover: 40 15% 99%;
+    --popover-foreground: 220 15% 16%;
 
-    --primary: 174 42% 35%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 160 25% 22%;
+    --primary-foreground: 40 20% 97%;
 
-    --secondary: 180 15% 94%;
-    --secondary-foreground: 210 30% 15%;
+    --secondary: 40 12% 93%;
+    --secondary-foreground: 220 15% 16%;
 
-    --muted: 180 10% 92%;
-    --muted-foreground: 210 10% 45%;
+    --muted: 40 10% 91%;
+    --muted-foreground: 220 8% 46%;
 
-    --accent: 35 80% 55%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 35 30% 52%;
+    --accent-foreground: 40 20% 97%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 180 15% 88%;
-    --input: 180 15% 88%;
-    --ring: 174 42% 35%;
+    --border: 40 12% 88%;
+    --input: 40 12% 88%;
+    --ring: 160 25% 22%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --hero-gradient: linear-gradient(135deg, hsl(174 42% 35%), hsl(190 40% 45%));
-    --section-alt: 180 15% 96%;
-    --warm: 35 80% 55%;
+    --section-alt: 40 15% 95%;
+    --warm: 35 30% 52%;
+    --sand: 38 25% 90%;
+    --graphite: 220 10% 30%;
+    --deep-green: 160 30% 18%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -57,19 +59,24 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 
   h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  ::selection {
+    background: hsl(160 25% 22% / 0.15);
   }
 }
 
 @layer utilities {
   .font-display {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
   }
   .font-body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
   }
 }

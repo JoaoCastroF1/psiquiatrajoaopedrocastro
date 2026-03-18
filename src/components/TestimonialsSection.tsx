@@ -1,61 +1,81 @@
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Maria S.",
-    text: "O Dr. João Pedro mudou minha vida. Depois de anos sofrendo com ansiedade, finalmente encontrei um profissional que me ouviu de verdade e encontrou o tratamento certo.",
+    text: "Um profissional que escuta de verdade. Depois de anos buscando um psiquiatra que fosse além da receita, encontrei no Dr. João Pedro a profundidade e a seriedade que eu precisava.",
+    name: "Paciente, 38 anos",
   },
   {
-    name: "Carlos R.",
-    text: "Minha mãe de 78 anos está sendo acompanhada pelo Dr. João Pedro. A dedicação dele com os idosos é impressionante. Toda a família se sente acolhida.",
+    text: "O cuidado com a minha mãe foi extraordinário. Ele explicou tudo com clareza, envolveu a família no processo e trouxe uma dignidade ao tratamento que não tínhamos encontrado antes.",
+    name: "Familiar de paciente, 62 anos",
   },
   {
-    name: "Ana L.",
-    text: "Profissional excepcional. Muito atencioso, explica tudo com clareza e faz a gente se sentir seguro. Recomendo de olhos fechados.",
+    text: "Contratamos o Dr. João Pedro para um programa de saúde mental na empresa. A abordagem foi séria, sem clichês, e gerou um impacto real nas nossas lideranças.",
+    name: "Diretora de RH",
   },
+];
+
+const credentials = [
+  "Consulta particular",
+  "Posicionamento premium",
+  "Atendimento presencial e telemedicina",
+  "Recibo para reembolso",
 ];
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 md:py-32 bg-section-alt">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="max-w-2xl mb-16"
         >
-          <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-4">
-            Depoimentos
+          <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
+            Confiança
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-            O que dizem os pacientes
+          <h2 className="font-display text-3xl md:text-4xl font-medium text-foreground leading-tight">
+            O que dizem sobre{" "}
+            <span className="italic">este trabalho</span>
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-card rounded-xl p-8 border border-border shadow-sm"
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="bg-card border border-border p-8"
             >
-              <div className="flex gap-1 mb-4">
-                {[...Array(5)].map((_, j) => (
-                  <Star key={j} className="w-4 h-4 fill-warm text-warm" />
-                ))}
-              </div>
-              <p className="font-body text-muted-foreground leading-relaxed mb-6 italic">
+              <p className="font-display text-lg italic text-foreground leading-relaxed mb-6">
                 "{t.text}"
               </p>
-              <p className="font-body font-semibold text-foreground">{t.name}</p>
+              <p className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground">
+                {t.name}
+              </p>
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="flex flex-wrap justify-center gap-x-8 gap-y-3 pt-8 border-t border-border"
+        >
+          {credentials.map((c, i) => (
+            <span
+              key={i}
+              className="font-body text-xs uppercase tracking-[0.12em] text-muted-foreground"
+            >
+              {c}
+            </span>
+          ))}
+        </motion.div>
       </div>
     </section>
   );

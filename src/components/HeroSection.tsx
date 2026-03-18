@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import jpPortrait from "@/assets/jp-portrait.jpg";
 
+const WA_LINK = "https://wa.me/5531991315958";
+
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-end md:items-center bg-background overflow-hidden pt-20">
@@ -15,12 +17,12 @@ const HeroSection = () => {
             <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">
               Psiquiatra · Psicogeriatra
             </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-medium leading-[1.1] text-foreground mb-8">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-normal leading-[1.1] text-foreground mb-8">
               Psiquiatria com
               <br />
               profundidade clínica,
               <br />
-              <span className="italic">inteligência humana</span>
+              <em className="text-lime">inteligência humana</em>
               <br />
               e visão contemporânea.
             </h1>
@@ -29,7 +31,7 @@ const HeroSection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://wa.me/5500000000000"
+                href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] bg-primary text-primary-foreground px-8 py-4 hover:opacity-90 transition-opacity"
@@ -63,7 +65,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Subtle decorative line */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-border" />
     </section>
   );

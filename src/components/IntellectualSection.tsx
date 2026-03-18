@@ -3,7 +3,7 @@ import jpCoat from "@/assets/jp-coat.jpg";
 
 const IntellectualSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-primary">
+    <section className="py-24 md:py-32 bg-graphite">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <motion.div
@@ -12,14 +12,14 @@ const IntellectualSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-body text-xs uppercase tracking-[0.25em] text-primary-foreground/60 mb-5">
+            <p className="font-body text-xs uppercase tracking-[0.25em] text-primary-foreground/50 mb-5">
               Presença intelectual e autoral
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-medium text-primary-foreground leading-tight mb-8">
+            <h2 className="font-display text-3xl md:text-4xl font-normal text-primary-foreground leading-tight mb-8">
               Medicina, música, escrita{" "}
-              <span className="italic">e pensamento</span>
+              <em className="text-lime">e pensamento</em>
             </h2>
-            <div className="space-y-5 font-body text-base text-primary-foreground/80 leading-[1.8]">
+            <div className="space-y-5 font-body text-base text-primary-foreground/75 leading-[1.8]">
               <p>
                 A prática clínica de João Pedro é alimentada por um repertório que ultrapassa a medicina. Músico, compositor e multi-instrumentista, transita entre MPB, rock inglês, bossa nova, chorinho e música clássica. É também escritor — com um livro escrito e uma busca constante por integrar arte, linguagem e pensamento à sua atuação profissional.
               </p>

@@ -1,55 +1,51 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Heart, Brain, Users } from "lucide-react";
-
-const credentials = [
-  { icon: GraduationCap, text: "Residência em Psiquiatria" },
-  { icon: Brain, text: "Especialista em Psicogeriatria" },
-  { icon: Heart, text: "Atendimento Humanizado" },
-  { icon: Users, text: "Acompanhamento Familiar" },
-];
+import jpWriting from "@/assets/jp-writing.jpg";
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-24 bg-background">
+    <section id="sobre" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
           >
-            <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-4">
-              Sobre o Dr. João Pedro
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Comprometido com a sua <span className="text-primary">saúde mental</span>
-            </h2>
-            <p className="font-body text-lg text-muted-foreground leading-relaxed">
-              Com mais de 15 anos de experiência em psiquiatria clínica, o Dr. João Pedro Castro
-              dedica-se ao cuidado integral da saúde mental, unindo ciência e empatia para
-              proporcionar o melhor tratamento a cada paciente. Especialista em psicogeriatria,
-              oferece acompanhamento personalizado para idosos e suas famílias.
-            </p>
+            <div className="relative">
+              <img
+                src={jpWriting}
+                alt="Dr. João Pedro Castro em consulta"
+                className="w-full aspect-[4/5] object-cover grayscale-[20%]"
+              />
+            </div>
           </motion.div>
-        </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {credentials.map((item, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-card border border-border rounded-xl p-6 text-center hover:shadow-lg hover:border-primary/30 transition-all"
-            >
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <item.icon className="w-7 h-7 text-primary" />
-              </div>
-              <p className="font-body font-semibold text-foreground">{item.text}</p>
-            </motion.div>
-          ))}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+          >
+            <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
+              Sobre
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-medium text-foreground leading-tight mb-8">
+              Uma prática construída sobre consistência,{" "}
+              <span className="italic">escuta e repertório</span>
+            </h2>
+            <div className="space-y-5 font-body text-base text-muted-foreground leading-[1.8]">
+              <p>
+                João Pedro Castro Martins Farias é médico psiquiatra e psicogeriatra formado pela Universidade Federal de Minas Gerais, com residência em Psiquiatria pelo Hospital Odilon Behrens. Aprovado em medicina aos 16 anos, construiu uma trajetória marcada por disciplina intelectual, sensibilidade clínica e curiosidade genuína pela complexidade humana.
+              </p>
+              <p>
+                Sua prática não se limita ao manejo de sintomas. Cada atendimento integra diagnóstico, subjetividade, contexto biográfico, personalidade, sono, vínculos, trabalho, cognição e projeto de vida. É uma psiquiatria que lê o paciente — não apenas o transtorno.
+              </p>
+              <p>
+                Além da clínica, atua como comunicador científico, palestrante para laboratórios farmacêuticos e criador de projetos em saúde mental corporativa e desenvolvimento humano. Sua abordagem une ciência, linguagem, visão estratégica e uma rara capacidade de articular o complexo com clareza.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -1,72 +1,80 @@
 import { motion } from "framer-motion";
-import { Brain, Clock, Stethoscope, Pill, HeartPulse, Users } from "lucide-react";
 
-const services = [
+const areas = [
   {
-    icon: Brain,
-    title: "Transtornos de Ansiedade",
-    desc: "Diagnóstico e tratamento personalizado para transtorno de ansiedade generalizada, pânico, fobias e TOC.",
+    title: "Psiquiatria do adulto",
+    desc: "Avaliação diagnóstica aprofundada e tratamento personalizado para quadros de ansiedade, depressão, transtorno bipolar, TOC e outros.",
   },
   {
-    icon: HeartPulse,
-    title: "Depressão e Bipolaridade",
-    desc: "Acompanhamento completo para transtornos do humor com abordagem medicamentosa e suporte terapêutico.",
-  },
-  {
-    icon: Clock,
-    title: "Insônia e Distúrbios do Sono",
-    desc: "Avaliação e manejo dos transtornos do sono, com foco na qualidade de vida do paciente.",
-  },
-  {
-    icon: Users,
     title: "Psicogeriatria",
-    desc: "Cuidado especializado em saúde mental do idoso, incluindo demências, Alzheimer e depressão senil.",
+    desc: "Cuidado especializado na saúde mental do envelhecimento — demências, Alzheimer, depressão senil, alterações comportamentais e suporte familiar.",
   },
   {
-    icon: Pill,
-    title: "Manejo Medicamentoso",
-    desc: "Ajuste fino de medicações psiquiátricas com acompanhamento próximo e minimização de efeitos colaterais.",
+    title: "Transtornos do humor e ansiedade",
+    desc: "Manejo clínico sofisticado de quadros afetivos e ansiosos, com atenção à funcionalidade, ao contexto e à história de vida.",
   },
   {
-    icon: Stethoscope,
-    title: "Avaliação Psiquiátrica",
-    desc: "Consulta completa para investigação diagnóstica, laudos e pareceres psiquiátricos.",
+    title: "TDAH e sofrimento funcional",
+    desc: "Investigação criteriosa e acompanhamento de TDAH em adultos, com foco na produtividade, autorregulação e qualidade de vida.",
+  },
+  {
+    title: "Burnout e saúde mental no trabalho",
+    desc: "Abordagem integrada do esgotamento profissional, com leitura dos fatores individuais e organizacionais envolvidos.",
+  },
+  {
+    title: "Dependências e hábitos",
+    desc: "Tratamento de dependências químicas e comportamentais com estratégia, empatia e visão realista de mudança.",
+  },
+  {
+    title: "Cognição e envelhecimento",
+    desc: "Investigação de queixas cognitivas, rastreio de declínio, acompanhamento longitudinal e orientação para pacientes e famílias.",
+  },
+  {
+    title: "Saúde mental corporativa",
+    desc: "Programas, consultorias e palestras para empresas que desejam atuar com seriedade na saúde mental de suas equipes.",
+  },
+  {
+    title: "Educação e palestras",
+    desc: "Participações como speaker para laboratórios, congressos e eventos — comunicando ciência com clareza, densidade e linguagem de alto nível.",
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section id="especialidades" className="py-24 bg-section-alt">
+    <section id="atuacao" className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="max-w-2xl mb-16"
         >
-          <p className="font-body text-sm uppercase tracking-[0.2em] text-primary mb-4">
-            Especialidades
+          <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
+            Áreas de atuação
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">
-            Como posso te ajudar
+          <h2 className="font-display text-3xl md:text-4xl font-medium text-foreground leading-tight">
+            Do consultório ao mundo corporativo —{" "}
+            <span className="italic">com a mesma densidade</span>
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((s, i) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
+          {areas.map((a, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-card rounded-xl p-8 border border-border hover:shadow-xl hover:border-primary/20 transition-all group"
+              transition={{ duration: 0.5, delay: i * 0.05 }}
+              className="group"
             >
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
-                <s.icon className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="font-display text-xl font-semibold text-foreground mb-3">{s.title}</h3>
-              <p className="font-body text-muted-foreground leading-relaxed">{s.desc}</p>
+              <div className="w-8 h-px bg-primary/40 mb-5 group-hover:w-12 transition-all duration-300" />
+              <h3 className="font-display text-lg md:text-xl font-medium text-foreground mb-2">
+                {a.title}
+              </h3>
+              <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                {a.desc}
+              </p>
             </motion.div>
           ))}
         </div>

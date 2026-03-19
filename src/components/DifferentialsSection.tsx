@@ -2,28 +2,28 @@ import { motion } from "framer-motion";
 
 const differentials = [
   {
-    title: "Leitura diagnóstica sofisticada",
-    text: "Cada paciente é singular. A avaliação vai além do checklist de sintomas — integra história, personalidade, contexto, funcionamento e sentido.",
+    title: "Formação médica de elite",
+    text: "Médico formado pela UFMG, com residências em Psiquiatria e Psicogeriatria, além de mestrado em Neurociências em andamento.",
   },
   {
-    title: "Integração clínica real",
-    text: "Sintomas, personalidade, contexto de vida, vínculos, sono, hábitos e projeto existencial são lidos de forma articulada, não fragmentada.",
+    title: "Atualização científica constante",
+    text: "Estudioso de psicofarmacologia, psicopatologia, psicoterapias, psicodélicos e cannabis medicinal, mantendo-se sempre na vanguarda dos tratamentos.",
   },
   {
-    title: "Experiência com quadros complexos",
-    text: "Formação e prática com casos que exigem raciocínio clínico apurado — comorbidades, refratariedade, polifarmácia, quadros geriátricos e situações de difícil manejo.",
+    title: "Escuta ativa e empatia",
+    text: "Abordagem que prioriza a compreensão profunda de cada paciente, indo além dos sintomas para encontrar soluções personalizadas.",
   },
   {
-    title: "Comunicação de alto nível",
-    text: "Capacidade de traduzir ciência em linguagem clara, precisa e acessível — no consultório, no palco e nos meios digitais.",
+    title: "Domínio de diagnósticos diferenciais",
+    text: "Grande expertise em psicofarmacologia e clínica médica, permitindo investigação precisa e manejo eficaz de quadros complexos.",
   },
   {
-    title: "Repertório humanístico",
-    text: "Uma clínica informada por sensibilidade cultural, leitura ampla e interesse genuíno pela condição humana — para além do estritamente médico.",
+    title: "Integração de abordagens",
+    text: "Combina com maestria diversas psicoterapias à medicação, trazendo o melhor de cada abordagem para cada caso.",
   },
   {
-    title: "Cuidado orientado para potência",
-    text: "Não se trata apenas de reduzir sofrimento. O objetivo é funcionalidade, direção de vida e construção de uma existência com mais presença e propósito.",
+    title: "Visão contemporânea",
+    text: "Práticas inovadoras como uso de psicodélicos e cannabis medicinal, aliadas a um olhar holístico sobre a saúde mental.",
   },
 ];
 

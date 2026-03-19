@@ -31,18 +31,18 @@ const AboutSection = () => {
               Sobre
             </p>
             <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-normal text-foreground leading-tight mb-8">
-              Uma prática construída sobre consistência,{" "}
-              <em className="text-lime">escuta e repertório</em>
+              Um psiquiatra com formação de elite e{" "}
+              <em className="text-lime">visão contemporânea</em>
             </h2>
             <div className="space-y-5 font-body text-base text-muted-foreground leading-[1.8]">
               <p>
-                João Pedro Castro Martins Farias é médico psiquiatra e psicogeriatra formado pela Universidade Federal de Minas Gerais, com residência em Psiquiatria pelo Hospital Odilon Behrens. Aprovado em medicina aos 16 anos, construiu uma trajetória marcada por disciplina intelectual, sensibilidade clínica e curiosidade genuína pela complexidade humana.
+                João Pedro Castro é médico psiquiatra e psicogeriatria, formado pela Universidade Federal de Minas Gerais. Ele possui residência em Psiquiatria pelo Hospital Odilon Behrens e em Psicogeriatria pelo HC/UFMG. Atualmente, é mestrando em Neurociências, aprofundando seus conhecimentos em psicopatologia, psicofarmacologia e novas abordagens terapêuticas.
               </p>
               <p>
-                Sua prática não se limita ao manejo de sintomas. Cada atendimento integra diagnóstico, subjetividade, contexto biográfico, personalidade, sono, vínculos, trabalho, cognição e projeto de vida. É uma psiquiatria que lê o paciente — não apenas o transtorno.
+                Sua prática clínica se destaca pela escuta ativa, empatia e grande domínio de psicofarmacologia e diagnósticos diferenciais. Além disso, integra com maestria diversas abordagens psicoterápicas, trazendo soluções personalizadas para cada paciente.
               </p>
               <p>
-                Além da clínica, atua como comunicador científico, palestrante para laboratórios farmacêuticos e criador de projetos em saúde mental corporativa e desenvolvimento humano. Sua abordagem une ciência, linguagem, visão estratégica e uma rara capacidade de articular o complexo com clareza.
+                Com atualização científica constante, João Pedro une rigor acadêmico, sensibilidade clínica e uma visão contemporânea da saúde mental. Seu objetivo é resolver os problemas de seus pacientes com eficácia, dedicação e uma abordagem elegante e sutil.
               </p>
             </div>
           </motion.div>

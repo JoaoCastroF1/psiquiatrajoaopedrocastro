@@ -13,18 +13,18 @@ const IntellectualSection = () => {
             transition={{ duration: 0.8 }}
           >
             <p className="font-body text-xs uppercase tracking-[0.25em] text-primary-foreground/50 mb-5">
-              Presença intelectual e autoral
+              Presença intelectual
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-normal text-primary-foreground leading-tight mb-8">
-              Medicina, música, escrita{" "}
-              <em className="text-lime">e pensamento</em>
+              Medicina, neurociência e uma{" "}
+              <em className="text-lime">visão multidimensional</em> da saúde mental
             </h2>
             <div className="space-y-5 font-body text-base text-primary-foreground/75 leading-[1.8]">
               <p>
-                A prática clínica de João Pedro é alimentada por um repertório que ultrapassa a medicina. Músico, compositor e multi-instrumentista, transita entre MPB, rock inglês, bossa nova, chorinho e música clássica. É também escritor — com um livro escrito e uma busca constante por integrar arte, linguagem e pensamento à sua atuação profissional.
+                João Pedro Castro é um profissional com formação de elite e uma visão contemporânea da saúde mental. Além da sólida base médica, ele é mestrando em Neurociências, aprofundando seus conhecimentos em psicopatologia, psicofarmacologia e novas abordagens terapêuticas.
               </p>
               <p>
-                Esse trânsito entre disciplinas não é acessório. A sensibilidade estética, a escuta treinada pela música e a capacidade narrativa informam diretamente a qualidade de sua clínica — e a profundidade de sua comunicação. É a presença de alguém que pensa com amplitude e trabalha com precisão.
+                Sua prática clínica é informada por uma leitura ampla e interdisciplinar, integrando ciência, humanidades e uma compreensão profunda da condição humana. Essa perspectiva multidimensional se traduz em soluções elegantes e eficazes para os desafios enfrentados por seus pacientes.
               </p>
             </div>
           </motion.div>
@@ -36,11 +36,16 @@ const IntellectualSection = () => {
             transition={{ duration: 1, delay: 0.2 }}
             className="flex justify-center lg:justify-end"
           >
-            <img
-              src={jpCoat}
-              alt="Dr. João Pedro Castro"
-              className="w-72 md:w-80 lg:w-[380px] aspect-[3/4] object-cover object-top grayscale-[15%] brightness-110"
-            />
+            <div className="relative">
+              <img
+                src={jpCoat}
+                alt="Dr. João Pedro Castro"
+                className="w-72 md:w-80 lg:w-[380px] aspect-[3/4] object-cover object-top grayscale-[15%] brightness-110"
+              />
+              <p className="font-body text-xs text-primary-foreground/40 mt-4 text-center italic">
+                Um psiquiatra com formação de ponta e visão de futuro.
+              </p>
+            </div>
           </motion.div>
         </div>
       </div>

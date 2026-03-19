@@ -2,14 +2,6 @@ import { motion } from "framer-motion";
 
 const areas = [
   {
-    title: "Psiquiatria do adulto",
-    desc: "Avaliação diagnóstica aprofundada e tratamento personalizado para quadros de ansiedade, depressão, transtorno bipolar, TOC e outros.",
-  },
-  {
-    title: "Psicogeriatria",
-    desc: "Cuidado especializado na saúde mental do envelhecimento — demências, Alzheimer, depressão senil, alterações comportamentais e suporte familiar.",
-  },
-  {
     title: "Transtornos do humor e ansiedade",
     desc: "Manejo clínico sofisticado de quadros afetivos e ansiosos, com atenção à funcionalidade, ao contexto e à história de vida.",
   },
@@ -18,24 +10,24 @@ const areas = [
     desc: "Investigação criteriosa e acompanhamento de TDAH em adultos, com foco na produtividade, autorregulação e qualidade de vida.",
   },
   {
-    title: "Burnout e saúde mental no trabalho",
-    desc: "Abordagem integrada do esgotamento profissional, com leitura dos fatores individuais e organizacionais envolvidos.",
+    title: "Transtornos psicóticos",
+    desc: "Diagnóstico precoce e acompanhamento compassivo de quadros como esquizofrenia, visando a melhora da funcionalidade e da qualidade de vida.",
+  },
+  {
+    title: "Transtorno do Espectro Autista",
+    desc: "Avaliação abrangente e plano de cuidados individualizado para adultos com TEA, integrando medicação, psicoterapia e orientação familiar.",
+  },
+  {
+    title: "Demências e Alzheimer",
+    desc: "Investigação precisa de queixas cognitivas, rastreio precoce, acompanhamento longitudinal e suporte especializado para pacientes e famílias.",
   },
   {
     title: "Dependências e hábitos",
     desc: "Tratamento de dependências químicas e comportamentais com estratégia, empatia e visão realista de mudança.",
   },
   {
-    title: "Cognição e envelhecimento",
-    desc: "Investigação de queixas cognitivas, rastreio de declínio, acompanhamento longitudinal e orientação para pacientes e famílias.",
-  },
-  {
     title: "Saúde mental corporativa",
     desc: "Programas, consultorias e palestras para empresas que desejam atuar com seriedade na saúde mental de suas equipes.",
-  },
-  {
-    title: "Educação e palestras",
-    desc: "Participações como speaker para laboratórios, congressos e eventos — comunicando ciência com clareza, densidade e linguagem de alto nível.",
   },
 ];
 
@@ -53,8 +45,8 @@ const ServicesSection = () => {
             Áreas de atuação
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-            Do consultório ao mundo corporativo —{" "}
-            <em className="text-lime">com a mesma densidade</em>
+            Expertise em uma ampla gama de{" "}
+            <em className="text-lime">transtornos mentais</em>
           </h2>
         </motion.div>
 

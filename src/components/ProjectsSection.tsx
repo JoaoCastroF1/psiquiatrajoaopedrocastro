@@ -2,28 +2,28 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    label: "Projeto",
-    title: "Anti-Inércia",
+    label: "Pesquisa",
+    title: "Pesquisa e Inovação",
     description:
-      "Programa voltado ao desenvolvimento de habilidades concretas em pessoas comuns — inteligência emocional, melhora do sono, enfrentamento de dependências, mudança de hábitos e capacidade de ação. Uma ponte entre conhecimento clínico e transformação prática.",
+      "Como mestrando em Neurociências, João Pedro conduz estudos que expandem as fronteiras do conhecimento em saúde mental, buscando soluções cada vez mais eficazes.",
   },
   {
     label: "Empreendimento",
-    title: "Saúde mental para empresas",
+    title: "Saúde mental corporativa",
     description:
-      "Hub de soluções para organizações que desejam tratar saúde mental com seriedade: diagnóstico institucional, programas de prevenção, suporte a lideranças e cultura de cuidado com base em evidência.",
+      "Desenvolve programas e consultorias para empresas que desejam cuidar da saúde mental de seus colaboradores com seriedade e embasamento científico.",
   },
   {
     label: "Atuação",
     title: "Palestras e educação",
     description:
-      "Participação como speaker para laboratórios farmacêuticos, congressos e eventos. Comunicação científica com linguagem sofisticada, acessibilidade real e impacto na audiência.",
+      "Participa ativamente como palestrante em congressos, eventos médicos e iniciativas de formação continuada, comunicando ciência com clareza e impacto.",
   },
   {
     label: "Visão",
-    title: "Psiquiatria, desenvolvimento humano e criação",
+    title: "Psiquiatria e desenvolvimento humano",
     description:
-      "Uma prática que não se encerra no consultório. João constrói um ecossistema que articula clínica, educação, conteúdo, produtos digitais e projetos autorais — com consistência e visão de longo prazo.",
+      "Sua prática clínica é apenas o início de uma obra mais ampla, que articula pesquisa, educação e projetos autorais voltados ao bem-estar integral.",
   },
 ];
 
@@ -42,7 +42,7 @@ const ProjectsSection = () => {
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
             Além da clínica —{" "}
-            <em className="text-lime">construção de obra</em>
+            <em className="text-lime">uma obra em construção</em>
           </h2>
         </motion.div>
 

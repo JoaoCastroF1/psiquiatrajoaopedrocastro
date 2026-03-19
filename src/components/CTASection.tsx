@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 
-const WA_LINK = "https://wa.me/5531991315958";
-const WA_LINK_PROJECTS = "https://wa.me/5531991315958?text=Olá, gostaria de saber mais sobre palestras, projetos ou parcerias.";
+const WA_LINK =
+  "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
+const WA_LINK_PROJECTS =
+  "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20palestras%2C%20projetos%20ou%20parcerias.";
 
 const CTASection = () => {
   return (
@@ -14,11 +16,11 @@ const CTASection = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-normal text-foreground leading-tight mb-6">
-            Um cuidado em saúde mental à altura da{" "}
-            <em className="text-lime">complexidade humana</em>
+            Saúde mental com a{" "}
+            <em className="text-lime">profundidade que você merece</em>
           </h2>
           <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-12 max-w-xl mx-auto">
-            Quando profundidade clínica e presença médica real fazem diferença. O primeiro passo é uma conversa.
+            Agende uma consulta com o Dr. João Pedro e descubra soluções personalizadas para seus desafios.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -2,24 +2,14 @@ import { motion } from "framer-motion";
 
 const audiences = [
   {
-    title: "Pacientes adultos",
+    title: "Adultos",
     description:
-      "Para quem busca psiquiatria com profundidade, escuta real e um olhar que vai além do diagnóstico. Atendimento particular com tempo, atenção e sofisticação clínica.",
+      "Pacientes que buscam psiquiatria com profundidade, escuta ativa e soluções personalizadas para transtornos como depressão, ansiedade, TOC e TDAH.",
   },
   {
     title: "Idosos e famílias",
     description:
-      "Psicogeriatria com experiência em quadros complexos — demências, depressão senil, alterações cognitivas. Acompanhamento próximo do paciente e orientação dedicada à família.",
-  },
-  {
-    title: "Empresas e lideranças",
-    description:
-      "Soluções em saúde mental para organizações que levam a sério o cuidado com seus times. Diagnóstico institucional, palestras, programas de prevenção e suporte estratégico.",
-  },
-  {
-    title: "Instituições e educação médica",
-    description:
-      "Participação como speaker, consultor e educador em eventos médicos, congressos e iniciativas de formação continuada em saúde mental.",
+      "Psicogeriatria com experiência em quadros complexos — demências, Alzheimer, depressão senil, alterações cognitivas. Acompanhamento próximo do paciente e orientação dedicada à família.",
   },
 ];
 
@@ -37,8 +27,8 @@ const AudienceSection = () => {
             Para quem é este trabalho
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-            Quem procura um cuidado à altura da{" "}
-            <em className="text-lime">própria complexidade</em>
+            Cuidado especializado para quem valoriza a{" "}
+            <em className="text-lime">excelência</em>
           </h2>
         </motion.div>
 

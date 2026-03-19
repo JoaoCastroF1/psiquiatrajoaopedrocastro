@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
-const WA_LINK = "https://wa.me/5531991315958";
+const WA_LINK =
+  "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
 
 const links = [
   { label: "Sobre", href: "#sobre" },

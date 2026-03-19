@@ -2,15 +2,15 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    text: "Um profissional que escuta de verdade. Depois de anos buscando um psiquiatra que fosse além da receita, encontrei no Dr. João Pedro a profundidade e a seriedade que eu precisava.",
-    name: "Paciente, 38 anos",
+    text: "Finalmente encontrei um psiquiatra que realmente me entende. O Dr. João Pedro é atento, empático e tem um conhecimento impressionante. Sinto que estou em boas mãos.",
+    name: "Paciente",
   },
   {
-    text: "O cuidado com a minha mãe foi extraordinário. Ele explicou tudo com clareza, envolveu a família no processo e trouxe uma dignidade ao tratamento que não tínhamos encontrado antes.",
-    name: "Familiar de paciente, 62 anos",
+    text: "O tratamento da minha mãe com o Dr. João Pedro foi transformador. Ele envolveu a família, explicou tudo com clareza e trouxe uma dignidade ao cuidado que não tínhamos encontrado antes.",
+    name: "Familiar de paciente",
   },
   {
-    text: "Contratamos o Dr. João Pedro para um programa de saúde mental na empresa. A abordagem foi séria, sem clichês, e gerou um impacto real nas nossas lideranças.",
+    text: "Contratamos o Dr. João Pedro para um programa de saúde mental na empresa e ficamos impressionados. Sua abordagem foi altamente profissional, embasada em evidências e gerou um impacto real em nossa equipe.",
     name: "Diretora de RH",
   },
 ];

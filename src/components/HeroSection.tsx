@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import jpPortrait from "@/assets/jp-portrait.jpg";
 
-const WA_LINK = "https://wa.me/5531991315958";
+const WA_LINK =
+  "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
 
 const HeroSection = () => {
   return (
@@ -15,20 +16,28 @@ const HeroSection = () => {
             className="order-2 lg:order-1"
           >
             <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">
-              Psiquiatra · Psicogeriatra
+              Psiquiatra · Psicogeriatria
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-normal leading-[1.1] text-foreground mb-8">
-              Psiquiatria com
+              Psiquiatria com a
               <br />
-              profundidade clínica,
+              profundidade clínica que
               <br />
-              <em className="text-lime">inteligência humana</em>
+              <em className="text-lime">sua saúde mental</em>
               <br />
-              e visão contemporânea.
+              merece.
             </h1>
-            <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mb-10">
-              Cuidado em saúde mental com rigor científico, escuta sofisticada e leitura fina da singularidade de cada paciente. Psiquiatria e psicogeriatria para adultos, idosos e contextos que exigem presença médica real.
+            <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mb-6">
+              Cuidado especializado em depressão, ansiedade, TDAH, demências e muito mais. Com rigor científico, escuta ativa e soluções personalizadas.
             </p>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 mb-10">
+              <span className="font-body text-xs uppercase tracking-[0.12em] text-warm">
+                Apenas consultas particulares
+              </span>
+              <span className="font-body text-xs uppercase tracking-[0.12em] text-warm">
+                Emitimos nota fiscal para reembolso em planos de saúde
+              </span>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href={WA_LINK}
@@ -42,7 +51,7 @@ const HeroSection = () => {
                 href="#sobre"
                 className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] border border-foreground/20 text-foreground px-8 py-4 hover:bg-foreground/5 transition-colors"
               >
-                Conhecer a abordagem
+                Conheça minha abordagem
               </a>
             </div>
           </motion.div>
@@ -56,7 +65,7 @@ const HeroSection = () => {
             <div className="relative w-72 md:w-80 lg:w-[420px]">
               <img
                 src={jpPortrait}
-                alt="Dr. João Pedro Castro Martins Farias — Psiquiatra e Psicogeriatra"
+                alt="Dr. João Pedro Castro — Psiquiatra e Psicogeriatria"
                 className="w-full aspect-[3/4] object-cover object-top grayscale-[30%] contrast-[1.05]"
               />
               <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />

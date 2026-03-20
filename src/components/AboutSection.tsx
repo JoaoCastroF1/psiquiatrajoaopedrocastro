@@ -32,7 +32,7 @@ const AboutSection = () => {
             </p>
             <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-normal text-foreground leading-tight mb-8">
               Um psiquiatra com formação de elite e{" "}
-              <em className="text-lime">visão contemporânea</em>
+              <em className="text-deep-green">visão contemporânea</em>
             </h2>
             <div className="space-y-5 font-body text-base text-muted-foreground leading-[1.8]">
               <p>

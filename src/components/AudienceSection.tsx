@@ -28,7 +28,7 @@ const AudienceSection = () => {
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
             Cuidado especializado para quem valoriza a{" "}
-            <em className="text-lime">excelência</em>
+            <em className="text-deep-green">excelência</em>
           </h2>
         </motion.div>
 

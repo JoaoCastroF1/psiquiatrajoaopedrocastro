@@ -23,7 +23,7 @@ const HeroSection = () => {
               <br />
               profundidade clínica que
               <br />
-              <em className="text-lime">sua saúde mental</em>
+              <em className="text-deep-green">sua saúde mental</em>
               <br />
               merece.
             </h1>

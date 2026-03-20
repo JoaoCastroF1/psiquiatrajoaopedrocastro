@@ -46,7 +46,7 @@ const ServicesSection = () => {
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
             Expertise em uma ampla gama de{" "}
-            <em className="text-lime">transtornos mentais</em>
+            <em className="text-deep-green">transtornos mentais</em>
           </h2>
         </motion.div>
 

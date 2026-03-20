@@ -32,7 +32,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <a href="#" className="font-display text-xl md:text-2xl text-foreground tracking-tight">
-          <em className="text-lime">Dr.</em> João Pedro Castro
+          <em className="text-deep-green">Dr.</em> João Pedro Castro
         </a>
 
         <div className="hidden md:flex items-center gap-8">

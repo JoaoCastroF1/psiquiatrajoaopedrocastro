@@ -17,7 +17,7 @@ const CTASection = () => {
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-normal text-foreground leading-tight mb-6">
             Saúde mental com a{" "}
-            <em className="text-lime">profundidade que você merece</em>
+            <em className="text-deep-green">profundidade que você merece</em>
           </h2>
           <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-12 max-w-xl mx-auto">
             Agende uma consulta com o Dr. João Pedro e descubra soluções personalizadas para seus desafios.

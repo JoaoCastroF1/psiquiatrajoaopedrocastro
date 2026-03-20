@@ -31,10 +31,10 @@ const HeroSection = () => {
               Cuidado especializado em depressão, ansiedade, TDAH, demências e muito mais. Com rigor científico, escuta ativa e soluções personalizadas.
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-2 mb-10">
-              <span className="font-body text-xs uppercase tracking-[0.12em] text-warm">
+              <span className="font-body text-xs uppercase tracking-[0.12em] text-steel">
                 Apenas consultas particulares
               </span>
-              <span className="font-body text-xs uppercase tracking-[0.12em] text-warm">
+              <span className="font-body text-xs uppercase tracking-[0.12em] text-steel">
                 Emitimos nota fiscal para reembolso em planos de saúde
               </span>
             </div>

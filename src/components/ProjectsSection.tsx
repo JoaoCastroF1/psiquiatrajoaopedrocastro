@@ -56,7 +56,7 @@ const ProjectsSection = () => {
               transition={{ duration: 0.6, delay: i * 0.08 }}
               className="border border-border p-8 md:p-10 hover:border-primary/20 transition-colors"
             >
-              <span className="font-body text-[11px] uppercase tracking-[0.2em] text-warm">
+              <span className="font-body text-[11px] uppercase tracking-[0.2em] text-steel">
                 {p.label}
               </span>
               <h3 className="font-display text-2xl md:text-[1.65rem] font-medium text-foreground mt-3 mb-4">

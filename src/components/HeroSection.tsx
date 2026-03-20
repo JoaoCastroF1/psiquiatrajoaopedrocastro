@@ -16,26 +16,28 @@ const HeroSection = () => {
             className="order-2 lg:order-1"
           >
             <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">
-              Psiquiatra · Psicogeriatria
+              Psiquiatra · Psicogeriatria · Belo Horizonte
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-normal leading-[1.1] text-foreground mb-8">
-              Psiquiatria com a
+              Psiquiatria com
               <br />
-              profundidade clínica que
+              rigor clínico. Tratamento
               <br />
-              <em className="text-deep-green">sua saúde mental</em>
+              que respeita a
               <br />
-              merece.
+              <em className="text-deep-green">complexidade</em> de
+              <br />
+              quem você é.
             </h1>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mb-6">
-              Cuidado especializado em depressão, ansiedade, TDAH, demências e muito mais. Com rigor científico, escuta ativa e soluções personalizadas.
+              Para adultos que convivem com depressão, ansiedade, TDAH, bipolaridade ou transtornos do humor — e para famílias que acompanham o declínio cognitivo de alguém que amam. Diagnóstico preciso, farmacologia baseada em evidências e escuta que vai além dos sintomas.
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-2 mb-10">
               <span className="font-body text-xs uppercase tracking-[0.12em] text-steel">
-                Apenas consultas particulares
+                Atendimento particular
               </span>
               <span className="font-body text-xs uppercase tracking-[0.12em] text-steel">
-                Emitimos nota fiscal para reembolso em planos de saúde
+                Nota fiscal emitida para reembolso em planos de saúde
               </span>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">

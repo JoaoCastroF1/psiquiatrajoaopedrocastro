@@ -16,11 +16,11 @@ const CTASection = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-normal text-foreground leading-tight mb-6">
-            Saúde mental com a{" "}
-            <em className="text-deep-green">profundidade que você merece</em>
+            Psiquiatria com a{" "}
+            <em className="text-deep-green">precisão que o seu caso merece</em>
           </h2>
           <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-12 max-w-xl mx-auto">
-            Agende uma consulta com o Dr. João Pedro e descubra soluções personalizadas para seus desafios.
+            Se você carrega sintomas sem resposta, quer revisar um tratamento que não está funcionando, ou acompanha alguém com declínio cognitivo sem saber o que esperar — o primeiro passo é uma avaliação com tempo e profundidade suficientes para entender o que está acontecendo.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -38,7 +38,7 @@ const CTASection = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] border border-foreground/20 text-foreground px-10 py-4 hover:bg-foreground/5 transition-colors"
             >
-              Palestras, empresas ou projetos
+              Empresas, palestras ou projetos
             </a>
           </div>
         </motion.div>

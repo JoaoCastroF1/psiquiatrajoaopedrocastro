@@ -5,25 +5,25 @@ const projects = [
     label: "Pesquisa",
     title: "Pesquisa e Inovação",
     description:
-      "Como mestrando em Neurociências, João Pedro conduz estudos que expandem as fronteiras do conhecimento em saúde mental, buscando soluções cada vez mais eficazes.",
+      "Como mestrando em Neurociências na UFMG, João Pedro conduz pesquisa em psicopatologia e novas abordagens terapêuticas — conectando o que está sendo produzido nos laboratórios à lógica do consultório.",
   },
   {
     label: "Empreendimento",
     title: "Saúde mental corporativa",
     description:
-      "Desenvolve programas e consultorias para empresas que desejam cuidar da saúde mental de seus colaboradores com seriedade e embasamento científico.",
+      "Ambientes de alta pressão têm taxas elevadas de burnout, ansiedade e afastamentos. João Pedro desenvolve programas e consultorias para empresas com estrutura clínica real — intervenções baseadas em evidências, diagnóstico situacional e acompanhamento de resultados.",
   },
   {
     label: "Atuação",
-    title: "Palestras e educação",
+    title: "Palestras e formação",
     description:
-      "Participa ativamente como palestrante em congressos, eventos médicos e iniciativas de formação continuada, comunicando ciência com clareza e impacto.",
+      "Palestrante em congressos médicos e eventos de formação continuada, com foco em traduzir a ciência atual para a prática clínica — especialmente em psicofarmacologia, psicogeriatria e novas abordagens terapêuticas.",
   },
   {
     label: "Visão",
-    title: "Psiquiatria e desenvolvimento humano",
+    title: "Visão de longo prazo",
     description:
-      "Sua prática clínica é apenas o início de uma obra mais ampla, que articula pesquisa, educação e projetos autorais voltados ao bem-estar integral.",
+      "A prática clínica é o núcleo, mas não o limite. João Pedro trabalha para construir uma atuação mais ampla — articulando pesquisa, educação e iniciativas autorais em saúde mental com impacto além do consultório.",
   },
 ];
 

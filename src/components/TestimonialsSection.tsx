@@ -16,10 +16,10 @@ const testimonials = [
 ];
 
 const credentials = [
-  "Consulta particular",
-  "Posicionamento premium",
-  "Atendimento presencial e telemedicina",
-  "Recibo para reembolso",
+  "Atendimento particular",
+  "Nota fiscal para reembolso",
+  "Presencial, telemedicina e domiciliar",
+  "Belo Horizonte — MG",
 ];
 
 const TestimonialsSection = () => {

@@ -21,10 +21,10 @@ const IntellectualSection = () => {
             </h2>
             <div className="space-y-5 font-body text-base text-primary-foreground/75 leading-[1.8]">
               <p>
-                João Pedro Castro é um profissional com formação de elite e uma visão contemporânea da saúde mental. Além da sólida base médica, ele é mestrando em Neurociências, aprofundando seus conhecimentos em psicopatologia, psicofarmacologia e novas abordagens terapêuticas.
+                João Pedro Castro tem formação técnica de alto nível — e o que diferencia sua prática clínica é a capacidade de integrar rigor científico com compreensão do contexto de cada paciente. Mestrando em Neurociências, acompanha de perto o que está sendo produzido nas fronteiras da psiquiatria: novos biomarcadores, farmacologia de precisão e abordagens psicoterápicas emergentes.
               </p>
               <p>
-                Sua prática clínica é informada por uma leitura ampla e interdisciplinar, integrando ciência, humanidades e uma compreensão profunda da condição humana. Essa perspectiva multidimensional se traduz em soluções elegantes e eficazes para os desafios enfrentados por seus pacientes.
+                Essa base se traduz em algo concreto para quem está em tratamento: um profissional que explica o raciocínio clínico em cada consulta, revisa hipóteses quando necessário e trata cada caso com a singularidade que ele merece — porque dois pacientes com o mesmo diagnóstico raramente precisam do mesmo tratamento.
               </p>
             </div>
           </motion.div>
@@ -43,7 +43,7 @@ const IntellectualSection = () => {
                 className="w-72 md:w-80 lg:w-[380px] aspect-[3/4] object-cover object-top grayscale-[15%] brightness-110"
               />
               <p className="font-body text-xs text-primary-foreground/40 mt-4 text-center italic">
-                Um psiquiatra com formação de ponta e visão de futuro.
+                Psiquiatra e psicogeriatria. Residências pelo Odilon Behrens e HC/UFMG. Mestrando em Neurociências.
               </p>
             </div>
           </motion.div>

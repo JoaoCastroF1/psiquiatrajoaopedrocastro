@@ -2,28 +2,28 @@ import { motion } from "framer-motion";
 
 const differentials = [
   {
-    title: "Formação médica de elite",
-    text: "Médico formado pela UFMG, com residências em Psiquiatria e Psicogeriatria, além de mestrado em Neurociências em andamento.",
+    title: "Dupla residência médica em saúde mental",
+    text: "Psiquiatria pelo Hospital Odilon Behrens e Psicogeriatria pelo HC/UFMG — programas de referência em Minas Gerais. A combinação de duas residências em saúde mental é rara no consultório particular: amplia o repertório diagnóstico, especialmente em quadros que transitam entre a psiquiatria geral e o envelhecimento.",
   },
   {
-    title: "Atualização científica constante",
-    text: "Estudioso de psicofarmacologia, psicopatologia, psicoterapias, psicodélicos e cannabis medicinal, mantendo-se sempre na vanguarda dos tratamentos.",
+    title: "Psicogeriatria: a especialidade que a maioria dos consultórios particulares não tem",
+    text: "Após os 60 anos, o cérebro envelhece, o metabolismo de medicamentos muda, os sintomas se apresentam de formas atípicas — e confundir depressão com demência, ou delirium com psicose, tem consequências clínicas sérias. João Pedro realiza consultas domiciliares para pacientes com dificuldade de deslocamento. Para famílias que lidam com quadros avançados, isso não é conveniência: é o que torna o acompanhamento possível.",
   },
   {
-    title: "Escuta ativa e empatia",
-    text: "Abordagem que prioriza a compreensão profunda de cada paciente, indo além dos sintomas para encontrar soluções personalizadas.",
+    title: "A primeira consulta dura o tempo que for necessário",
+    text: "O objetivo da avaliação inicial é construir uma hipótese diagnóstica fundamentada — não registrar queixas e prescrever. Isso significa anamnese longa, atenção à história prévia, aos tratamentos que já foram tentados e ao contexto de vida. Diagnósticos incompletos levam a tratamentos errados por meses.",
   },
   {
-    title: "Domínio de diagnósticos diferenciais",
-    text: "Grande expertise em psicofarmacologia e clínica médica, permitindo investigação precisa e manejo eficaz de quadros complexos.",
+    title: "Psicofarmacologia com raciocínio clínico transparente",
+    text: "A escolha de cada medicamento tem uma lógica — e essa lógica é explicada. Perfil clínico, histórico de resposta, comorbidades, fase da vida, tolerabilidade esperada. O ajuste farmacológico é contínuo, e o paciente entende o raciocínio por trás de cada decisão ao longo do tratamento.",
   },
   {
-    title: "Integração de abordagens",
-    text: "Combina com maestria diversas psicoterapias à medicação, trazendo o melhor de cada abordagem para cada caso.",
+    title: "Medicação e psicoterapia com coerência clínica",
+    text: "Abordagens como TCC, terapias de terceira onda e técnicas psicodinâmicas são integradas ao tratamento de acordo com o diagnóstico e o momento clínico — não como complemento genérico, mas como parte de um plano com direção definida. Quando o caso exige trabalho paralelo com psicólogo, João Pedro indica e articula.",
   },
   {
-    title: "Visão contemporânea",
-    text: "Práticas inovadoras como uso de psicodélicos e cannabis medicinal, aliadas a um olhar holístico sobre a saúde mental.",
+    title: "Atualização em fronteiras terapêuticas",
+    text: "Psicodélicos assistidos, cannabis medicinal, novos modelos em psicopatologia. João Pedro acompanha essa literatura com critério e integra o que tem evidência crescente à prática — sem conservadorismo que priva pacientes de opções válidas, e sem entusiasmo acrítico que ignora os limites do que se sabe.",
   },
 ];
 

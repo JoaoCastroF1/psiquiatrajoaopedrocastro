@@ -4,12 +4,12 @@ const audiences = [
   {
     title: "Adultos",
     description:
-      "Pacientes que buscam psiquiatria com profundidade, escuta ativa e soluções personalizadas para transtornos como depressão, ansiedade, TOC e TDAH.",
+      "Para quem carrega sintomas que já interferem no trabalho, nos relacionamentos ou no sono — seja depressão que não cede, ansiedade que antecipa o pior, TDAH que sabota projetos, bipolaridade com oscilações que ninguém ao redor entende, ou TOC que ocupa cada vez mais espaço no dia. O tratamento começa por entender o que está de fato acontecendo, antes de qualquer prescrição.",
   },
   {
     title: "Idosos e famílias",
     description:
-      "Psicogeriatria com experiência em quadros complexos — demências, Alzheimer, depressão senil, alterações cognitivas. Acompanhamento próximo do paciente e orientação dedicada à família.",
+      "Para famílias que percebem que algo mudou — os esquecimentos ficaram mais frequentes, o comportamento alterou, a pessoa ficou mais irritável, apática, ou simplesmente diferente. A psicogeriatria investiga e acompanha Alzheimer, demências, depressão no envelhecimento, psicose tardia e alterações cognitivas. O paciente recebe cuidado clínico especializado. A família recebe orientação sobre o que está acontecendo e o que vem pela frente. Consultas domiciliares disponíveis quando o deslocamento não é possível.",
   },
 ];
 
@@ -27,8 +27,8 @@ const AudienceSection = () => {
             Para quem é este trabalho
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-            Cuidado especializado para quem valoriza a{" "}
-            <em className="text-deep-green">excelência</em>
+            Cuidado especializado para dois momentos{" "}
+            <em className="text-deep-green">distintos da vida</em>
           </h2>
         </motion.div>
 

@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 const areas = [
   {
     title: "Depressão, distimia e depressão resistente",
-    desc: "Depressão com anedonia, isolamento e incapacidade de sentir prazer. Distimia — o peso baixo e constante que dura anos sem nome claro. Depressão atípica com padrão de sono e humor que confunde. Depressão que já passou por dois, três antidepressivos sem resposta adequada. Cada apresentação tem uma lógica farmacológica e psicoterápica própria — e merece ser investigada por inteiro.",
+    desc: "Depressão com anedonia, isolamento e incapacidade de sentir prazer. Distimia, o peso baixo e constante que dura anos sem nome claro. Depressão atípica com padrão de sono e humor que confunde. Depressão que já passou por dois, três antidepressivos sem resposta adequada. Cada apresentação tem uma lógica farmacológica e psicoterápica própria e merece ser investigada por inteiro.",
   },
   {
     title: "Transtorno Afetivo Bipolar",
-    desc: "Oscilações de humor que vão além do \"estou mal hoje\". Períodos de energia e produtividade que viram impulsividade e decisões das quais a pessoa se arrepende. Quedas que imobilizam por semanas. Bipolar tipo II com hipomanias tão sutis que passam anos sem diagnóstico — e a pessoa acaba tratada como depressão unipolar, sem resultado. Ciclotimia. O diagnóstico diferencial preciso aqui define o tratamento.",
+    desc: "Oscilações de humor que vão além do \"estou mal hoje\". Períodos de energia e produtividade que viram impulsividade e decisões das quais a pessoa se arrepende. Quedas que imobilizam por semanas. Bipolar tipo II com hipomanias tão sutis que passam anos sem diagnóstico, e a pessoa acaba tratada como depressão unipolar, sem resultado. O diagnóstico diferencial preciso aqui define o tratamento.",
   },
   {
     title: "Ansiedade, pânico, fobia social e TOC",
@@ -15,27 +15,27 @@ const areas = [
   },
   {
     title: "TDAH em adultos",
-    desc: "Procrastinação crônica que não é preguiça. Dificuldade de terminar o que começou, mesmo quando o assunto importa. Impulsividade em decisões financeiras, afetivas ou profissionais. Instabilidade emocional marcante. Sensação constante de funcionar abaixo do potencial. O diagnóstico diferencial distingue TDAH de ansiedade, bipolaridade e outros quadros que se parecem — e isso muda completamente o tratamento.",
+    desc: "Procrastinação crônica que não é preguiça. Dificuldade de terminar o que começou, mesmo quando o assunto importa. Impulsividade em decisões financeiras, afetivas ou profissionais. Instabilidade emocional marcante. Sensação constante de funcionar abaixo do potencial. O diagnóstico diferencial distingue TDAH de ansiedade, bipolaridade e outros quadros que se parecem, e isso muda completamente o tratamento.",
   },
   {
     title: "Transtornos psicóticos",
-    desc: "Esquizofrenia, transtorno esquizoafetivo, transtorno delirante, primeiro episódio psicótico. Diagnóstico precoce e acompanhamento longitudinal com foco em funcionalidade e autonomia — e com atenção especial à tolerabilidade do tratamento farmacológico, que é o principal motivo de abandono nesses quadros.",
+    desc: "Esquizofrenia, transtorno esquizoafetivo, transtorno delirante, primeiro episódio psicótico. Diagnóstico precoce e acompanhamento longitudinal com foco em funcionalidade e autonomia, com atenção especial à tolerabilidade do tratamento farmacológico, que é o principal motivo de abandono nesses quadros.",
   },
   {
     title: "Transtorno do Espectro Autista em adultos",
-    desc: "Muitos adultos chegam ao diagnóstico de TEA depois de anos com ansiedade refratária, depressão sem resposta satisfatória, ou simplesmente a sensação de que algo não se encaixa. A avaliação considera a história do desenvolvimento, os padrões de funcionamento e o contexto atual — e o plano de cuidado é construído a partir do que faz sentido para aquele perfil.",
+    desc: "Muitos adultos chegam ao diagnóstico de TEA depois de anos com ansiedade refratária, depressão sem resposta satisfatória, ou simplesmente a sensação de que algo não se encaixa. A avaliação considera a história do desenvolvimento, os padrões de funcionamento e o contexto atual. O plano de cuidado é construído a partir do que faz sentido para aquele perfil.",
   },
   {
     title: "Transtornos de personalidade",
-    desc: "Borderline com instabilidade emocional intensa, relações turbulentas e dificuldade crônica de regulação. Personalidade evitativa com isolamento que se aprofunda. O diagnóstico preciso — e principalmente sua distinção de transtornos do humor — define se o tratamento vai ter alguma direção coerente.",
+    desc: "Borderline com instabilidade emocional intensa, relações turbulentas e dificuldade crônica de regulação. Personalidade evitativa com isolamento que se aprofunda. O diagnóstico preciso, e principalmente sua distinção de transtornos do humor, define se o tratamento vai ter alguma direção coerente.",
   },
   {
     title: "Estresse pós-traumático e trauma complexo",
-    desc: "Memórias que voltam sem aviso, hipervigilância constante, evitação de situações que lembram o que aconteceu. TEPT após eventos únicos. Trauma complexo por exposição prolongada. Quadros que frequentemente chegam mascarados como depressão ou ansiedade generalizada — e que respondem a abordagens específicas quando bem identificados.",
+    desc: "Memórias que voltam sem aviso, hipervigilância constante, evitação de situações que lembram o que aconteceu. TEPT após eventos únicos. Trauma complexo por exposição prolongada. Quadros que frequentemente chegam mascarados como depressão ou ansiedade generalizada e que respondem a abordagens específicas quando bem identificados.",
   },
   {
     title: "Insônia e transtornos do sono",
-    desc: "Insônia crônica que deteriora humor, cognição e capacidade de trabalho ao longo do tempo. Hipersonia. Síndrome das pernas inquietas. O sono costuma ser a primeira coisa a quebrar quando um quadro psiquiátrico começa — e uma das últimas a receber a atenção que merece no tratamento.",
+    desc: "Insônia crônica que deteriora humor, cognição e capacidade de trabalho ao longo do tempo. Hipersonia. Síndrome das pernas inquietas. O sono costuma ser a primeira coisa a quebrar quando um quadro psiquiátrico começa, e uma das últimas a receber a atenção que merece no tratamento.",
   },
   {
     title: "Transtornos alimentares",
@@ -43,19 +43,19 @@ const areas = [
   },
   {
     title: "Dependências químicas e comportamentais",
-    desc: "Álcool, estimulantes, opioides, benzodiazepínicos — às vezes iniciados como automedicação para ansiedade ou insônia. Jogo patológico. Compulsão sexual. Tratamento sem julgamento, com atenção às comorbidades psiquiátricas que sustentam o uso e acompanhamento nos momentos mais críticos do processo.",
+    desc: "Álcool, estimulantes, opioides, benzodiazepínicos, às vezes iniciados como automedicação para ansiedade ou insônia. Jogo patológico. Compulsão sexual. Tratamento sem julgamento, com atenção às comorbidades psiquiátricas que sustentam o uso e acompanhamento nos momentos mais críticos do processo.",
   },
   {
     title: "Demências e Alzheimer",
-    desc: "Investigação de queixas cognitivas com o tempo e os instrumentos adequados — porque o diagnóstico precoce muda o prognóstico e o planejamento familiar. Acompanhamento de Alzheimer, demência vascular, demência com corpos de Lewy e demência frontotemporal. Manejo clínico dos sintomas comportamentais: agitação noturna, apatia, agressividade, psicose, delirium sobreposto. Orientação especializada à família e aos cuidadores em cada fase.",
+    desc: "Investigação de queixas cognitivas com o tempo e os instrumentos adequados, porque o diagnóstico precoce muda o prognóstico e o planejamento familiar. Acompanhamento de Alzheimer, demência vascular, demência com corpos de Lewy e demência frontotemporal. Manejo clínico dos sintomas comportamentais: agitação noturna, apatia, agressividade, psicose, delirium sobreposto. Orientação especializada à família e aos cuidadores em cada fase.",
   },
   {
     title: "Depressão, ansiedade e psicose no envelhecimento",
-    desc: "No idoso, a depressão frequentemente se apresenta com queixas físicas, lentidão cognitiva e irritabilidade — sem o humor triste que levaria a uma suspeita imediata. A psicose de início tardio exige investigação para afastar causas orgânicas e neurológicas. O envelhecimento altera o metabolismo de praticamente todos os psicofármacos — e a psicogeriatria é a especialidade que leva isso em conta desde a primeira prescrição.",
+    desc: "No idoso, a depressão frequentemente se apresenta com queixas físicas, lentidão cognitiva e irritabilidade, sem o humor triste que levaria a uma suspeita imediata. A psicose de início tardio exige investigação para afastar causas orgânicas e neurológicas. O envelhecimento altera o metabolismo de praticamente todos os psicofármacos, e a psicogeriatria é a especialidade que leva isso em conta desde a primeira prescrição.",
   },
   {
     title: "Saúde mental corporativa",
-    desc: "Programas, consultorias e palestras para empresas que querem lidar com burnout, ansiedade ocupacional e afastamentos com embasamento clínico — diagnóstico situacional, intervenções com lógica científica e resultados que podem ser acompanhados.",
+    desc: "Programas, consultorias e palestras para empresas que querem lidar com burnout, ansiedade ocupacional e afastamentos com embasamento clínico. Diagnóstico situacional, intervenções com lógica científica e resultados que podem ser acompanhados.",
   },
 ];
 

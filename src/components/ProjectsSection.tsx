@@ -5,25 +5,25 @@ const projects = [
     label: "Pesquisa",
     title: "Pesquisa e Inovação",
     description:
-      "Como mestrando em Neurociências na UFMG, João Pedro conduz pesquisa em psicopatologia e novas abordagens terapêuticas — conectando o que está sendo produzido nos laboratórios à lógica do consultório.",
+      "Como mestrando em Neurociências na UFMG, João Pedro conduz pesquisa em psicopatologia e novas abordagens terapêuticas, conectando o que está sendo produzido nos laboratórios à lógica do consultório.",
   },
   {
     label: "Empreendimento",
     title: "Saúde mental corporativa",
     description:
-      "Ambientes de alta pressão têm taxas elevadas de burnout, ansiedade e afastamentos. João Pedro desenvolve programas e consultorias para empresas com estrutura clínica real — intervenções baseadas em evidências, diagnóstico situacional e acompanhamento de resultados.",
+      "Ambientes de alta pressão têm taxas elevadas de burnout, ansiedade e afastamentos. João Pedro desenvolve programas e consultorias para empresas com estrutura clínica real: intervenções baseadas em evidências, diagnóstico situacional e acompanhamento de resultados.",
   },
   {
     label: "Atuação",
     title: "Palestras e formação",
     description:
-      "Palestrante em congressos médicos e eventos de formação continuada, com foco em traduzir a ciência atual para a prática clínica — especialmente em psicofarmacologia, psicogeriatria e novas abordagens terapêuticas.",
+      "Palestrante em congressos médicos e eventos de formação continuada, com foco em traduzir a ciência atual para a prática clínica, especialmente em psicofarmacologia, psicogeriatria e novas abordagens terapêuticas.",
   },
   {
     label: "Visão",
     title: "Visão de longo prazo",
     description:
-      "A prática clínica é o núcleo, mas não o limite. João Pedro trabalha para construir uma atuação mais ampla — articulando pesquisa, educação e iniciativas autorais em saúde mental com impacto além do consultório.",
+      "A prática clínica é o núcleo, mas não o limite. João Pedro trabalha para construir uma atuação mais ampla, articulando pesquisa, educação e iniciativas autorais em saúde mental com impacto além do consultório.",
   },
 ];
 
@@ -41,7 +41,7 @@ const ProjectsSection = () => {
             Projetos e visão
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-            Além da clínica —{" "}
+            Além da clínica,{" "}
             <em className="text-deep-green">uma obra em construção</em>
           </h2>
         </motion.div>

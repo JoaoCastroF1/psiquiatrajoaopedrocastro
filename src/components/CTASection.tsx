@@ -20,7 +20,7 @@ const CTASection = () => {
             <em className="text-deep-green">precisão que o seu caso merece</em>
           </h2>
           <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-12 max-w-xl mx-auto">
-            Se você carrega sintomas sem resposta, quer revisar um tratamento que não está funcionando, ou acompanha alguém com declínio cognitivo sem saber o que esperar — o primeiro passo é uma avaliação com tempo e profundidade suficientes para entender o que está acontecendo.
+            Se você carrega sintomas sem resposta, quer revisar um tratamento que não está funcionando, ou acompanha alguém com declínio cognitivo sem saber o que esperar: o primeiro passo é uma avaliação com tempo e profundidade suficientes para entender o que está acontecendo.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

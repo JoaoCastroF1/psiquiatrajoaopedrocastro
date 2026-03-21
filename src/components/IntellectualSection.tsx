@@ -21,10 +21,10 @@ const IntellectualSection = () => {
             </h2>
             <div className="space-y-5 font-body text-base text-primary-foreground/75 leading-[1.8]">
               <p>
-                João Pedro Castro tem formação técnica de alto nível — e o que diferencia sua prática clínica é a capacidade de integrar rigor científico com compreensão do contexto de cada paciente. Mestrando em Neurociências, acompanha de perto o que está sendo produzido nas fronteiras da psiquiatria: novos biomarcadores, farmacologia de precisão e abordagens psicoterápicas emergentes.
+                João Pedro Castro tem formação técnica de alto nível. O que diferencia sua prática clínica é a capacidade de integrar rigor científico com compreensão do contexto de cada paciente. Mestrando em Neurociências, acompanha de perto o que está sendo produzido nas fronteiras da psiquiatria: novos biomarcadores, farmacologia de precisão e abordagens psicoterápicas emergentes.
               </p>
               <p>
-                Essa base se traduz em algo concreto para quem está em tratamento: um profissional que explica o raciocínio clínico em cada consulta, revisa hipóteses quando necessário e trata cada caso com a singularidade que ele merece — porque dois pacientes com o mesmo diagnóstico raramente precisam do mesmo tratamento.
+                Essa base se traduz em algo concreto para quem está em tratamento: um profissional que explica o raciocínio clínico em cada consulta, revisa hipóteses quando necessário e trata cada caso com a singularidade que ele merece. Dois pacientes com o mesmo diagnóstico raramente precisam do mesmo tratamento.
               </p>
             </div>
           </motion.div>
@@ -44,7 +44,7 @@ const IntellectualSection = () => {
                 loading="lazy"
               />
               <p className="font-body text-xs text-primary-foreground/40 mt-4 text-center italic">
-                Psiquiatra e psicogeriatria. Residências pelo Odilon Behrens e HC/UFMG. Mestrando em Neurociências.
+                Psiquiatra e psicogeriatra. Residências pelo Odilon Behrens e HC/UFMG. Mestrando em Neurociências.
               </p>
             </div>
           </motion.div>

@@ -56,6 +56,9 @@ const HeroSection = () => {
                 Conheça minha abordagem
               </a>
             </div>
+            <p className="font-body text-[11px] text-muted-foreground/60 mt-4 tracking-wide">
+              Presencial em Belo Horizonte · Telemedicina · Consulta domiciliar
+            </p>
           </motion.div>
 
           <motion.div
@@ -67,7 +70,8 @@ const HeroSection = () => {
             <div className="relative w-72 md:w-80 lg:w-[420px]">
               <img
                 src={jpPortrait}
-                alt="Dr. João Pedro Castro — Psiquiatra e Psicogeriatria"
+                alt="Dr. João Pedro Castro — Psiquiatra e Psicogeriatra em Belo Horizonte"
+                loading="eager"
                 className="w-full aspect-[3/4] object-cover object-top grayscale-[30%] contrast-[1.05]"
               />
               <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />

@@ -15,8 +15,9 @@ const AboutSection = () => {
             <div className="relative">
               <img
                 src={jpWriting}
-                alt="Dr. João Pedro Castro em consulta"
+                alt="Dr. João Pedro Castro — Psiquiatra formado pela UFMG em atendimento clínico"
                 className="w-full aspect-[4/5] object-cover grayscale-[20%]"
+                loading="lazy"
               />
             </div>
           </motion.div>

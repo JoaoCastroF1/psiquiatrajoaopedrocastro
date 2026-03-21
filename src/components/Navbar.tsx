@@ -31,9 +31,14 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <a href="#" className="font-display text-xl md:text-2xl text-foreground tracking-tight">
-          <em className="text-deep-green">Dr.</em> João Pedro Castro
-        </a>
+        <div className="flex flex-col">
+          <a href="#" className="font-display text-xl md:text-2xl text-foreground tracking-tight leading-tight">
+            <em className="text-deep-green">Dr.</em> João Pedro Castro
+          </a>
+          <span className="hidden md:block font-body text-[10px] uppercase tracking-[0.15em] text-muted-foreground/70 -mt-0.5">
+            Psiquiatra · Psicogeriatra · CRM 83920
+          </span>
+        </div>
 
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (

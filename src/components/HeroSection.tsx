@@ -56,6 +56,9 @@ const HeroSection = () => {
                 Conheça minha abordagem
               </a>
             </div>
+            <p className="font-body text-[11px] text-muted-foreground/60 mt-4 tracking-wide">
+              Presencial em Belo Horizonte · Telemedicina · Consulta domiciliar
+            </p>
           </motion.div>
 
           <motion.div

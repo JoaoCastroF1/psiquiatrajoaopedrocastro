@@ -32,18 +32,18 @@ const AboutSection = () => {
               Sobre
             </p>
             <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-normal text-foreground leading-tight mb-8">
-              Formação sólida, visão contemporânea e uma prática clínica que trata o paciente —{" "}
+              Formação sólida, visão contemporânea e uma prática clínica que trata o paciente,{" "}
               <em className="text-deep-green">não apenas o diagnóstico</em>
             </h2>
             <div className="space-y-5 font-body text-base text-muted-foreground leading-[1.8]">
               <p>
-                João Pedro Castro é médico psiquiatra e psicogeriatria, formado pela Universidade Federal de Minas Gerais. Realizou residência em Psiquiatria pelo Hospital Odilon Behrens e em Psicogeriatria pelo HC/UFMG — dois dos programas de referência em Minas Gerais. Atualmente é mestrando em Neurociências, com foco em psicopatologia, psicofarmacologia e novas abordagens terapêuticas.
+                João Pedro Castro é médico psiquiatra e psicogeriatra, formado pela Universidade Federal de Minas Gerais. Realizou residência em Psiquiatria pelo Hospital Odilon Behrens e em Psicogeriatria pelo HC/UFMG, dois dos programas de referência em Minas Gerais. Atualmente é mestrando em Neurociências, com foco em psicopatologia, psicofarmacologia e novas abordagens terapêuticas.
               </p>
               <p>
-                Sua prática se distingue pela investigação cuidadosa dos diagnósticos diferenciais — porque nem toda tristeza é depressão, nem todo esquecimento é demência, nem toda agitação tem a mesma causa. Essa precisão diagnóstica, aliada ao domínio da psicofarmacologia, permite construir tratamentos que realmente funcionam no longo prazo.
+                Sua prática se distingue pela investigação cuidadosa dos diagnósticos diferenciais. Nem toda tristeza é depressão, nem todo esquecimento é demência, nem toda agitação tem a mesma causa. Essa precisão diagnóstica, aliada ao domínio da psicofarmacologia, permite construir tratamentos que realmente funcionam no longo prazo.
               </p>
               <p>
-                João Pedro integra medicação e psicoterapia de forma individualizada, acompanha a literatura científica em áreas ainda pouco exploradas na clínica convencional — como psicodélicos assistidos e cannabis medicinal — e realiza consultas domiciliares para pacientes com dificuldade de deslocamento, especialmente idosos. Seu objetivo é direto: que cada paciente — e quando necessário, cada família — compreenda o que está acontecendo e encontre um caminho concreto de melhora.
+                João Pedro integra medicação e psicoterapia de forma individualizada, acompanha a literatura científica em áreas ainda pouco exploradas na clínica convencional e realiza consultas domiciliares para pacientes com dificuldade de deslocamento, especialmente idosos. Seu objetivo é direto: que cada paciente, e quando necessário, cada família, compreenda o que está acontecendo e encontre um caminho concreto de melhora.
               </p>
             </div>
           </motion.div>

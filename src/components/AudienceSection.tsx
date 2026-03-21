@@ -4,12 +4,12 @@ const audiences = [
   {
     title: "Adultos",
     description:
-      "Para quem carrega sintomas que já interferem no trabalho, nos relacionamentos ou no sono — seja depressão que não cede, ansiedade que antecipa o pior, TDAH que sabota projetos, bipolaridade com oscilações que ninguém ao redor entende, ou TOC que ocupa cada vez mais espaço no dia. O tratamento começa por entender o que está de fato acontecendo, antes de qualquer prescrição.",
+      "Para quem carrega sintomas que já interferem no trabalho, nos relacionamentos ou no sono. Seja depressão que não cede, ansiedade que antecipa o pior, TDAH que sabota projetos, bipolaridade com oscilações que ninguém ao redor entende, ou TOC que ocupa cada vez mais espaço no dia. O tratamento começa por entender o que está de fato acontecendo, antes de qualquer prescrição.",
   },
   {
     title: "Idosos e famílias",
     description:
-      "Para famílias que percebem que algo mudou — os esquecimentos ficaram mais frequentes, o comportamento alterou, a pessoa ficou mais irritável, apática, ou simplesmente diferente. A psicogeriatria investiga e acompanha Alzheimer, demências, depressão no envelhecimento, psicose tardia e alterações cognitivas. O paciente recebe cuidado clínico especializado. A família recebe orientação sobre o que está acontecendo e o que vem pela frente. Consultas domiciliares disponíveis quando o deslocamento não é possível.",
+      "Para famílias que percebem que algo mudou. Os esquecimentos ficaram mais frequentes, o comportamento alterou, a pessoa ficou mais irritável, apática, ou simplesmente diferente. A psicogeriatria investiga e acompanha Alzheimer, demências, depressão no envelhecimento, psicose tardia e alterações cognitivas. O paciente recebe cuidado clínico especializado. A família recebe orientação sobre o que está acontecendo e o que vem pela frente. Consultas domiciliares disponíveis quando o deslocamento não é possível.",
   },
 ];
 

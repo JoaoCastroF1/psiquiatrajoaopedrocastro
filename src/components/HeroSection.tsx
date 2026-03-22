@@ -19,11 +19,7 @@ const HeroSection = () => {
               Psiquiatra · Psicogeriatria · Belo Horizonte
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-normal leading-[1.1] text-foreground mb-8">
-              Psiquiatria feita com
-              <br />
-              ciência de ponta e a escuta
-              <br />
-              que seu caso{" "}
+              Psiquiatria feita com ciência de ponta e a escuta que seu caso{" "}
               <em className="text-deep-green">precisa.</em>
             </h1>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mb-6">

@@ -1,26 +1,28 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const WA_LINK =
   "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
 
-const links = [
-  { label: "Sobre", href: "#sobre" },
-  { label: "Atuação", href: "#atuacao" },
-  { label: "Diferenciais", href: "#diferenciais" },
-  { label: "Projetos", href: "#projetos" },
-  { label: "Contato", href: "#contato" },
-];
-
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const links = [
+    { label: "Sobre", href: isHome ? "#sobre" : "/#sobre", isAnchor: isHome },
+    { label: "Atuação", href: "/atuacao", isAnchor: false },
+    { label: "Blog", href: "/blog", isAnchor: false },
+    { label: "Contato", href: isHome ? "#contato" : "/#contato", isAnchor: isHome },
+  ];
 
   return (
     <nav
@@ -32,24 +34,34 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <div className="flex flex-col">
-          <a href="#" className="font-display text-xl md:text-2xl text-foreground tracking-tight leading-tight">
+          <Link to="/" className="font-display text-xl md:text-2xl text-foreground tracking-tight leading-tight">
             <em className="text-deep-green">Dr.</em> João Pedro Castro
-          </a>
+          </Link>
           <span className="hidden md:block font-body text-[10px] uppercase tracking-[0.15em] text-muted-foreground/70 -mt-0.5">
             Psiquiatra · Psicogeriatra · CRM 83920
           </span>
         </div>
 
         <div className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {l.label}
-            </a>
-          ))}
+          {links.map((l) =>
+            l.isAnchor ? (
+              <a
+                key={l.label}
+                href={l.href}
+                className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {l.label}
+              </a>
+            ) : (
+              <Link
+                key={l.label}
+                to={l.href}
+                className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {l.label}
+              </Link>
+            )
+          )}
           <a
             href={WA_LINK}
             target="_blank"
@@ -70,16 +82,27 @@ const Navbar = () => {
 
       {open && (
         <div className="md:hidden bg-background border-t border-border px-4 pb-6">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className="block font-body text-sm text-muted-foreground hover:text-foreground py-3 border-b border-border/50"
-            >
-              {l.label}
-            </a>
-          ))}
+          {links.map((l) =>
+            l.isAnchor ? (
+              <a
+                key={l.label}
+                href={l.href}
+                onClick={() => setOpen(false)}
+                className="block font-body text-sm text-muted-foreground hover:text-foreground py-3 border-b border-border/50"
+              >
+                {l.label}
+              </a>
+            ) : (
+              <Link
+                key={l.label}
+                to={l.href}
+                onClick={() => setOpen(false)}
+                className="block font-body text-sm text-muted-foreground hover:text-foreground py-3 border-b border-border/50"
+              >
+                {l.label}
+              </Link>
+            )
+          )}
           <a
             href={WA_LINK}
             target="_blank"

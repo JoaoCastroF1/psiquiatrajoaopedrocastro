@@ -7,7 +7,7 @@ const areas = [
   },
   {
     title: "Transtorno Afetivo Bipolar",
-    desc: "Oscilações de humor que vão além do \"estou mal hoje\". Períodos de energia e produtividade que viram impulsividade e decisões das quais a pessoa se arrepende. Quedas que imobilizam por semanas. Bipolar tipo II com hipomanias tão sutis que passam anos sem diagnóstico, e a pessoa acaba tratada como depressão unipolar, sem resultado. O diagnóstico diferencial preciso aqui define o tratamento.",
+    desc: "Oscilações de humor que vão além do \"estou mal hoje\". Períodos de energia e produtividade que viram impulsividade e decisões das quais a pessoa se arrepende. Quedas que imobilizam por semanas. Bipolar tipo II com hipomanias tão sutis que passam anos sem diagnóstico, e a pessoa acaba tratada como depressão unipolar, sem resultado. Ciclotimia. O diagnóstico diferencial preciso aqui define o tratamento.",
   },
   {
     title: "Ansiedade, pânico, fobia social e TOC",
@@ -59,24 +59,30 @@ const areas = [
   },
 ];
 
-const ServicesSection = () => {
+interface ServicesSectionProps {
+  showHeader?: boolean;
+}
+
+const ServicesSection = ({ showHeader = true }: ServicesSectionProps) => {
   return (
-    <section id="atuacao" className="py-24 md:py-32 bg-background">
+    <section id={showHeader ? "atuacao" : undefined} className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-2xl mb-16"
-        >
-          <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
-            Áreas de atuação
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-            Condições tratadas com{" "}
-            <em className="text-deep-green">profundidade clínica</em>
-          </h2>
-        </motion.div>
+        {showHeader && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-2xl mb-16"
+          >
+            <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
+              Áreas de atuação
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
+              Condições tratadas com{" "}
+              <em className="text-deep-green">profundidade clínica</em>
+            </h2>
+          </motion.div>
+        )}
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
           {areas.map((a, i) => (

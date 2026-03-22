@@ -3,11 +3,8 @@ import HeroSection from "@/components/HeroSection";
 import AuthorityStrip from "@/components/AuthorityStrip";
 import AboutSection from "@/components/AboutSection";
 import AudienceSection from "@/components/AudienceSection";
-import ServicesSection from "@/components/ServicesSection";
-import DifferentialsSection from "@/components/DifferentialsSection";
-import ProjectsSection from "@/components/ProjectsSection";
-import IntellectualSection from "@/components/IntellectualSection";
-import BlogSection from "@/components/BlogSection";
+import ServicesPreview from "@/components/ServicesPreview";
+import DifferentialsPreview from "@/components/DifferentialsPreview";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -21,11 +18,8 @@ const Index = () => {
       <AuthorityStrip />
       <AboutSection />
       <AudienceSection />
-      <ServicesSection />
-      <DifferentialsSection />
-      <ProjectsSection />
-      <IntellectualSection />
-      <BlogSection />
+      <ServicesPreview />
+      <DifferentialsPreview />
       <TestimonialsSection />
       <CTASection />
       <Footer />

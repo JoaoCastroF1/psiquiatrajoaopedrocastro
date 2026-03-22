@@ -19,13 +19,12 @@ const HeroSection = () => {
               Psiquiatra · Psicogeriatria · Belo Horizonte
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-normal leading-[1.1] text-foreground mb-8">
-              O melhor da ciência
+              Psiquiatria feita com
               <br />
-              psiquiátrica com a escuta
+              ciência de ponta e a escuta
               <br />
-              que o seu caso
-              <br />
-              <em className="text-deep-green">realmente</em> precisa.
+              que seu caso{" "}
+              <em className="text-deep-green">precisa.</em>
             </h1>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mb-6">
               Para adultos que convivem com depressão, ansiedade, TDAH, bipolaridade ou transtornos do humor. E para famílias que acompanham o declínio cognitivo de alguém que amam. Diagnóstico preciso, farmacologia baseada em evidências e tempo de consulta suficiente para entender o que está acontecendo.

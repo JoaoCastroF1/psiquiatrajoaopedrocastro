@@ -1,10 +1,26 @@
 const Footer = () => {
   return (
-    <footer className="bg-graphite py-10">
-      <div className="container mx-auto px-4 text-center space-y-3">
+    <footer className="bg-graphite">
+      {/* Google Maps embed */}
+      <div className="w-full h-64 md:h-80">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3751.0!2d-43.9378!3d-19.9245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sRua+dos+Timbiras%2C+1940+-+Lourdes%2C+Belo+Horizonte+-+MG!5e0!3m2!1spt-BR!2sbr!4v1"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Consultório Dr. João Pedro Castro - Rua dos Timbiras, 1940, sala 1515, Lourdes, BH/MG"
+        />
+      </div>
+
+      <div className="container mx-auto px-4 text-center space-y-3 py-10">
         <p className="font-display text-lg text-primary-foreground/80">
           <em className="text-lime">Dr.</em> João Pedro Castro
-
+        </p>
+        <p className="font-body text-xs text-primary-foreground/50 mb-1">
+          Rua dos Timbiras, 1940, sala 1515, Lourdes · Belo Horizonte — MG
         </p>
         <p className="font-body text-xs text-primary-foreground/40 uppercase tracking-[0.15em]">
           Psiquiatra · Psicogeriatria · CRM 83920 · RQE 62148 · RQE 66521

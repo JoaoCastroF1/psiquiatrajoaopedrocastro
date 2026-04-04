@@ -1,27 +1,48 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactFormSection = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
+    setError(null);
+
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // Tally.so form submission (replace FORM_ID with actual Tally form ID)
-    // For now, redirect to WhatsApp with form data as fallback
-    const nome = data.get("nome") as string;
-    const motivo = data.get("motivo") as string;
-    const telefone = data.get("telefone") as string;
-    const email = data.get("email") as string;
+    const nome = (data.get("nome") as string).trim();
+    const email = (data.get("email") as string).trim();
+    const telefone = (data.get("telefone") as string)?.trim() || null;
+    const motivo = (data.get("motivo") as string).trim();
 
-    const message = encodeURIComponent(
-      `Olá, vim do formulário do site.\n\nNome: ${nome}\nMotivo: ${motivo}\nTelefone: ${telefone}\nE-mail: ${email}`
-    );
+    if (!nome || !email || !motivo) {
+      setError("Preencha todos os campos obrigatórios.");
+      setLoading(false);
+      return;
+    }
 
-    window.open(`https://wa.me/5531991315958?text=${message}`, "_blank");
+    const { error: dbError } = await supabase.from("leads").insert({
+      nome,
+      email,
+      telefone,
+      motivo,
+      origem: "formulario_site",
+    });
+
+    if (dbError) {
+      console.error("Erro ao salvar lead:", dbError);
+      setError("Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.");
+      setLoading(false);
+      return;
+    }
+
     setSubmitted(true);
+    setLoading(false);
   };
 
   return (
@@ -70,7 +91,7 @@ const ContactFormSection = () => {
                 </p>
               </div>
             ) : (
-              <div className="bg-card border border-border p-8 md:p-10">
+              <form onSubmit={handleSubmit} className="bg-card border border-border p-8 md:p-10">
                 <div className="space-y-5">
                   <div>
                     <label className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground block mb-2">
@@ -82,7 +103,6 @@ const ContactFormSection = () => {
                       required
                       className="w-full bg-transparent border-b border-border py-3 font-body text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors"
                       placeholder="Seu nome completo"
-                      form="contact-form"
                     />
                   </div>
                   <div>
@@ -95,7 +115,6 @@ const ContactFormSection = () => {
                       required
                       className="w-full bg-transparent border-b border-border py-3 font-body text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors"
                       placeholder="seu@email.com"
-                      form="contact-form"
                     />
                   </div>
                   <div>
@@ -107,7 +126,6 @@ const ContactFormSection = () => {
                       name="telefone"
                       className="w-full bg-transparent border-b border-border py-3 font-body text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary transition-colors"
                       placeholder="(31) 99999-9999"
-                      form="contact-form"
                     />
                   </div>
                   <div>
@@ -118,7 +136,6 @@ const ContactFormSection = () => {
                       name="motivo"
                       required
                       className="w-full bg-transparent border-b border-border py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors"
-                      form="contact-form"
                     >
                       <option value="">Selecione</option>
                       <option value="consulta">Agendar consulta</option>
@@ -128,17 +145,20 @@ const ContactFormSection = () => {
                     </select>
                   </div>
                 </div>
+
+                {error && (
+                  <p className="mt-4 font-body text-sm text-destructive">{error}</p>
+                )}
+
                 <button
                   type="submit"
-                  form="contact-form"
-                  className="mt-8 w-full font-body text-sm uppercase tracking-[0.1em] bg-primary text-primary-foreground py-4 hover:opacity-90 transition-opacity"
+                  disabled={loading}
+                  className="mt-8 w-full font-body text-sm uppercase tracking-[0.1em] bg-primary text-primary-foreground py-4 hover:opacity-90 transition-opacity disabled:opacity-50"
                 >
-                  Enviar mensagem
+                  {loading ? "Enviando..." : "Enviar mensagem"}
                 </button>
-              </div>
+              </form>
             )}
-            {/* Hidden form element to handle submission */}
-            <form id="contact-form" onSubmit={handleSubmit} className="hidden" />
           </motion.div>
         </div>
       </div>

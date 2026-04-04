@@ -10,7 +10,7 @@ const steps = [
   {
     icon: ClipboardList,
     title: "Avaliação detalhada",
-    text: "A primeira consulta dura o tempo necessário para construir uma hipótese diagnóstica fundamentada. Inclui anamnese completa, revisão de tratamentos anteriores e análise do contexto de vida.",
+    text: "A primeira consulta dura em torno de 1 hora. São colhidas informações sobre sua vida, saúde pessoal e familiar, e a queixa atual. Quando indicado, exames laboratoriais são solicitados para diagnósticos diferenciais.",
   },
   {
     icon: Pill,

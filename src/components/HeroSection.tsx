@@ -52,6 +52,9 @@ const HeroSection = () => {
             <p className="font-body text-[11px] text-muted-foreground/60 mt-4 tracking-wide">
               Presencial em Belo Horizonte · Telemedicina · Consulta domiciliar
             </p>
+            <p className="font-body text-[11px] text-muted-foreground/60 mt-1 tracking-wide">
+              Atendimento em Lourdes, próximo aos principais cursinhos da região
+            </p>
           </motion.div>
 
           <motion.div

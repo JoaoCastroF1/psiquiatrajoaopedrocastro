@@ -7,19 +7,27 @@ const WA_LINK_PROJECTS =
 
 const CTASection = () => {
   return (
-    <section id="contato" className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="contato" className="py-24 md:py-32 bg-primary relative overflow-hidden">
+      {/* Subtle pattern overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(var(--primary-foreground)) 1px, transparent 0)',
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="max-w-3xl mx-auto text-center"
         >
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-normal text-foreground leading-tight mb-6">
+          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-normal text-primary-foreground leading-tight mb-6">
             Psiquiatria com a{" "}
-            <em className="text-deep-green">precisão que o seu caso merece</em>
+            <em className="text-lime">precisão que o seu caso merece</em>
           </h2>
-          <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-12 max-w-xl mx-auto">
+          <p className="font-body text-base md:text-lg text-primary-foreground/70 leading-relaxed mb-12 max-w-xl mx-auto">
             Se você carrega sintomas sem resposta, quer revisar um tratamento que não está funcionando, ou acompanha alguém com declínio cognitivo sem saber o que esperar: o primeiro passo é uma avaliação com tempo e profundidade suficientes para entender o que está acontecendo.
           </p>
 
@@ -28,7 +36,7 @@ const CTASection = () => {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] bg-primary text-primary-foreground px-10 py-4 hover:opacity-90 transition-opacity"
+              className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] bg-primary-foreground text-primary px-10 py-4 hover:opacity-90 transition-all hover:shadow-lg"
             >
               Agendar consulta
             </a>
@@ -36,7 +44,7 @@ const CTASection = () => {
               href={WA_LINK_PROJECTS}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] border border-foreground/20 text-foreground px-10 py-4 hover:bg-foreground/5 transition-colors"
+              className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] border border-primary-foreground/30 text-primary-foreground px-10 py-4 hover:bg-primary-foreground/10 transition-all"
             >
               Empresas, palestras ou projetos
             </a>

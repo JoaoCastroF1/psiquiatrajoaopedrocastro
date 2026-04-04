@@ -43,30 +43,37 @@ const HowItWorksSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
           {steps.map((s, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="relative"
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="relative group"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <s.icon className="w-5 h-5 text-primary" />
+              {/* Step number + connector line */}
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/15 transition-colors">
+                  <s.icon className="w-5 h-5 text-deep-green" />
                 </div>
-                <span className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground">
+                <span className="font-display text-2xl font-light text-border">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
+
               <h3 className="font-display text-lg font-medium text-foreground mb-2">
                 {s.title}
               </h3>
               <p className="font-body text-sm text-muted-foreground leading-relaxed">
                 {s.text}
               </p>
+
+              {/* Connector line for desktop */}
+              {i < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-6 left-[calc(100%+0.5rem)] w-[calc(100%-3rem)] h-px bg-border" />
+              )}
             </motion.div>
           ))}
         </div>

@@ -42,6 +42,26 @@ const faqs = [
     answer:
       "O agendamento pode ser feito pelo WhatsApp (31) 99131-5958 ou pelo formulário de contato no site. O retorno é feito em horário comercial.",
   },
+  {
+    question: "Ansiedade pode atrapalhar a rotina de estudos?",
+    answer:
+      "Sim. Em alguns casos, ansiedade pode comprometer concentração, sono, resistência ao estresse e capacidade de manter constância sob pressão.",
+  },
+  {
+    question: "TDAH pode ser confundido com procrastinação ou desorganização?",
+    answer:
+      "Sim. Em muitos adultos jovens, o transtorno aparece como dificuldade persistente de foco, planejamento, gestão do tempo e conclusão de tarefas, o que costuma ser interpretado de forma simplista como falta de disciplina.",
+  },
+  {
+    question: "Dormir mal pode piorar concentração e funcionamento?",
+    answer:
+      "Sim. Sono ruim costuma prejudicar atenção, clareza mental, memória e regulação emocional, especialmente em fases de estudo intenso.",
+  },
+  {
+    question: "O tratamento psiquiátrico serve para melhorar nota?",
+    answer:
+      "O objetivo do tratamento não é aumentar nota artificialmente, e sim avaliar e tratar condições clínicas que podem estar atrapalhando funcionamento, estabilidade emocional e rotina de estudos.",
+  },
 ];
 
 const FAQSection = () => {

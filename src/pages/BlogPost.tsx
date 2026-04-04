@@ -4,6 +4,7 @@ import { ArrowLeft, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import JsonLd from "@/components/JsonLd";
 import { blogPosts } from "@/data/blogPosts";
 
 const WA_LINK =
@@ -15,8 +16,31 @@ const BlogPost = () => {
 
   if (!post) return <Navigate to="/blog" replace />;
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: {
+      "@type": "Person",
+      name: "Dr. João Pedro Castro Martins Farias",
+      url: "https://drjoaopedrocastro.com.br",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Dr. João Pedro Castro",
+      url: "https://drjoaopedrocastro.com.br",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://drjoaopedrocastro.com.br/blog/${post.slug}`,
+    },
+  };
+
   return (
     <div className="min-h-screen">
+      <JsonLd data={articleJsonLd} />
       <Navbar />
 
       <article className="pt-28 md:pt-36 pb-20 md:pb-28 bg-background">

@@ -2,11 +2,31 @@ import Navbar from "@/components/Navbar";
 import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import JsonLd from "@/components/JsonLd";
 import { motion } from "framer-motion";
+import { blogPosts } from "@/data/blogPosts";
+
+const blogListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Blog — Dr. João Pedro Castro",
+  description: "Artigos sobre saúde mental escritos com base na prática clínica e na literatura científica atual.",
+  url: "https://drjoaopedrocastro.com.br/blog",
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: blogPosts.map((post, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `https://drjoaopedrocastro.com.br/blog/${post.slug}`,
+      name: post.title,
+    })),
+  },
+};
 
 const Blog = () => {
   return (
     <div className="min-h-screen">
+      <JsonLd data={blogListJsonLd} />
       <Navbar />
       <section className="pt-28 md:pt-36 pb-16 bg-background">
         <div className="container mx-auto px-4">

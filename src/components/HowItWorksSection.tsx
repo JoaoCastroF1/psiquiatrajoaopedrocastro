@@ -18,7 +18,7 @@ const steps = [
     text: "Com base na avaliação, é definido um plano terapêutico individualizado — com farmacologia explicada, metas claras e cronograma de acompanhamento.",
   },
   {
-    icon: HeadsetIcon,
+    icon: Headset,
     title: "Suporte contínuo",
     text: "Entre as consultas, dúvidas sobre medicação ou sintomas podem ser esclarecidas por WhatsApp. O acompanhamento longitudinal garante ajustes precisos ao longo do tempo.",
   },

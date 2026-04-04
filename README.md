@@ -24,6 +24,15 @@ To run this project locally:
    npm start
    ```
 
+
+## Fluxo de branches
+A organização oficial de branches está documentada em [BRANCHING.md](./BRANCHING.md).
+
+Resumo:
+- `main` para produção
+- `staging` para preview/testes
+- branches de feature com padrão `feat/*`
+
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 

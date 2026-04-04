@@ -1,3 +1,5 @@
+import { Instagram } from "lucide-react";
+
 const Footer = () => {
   return (
     <footer className="bg-graphite">
@@ -22,6 +24,20 @@ const Footer = () => {
         <p className="font-body text-xs text-primary-foreground/50 mb-1">
           Rua dos Timbiras, 1940, sala 1515, Lourdes · Belo Horizonte — MG
         </p>
+        <p className="font-body text-xs text-primary-foreground/40">
+          Horário de atendimento: Seg–Sex · 8h às 18h
+        </p>
+        <div className="flex items-center justify-center gap-4 pt-2">
+          <a
+            href="https://www.instagram.com/drjoaopedrocastro/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 font-body text-xs text-primary-foreground/50 hover:text-primary-foreground/80 transition-colors"
+          >
+            <Instagram className="w-4 h-4" />
+            @drjoaopedrocastro
+          </a>
+        </div>
         <p className="font-body text-xs text-primary-foreground/40 uppercase tracking-[0.15em]">
           Psiquiatra · Psicogeriatria · CRM 83920 · RQE 62148 · RQE 66521
         </p>

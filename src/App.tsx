@@ -9,6 +9,8 @@ import Blog from "./pages/Blog.tsx";
 import Empresas from "./pages/Empresas.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
+import AdminLogin from "./pages/AdminLogin.tsx";
+import Admin from "./pages/Admin.tsx";
 
 const queryClient = new QueryClient();
 

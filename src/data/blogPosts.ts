@@ -80,4 +80,42 @@ export const blogPosts: BlogPost[] = [
       "O sono não é luxo, é um pilar biológico. Se você dorme mal há mais de três meses, com impacto na sua energia, humor ou desempenho diurno, uma avaliação especializada pode identificar causas tratáveis e propor soluções que vão além do \"tome um chá e desligue o celular\".",
     ],
   },
+  {
+    slug: "ansiedade-no-vestibular",
+    tag: "Ansiedade",
+    title: "Ansiedade no vestibular: quando é só pressão e quando é um quadro clínico",
+    excerpt:
+      "Nervosismo antes da prova é esperado. Mas quando a ansiedade trava o raciocínio, rouba o sono e paralisa a rotina de estudos, pode haver um quadro que merece avaliação psiquiátrica.",
+    date: "2 Abr 2026",
+    readTime: "7 min de leitura",
+    content: [
+      "Sentir ansiedade diante de uma prova importante é uma resposta biológica normal. O sistema nervoso reconhece a situação como relevante, libera adrenalina e cortisol, e o corpo se prepara para responder. Em doses adequadas, essa ativação melhora o estado de alerta e pode até favorecer o desempenho. O problema começa quando a ansiedade ultrapassa esse ponto e passa a atrapalhar.",
+      "No contexto do vestibular, a linha entre ansiedade funcional e ansiedade patológica nem sempre é óbvia. A pressão por aprovação, a comparação com colegas, a carga horária de cursinho, a cobrança familiar e a sensação de que o futuro inteiro depende de uma prova criam um cenário propício para o desenvolvimento de quadros ansiosos — especialmente em quem já tem vulnerabilidade biológica.",
+      "Os sinais de que a ansiedade deixou de ser adaptativa incluem: dificuldade persistente de concentração mesmo em ambientes calmos, tensão muscular crônica, irritabilidade desproporcional, crises de choro sem gatilho claro, insônia de início ou manutenção, sensação de aperto no peito, taquicardia em repouso, náuseas antes de simulados e a famosa sensação de 'branco' durante provas — quando o aluno sabe o conteúdo mas não consegue acessá-lo sob pressão.",
+      "Do ponto de vista clínico, esses sintomas podem configurar um Transtorno de Ansiedade Generalizada (TAG), um Transtorno de Pânico ou, em alguns casos, um quadro misto com componentes depressivos. O diagnóstico diferencial é importante porque cada condição tem manejo específico.",
+      "Um aspecto que merece atenção especial é a relação entre ansiedade e sono. Muitos vestibulandos relatam que não conseguem 'desligar a cabeça' à noite, repassam mentalmente conteúdos ou cenários de fracasso, e acordam com sensação de cansaço. Esse padrão de hiperativação noturna prejudica a consolidação da memória — justamente o processo cerebral que transforma estudo em aprendizado duradouro.",
+      "Outro ponto clinicamente relevante é a automedicação. Parte dos estudantes recorre a substâncias para lidar com a pressão: cafeína em doses altas, energéticos, suplementos sem orientação médica e, em alguns casos, estimulantes obtidos sem prescrição. Esse comportamento pode mascarar sintomas, piorar a ansiedade de rebote e criar riscos cardiovasculares e psiquiátricos reais.",
+      "O tratamento da ansiedade em vestibulandos não significa medicalizar o esforço. Significa identificar quando existe um quadro clínico que está impedindo o estudante de funcionar no nível que ele conseguiria se estivesse bem. Em muitos casos, a intervenção combina psicoeducação, ajuste de hábitos de sono e rotina, psicoterapia focada e, quando indicado, medicação por tempo definido.",
+      "Se você estuda na região de Lourdes, em BH, e percebe que a ansiedade está atrapalhando mais do que ajudando, uma avaliação psiquiátrica pode esclarecer o que está acontecendo e indicar o caminho mais adequado para o seu caso. O consultório fica na Rua dos Timbiras, 1940, sala 1515 — perto do Bernoulli, Hplus Med, SOMA, Determinante e outros cursinhos da região.",
+    ],
+  },
+  {
+    slug: "tdah-adultos-jovens-estudos",
+    tag: "TDAH",
+    title: "TDAH em adultos jovens: como identificar quando está atrapalhando seus estudos",
+    excerpt:
+      "Procrastinação crônica, dificuldade de manter foco, sensação de estar sempre atrasado. Em muitos adultos jovens, esses sinais apontam para um TDAH que nunca foi diagnosticado.",
+    date: "2 Abr 2026",
+    readTime: "8 min de leitura",
+    content: [
+      "O TDAH em adultos jovens é uma das condições mais subdiagnosticadas da psiquiatria contemporânea. Muitos estudantes universitários e vestibulandos convivem durante anos com dificuldades que atribuem à falta de disciplina, preguiça ou desorganização pessoal — quando, na verdade, podem ter um transtorno do neurodesenvolvimento que afeta diretamente a capacidade de atenção, planejamento e execução.",
+      "Diferente da imagem clássica da criança hiperativa que não para quieta na sala de aula, o TDAH no adulto jovem costuma se apresentar de forma mais sutil. Os sintomas predominantes são desatenção, dificuldade de organização, procrastinação crônica, sensação de sobrecarga diante de tarefas com muitas etapas, tendência a começar projetos e não terminar, e uma dificuldade persistente de estimar o tempo necessário para completar atividades.",
+      "No contexto de estudos intensivos — como a preparação para vestibulares de Medicina e outros cursos concorridos —, o TDAH pode ser particularmente prejudicial. O estudante com TDAH frequentemente relata que consegue se concentrar em assuntos que lhe interessam (o chamado hiperfoco), mas não consegue sustentar atenção em matérias que considera monótonas ou em revisões longas. Essa inconsistência gera frustração, culpa e, com o tempo, desmotivação.",
+      "Outro padrão comum é a dificuldade com a gestão do tempo. Aulas, simulados, revisões, exercícios e descanso precisam caber em uma semana — e o estudante com TDAH frequentemente subestima o tempo necessário para cada tarefa, posterga atividades importantes em favor de urgências menores e chega ao final do dia com a sensação de que trabalhou muito mas produziu pouco.",
+      "É importante destacar que o TDAH em adultos jovens frequentemente coexiste com outros quadros: ansiedade, depressão, baixa autoestima crônica e dificuldades de regulação emocional. Essa sobreposição pode dificultar o diagnóstico, já que os sintomas se confundem. Um estudante ansioso e desatento pode ter ansiedade primária que prejudica a concentração, TDAH que gera ansiedade secundária, ou ambos os diagnósticos coexistindo. A avaliação psiquiátrica cuidadosa é o que diferencia essas situações.",
+      "O diagnóstico de TDAH em adultos é clínico e exige história detalhada dos sintomas ao longo da vida. Não existe exame de sangue ou de imagem que confirme o transtorno. A avaliação inclui revisão dos sintomas na infância e adolescência, análise do funcionamento atual em diferentes contextos, exclusão de outras condições que mimetizam o TDAH e, frequentemente, informações de familiares que conhecem a trajetória do paciente.",
+      "O tratamento do TDAH, quando bem indicado, costuma ter impacto significativo na qualidade de vida e na capacidade de estudo. A combinação de psicoeducação — entender o que é o transtorno e como ele afeta o funcionamento —, estratégias de organização e planejamento, psicoterapia e, quando indicado, medicação estimulante, oferece resultados consistentes. A resposta à medicação no TDAH é uma das mais robustas da psiquiatria, com eficácia superior a 70% dos casos.",
+      "Se você é estudante na região de Lourdes, em Belo Horizonte, e se identifica com essas dificuldades, uma avaliação pode trazer clareza sobre o que está acontecendo. O consultório do Dr. João Pedro Castro fica na Rua dos Timbiras, 1940, sala 1515 — próximo ao Bernoulli, Hplus Med, SOMA, Determinante e Acerta. Cuidar da saúde mental durante o período de preparação para o vestibular é investir no seu funcionamento, não em um atalho.",
+    ],
+  },
 ];

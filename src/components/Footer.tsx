@@ -17,33 +17,62 @@ const Footer = () => {
         />
       </div>
 
-      <div className="container mx-auto px-4 text-center space-y-3 py-10">
-        <p className="font-display text-lg text-primary-foreground/80">
-          <em className="text-lime">Dr.</em> João Pedro Castro
-        </p>
-        <p className="font-body text-xs text-primary-foreground/50 mb-1">
-          Rua dos Timbiras, 1940, sala 1515, Lourdes · Belo Horizonte — MG
-        </p>
-        <p className="font-body text-xs text-primary-foreground/40">
-          Horário de atendimento: Seg–Sex · 8h às 18h
-        </p>
-        <div className="flex items-center justify-center gap-4 pt-2">
-          <a
-            href="https://www.instagram.com/drjoaopedrocastro/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 font-body text-xs text-primary-foreground/50 hover:text-primary-foreground/80 transition-colors"
-          >
-            <Instagram className="w-4 h-4" />
-            @drjoaopedrocastro
-          </a>
+      <div className="container mx-auto px-4 py-12 md:py-16">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left">
+          {/* Brand */}
+          <div>
+            <p className="font-display text-lg text-primary-foreground/80 mb-2">
+              <em className="text-lime">Dr.</em> João Pedro Castro
+            </p>
+            <p className="font-body text-xs text-primary-foreground/40 uppercase tracking-[0.15em]">
+              Psiquiatra · Psicogeriatra
+            </p>
+            <p className="font-body text-xs text-primary-foreground/40 uppercase tracking-[0.15em] mt-1">
+              CRM 83920 · RQE 62148 · RQE 66521
+            </p>
+          </div>
+
+          {/* Location */}
+          <div>
+            <p className="font-body text-xs uppercase tracking-[0.15em] text-primary-foreground/50 mb-3">
+              Localização
+            </p>
+            <p className="font-body text-sm text-primary-foreground/70 leading-relaxed">
+              Rua dos Timbiras, 1940, sala 1515
+            </p>
+            <p className="font-body text-sm text-primary-foreground/70">
+              Lourdes · Belo Horizonte — MG
+            </p>
+            <p className="font-body text-sm text-primary-foreground/50 mt-2">
+              Seg–Sex · 8h às 18h
+            </p>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <p className="font-body text-xs uppercase tracking-[0.15em] text-primary-foreground/50 mb-3">
+              Contato
+            </p>
+            <p className="font-body text-sm text-primary-foreground/70">
+              (31) 99131-5958
+            </p>
+            <a
+              href="https://www.instagram.com/drjoaopedrocastro/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 font-body text-sm text-primary-foreground/50 hover:text-primary-foreground/80 transition-colors mt-2"
+            >
+              <Instagram className="w-4 h-4" />
+              @drjoaopedrocastro
+            </a>
+          </div>
         </div>
-        <p className="font-body text-xs text-primary-foreground/40 uppercase tracking-[0.15em]">
-          Psiquiatra · Psicogeriatria · CRM 83920 · RQE 62148 · RQE 66521
-        </p>
-        <p className="font-body text-xs text-primary-foreground/30 pt-4">
-          © {new Date().getFullYear()} Dr. João Pedro Castro Martins Farias — Todos os direitos reservados
-        </p>
+
+        <div className="border-t border-primary-foreground/10 mt-10 pt-6">
+          <p className="font-body text-xs text-primary-foreground/25 text-center">
+            © {new Date().getFullYear()} Dr. João Pedro Castro Martins Farias — Todos os direitos reservados
+          </p>
+        </div>
       </div>
     </footer>
   );

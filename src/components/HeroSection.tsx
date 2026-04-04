@@ -38,13 +38,13 @@ const HeroSection = () => {
                 href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] bg-primary text-primary-foreground px-8 py-4 hover:opacity-90 transition-opacity"
+                className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] bg-primary text-primary-foreground px-8 py-4 hover:opacity-90 transition-all hover:shadow-lg"
               >
                 Agendar consulta
               </a>
               <a
                 href="#sobre"
-                className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] border border-foreground/20 text-foreground px-8 py-4 hover:bg-foreground/5 transition-colors"
+                className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] border border-foreground/20 text-foreground px-8 py-4 hover:bg-foreground/5 hover:border-foreground/30 transition-all"
               >
                 Conheça minha abordagem
               </a>
@@ -75,6 +75,23 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Subtle scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2"
+      >
+        <span className="font-body text-[10px] uppercase tracking-[0.2em] text-muted-foreground/40">
+          Role para explorar
+        </span>
+        <motion.div
+          animate={{ y: [0, 6, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+          className="w-px h-8 bg-gradient-to-b from-muted-foreground/30 to-transparent"
+        />
+      </motion.div>
 
       <div className="absolute bottom-0 left-0 right-0 h-px bg-border" />
     </section>

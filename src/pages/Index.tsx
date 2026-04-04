@@ -4,6 +4,7 @@ import AuthorityStrip from "@/components/AuthorityStrip";
 import AboutSection from "@/components/AboutSection";
 import ApproachSection from "@/components/ApproachSection";
 import AudienceSection from "@/components/AudienceSection";
+import StudentsLocalSection from "@/components/StudentsLocalSection";
 import ServicesPreview from "@/components/ServicesPreview";
 import DifferentialsPreview from "@/components/DifferentialsPreview";
 import TestimonialsSection from "@/components/TestimonialsSection";

@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
+
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
 const ContactFormSection = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -26,16 +28,31 @@ const ContactFormSection = () => {
       return;
     }
 
-    const { error: dbError } = await supabase.from("leads").insert({
-      nome,
-      email,
-      telefone,
-      motivo,
-      origem: "formulario_site",
+    if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
+      setError("Formulário indisponível no momento. Tente novamente ou entre em contato pelo WhatsApp.");
+      setLoading(false);
+      return;
+    }
+
+    const response = await fetch(`${SUPABASE_URL}/rest/v1/leads`, {
+      method: "POST",
+      headers: {
+        apikey: SUPABASE_PUBLISHABLE_KEY,
+        Authorization: `Bearer ${SUPABASE_PUBLISHABLE_KEY}`,
+        "Content-Type": "application/json",
+        Prefer: "return=minimal",
+      },
+      body: JSON.stringify({
+        nome,
+        email,
+        telefone,
+        motivo,
+        origem: "formulario_site",
+      }),
     });
 
-    if (dbError) {
-      console.error("Erro ao salvar lead:", dbError);
+    if (!response.ok) {
+      console.error("Erro ao salvar lead:", await response.text());
       setError("Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.");
       setLoading(false);
       return;

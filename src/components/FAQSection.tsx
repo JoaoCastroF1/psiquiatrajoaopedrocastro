@@ -10,7 +10,7 @@ const faqs = [
   {
     question: "Como funciona a primeira consulta psiquiátrica?",
     answer:
-      "A primeira consulta é uma avaliação ampla que dura o tempo necessário para construir uma hipótese diagnóstica fundamentada. Inclui anamnese detalhada, revisão de tratamentos anteriores e análise do contexto de vida. O objetivo é entender o que está acontecendo antes de qualquer prescrição.",
+      "A primeira consulta dura em torno de 1 hora. São colhidas informações sobre sua vida, saúde pessoal e familiar, e a queixa atual. Quando indicado, são solicitados exames laboratoriais para diagnósticos diferenciais. O objetivo é entender o que está acontecendo antes de qualquer prescrição.",
   },
   {
     question: "O atendimento aceita plano de saúde?",

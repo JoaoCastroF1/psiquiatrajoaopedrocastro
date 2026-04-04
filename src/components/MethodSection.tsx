@@ -10,8 +10,8 @@ const pillars = [
     text: "A escolha de cada medicamento é guiada pelo perfil clínico, histórico de resposta a tratamentos prévios e literatura científica atualizada. Cada ajuste é explicado ao paciente com o raciocínio clínico que o sustenta.",
   },
   {
-    title: "Consulta sem pressa",
-    text: "A primeira avaliação dura o tempo necessário para construir uma hipótese diagnóstica fundamentada. Diagnósticos incompletos levam a tratamentos errados por meses. O acompanhamento longitudinal permite ajustes com precisão progressiva.",
+    title: "Consulta de ~1 hora",
+    text: "A primeira avaliação dura em torno de 1 hora, tempo suficiente para construir uma hipótese diagnóstica fundamentada. Diagnósticos incompletos levam a tratamentos errados por meses. O acompanhamento longitudinal permite ajustes com precisão progressiva.",
   },
   {
     title: "Dupla formação em saúde mental",

@@ -10,8 +10,8 @@ const differentials = [
     text: "Após os 60 anos, o cérebro envelhece, o metabolismo de medicamentos muda, os sintomas se apresentam de formas atípicas. Confundir depressão com demência, ou delirium com psicose, tem consequências clínicas sérias. João Pedro realiza consultas domiciliares para pacientes com dificuldade de deslocamento. Para famílias que lidam com quadros avançados, isso não é conveniência: é o que torna o acompanhamento possível.",
   },
   {
-    title: "A primeira consulta dura o tempo que for necessário",
-    text: "O objetivo da avaliação inicial é construir uma hipótese diagnóstica fundamentada, não registrar queixas e prescrever. Isso significa anamnese longa, atenção à história prévia, aos tratamentos que já foram tentados e ao contexto de vida. Diagnósticos incompletos levam a tratamentos errados por meses.",
+    title: "A primeira consulta dura em torno de 1 hora",
+    text: "O objetivo da avaliação inicial é construir uma hipótese diagnóstica fundamentada. São colhidas informações sobre sua vida, saúde pessoal e familiar, e a queixa atual. Quando indicado, exames laboratoriais são solicitados para diagnósticos diferenciais.",
   },
   {
     title: "Psicofarmacologia com raciocínio clínico transparente",

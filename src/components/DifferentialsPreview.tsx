@@ -6,8 +6,8 @@ const highlights = [
     text: "Psiquiatria e Psicogeriatria por programas de referência em MG. Repertório diagnóstico ampliado para quadros que transitam entre a psiquiatria geral e o envelhecimento.",
   },
   {
-    title: "Consulta inicial sem pressa",
-    text: "A primeira avaliação dura o tempo necessário para construir uma hipótese diagnóstica fundamentada. Diagnósticos incompletos levam a tratamentos errados por meses.",
+    title: "Consulta de ~1 hora",
+    text: "A primeira avaliação dura em torno de 1 hora, tempo suficiente para construir uma hipótese diagnóstica fundamentada. Diagnósticos incompletos levam a tratamentos errados por meses.",
   },
   {
     title: "Psicofarmacologia transparente",

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageSquare, ClipboardList, Pill, HeadsetIcon } from "lucide-react";
+import { MessageSquare, ClipboardList, Pill, Headset } from "lucide-react";
 
 const steps = [
   {
@@ -10,7 +10,7 @@ const steps = [
   {
     icon: ClipboardList,
     title: "Avaliação detalhada",
-    text: "A primeira consulta dura o tempo necessário para construir uma hipótese diagnóstica fundamentada. Inclui anamnese completa, revisão de tratamentos anteriores e análise do contexto de vida.",
+    text: "A primeira consulta dura em torno de 1 hora. São colhidas informações sobre sua vida, saúde pessoal e familiar, e a queixa atual. Quando indicado, exames laboratoriais são solicitados para diagnósticos diferenciais.",
   },
   {
     icon: Pill,
@@ -18,7 +18,7 @@ const steps = [
     text: "Com base na avaliação, é definido um plano terapêutico individualizado — com farmacologia explicada, metas claras e cronograma de acompanhamento.",
   },
   {
-    icon: HeadsetIcon,
+    icon: Headset,
     title: "Suporte contínuo",
     text: "Entre as consultas, dúvidas sobre medicação ou sintomas podem ser esclarecidas por WhatsApp. O acompanhamento longitudinal garante ajustes precisos ao longo do tempo.",
   },

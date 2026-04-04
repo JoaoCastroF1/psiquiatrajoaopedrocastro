@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageSquare, ClipboardList, Pill, HeadsetIcon } from "lucide-react";
+import { MessageSquare, ClipboardList, Pill, Headset } from "lucide-react";
 
 const steps = [
   {

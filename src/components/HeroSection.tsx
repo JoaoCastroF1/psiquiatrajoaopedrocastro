@@ -6,9 +6,9 @@ const WA_LINK =
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-end md:items-center bg-background overflow-hidden pt-20">
-      <div className="container mx-auto px-4 py-16 md:py-24">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-end">
+    <section className="relative flex items-center bg-background overflow-hidden pt-20">
+      <div className="container mx-auto px-4 py-12 md:py-20 lg:py-24">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

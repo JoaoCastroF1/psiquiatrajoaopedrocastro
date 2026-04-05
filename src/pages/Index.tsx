@@ -118,7 +118,7 @@ const Index = () => {
       <TestimonialsSection />
       <FAQSection />
       <CTASection />
-      <ContactFormSection />
+      
       <Footer />
       <WhatsAppButton />
     </div>

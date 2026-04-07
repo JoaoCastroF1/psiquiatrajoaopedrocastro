@@ -3,6 +3,7 @@ import ServicesSection from "@/components/ServicesSection";
 import DifferentialsSection from "@/components/DifferentialsSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { motion } from "framer-motion";
 
 const WA_LINK =
@@ -20,6 +21,7 @@ const Atuacao = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
+            <Breadcrumbs items={[{ label: "Áreas de atuação" }]} />
             <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
               Áreas de atuação
             </p>

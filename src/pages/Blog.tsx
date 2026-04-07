@@ -37,6 +37,7 @@ const Blog = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
+            <Breadcrumbs items={[{ label: "Blog" }]} />
             <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
               Conteúdo
             </p>

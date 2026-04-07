@@ -466,3 +466,39 @@ export const blogPosts: BlogPost[] = [
   },
 ];
 
+
+  {
+    slug: "quetiapina-guia-completo",
+    tag: "Medicação",
+    title: "Quetiapina: Para que serve, efeitos colaterais e mitos sobre o uso em psiquiatria",
+    excerpt:
+      "A quetiapina é um antipsicótico atípico usado para esquizofrenia, transtorno bipolar e insônia. Entenda como funciona, suas indicações, riscos e benefícios.",
+    date: "07 Abr 2026",
+    readTime: "4 min de leitura",
+    content: [
+      "A quetiapina é classificada como um antipsicótico de segunda geração (ou atípico). Ela atua no cérebro modulando a atividade de diversos receptores de neurotransmissores, incluindo dopamina (D2), serotonina (5-HT2A e 5-HT1A), histamina (H1) e alfa-adrenérgicos (alfa 1). Essa ação multifacetada permite que a quetiapina seja eficaz em diferentes contextos clínicos.",
+      "A quetiapina possui um amplo espectro de indicações aprovadas, refletindo sua versatilidade na prática psiquiátrica. As principais incluem: Esquizofrenia, Transtorno Bipolar, Depressão Maior (como terapia adjuvante), Transtorno de Ansiedade Generalizada (TAG) e Insônia.",
+      "A dosagem da quetiapina varia amplamente dependendo da condição a ser tratada, da resposta individual do paciente e da formulação. Geralmente, o tratamento é iniciado com doses baixas, que são gradualmente ajustadas pelo médico.",
+      "Como todo medicamento, a quetiapina pode causar efeitos colaterais. Os mais comuns incluem: Sonolência/Sedação, Ganho de Peso, Boca Seca, Tontura e Hipotensão Postural e Aumento do Apetite. É crucial comunicar qualquer sintoma incomum ao seu médico.",
+      "Existem muitos equívocos sobre a quetiapina. É verdade que ela é usada para diversas condições, não apenas esquizofrenia. Não causa dependência física como os benzodiazepínicos, mas a interrupção abrupta pode levar a sintomas de abstinência. Seu uso para insônia deve ser cauteloso e não há evidências de que cause demência.",
+      "A quetiapina é uma ferramenta valiosa na psiquiatria moderna, capaz de trazer alívio significativo para pacientes com transtornos complexos. No entanto, seu uso exige uma avaliação cuidadosa, prescrição individualizada e acompanhamento contínuo por um profissional qualificado."
+    ],
+  },
+  {
+    slug: "trazodona-guia-completo",
+    tag: "Medicação",
+    title: "Trazodona: O que é, como funciona e quando é indicada para insônia e depressão",
+    excerpt:
+      "A trazodona é um antidepressivo atípico eficaz para insônia, depressão e ansiedade. Saiba mais sobre seu mecanismo de ação, indicações e efeitos colaterais.",
+    date: "07 Abr 2026",
+    readTime: "4 min de leitura",
+    content: [
+      "A trazodona é um antidepressivo da classe dos antagonistas e inibidores da recaptação de serotonina (SARI). Seu mecanismo de ação é complexo e multifacetado, envolvendo o antagonismo 5-HT2A, a inibição da recaptação de serotonina e o bloqueio de receptores alfa-1 adrenérgicos e H1 histamínicos.",
+      "A trazodona é indicada para diversas condições, com destaque para: Depressão, Insônia, Ansiedade e Dores Crônicas. Sua ação sedativa pode ser particularmente benéfica para pacientes com depressão que também sofrem de insônia.",
+      "A dosagem da trazodona varia conforme a indicação e a resposta individual do paciente. Geralmente, para insônia, doses mais baixas são utilizadas, enquanto para depressão, doses mais elevadas podem ser necessárias. O medicamento é usualmente tomado à noite, devido ao seu efeito sedativo.",
+      "Os efeitos colaterais da trazodona são geralmente leves a moderados e tendem a diminuir com o tempo. Os mais comuns incluem: Sonolência/Sedação, Tontura e Hipotensão Ortostática, Boca Seca e Náuseas. Um efeito colateral raro, mas grave, é o priapismo.",
+      "É comum haver dúvidas sobre a trazodona. Ela não causa dependência física, mas a interrupção abrupta pode levar a sintomas de descontinuação. É um antidepressivo com indicações para depressão e ansiedade, não apenas um remédio para dormir. Diferente de alguns outros antidepressivos, a trazodona tem um perfil mais favorável em relação à função sexual.",
+      "A trazodona é uma medicação com um perfil único, oferecendo uma alternativa eficaz para o tratamento da depressão, ansiedade e, principalmente, da insônia. Como qualquer medicamento, seu uso deve ser individualizado, com acompanhamento médico rigoroso para garantir a segurança e a eficácia do tratamento."
+    ],
+  }
+];

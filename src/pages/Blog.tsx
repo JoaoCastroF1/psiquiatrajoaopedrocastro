@@ -3,6 +3,7 @@ import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { motion } from "framer-motion";
 import { blogPosts } from "@/data/blogPosts";
 
@@ -36,6 +37,7 @@ const Blog = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
+            <Breadcrumbs items={[{ label: "Blog" }]} />
             <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
               Conteúdo
             </p>

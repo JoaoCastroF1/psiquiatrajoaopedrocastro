@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import RelatedArticles from "@/components/RelatedArticles";
 import { blogPosts } from "@/data/blogPosts";
 
 const WA_LINK =
@@ -16,16 +18,25 @@ const BlogPost = () => {
 
   if (!post) return <Navigate to="/blog" replace />;
 
+  const postUrl = `https://drjoaopedrocastro.com.br/blog/${post.slug}`;
+
   const articleJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "MedicalWebPage",
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
+    url: postUrl,
+    specialty: {
+      "@type": "MedicalSpecialty",
+      name: "Psychiatry",
+    },
     author: {
       "@type": "Person",
       name: "Dr. João Pedro Castro Martins Farias",
       url: "https://drjoaopedrocastro.com.br",
+      jobTitle: "Psiquiatra e Psicogeriatra",
+      description: "CRM 83920 | RQE 62148 | RQE 66521",
     },
     publisher: {
       "@type": "Organization",
@@ -34,7 +45,11 @@ const BlogPost = () => {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://drjoaopedrocastro.com.br/blog/${post.slug}`,
+      "@id": postUrl,
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: [".article-speakable-intro", ".article-speakable-title"],
     },
   };
 
@@ -51,6 +66,13 @@ const BlogPost = () => {
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto"
           >
+            <Breadcrumbs
+              items={[
+                { label: "Blog", href: "/blog" },
+                { label: post.title },
+              ]}
+            />
+
             <Link
               to="/blog"
               className="inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors mb-10"
@@ -69,7 +91,7 @@ const BlogPost = () => {
               </span>
             </div>
 
-            <h1 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-normal text-foreground leading-tight mb-4">
+            <h1 className="article-speakable-title font-display text-3xl md:text-4xl lg:text-[2.75rem] font-normal text-foreground leading-tight mb-4">
               {post.title}
             </h1>
 
@@ -81,7 +103,7 @@ const BlogPost = () => {
               {post.content.map((paragraph, i) => (
                 <p
                   key={i}
-                  className="font-body text-base md:text-[17px] text-foreground/85 leading-[1.85]"
+                  className={`font-body text-base md:text-[17px] text-foreground/85 leading-[1.85]${i === 0 ? " article-speakable-intro" : ""}`}
                 >
                   {paragraph}
                 </p>
@@ -105,6 +127,9 @@ const BlogPost = () => {
                 Agendar consulta
               </a>
             </div>
+
+            {/* Related Articles */}
+            <RelatedArticles currentSlug={post.slug} currentTag={post.tag} />
           </motion.div>
         </div>
       </article>

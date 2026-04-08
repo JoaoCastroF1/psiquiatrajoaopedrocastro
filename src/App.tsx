@@ -7,6 +7,7 @@ import Index from "./pages/Index.tsx";
 import Atuacao from "./pages/Atuacao.tsx";
 import Blog from "./pages/Blog.tsx";
 import Empresas from "./pages/Empresas.tsx";
+import Podcast from "./pages/Podcast.tsx";
 import BlogHub from "./pages/BlogHub.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/blog/tema/:hubSlug" element={<BlogHub />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/empresas" element={<Empresas />} />
+          <Route path="/podcast" element={<Podcast />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

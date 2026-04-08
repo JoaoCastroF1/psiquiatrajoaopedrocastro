@@ -1,4 +1,4 @@
-import { Instagram, Podcast } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -64,15 +64,6 @@ const Footer = () => {
             >
               <Instagram className="w-4 h-4" />
               @joaocastrof
-            </a>
-            <a
-              href="https://open.spotify.com/show/5ydpr79sJQAfaCO788wNrf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-body text-sm text-primary-foreground/50 hover:text-primary-foreground/80 transition-colors mt-1"
-            >
-              <Podcast className="w-4 h-4" />
-              Podcast Antivírus
             </a>
           </div>
         </div>

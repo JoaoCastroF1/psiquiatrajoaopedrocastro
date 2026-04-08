@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
@@ -6,6 +7,7 @@ import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { motion } from "framer-motion";
 import { blogPosts } from "@/data/blogPosts";
+import { blogHubs } from "@/data/blogHubs";
 
 const blogListJsonLd = {
   "@context": "https://schema.org",
@@ -49,6 +51,23 @@ const Blog = () => {
               Artigos sobre saúde mental escritos com base na prática clínica e na literatura científica atual.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Hub navigation */}
+      <section className="pb-8 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap gap-3">
+            {blogHubs.map((hub) => (
+              <Link
+                key={hub.slug}
+                to={`/blog/tema/${hub.slug}`}
+                className="font-body text-xs uppercase tracking-[0.15em] border border-border px-4 py-2 text-muted-foreground hover:text-foreground hover:border-primary/20 transition-colors"
+              >
+                {hub.title}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

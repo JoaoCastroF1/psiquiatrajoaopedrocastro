@@ -854,9 +854,6 @@ export const blogPosts: BlogPost[] = [
       "Se você tem um familiar idoso com mudanças cognitivas, emocionais ou comportamentais, a avaliação psicogeriatria pode oferecer diagnóstico preciso, planejamento terapêutico adequado e orientação familiar estruturada.",
     ],
   },
-];
-
-
   {
     slug: "quetiapina-guia-completo",
     tag: "Medicação",
@@ -890,5 +887,5 @@ export const blogPosts: BlogPost[] = [
       "É comum haver dúvidas sobre a trazodona. Ela não causa dependência física, mas a interrupção abrupta pode levar a sintomas de descontinuação. É um antidepressivo com indicações para depressão e ansiedade, não apenas um remédio para dormir. Diferente de alguns outros antidepressivos, a trazodona tem um perfil mais favorável em relação à função sexual.",
       "A trazodona é uma medicação com um perfil único, oferecendo uma alternativa eficaz para o tratamento da depressão, ansiedade e, principalmente, da insônia. Como qualquer medicamento, seu uso deve ser individualizado, com acompanhamento médico rigoroso para garantir a segurança e a eficácia do tratamento."
     ],
-  }
+  },
 ];

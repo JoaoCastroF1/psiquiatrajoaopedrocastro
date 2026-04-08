@@ -1,4 +1,4 @@
-import { Instagram } from "lucide-react";
+import { Instagram, Podcast } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -57,22 +57,22 @@ const Footer = () => {
               (31) 99131-5958
             </p>
             <a
-              href="https://www.instagram.com/drjoaopedrocastro/"
+              href="https://www.instagram.com/joaocastrof/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 font-body text-sm text-primary-foreground/50 hover:text-primary-foreground/80 transition-colors mt-2"
             >
               <Instagram className="w-4 h-4" />
-              @drjoaopedrocastro
+              @joaocastrof
             </a>
             <a
-              href="https://www.instagram.com/joaocastrof/"
+              href="https://open.spotify.com/show/5ydpr79sJQAfaCO788wNrf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 font-body text-sm text-primary-foreground/50 hover:text-primary-foreground/80 transition-colors mt-1"
             >
-              <Instagram className="w-4 h-4" />
-              @joaocastrof
+              <Podcast className="w-4 h-4" />
+              Podcast Antivírus
             </a>
           </div>
         </div>

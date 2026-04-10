@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
+import PageHead from "@/components/PageHead";
 import { Headphones, ExternalLink, Clock, Calendar } from "lucide-react";
 
 const SPOTIFY_SHOW_URL = "https://open.spotify.com/show/5ydpr79sJQAfaCO788wNrf";
@@ -41,6 +42,11 @@ const podcastJsonLd = {
 const Podcast = () => {
   return (
     <div className="min-h-screen">
+      <PageHead
+        title="Podcast Antivírus — Dr. João Pedro Castro | Psiquiatra em BH"
+        description="Podcast sobre saúde mental, psiquiatria e psicanálise. Conversas sobre diagnóstico, medicação, sofrimento e os desafios da mente contemporânea."
+        url="https://drjoaopedrocastro.com.br/podcast"
+      />
       <JsonLd data={podcastJsonLd} />
       <Navbar />
 

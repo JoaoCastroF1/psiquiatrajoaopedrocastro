@@ -8,6 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { motion } from "framer-motion";
 import { blogPosts } from "@/data/blogPosts";
 import { blogHubs } from "@/data/blogHubs";
+import PageHead from "@/components/PageHead";
 
 const blogListJsonLd = {
   "@context": "https://schema.org",
@@ -29,6 +30,11 @@ const blogListJsonLd = {
 const Blog = () => {
   return (
     <div className="min-h-screen">
+      <PageHead
+        title="Blog — Dr. João Pedro Castro | Psiquiatra em BH"
+        description="Artigos sobre saúde mental escritos com base na prática clínica e na literatura científica atual."
+        url="https://drjoaopedrocastro.com.br/blog"
+      />
       <JsonLd data={blogListJsonLd} />
       <Navbar />
       <section className="pt-28 md:pt-36 pb-16 bg-background">

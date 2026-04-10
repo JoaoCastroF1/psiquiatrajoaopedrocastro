@@ -14,6 +14,7 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
+import PageHead from "@/components/PageHead";
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -105,6 +106,11 @@ const faqJsonLd = {
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <PageHead
+        title="Dr. João Pedro Castro — Psiquiatra e Psicogeriatra em BH"
+        description="Psiquiatra e psicogeriatra em Belo Horizonte. Atendimento para depressão, ansiedade, TDAH, bipolaridade, demências e Alzheimer. CRM 83920."
+        url="https://drjoaopedrocastro.com.br/"
+      />
       <JsonLd data={faqJsonLd} />
       <Navbar />
       <HeroSection />

@@ -8,6 +8,7 @@ import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { blogPosts } from "@/data/blogPosts";
 import { blogHubs } from "@/data/blogHubs";
+import PageHead from "@/components/PageHead";
 
 const BlogHub = () => {
   const { hubSlug } = useParams<{ hubSlug: string }>();
@@ -47,6 +48,11 @@ const BlogHub = () => {
 
   return (
     <div className="min-h-screen">
+      <PageHead
+        title={`${hub.title} — Blog | Dr. João Pedro Castro`}
+        description={hub.metaDescription}
+        url={hubUrl}
+      />
       <JsonLd data={hubJsonLd} />
       <Navbar />
 

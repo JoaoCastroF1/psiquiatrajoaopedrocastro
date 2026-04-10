@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import PageHead from "@/components/PageHead";
 
 const WA_NUMBER = "5531991315958";
 
@@ -134,6 +135,11 @@ const Avaliacao = () => {
 
   return (
     <div className="min-h-screen">
+      <PageHead
+        title="Avaliação de Sintomas — Dr. João Pedro Castro | Psiquiatra em BH"
+        description="Faça uma avaliação rápida dos seus sintomas e descubra se é hora de procurar um psiquiatra. Questionário orientativo gratuito."
+        url="https://drjoaopedrocastro.com.br/avaliacao"
+      />
       <JsonLd data={assessmentJsonLd} />
       <Navbar />
 

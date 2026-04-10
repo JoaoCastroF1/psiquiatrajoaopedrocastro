@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
+import PageHead from "@/components/PageHead";
 import { Headphones, ExternalLink, Clock, Calendar } from "lucide-react";
 
 const SPOTIFY_SHOW_URL = "https://open.spotify.com/show/5ydpr79sJQAfaCO788wNrf";

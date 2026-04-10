@@ -8,6 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { motion } from "framer-motion";
 import { blogPosts } from "@/data/blogPosts";
 import { blogHubs } from "@/data/blogHubs";
+import PageHead from "@/components/PageHead";
 
 const blogListJsonLd = {
   "@context": "https://schema.org",

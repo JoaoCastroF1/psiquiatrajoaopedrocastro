@@ -4,6 +4,7 @@ import DifferentialsSection from "@/components/DifferentialsSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import PageHead from "@/components/PageHead";
 import { motion } from "framer-motion";
 
 const WA_LINK =
@@ -12,6 +13,11 @@ const WA_LINK =
 const Atuacao = () => {
   return (
     <div className="min-h-screen">
+      <PageHead
+        title="Áreas de Atuação — Dr. João Pedro Castro | Psiquiatra em BH"
+        description="Condições tratadas: depressão, ansiedade, TDAH, bipolaridade, demências e Alzheimer. Diagnóstico preciso e farmacologia baseada em evidências."
+        url="https://drjoaopedrocastro.com.br/atuacao"
+      />
       <Navbar />
       <section className="pt-28 md:pt-36 pb-16 bg-background">
         <div className="container mx-auto px-4">

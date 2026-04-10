@@ -48,6 +48,11 @@ const BlogHub = () => {
 
   return (
     <div className="min-h-screen">
+      <PageHead
+        title={`${hub.title} — Blog | Dr. João Pedro Castro`}
+        description={hub.metaDescription}
+        url={hubUrl}
+      />
       <JsonLd data={hubJsonLd} />
       <Navbar />
 

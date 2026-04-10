@@ -56,6 +56,12 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen">
+      <PageHead
+        title={`${post.title} — Dr. João Pedro Castro`}
+        description={post.excerpt}
+        url={postUrl}
+        type="article"
+      />
       <JsonLd data={articleJsonLd} />
       <Navbar />
 

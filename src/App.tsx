@@ -12,6 +12,7 @@ import Avaliacao from "./pages/Avaliacao.tsx";
 import BlogHub from "./pages/BlogHub.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
+import VestibulandoEspecialista from "./pages/VestibulandoEspecialista.tsx";
 
 const queryClient = new QueryClient();
 

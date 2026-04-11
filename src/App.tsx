@@ -12,6 +12,7 @@ import Avaliacao from "./pages/Avaliacao.tsx";
 import BlogHub from "./pages/BlogHub.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
+import VestibulandoEspecialista from "./pages/VestibulandoEspecialista.tsx";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/empresas" element={<Empresas />} />
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/avaliacao" element={<Avaliacao />} />
+          <Route path="/vestibulandos" element={<VestibulandoEspecialista />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

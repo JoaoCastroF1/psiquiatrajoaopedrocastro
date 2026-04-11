@@ -22,6 +22,7 @@ const Navbar = () => {
     { label: "Atuação", href: "/atuacao", isAnchor: false },
     { label: "Empresas", href: "/empresas", isAnchor: false },
     { label: "Podcast", href: "/podcast", isAnchor: false },
+    { label: "Vestibulandos", href: "/vestibulandos", isAnchor: false },
     { label: "Blog", href: "/blog", isAnchor: false },
     { label: "Contato", href: isHome ? "#contato" : "/#contato", isAnchor: isHome },
   ];

@@ -189,7 +189,7 @@ const StudentsLocalSection = () => {
                 </a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="#contato">
+                <a href="/avaliacao">
                   Entender se meus sintomas merecem avaliação
                 </a>
               </Button>

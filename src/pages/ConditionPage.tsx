@@ -1,4 +1,4 @@
-import { useParams, Navigate, Link } from "react-router-dom";
+import { useLocation, Navigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -16,8 +16,9 @@ import {
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const ConditionPage = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const condition = slug ? getConditionBySlug(slug) : undefined;
+  const location = useLocation();
+  const slug = location.pathname.replace("/", "");
+  const condition = getConditionBySlug(slug);
 
   if (!condition) return <Navigate to="/atuacao" replace />;
 

@@ -13,6 +13,7 @@ import BlogHub from "./pages/BlogHub.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
 import VestibulandoEspecialista from "./pages/VestibulandoEspecialista.tsx";
+import ConditionPage from "./pages/ConditionPage.tsx";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,13 @@ const App = () => (
           <Route path="/podcast" element={<Podcast />} />
           <Route path="/avaliacao" element={<Avaliacao />} />
           <Route path="/vestibulandos" element={<VestibulandoEspecialista />} />
+          <Route path="/depressao" element={<ConditionPage />} />
+          <Route path="/ansiedade" element={<ConditionPage />} />
+          <Route path="/tdah" element={<ConditionPage />} />
+          <Route path="/bipolaridade" element={<ConditionPage />} />
+          <Route path="/alzheimer" element={<ConditionPage />} />
+          <Route path="/insonia" element={<ConditionPage />} />
+          <Route path="/estresse-pos-traumatico" element={<ConditionPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

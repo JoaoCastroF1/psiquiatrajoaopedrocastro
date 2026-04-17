@@ -3,20 +3,20 @@ import { CheckCircle2 } from "lucide-react";
 
 const pillars = [
   {
-    title: "Investigação diagnóstica aprofundada",
-    text: "O diagnóstico correto é o alicerce de qualquer tratamento eficaz. A avaliação inclui análise detalhada da história clínica, revisão de hipóteses anteriores e instrumentos de rastreio validados. Quadros sobrepostos — como ansiedade mascarando TDAH ou depressão sobreposta a demência inicial — exigem esse nível de atenção.",
+    title: "Diagnóstico aprofundado",
+    text: "História clínica detalhada, revisão de hipóteses anteriores e instrumentos de rastreio quando indicados. Quadros sobrepostos — ansiedade que esconde TDAH, depressão sobreposta a demência inicial — exigem esse nível de atenção.",
   },
   {
-    title: "Farmacologia baseada em evidências",
-    text: "A escolha de cada medicamento é guiada pelo perfil clínico, histórico de resposta a tratamentos prévios e literatura científica atualizada. Cada ajuste é explicado ao paciente com o raciocínio clínico que o sustenta.",
+    title: "Farmacologia com critério",
+    text: "Cada medicação é escolhida pelo perfil clínico, resposta prévia e literatura atual. O raciocínio por trás de cada ajuste é explicado ao paciente.",
   },
   {
     title: "Consulta de aproximadamente 1 hora",
-    text: "A primeira avaliação dura em torno de 1 hora, tempo suficiente para construir uma hipótese diagnóstica fundamentada. Diagnósticos incompletos levam a tratamentos errados por meses. O acompanhamento longitudinal permite ajustes com precisão progressiva.",
+    text: "Tempo necessário para construir uma hipótese diagnóstica sólida. O acompanhamento ao longo do tempo permite ajustes com precisão progressiva.",
   },
   {
-    title: "Dupla formação em saúde mental",
-    text: "Psiquiatria e Psicogeriatria por programas de referência em MG. Repertório diagnóstico ampliado para quadros que transitam entre a psiquiatria geral e o envelhecimento, com mestrando em Neurociências.",
+    title: "Dupla formação",
+    text: "Psiquiatria e Psicogeriatria por programas de referência em MG, com mestrado em andamento em Neurociências na UFMG.",
   },
 ];
 

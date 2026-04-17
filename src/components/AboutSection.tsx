@@ -42,18 +42,24 @@ const AboutSection = () => {
             <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
               Sobre
             </p>
-            <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-normal text-foreground leading-tight mb-3">
+            <h2 className="font-display text-[1.75rem] md:text-4xl lg:text-[2.5rem] font-normal text-foreground leading-[1.15] mb-3">
               <em className="text-deep-green not-italic">Dr.</em> João Pedro Castro Martins Farias
             </h2>
-            <p className="font-body text-sm md:text-base text-deep-green tracking-wide mb-8">
-              Psiquiatria · Psicogeriatria — CRM-MG 83920 / RQE 62148 / RQE 66521
+            <p className="font-body text-[11px] md:text-xs uppercase tracking-[0.15em] text-deep-green mb-8 md:mb-10">
+              Psiquiatria · Psicogeriatria
+              <span className="block md:inline md:ml-2 text-muted-foreground/80 mt-1 md:mt-0">
+                CRM-MG 83920 · RQE 62148 · RQE 66521
+              </span>
             </p>
 
-            <ul className="space-y-4 mb-10">
+            <ul className="space-y-3 md:space-y-4 mb-10">
               {credentials.map((item, i) => (
-                <li key={i} className="flex gap-3 font-body text-base text-foreground leading-[1.6]">
+                <li
+                  key={i}
+                  className="flex gap-3 font-body text-[15px] md:text-base text-foreground leading-[1.55]"
+                >
                   <Check
-                    className="w-5 h-5 text-deep-green shrink-0 mt-1"
+                    className="w-4 h-4 md:w-5 md:h-5 text-deep-green shrink-0 mt-[5px] md:mt-1"
                     strokeWidth={2.5}
                     aria-hidden="true"
                   />
@@ -62,7 +68,7 @@ const AboutSection = () => {
               ))}
             </ul>
 
-            <div className="space-y-5 font-body text-base text-muted-foreground leading-[1.8] border-t border-border pt-8">
+            <div className="space-y-4 md:space-y-5 font-body text-[15px] md:text-base text-muted-foreground leading-[1.7] md:leading-[1.8] border-t border-border pt-8">
               <p>
                 Atuo na interface entre psiquiatria clínica e neurociências, com interesse particular em transtornos do humor, ansiedade, TDAH no adulto, esquizofrenia, neuropsiquiatria e síndromes demenciais. Minha prática integra rigor diagnóstico, psicofarmacologia baseada em evidências e investigação de quadros que frequentemente passam despercebidos em avaliações superficiais.
               </p>

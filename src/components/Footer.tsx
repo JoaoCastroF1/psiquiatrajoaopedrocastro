@@ -27,8 +27,14 @@ const Footer = () => {
             <p className="font-body text-xs text-primary-foreground/40 uppercase tracking-[0.15em]">
               Psiquiatra · Psicogeriatra
             </p>
-            <p className="font-body text-xs text-primary-foreground/40 uppercase tracking-[0.15em] mt-1">
-              CRM 83920 · RQE 62148 · RQE 66521
+            <p className="font-body text-xs text-primary-foreground/60 uppercase tracking-[0.15em] mt-1">
+              CRM-MG 83920
+            </p>
+            <p className="font-body text-xs text-primary-foreground/60 uppercase tracking-[0.15em]">
+              RQE 62148 (Psiquiatria)
+            </p>
+            <p className="font-body text-xs text-primary-foreground/60 uppercase tracking-[0.15em]">
+              RQE 66521 (Psicogeriatria)
             </p>
           </div>
 

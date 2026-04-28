@@ -46,3 +46,27 @@ Padrão recomendado para novas features:
 - [ ] Build e testes locais executados.
 - [ ] PR aponta para `staging` (ou para `main` apenas em release/hotfix).
 - [ ] Descrição do PR inclui escopo e validação.
+
+## Mensagens de commit (Conventional Commits)
+
+Todo commit deve usar um dos prefixos abaixo, seguido de descrição curta no imperativo:
+
+- `feat:` nova funcionalidade visível ao usuário
+- `fix:` correção de bug
+- `docs:` apenas documentação
+- `chore:` manutenção sem efeito de comportamento (deps, scripts, configs)
+- `refactor:` mudança interna sem alterar comportamento
+- `test:` adicionar ou ajustar testes
+- `style:` formatação, espaçamento, sem mudança de lógica
+- `ci:` pipelines, GitHub Actions, deploy
+
+Exemplos:
+
+```
+feat: adiciona página de condição para TOC
+fix: corrige link quebrado no footer
+chore: atualiza dependências do shadcn
+ci: roda lint e build em PRs
+```
+
+**Não use** mensagens genéricas tipo `Changes`, `Update`, `WIP`. Mensagens precisam contar o que muda — quem ler `git log` daqui a um ano deve entender sem abrir o diff.

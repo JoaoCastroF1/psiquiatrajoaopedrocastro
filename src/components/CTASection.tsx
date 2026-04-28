@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { trackEvent } from "@/lib/analytics";
 
 const WA_LINK =
   "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
@@ -36,6 +37,7 @@ const CTASection = () => {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent("cta_whatsapp_click", { location: "cta_section_consulta" })}
               className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] bg-primary-foreground text-primary px-10 py-4 hover:opacity-90 transition-all hover:shadow-lg"
             >
               Agendar consulta
@@ -44,6 +46,7 @@ const CTASection = () => {
               href={WA_LINK_PROJECTS}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackEvent("cta_whatsapp_click", { location: "cta_section_projetos" })}
               className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] border border-primary-foreground/30 text-primary-foreground px-10 py-4 hover:bg-primary-foreground/10 transition-all"
             >
               Empresas, palestras ou projetos

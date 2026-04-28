@@ -75,7 +75,17 @@ Detalhes em [BRANCHING.md](./BRANCHING.md). Resumo:
 
 ## Deploy
 
-TBD — configuração de hospedagem a documentar.
+Hospedado no **Vercel**. O projeto é conectado a este repositório no GitHub e segue o padrão de Production Branch:
+
+- Push em `main` → deploy automático em produção (`drjoaopedrocastro.com.br`).
+- Push em qualquer outra branch (incluindo `staging` e branches de feature) → deploy de **preview** em URL gerada pelo Vercel, comentada no PR.
+
+Variáveis de ambiente necessárias (configurar nos environments Production e Preview no painel do Vercel):
+
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_PUBLISHABLE_KEY`
+
+O código permanece versionado no GitHub — o Vercel apenas observa os pushes.
 
 ## Contribuindo
 

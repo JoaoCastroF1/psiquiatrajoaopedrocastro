@@ -23,3 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Skills installed via `npx skills add` — content is auto-installed
+# from skills-lock.json, similar to node_modules.
+.agents/
+.claude/

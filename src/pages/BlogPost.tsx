@@ -23,15 +23,15 @@ const BlogPost = () => {
 
   const articleJsonLd = {
     "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
+    "@type": "Article",
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
+    dateModified: post.date,
     url: postUrl,
-    specialty: {
-      "@type": "MedicalSpecialty",
-      name: "Psychiatry",
-    },
+    image: "https://storage.googleapis.com/gpt-engineer-file-uploads/yFToYCs0UngFU2k1vSPCMcxcOri1/social-images/social-1774294559691-109195.webp",
+    articleSection: post.tag,
+    inLanguage: "pt-BR",
     author: {
       "@type": "Person",
       name: "Dr. João Pedro Castro Martins Farias",
@@ -43,6 +43,10 @@ const BlogPost = () => {
       "@type": "Organization",
       name: "Dr. João Pedro Castro",
       url: "https://drjoaopedrocastro.com.br",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://storage.googleapis.com/gpt-engineer-file-uploads/yFToYCs0UngFU2k1vSPCMcxcOri1/social-images/social-1774294559691-109195.webp",
+      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",

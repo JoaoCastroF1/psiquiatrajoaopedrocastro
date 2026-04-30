@@ -50,6 +50,7 @@ const ConditionPage = () => {
     name: condition.metaTitle,
     description: condition.metaDescription,
     url: `https://drjoaopedrocastro.com.br/${condition.slug}`,
+    inLanguage: "pt-BR",
     author: {
       "@type": "Physician",
       name: "Dr. João Pedro Castro",
@@ -58,6 +59,16 @@ const ConditionPage = () => {
     about: {
       "@type": "MedicalCondition",
       name: condition.title,
+      alternateName: condition.tagLabel,
+      description: condition.intro,
+      signOrSymptom: condition.symptoms.map((s) => ({
+        "@type": "MedicalSignOrSymptom",
+        name: s,
+      })),
+      possibleTreatment: condition.approach.map((step) => ({
+        "@type": "MedicalTherapy",
+        description: step,
+      })),
     },
   };
 

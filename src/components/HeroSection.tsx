@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import jpPortrait from "@/assets/jp-portrait.jpg";
+import jpPortraitJpg from "@/assets/jp-portrait.jpg";
+import jpPortraitWebp from "@/assets/jp-portrait.webp";
 
 const WA_LINK =
   "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
@@ -64,12 +65,17 @@ const HeroSection = () => {
             className="order-1 lg:order-2 flex justify-center lg:justify-end"
           >
             <div className="relative w-72 md:w-80 lg:w-[420px]">
-              <img
-                src={jpPortrait}
-                alt="Dr. João Pedro Castro — Psiquiatra e Psicogeriatra em Belo Horizonte"
-                loading="eager"
-                className="w-full aspect-[3/4] object-cover object-top grayscale-[30%] contrast-[1.05]"
-              />
+              <picture>
+                <source srcSet={jpPortraitWebp} type="image/webp" />
+                <img
+                  src={jpPortraitJpg}
+                  alt="Dr. João Pedro Castro — Psiquiatra e Psicogeriatra em Belo Horizonte"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="w-full aspect-[3/4] object-cover object-top grayscale-[30%] contrast-[1.05]"
+                />
+              </picture>
               <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
             </div>
           </motion.div>

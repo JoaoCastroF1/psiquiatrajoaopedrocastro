@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { SpeechBubbleScribble } from "@/components/brand/scribbles/SpeechBubbleScribble";
 
 const faqs = [
   {
@@ -66,8 +67,9 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="faq" className="py-24 md:py-32 bg-background relative overflow-hidden">
+      <SpeechBubbleScribble className="hidden md:block absolute top-12 right-8 lg:right-16 text-graphite/15 w-28 h-28 lg:w-36 lg:h-36 pointer-events-none" />
+      <div className="container mx-auto px-4 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

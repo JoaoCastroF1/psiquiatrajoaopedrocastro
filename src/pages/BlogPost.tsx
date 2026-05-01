@@ -89,7 +89,7 @@ const BlogPost = () => {
             </Link>
 
             <div className="flex items-center gap-4 mb-6">
-              <span className="font-body text-[11px] uppercase tracking-[0.2em] text-steel bg-secondary px-3 py-1">
+              <span className="font-body text-[11px] uppercase tracking-[0.2em] text-muted-foreground bg-secondary px-3 py-1">
                 {post.tag}
               </span>
               <span className="flex items-center gap-1.5 font-body text-xs text-muted-foreground">

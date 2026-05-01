@@ -26,10 +26,10 @@ const HeroSection = () => {
               Para adultos que convivem com depressão, ansiedade, TDAH, bipolaridade ou transtornos do humor. E para famílias que acompanham o declínio cognitivo de alguém que amam. Diagnóstico preciso, farmacologia baseada em evidências e tempo de consulta suficiente para entender o que está acontecendo.
             </p>
             <div className="flex flex-wrap gap-x-6 gap-y-2 mb-10">
-              <span className="font-body text-xs uppercase tracking-[0.12em] text-steel">
+              <span className="font-body text-xs uppercase tracking-[0.12em] text-graphite/70">
                 Atendimento particular
               </span>
-              <span className="font-body text-xs uppercase tracking-[0.12em] text-steel">
+              <span className="font-body text-xs uppercase tracking-[0.12em] text-graphite/70">
                 Nota fiscal emitida para reembolso em planos de saúde
               </span>
             </div>

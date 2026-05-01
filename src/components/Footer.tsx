@@ -1,5 +1,7 @@
 import { Instagram } from "lucide-react";
 
+const COPYRIGHT_YEAR = new Date().getFullYear();
+
 const Footer = () => {
   return (
     <footer className="bg-graphite">
@@ -76,7 +78,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 mt-10 pt-6">
           <p className="font-body text-xs text-primary-foreground/25 text-center">
-            © {new Date().getFullYear()} Dr. João Pedro Castro Martins Farias — Todos os direitos reservados
+            © {COPYRIGHT_YEAR} Dr. João Pedro Castro Martins Farias — Todos os direitos reservados
           </p>
         </div>
       </div>

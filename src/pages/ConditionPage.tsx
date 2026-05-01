@@ -86,7 +86,7 @@ const ConditionPage = () => {
               {condition.headline}{" "}
               <em className="text-deep-green">{condition.headlineAccent}</em>
             </h1>
-            <p className="font-body text-sm uppercase tracking-[0.15em] text-steel mb-8">
+            <p className="font-body text-sm uppercase tracking-[0.15em] text-graphite/70 mb-8">
               {condition.subtitle}
             </p>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mb-8">

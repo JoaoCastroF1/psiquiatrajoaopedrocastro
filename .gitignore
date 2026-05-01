@@ -23,3 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Brand source binaries (Adobe Illustrator). PDFs in docs/brand/ are committed as reference.
+docs/brand/*.ai

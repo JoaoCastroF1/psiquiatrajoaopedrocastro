@@ -42,7 +42,7 @@ const BlogSection = ({ showHeader = true }: BlogSectionProps) => {
                 className="group block border border-border p-8 md:p-10 hover:border-primary/20 transition-colors"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="font-body text-[11px] uppercase tracking-[0.2em] text-steel">
+                  <span className="font-body text-[11px] uppercase tracking-[0.2em] text-graphite/70">
                     {post.tag}
                   </span>
                   <span className="font-body text-[11px] text-muted-foreground">

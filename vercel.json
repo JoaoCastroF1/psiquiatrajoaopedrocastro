@@ -1,0 +1,46 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.drjoaopedrocastro.com.br" }],
+      "destination": "https://drjoaopedrocastro.com.br/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "psiquiatrajoaopedrocastro.lovable.app" }],
+      "destination": "https://drjoaopedrocastro.com.br/$1",
+      "permanent": true
+    },
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/sobre", "destination": "/atuacao", "permanent": true },
+    { "source": "/servicos", "destination": "/atuacao", "permanent": true },
+    { "source": "/contato", "destination": "/avaliacao", "permanent": true },
+    { "source": "/agendamento", "destination": "/avaliacao", "permanent": true },
+    { "source": "/artigos", "destination": "/blog", "permanent": true },
+    { "source": "/artigos/:slug", "destination": "/blog/:slug", "permanent": true },
+    { "source": "/blog/categoria/:slug", "destination": "/blog/tema/:slug", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.(png|jpg|jpeg|webp|svg|ico)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/site.webmanifest",
+      "headers": [
+        { "key": "Content-Type", "value": "application/manifest+json" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    }
+  ]
+}

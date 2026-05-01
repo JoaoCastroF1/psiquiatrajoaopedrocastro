@@ -21,5 +21,6 @@ export default defineConfig({
     formatting: "none",
     crittersOptions: false,
     script: "async",
+    dirStyle: "nested",
   },
 });

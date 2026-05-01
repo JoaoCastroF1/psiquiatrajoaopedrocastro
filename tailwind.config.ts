@@ -60,6 +60,7 @@ export default {
         forest: "hsl(var(--deep-green))",
         coral: "hsl(var(--coral))",
         cyan: "hsl(var(--cyan))",
+        cream: "hsl(var(--cream))",
         "section-alt": "hsl(var(--section-alt))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

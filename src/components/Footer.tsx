@@ -1,5 +1,6 @@
 import { Instagram } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
+import { TangleScribble } from "@/components/brand/scribbles/TangleScribble";
 
 const COPYRIGHT_YEAR = new Date().getFullYear();
 
@@ -24,7 +25,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left">
           {/* Brand */}
           <div>
-            <Logo variant="dark" size="md" highlightDr className="mb-3" />
+            <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+              <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cream shrink-0" aria-hidden="true">
+                <TangleScribble className="w-7 h-7 text-graphite" />
+              </span>
+              <Logo variant="dark" size="md" highlightDr />
+            </div>
             <p className="font-body text-xs text-primary-foreground/40 uppercase tracking-[0.15em]">
               Psiquiatra · Psicogeriatra
             </p>

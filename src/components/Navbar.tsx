@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { Logo } from "@/components/brand/Logo";
 
 const WA_LINK =
   "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
@@ -37,8 +38,8 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <div className="flex flex-col">
-          <Link to="/" className="font-display text-xl md:text-2xl text-foreground tracking-tight leading-tight">
-            <em className="text-deep-green">Dr.</em> João Pedro Castro
+          <Link to="/" aria-label="Página inicial — Dr. João Pedro Castro">
+            <Logo variant="light" size="md" highlightDr />
           </Link>
           <span className="hidden md:block font-body text-[10px] uppercase tracking-[0.15em] text-muted-foreground/70 -mt-0.5">
             Psiquiatra · Psicogeriatra · CRM-MG 83920 · RQE 62148 / 66521

@@ -17,4 +17,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  ssgOptions: {
+    formatting: "none",
+    crittersOptions: false,
+    script: "async",
+  },
 });

@@ -32,7 +32,7 @@ const RelatedArticles = ({ currentSlug, currentTag }: RelatedArticlesProps) => {
             className="group block border border-border p-6 hover:border-primary/20 transition-colors"
           >
             <div className="flex items-center gap-3 mb-2">
-              <span className="font-body text-[11px] uppercase tracking-[0.2em] text-steel">
+              <span className="font-body text-[11px] uppercase tracking-[0.2em] text-graphite/70">
                 {post.tag}
               </span>
               <span className="font-body text-[11px] text-muted-foreground">

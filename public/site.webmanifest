@@ -1,10 +1,10 @@
 {
-    "name": "Dr. João Pedro Castro",
-    "short_name": "Dr. JPC",
+    "name": "Dr. João Pedro Castro — Psiquiatra",
+    "short_name": "Dr. João Pedro",
     "start_url": "/",
     "display": "standalone",
-    "theme_color": "#1E3A24",
-    "background_color": "#F2EAD8",
+    "theme_color": "#1D3B1F",
+    "background_color": "#F4F0E5",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",

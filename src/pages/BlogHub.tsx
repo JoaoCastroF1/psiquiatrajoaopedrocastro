@@ -110,7 +110,7 @@ const BlogHub = () => {
                       className="group block border border-border p-8 md:p-10 hover:border-primary/20 transition-colors"
                     >
                       <div className="flex items-center gap-3 mb-3">
-                        <span className="font-body text-[11px] uppercase tracking-[0.2em] text-steel">
+                        <span className="font-body text-[11px] uppercase tracking-[0.2em] text-graphite/70">
                           {post.tag}
                         </span>
                         <span className="font-body text-[11px] text-muted-foreground">
@@ -145,7 +145,7 @@ const BlogHub = () => {
                   to={`/blog/tema/${h.slug}`}
                   className="group block border border-border p-6 hover:border-primary/20 transition-colors"
                 >
-                  <p className="font-body text-[11px] uppercase tracking-[0.2em] text-steel mb-2">
+                  <p className="font-body text-[11px] uppercase tracking-[0.2em] text-graphite/70 mb-2">
                     {h.highlight}
                   </p>
                   <h3 className="font-display text-lg font-medium text-foreground mb-2">

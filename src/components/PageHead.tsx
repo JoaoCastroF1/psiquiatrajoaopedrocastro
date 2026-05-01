@@ -8,8 +8,7 @@ interface PageHeadProps {
   type?: string;
 }
 
-const DEFAULT_IMAGE =
-  "https://storage.googleapis.com/gpt-engineer-file-uploads/yFToYCs0UngFU2k1vSPCMcxcOri1/social-images/social-1774294559691-109195.webp";
+const DEFAULT_IMAGE = "https://drjoaopedrocastro.com.br/og-image.jpg";
 
 const PageHead = ({
   title,

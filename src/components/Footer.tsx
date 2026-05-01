@@ -1,4 +1,5 @@
 import { Instagram } from "lucide-react";
+import { Logo } from "@/components/brand/Logo";
 
 const COPYRIGHT_YEAR = new Date().getFullYear();
 
@@ -23,9 +24,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left">
           {/* Brand */}
           <div>
-            <p className="font-display text-lg text-primary-foreground/80 mb-2">
-              <em className="text-lime">Dr.</em> João Pedro Castro
-            </p>
+            <Logo variant="dark" size="md" highlightDr className="mb-3" />
             <p className="font-body text-xs text-primary-foreground/40 uppercase tracking-[0.15em]">
               Psiquiatra · Psicogeriatra
             </p>

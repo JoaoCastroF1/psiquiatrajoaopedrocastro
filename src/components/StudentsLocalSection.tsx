@@ -188,7 +188,12 @@ const StudentsLocalSection = () => {
                   Agendar consulta
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg">
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="h-auto min-h-11 whitespace-normal text-center leading-snug py-3"
+              >
                 <a href="/avaliacao">
                   Entender se meus sintomas merecem avaliação
                 </a>

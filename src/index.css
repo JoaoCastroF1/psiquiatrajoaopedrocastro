@@ -61,6 +61,12 @@
     @apply border-border;
   }
 
+  html,
+  body {
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Times New Roman', 'Georgia', serif;

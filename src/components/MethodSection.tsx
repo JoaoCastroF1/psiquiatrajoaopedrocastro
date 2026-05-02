@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
 
 const pillars = [
   {
@@ -47,15 +46,12 @@ const MethodSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-card p-8 border border-border hover:border-primary/20 transition-colors group"
+              className="bg-card p-8 border border-border"
             >
-              <div className="flex items-start gap-3 mb-3">
-                <CheckCircle2 className="w-5 h-5 text-deep-green mt-0.5 flex-shrink-0 opacity-70 group-hover:opacity-100 transition-opacity" />
-                <h3 className="font-display text-lg md:text-xl font-medium text-foreground">
-                  {p.title}
-                </h3>
-              </div>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed pl-8">
+              <h3 className="font-display text-lg md:text-xl font-medium text-foreground mb-3">
+                {p.title}
+              </h3>
+              <p className="font-body text-sm text-foreground/85 leading-relaxed">
                 {p.text}
               </p>
             </motion.div>

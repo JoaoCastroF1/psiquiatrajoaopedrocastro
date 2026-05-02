@@ -102,7 +102,7 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen">
       <PageHead
-        title={`${post.title} — Dr. João Pedro Castro`}
+        title={`${post.metaTitle ?? post.title} — Dr. João Pedro Castro`}
         description={post.excerpt}
         url={postUrl}
         type="article"
@@ -165,14 +165,26 @@ const BlogPost = () => {
             </p>
 
             <div className="space-y-6">
-              {post.content.map((paragraph, i) => (
-                <p
-                  key={i}
-                  className={`font-body text-base md:text-[17px] text-foreground/85 leading-[1.85]${i === 0 ? " article-speakable-intro" : ""}`}
-                >
-                  {paragraph}
-                </p>
-              ))}
+              {post.content.map((paragraph, i) => {
+                if (paragraph.startsWith("## ")) {
+                  return (
+                    <h2
+                      key={i}
+                      className="font-display text-2xl md:text-[1.75rem] font-normal text-foreground leading-tight pt-6 mb-1"
+                    >
+                      {paragraph.slice(3)}
+                    </h2>
+                  );
+                }
+                return (
+                  <p
+                    key={i}
+                    className={`font-body text-base md:text-[17px] text-foreground/85 leading-[1.85]${i === 0 ? " article-speakable-intro" : ""}`}
+                  >
+                    {paragraph}
+                  </p>
+                );
+              })}
             </div>
 
             {/* Author bio — E-E-A-T */}

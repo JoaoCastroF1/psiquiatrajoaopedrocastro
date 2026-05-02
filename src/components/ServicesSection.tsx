@@ -86,12 +86,7 @@ const ServicesSection = ({ showHeader = true }: ServicesSectionProps) => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {areas.map((a, i) => {
-            const palette = [
-              { card: "bg-card", kicker: "bg-deep-green" },
-              { card: "bg-section-alt/60", kicker: "bg-coral" },
-              { card: "bg-salmon/25", kicker: "bg-lime" },
-            ];
-            const { card, kicker } = palette[i % palette.length];
+            const cardBg = ["bg-card", "bg-section-alt/60", "bg-salmon/25"][i % 3];
             return (
               <motion.div
                 key={i}
@@ -99,9 +94,8 @@ const ServicesSection = ({ showHeader = true }: ServicesSectionProps) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                className={`group p-6 md:p-8 ${card}`}
+                className={`p-6 md:p-8 ${cardBg}`}
               >
-                <div className={`w-10 h-1 ${kicker} mb-5 group-hover:w-16 transition-all duration-300`} />
                 <h3 className="font-display text-lg md:text-xl font-medium text-foreground mb-3">
                   {a.title}
                 </h3>

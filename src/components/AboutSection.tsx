@@ -76,12 +76,28 @@ const AboutSection = () => {
             </ul>
 
             <div className="space-y-4 font-body text-[14px] md:text-[15px] text-muted-foreground leading-[1.7] border-t border-border pt-6 md:pt-8">
-              <p>
+              <p className="first-letter:font-display first-letter:text-[3.5rem] md:first-letter:text-[4.5rem] first-letter:float-left first-letter:leading-[0.85] first-letter:mr-2.5 first-letter:mt-1 first-letter:text-deep-green">
                 Atuo na interface entre psiquiatria clínica e neurociências, com interesse particular em transtornos do humor, ansiedade, TDAH no adulto, esquizofrenia, neuropsiquiatria e síndromes demenciais. Minha prática integra rigor diagnóstico, psicofarmacologia baseada em evidências e investigação de quadros que frequentemente passam despercebidos em avaliações superficiais.
               </p>
               <p>
-                Já realizei mais de 3.000 consultas psiquiátricas, com passagem por todos os níveis da Rede de Atenção Psicossocial de Belo Horizonte — urgência, ambulatório e consultório particular. Tenho produção científica publicada em periódicos nacionais e internacionais, incluindo trabalho apresentado no <em>International Psychogeriatrics Congress</em> em Buenos Aires.
+                Tenho produção científica publicada em periódicos nacionais e internacionais, incluindo trabalho apresentado no <em>International Psychogeriatrics Congress</em> em Buenos Aires.
               </p>
+            </div>
+
+            {/* 3.000+ pull stat — separator between bio halves */}
+            <div className="grid grid-cols-[auto_1fr] gap-6 md:gap-8 items-center my-8 md:my-10 py-6 md:py-7 border-y border-border">
+              <span
+                aria-hidden="true"
+                className="font-display text-[3.5rem] md:text-[4.5rem] leading-none text-coral -tracking-[0.02em]"
+              >
+                3.000+
+              </span>
+              <p className="font-body text-[13px] md:text-sm text-muted-foreground leading-snug max-w-xs">
+                consultas psiquiátricas realizadas em urgência, ambulatório e consultório particular — todos os níveis da Rede de Atenção Psicossocial de BH.
+              </p>
+            </div>
+
+            <div className="space-y-4 font-body text-[14px] md:text-[15px] text-muted-foreground leading-[1.7]">
               <p>
                 Acompanho a literatura em áreas ainda pouco exploradas na clínica convencional, como neuromodulação não invasiva e psicoterapia assistida por psicodélicos, e realizo consultas domiciliares para pacientes com dificuldade de deslocamento, especialmente idosos. O objetivo é sempre direto: que cada paciente, e quando necessário cada família, compreenda o que está acontecendo e encontre um caminho concreto de melhora.
               </p>

@@ -1,8 +1,10 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import ConditionStrip from "@/components/ConditionStrip";
 import AuthorityStrip from "@/components/AuthorityStrip";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import AboutSection from "@/components/AboutSection";
+import IntellectualSection from "@/components/IntellectualSection";
 import AudienceSection from "@/components/AudienceSection";
 import StudentsLocalSection from "@/components/StudentsLocalSection";
 import ServicesPreview from "@/components/ServicesPreview";
@@ -114,9 +116,11 @@ const Index = () => {
       <JsonLd data={faqJsonLd} />
       <Navbar />
       <HeroSection />
+      <ConditionStrip />
       <AuthorityStrip />
       <HowItWorksSection />
       <AboutSection />
+      <IntellectualSection />
       <AudienceSection />
       <StudentsLocalSection />
       <ServicesPreview />

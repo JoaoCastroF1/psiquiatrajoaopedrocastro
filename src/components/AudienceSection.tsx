@@ -32,7 +32,7 @@ const AudienceSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-14">
           {audiences.map((a, i) => (
             <motion.div
               key={i}
@@ -40,12 +40,12 @@ const AudienceSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="border-l-2 border-primary/30 pl-8 py-2"
+              className="border-l-2 border-deep-green/40 pl-8 py-2"
             >
-              <h3 className="font-display text-xl md:text-2xl font-medium text-foreground mb-3">
+              <h3 className="font-display text-2xl md:text-3xl font-medium text-foreground mb-4">
                 {a.title}
               </h3>
-              <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">
+              <p className="font-body text-sm md:text-base text-foreground/85 leading-relaxed">
                 {a.description}
               </p>
             </motion.div>

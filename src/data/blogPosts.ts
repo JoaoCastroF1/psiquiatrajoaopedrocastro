@@ -119,7 +119,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "bipolaridade-ciclagem-rapaida",
+    slug: "bipolaridade-ciclagem-rapida",
     tag: "Transtorno Bipolar",
     title: "Ciclagem rápida no transtorno bipolar: o subtipo que mais engana o diagnóstico",
     excerpt:
@@ -605,7 +605,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "lítio-sal-bipolar-gold-standard",
+    slug: "litio-sal-bipolar-gold-standard",
     tag: "Psicofarmacos",
     title: "Lítio: sal mineral que revolucionou o tratamento de transtorno bipolar",
     excerpt:
@@ -625,7 +625,7 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "alprazolam-xanax-panico-anxiety",
+    slug: "alprazolam-xanax-panico",
     tag: "Psicofarmacos",
     title: "Alprazolam (Xanax): benzodiazepínico de ação rápida para ansiedade aguda",
     excerpt:

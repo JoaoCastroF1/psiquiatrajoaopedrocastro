@@ -1,6 +1,8 @@
 import { Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Logo } from "@/components/brand/Logo";
 import { TangleScribble } from "@/components/brand/scribbles/TangleScribble";
+import { blogHubs } from "@/data/blogHubs";
 
 const COPYRIGHT_YEAR = new Date().getFullYear();
 
@@ -81,7 +83,34 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/10 mt-10 pt-6">
+        {/* Blog hubs */}
+        <div className="border-t border-primary-foreground/10 mt-10 pt-8">
+          <p className="font-body text-[11px] uppercase tracking-[0.2em] text-primary-foreground/40 text-center md:text-left mb-4">
+            Conteúdo do blog
+          </p>
+          <nav
+            aria-label="Temas do blog"
+            className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2"
+          >
+            <Link
+              to="/blog"
+              className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground/90 transition-colors"
+            >
+              Todos os artigos
+            </Link>
+            {blogHubs.map((hub) => (
+              <Link
+                key={hub.slug}
+                to={`/blog/tema/${hub.slug}`}
+                className="font-body text-sm text-primary-foreground/60 hover:text-primary-foreground/90 transition-colors"
+              >
+                {hub.title}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        <div className="border-t border-primary-foreground/10 mt-8 pt-6">
           <p className="font-body text-xs text-primary-foreground/25 text-center">
             © {COPYRIGHT_YEAR} Dr. João Pedro Castro Martins Farias — Todos os direitos reservados
           </p>

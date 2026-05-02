@@ -1,24 +1,19 @@
 import { motion } from "framer-motion";
-import { MessageSquare, ClipboardList, Pill, Headset } from "lucide-react";
 
 const steps = [
   {
-    icon: MessageSquare,
     title: "Primeiro contato",
     text: "Você entra em contato pelo formulário ou WhatsApp. A equipe confirma o agendamento e orienta sobre o que trazer para a primeira consulta.",
   },
   {
-    icon: ClipboardList,
     title: "Avaliação detalhada",
     text: "A primeira consulta dura em torno de 1 hora. São colhidas informações sobre sua vida, saúde pessoal e familiar, e a queixa atual. Quando indicado, exames laboratoriais são solicitados para diagnósticos diferenciais.",
   },
   {
-    icon: Pill,
     title: "Plano de tratamento personalizado",
     text: "Com base na avaliação, é definido um plano terapêutico individualizado — com farmacologia explicada, metas claras e cronograma de acompanhamento.",
   },
   {
-    icon: Headset,
     title: "Suporte contínuo",
     text: "Entre as consultas, dúvidas sobre medicação ou sintomas podem ser esclarecidas por WhatsApp. O acompanhamento longitudinal garante ajustes precisos ao longo do tempo.",
   },
@@ -51,29 +46,21 @@ const HowItWorksSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative group"
+              className="relative"
             >
-              {/* Step number + connector line */}
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/15 transition-colors">
-                  <s.icon className="w-5 h-5 text-deep-green" />
-                </div>
-                <span className="font-display text-2xl font-light text-border">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-              </div>
-
-              <h3 className="font-display text-lg font-medium text-foreground mb-2">
+              <span
+                aria-hidden="true"
+                className="font-display italic text-coral text-6xl md:text-7xl leading-none block mb-3"
+              >
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <div className="border-t border-foreground/15 mb-5" />
+              <h3 className="font-display text-lg md:text-xl font-medium text-foreground mb-3">
                 {s.title}
               </h3>
               <p className="font-body text-sm text-muted-foreground leading-relaxed">
                 {s.text}
               </p>
-
-              {/* Connector line for desktop */}
-              {i < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-6 left-[calc(100%+0.5rem)] w-[calc(100%-3rem)] h-px bg-border" />
-              )}
             </motion.div>
           ))}
         </div>

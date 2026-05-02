@@ -54,12 +54,12 @@ const DifferentialsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.06 }}
-              className="bg-card p-8 border border-border hover:border-primary/20 transition-colors"
+              className="bg-card p-8"
             >
               <h3 className="font-display text-lg md:text-xl font-medium text-foreground mb-3">
                 {d.title}
               </h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed">
+              <p className="font-body text-sm text-foreground/85 leading-relaxed">
                 {d.text}
               </p>
             </motion.div>

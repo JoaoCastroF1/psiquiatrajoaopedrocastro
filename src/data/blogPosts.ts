@@ -2,6 +2,7 @@ export interface BlogPost {
   slug: string;
   tag: string;
   title: string;
+  metaTitle?: string;
   excerpt: string;
   date: string;
   readTime: string;
@@ -9,6 +10,45 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "tdah-adultos-diferenciar-ansiedade-depressao",
+    tag: "TDAH",
+    title:
+      "TDAH em adultos: como diferenciar de ansiedade, depressão ou só falta de foco",
+    metaTitle:
+      "TDAH em adultos: como diferenciar de ansiedade e depressão",
+    excerpt:
+      "Procrastinação, mente acelerada e dificuldade de concentração nem sempre são TDAH. O que separa o quadro de ansiedade, depressão e cansaço crônico.",
+    date: "02 Mai 2026",
+    readTime: "9 min de leitura",
+    content: [
+      "Boa parte dos adultos que chegam ao consultório suspeitando de TDAH vem com o mesmo conjunto de queixas: procrastinação que arrasta projetos por meses, dificuldade de concentração mesmo em tarefas que dependem da carreira, sensação constante de funcionamento abaixo da capacidade. Esse perfil sintomático é compatível com TDAH, e também com ansiedade generalizada, com depressão atípica, com transtorno bipolar tipo II em fase eutímica e com cansaço crônico de quem dorme mal há dois anos. A distinção não é trivial, e o autodiagnóstico via internet, embora frequentemente acerte, também produz taxa relevante de falso-positivo.",
+      "## Como o TDAH se apresenta na vida adulta",
+      "A imagem popular do TDAH ainda está colada à criança hiperativa que não para na cadeira. Em adulto, a hiperatividade motora costuma ter migrado para inquietação interna, fala apressada, impulsividade verbal, busca constante por novidade e dificuldade de tolerar tarefas longas e sem retorno imediato. O eixo da queixa adulta é outro: disfunção executiva. Dificuldade de planejar, de iniciar, de sequenciar, de manter o curso, de finalizar. Tarefa pequena que vira projeto adiado por semanas. Mensagem que precisa ser respondida e não consegue ser respondida. Conta que precisa ser paga e fica em uma aba aberta no navegador.",
+      "Junto disso aparece com frequência a desregulação emocional: irritabilidade rápida, frustração intensa frente a obstáculos pequenos, oscilação reativa de humor ao longo do dia. O perfil é diferente do humor cíclico do bipolar e da apreensão crônica do ansioso. Aparece como reatividade aumentada e janela curta de tolerância à frustração. Russell Barkley argumenta há duas décadas que a desregulação emocional deveria fazer parte dos critérios diagnósticos formais, e a literatura atual tende a concordar.",
+      "O hiperfoco completa o quadro. A capacidade paradoxal de atenção sustentada por horas em algo intrinsecamente motivante (videogame, leitura específica, projeto novo) convive com a incapacidade de dedicar quinze minutos a uma planilha do trabalho. A capacidade atencional bruta está preservada. O que falha é a regulação top-down em função de prioridade.",
+      "## Os critérios diagnósticos",
+      "O DSM-5-TR pede cinco ou mais sintomas, em adultos a partir de 17 anos, em pelo menos uma das duas dimensões: desatenção ou hiperatividade-impulsividade. Os sintomas precisam estar presentes desde antes dos 12 anos, manifestar-se em mais de um contexto (trabalho e casa, por exemplo) e produzir prejuízo funcional concreto.",
+      "A exigência do início antes dos 12 anos é o ponto mais ignorado pelo autodiagnóstico via TikTok. Quadro que aparece pela primeira vez aos 28 anos, sem nenhum traço identificável de desatenção ou impulsividade na infância, dificilmente é TDAH. Quase sempre é outra coisa: depressão arrastada, ansiedade somatizada, esgotamento profissional, hipotireoidismo, apneia do sono não tratada, uso problemático de cannabis. A história clínica precisa documentar esses sintomas na infância, ainda que tenham passado despercebidos na época por compensação cognitiva, ambiente escolar permissivo ou diagnóstico que ninguém pensou em fazer.",
+      "## Diagnóstico diferencial: ansiedade, depressão e bipolaridade",
+      "A confusão mais frequente é com ansiedade. O ansioso tem dificuldade de concentração porque o pensamento está sequestrado pela preocupação. Tira a preocupação, o foco volta. O paciente com TDAH tem dificuldade de concentração também na ausência de preocupação, em tarefa neutra, em momento tranquilo. Outra pista: o ansioso costuma ter performance escolar e profissional preservada às custas de esforço desproporcional e perfeccionismo. O paciente com TDAH costuma ter histórico de subdesempenho persistente apesar de capacidade cognitiva alta.",
+      "A depressão lentifica. Quando a queixa de \"não consigo fazer nada\" vem acompanhada de anedonia, hipersonia ou insônia terminal, lentificação psicomotora, rebaixamento de autoestima e ideação ruminativa, o quadro é primariamente depressivo, ainda que o paciente nomeie de TDAH. Muitos adultos com depressão não tratada chegam dizendo \"acho que é TDAH\" porque é diagnóstico mais aceitável socialmente. A condução habitual é tratar a depressão primeiro e reavaliar a função executiva quando o humor se estabiliza.",
+      "O transtorno bipolar tipo II costuma ser confundido com TDAH em pacientes com hipomanias breves não reconhecidas. Mente acelerada, fala apressada, impulsividade, energia variável e irritabilidade compõem o substrato comum. A diferença está na duração e na qualidade do quadro. A hipomania tem curso episódico (dias a semanas de elevação claramente distinta do estado basal), elevação de autoestima, redução de necessidade de sono sem cansaço subsequente, aceleração do pensamento que o próprio paciente percebe como diferente de si mesmo. O TDAH se apresenta como padrão constante desde a infância, sem episódios distintos do estado basal.",
+      "A apneia obstrutiva do sono em adulto com sobrepeso, sono não restaurador e queixa de concentração prejudicada já recebeu o rótulo de TDAH em mais casos do que merece registro. A polissonografia, quando indicada, fecha a questão.",
+      "## Comorbidades",
+      "TDAH dificilmente aparece sozinho na vida adulta. Coortes mostram que cerca de metade dos adultos com TDAH tem transtorno de ansiedade comórbido em algum momento da vida, em torno de um terço tem transtorno depressivo, e o uso problemático de substâncias (especialmente álcool e cannabis) aparece em proporção bem acima da população geral. A comorbidade tende a ser regra, e o tratamento precisa contemplá-la. Tratar só o TDAH em paciente com depressão estabelecida costuma falhar; tratar só a depressão em paciente com TDAH genuíno deixa metade do quadro intocada.",
+      "## Como é feito o diagnóstico",
+      "Não existe exame que confirma TDAH. O diagnóstico é clínico, e uma anamnese bem feita pesa mais que qualquer escala. Em consulta inicial, costumo dedicar entre 60 e 90 minutos para reconstruir a história desde a infância, mapear funcionamento atual no trabalho e nos relacionamentos, descartar diagnósticos diferenciais e investigar comorbidades. Escalas como ASRS-18, WURS-25 e DIVA-5 ajudam, mas funcionam como instrumentos de apoio. Sozinhas, não diagnosticam ninguém.",
+      "Quando a história é ambígua, convém solicitar relato de pais ou irmãos sobre comportamento na infância, revisar boletins escolares antigos, rastrear sono, função tireoidiana, uso de substâncias e histórico psiquiátrico familiar. Em casos selecionados, avaliação neuropsicológica acrescenta dados sobre funções executivas, ainda que testes formais tenham limitação conhecida para confirmar ou descartar TDAH isoladamente.",
+      "## Tratamento",
+      "O tratamento de primeira linha do TDAH adulto é farmacológico, com estimulantes. Metilfenidato (em apresentações de curta e longa duração) e lisdexanfetamina compõem o grupo principal, com taxa de resposta entre 70 e 80 por cento em estudos controlados. A atomoxetina é a alternativa não-estimulante mais robusta, especialmente em pacientes com histórico de uso problemático de substâncias ou ansiedade marcada. Bupropiona aparece como opção off-label em casos selecionados.",
+      "Cuidado com a noção difundida de que estimulante \"vicia\". A literatura atual mostra o oposto: tratamento adequado do TDAH com estimulante reduz o risco de transtorno por uso de substâncias na vida adulta, comparado a paciente com TDAH não tratado. O risco de uso problemático aparece quando há diagnóstico errado ou quando o medicamento é usado fora de prescrição médica.",
+      "Terapia cognitivo-comportamental adaptada para TDAH adulto, focada em estratégias de organização, manejo de tempo e regulação afetiva, é o complemento mais bem documentado para a medicação. O tratamento psicofarmacológico isolado faz a função executiva responder. Combinado com TCC, faz o paciente aprender a usar essa função melhor.",
+      "## Quando vale procurar avaliação",
+      "Quando os sintomas estão presentes desde a infância, atravessam mais de um contexto da vida (trabalho, relacionamentos, finanças, casa) e produzem prejuízo concreto que persiste apesar de tentativas de organização, vale uma avaliação psiquiátrica criteriosa. O diagnóstico bem feito separa o que é TDAH do que é outra coisa, e o tratamento, quando indicado, costuma produzir mudança funcional perceptível em poucas semanas.",
+      "Atendo presencialmente em Lourdes, região central de Belo Horizonte, e por telemedicina para todo o Brasil. A primeira consulta dura entre 60 e 90 minutos.",
+    ],
+  },
   {
     slug: "depressao-ou-tristeza",
     tag: "Depressão",

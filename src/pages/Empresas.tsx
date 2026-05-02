@@ -54,14 +54,14 @@ const Empresas = () => {
               Programas de saúde mental para empresas com{" "}
               <em className="text-deep-green">estrutura clínica e métricas de resultado</em>
             </h1>
-            <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mb-8">
+            <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed max-w-2xl mb-8">
               Burnout, ansiedade ocupacional e afastamentos por transtornos mentais custam caro e, em muitos casos, são evitáveis. A diferença entre uma ação de saúde mental que gera resultado e uma que gera apenas relatório está na estrutura clínica do que é oferecido.
             </p>
             <a
               href={WA_LINK_CORP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] bg-primary text-primary-foreground px-10 py-4 hover:opacity-90 transition-opacity"
+              className="btn btn-primary text-sm px-10 py-4"
             >
               Solicitar proposta
             </a>
@@ -85,7 +85,7 @@ const Empresas = () => {
               Por que saúde mental corporativa precisa de{" "}
               <em className="text-deep-green">embasamento clínico</em>
             </h2>
-            <div className="space-y-5 font-body text-base text-muted-foreground leading-[1.8]">
+            <div className="space-y-5 font-body text-base text-foreground/85 leading-[1.8]">
               <p>
                 Transtornos mentais são a terceira principal causa de afastamento do trabalho no Brasil. Em ambientes de alta pressão, as taxas de burnout, ansiedade e depressão são significativamente superiores à média populacional. A NR-1 passou a exigir que empresas identifiquem e gerenciem riscos psicossociais no ambiente de trabalho.
               </p>
@@ -126,12 +126,12 @@ const Empresas = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="border border-border p-8 md:p-10 hover:border-primary/20 transition-colors"
+                className="bg-card p-8 md:p-10"
               >
                 <h3 className="font-display text-xl md:text-2xl font-medium text-foreground mb-4">
                   {s.title}
                 </h3>
-                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                <p className="font-body text-sm text-foreground/85 leading-relaxed">
                   {s.text}
                 </p>
               </motion.div>
@@ -153,14 +153,14 @@ const Empresas = () => {
               Pronto para estruturar a saúde mental da sua{" "}
               <em className="text-deep-green">equipe?</em>
             </h2>
-            <p className="font-body text-base text-muted-foreground leading-relaxed mb-10">
+            <p className="font-body text-base text-foreground/85 leading-relaxed mb-10">
               Cada programa é desenhado a partir das necessidades da organização. O primeiro passo é uma conversa para entender o cenário e definir o escopo.
             </p>
             <a
               href={WA_LINK_CORP}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] bg-primary text-primary-foreground px-10 py-4 hover:opacity-90 transition-opacity"
+              className="btn btn-primary text-sm px-10 py-4"
             >
               Solicitar proposta
             </a>

@@ -1,51 +1,79 @@
 import { motion } from "framer-motion";
 import jpCoat from "@/assets/jp-coat.jpg";
 
+const credentials = [
+  { area: "Medicina", school: "UFMG" },
+  { area: "Psiquiatria", school: "Hospital Odilon Behrens" },
+  { area: "Psicogeriatria", school: "HC / UFMG" },
+  { area: "Mestrando", school: "Neurociências — UFMG" },
+];
+
 const IntellectualSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-graphite">
+    <section className="py-24 md:py-32 bg-section-alt">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid lg:grid-cols-[5fr_7fr] gap-10 lg:gap-16 items-start">
+          {/* Photo on the LEFT */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
+            className="order-2 lg:order-1"
+          >
+            <img
+              src={jpCoat}
+              alt="Dr. João Pedro Castro — Psiquiatra e Psicogeriatra, jaleco branco"
+              className="brand-photo w-full aspect-[3/4] object-cover object-top"
+              loading="lazy"
+            />
+          </motion.div>
+
+          {/* Body on the RIGHT */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="order-1 lg:order-2"
           >
-            <p className="font-body text-xs uppercase tracking-[0.25em] text-primary-foreground/50 mb-5">
-              Presença intelectual
+            <p className="font-body text-[11px] uppercase tracking-[0.25em] text-muted-foreground mb-5">
+              <span className="text-coral mr-2">II</span> · Sobre o médico
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-normal text-primary-foreground leading-tight mb-8">
-              Medicina, neurociência e uma{" "}
-              <em className="text-lime">visão multidimensional</em> da saúde mental
+            <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-normal text-foreground leading-[1.1] mb-8">
+              Dupla residência médica em{" "}
+              <em className="text-deep-green">saúde mental.</em>
             </h2>
-            <div className="space-y-5 font-body text-base text-primary-foreground/75 leading-[1.8]">
+
+            <div className="space-y-5 font-body text-[15px] text-muted-foreground leading-[1.75] mb-10">
               <p>
-                João Pedro Castro tem formação técnica de alto nível. O que diferencia sua prática clínica é a capacidade de integrar rigor científico com compreensão do contexto de cada paciente. Mestrando em Neurociências, acompanha de perto o que está sendo produzido nas fronteiras da psiquiatria: novos biomarcadores, farmacologia de precisão e abordagens psicoterápicas emergentes.
+                Psiquiatria pelo Hospital Odilon Behrens. Psicogeriatria pelo
+                HC/UFMG. Mestrado em andamento em Neurociências na UFMG. A
+                combinação de duas residências em saúde mental é rara no
+                consultório particular: amplia o repertório diagnóstico,
+                especialmente em quadros que transitam entre a psiquiatria
+                geral e o envelhecimento.
               </p>
               <p>
-                Essa base se traduz em algo concreto para quem está em tratamento: um profissional que explica o raciocínio clínico em cada consulta, revisa hipóteses quando necessário e trata cada caso com a singularidade que ele merece. Dois pacientes com o mesmo diagnóstico raramente precisam do mesmo tratamento.
+                Tenho produção científica publicada em periódicos nacionais e
+                internacionais, incluindo trabalho apresentado no{" "}
+                <em>International Psychogeriatrics Congress</em> em Buenos
+                Aires.
               </p>
             </div>
-          </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="flex justify-center lg:justify-end"
-          >
-            <div className="relative">
-              <img
-                src={jpCoat}
-                alt="Dr. João Pedro Castro — Mestrando em Neurociências pela UFMG, psiquiatra e psicogeriatra"
-                className="brand-photo w-72 md:w-80 lg:w-[380px] aspect-[3/4] object-cover object-top"
-                loading="lazy"
-              />
-              <p className="font-body text-xs text-primary-foreground/40 mt-4 text-center italic">
-                Psiquiatra e psicogeriatra. Residências pelo Odilon Behrens e HC/UFMG. Mestrando em Neurociências.
-              </p>
+            {/* 2×2 credentials grid */}
+            <div className="grid grid-cols-2 gap-x-8 gap-y-5 pt-8 border-t border-border">
+              {credentials.map((c) => (
+                <div key={c.area} className="flex flex-col gap-1">
+                  <span className="font-body text-[10px] uppercase tracking-[0.2em] text-muted-foreground/70">
+                    {c.area}
+                  </span>
+                  <span className="font-display text-base text-foreground leading-snug">
+                    {c.school}
+                  </span>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>

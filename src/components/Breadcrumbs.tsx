@@ -29,7 +29,7 @@ const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
   return (
     <>
       <JsonLd data={breadcrumbJsonLd} />
-      <nav aria-label="Breadcrumb" className="font-body text-xs text-muted-foreground mb-6">
+      <nav aria-label="Breadcrumb" className="font-body text-xs text-foreground/80 mb-6">
         <ol className="flex flex-wrap items-center gap-1.5">
           {fullItems.map((item, i) => (
             <li key={i} className="flex items-center gap-1.5">
@@ -42,7 +42,7 @@ const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
                   {item.label}
                 </Link>
               ) : (
-                <span className="text-foreground/70">{item.label}</span>
+                <span className="text-foreground">{item.label}</span>
               )}
             </li>
           ))}

@@ -201,7 +201,7 @@ const StudentsLocalSection = () => {
             </motion.div>
 
             {/* SEO-friendly hidden text */}
-            <p className="font-body text-[11px] text-muted-foreground/60 leading-relaxed mt-6">
+            <p className="font-body text-[11px] text-foreground/70 leading-relaxed mt-6">
               Psiquiatra em Lourdes, perto do Bernoulli, Hplus Med, SOMA e
               outros cursinhos da região. Avaliação psiquiátrica para ansiedade,
               TDAH, insônia e sofrimento psíquico em estudantes e adultos jovens

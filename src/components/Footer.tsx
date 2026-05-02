@@ -31,23 +31,23 @@ const Footer = () => {
               </span>
               <Logo variant="dark" size="md" highlightDr />
             </div>
-            <p className="font-body text-xs text-primary-foreground/40 uppercase tracking-[0.15em]">
+            <p className="font-body text-xs text-primary-foreground/75 uppercase tracking-[0.15em]">
               Psiquiatra · Psicogeriatra
             </p>
-            <p className="font-body text-xs text-primary-foreground/60 uppercase tracking-[0.15em] mt-1">
+            <p className="font-body text-xs text-primary-foreground/85 uppercase tracking-[0.15em] mt-1">
               CRM-MG 83920
             </p>
-            <p className="font-body text-xs text-primary-foreground/60 uppercase tracking-[0.15em]">
+            <p className="font-body text-xs text-primary-foreground/85 uppercase tracking-[0.15em]">
               RQE 62148 (Psiquiatria)
             </p>
-            <p className="font-body text-xs text-primary-foreground/60 uppercase tracking-[0.15em]">
+            <p className="font-body text-xs text-primary-foreground/85 uppercase tracking-[0.15em]">
               RQE 66521 (Psicogeriatria)
             </p>
           </div>
 
           {/* Location */}
           <div>
-            <p className="font-body text-xs uppercase tracking-[0.15em] text-primary-foreground/50 mb-3">
+            <p className="font-body text-xs uppercase tracking-[0.15em] text-primary-foreground/80 mb-3">
               Localização
             </p>
             <p className="font-body text-sm text-primary-foreground/70 leading-relaxed">
@@ -56,14 +56,14 @@ const Footer = () => {
             <p className="font-body text-sm text-primary-foreground/70">
               Lourdes · Belo Horizonte — MG
             </p>
-            <p className="font-body text-sm text-primary-foreground/50 mt-2">
+            <p className="font-body text-sm text-primary-foreground/80 mt-2">
               Seg–Sex · 8h às 18h
             </p>
           </div>
 
           {/* Contact */}
           <div>
-            <p className="font-body text-xs uppercase tracking-[0.15em] text-primary-foreground/50 mb-3">
+            <p className="font-body text-xs uppercase tracking-[0.15em] text-primary-foreground/80 mb-3">
               Contato
             </p>
             <p className="font-body text-sm text-primary-foreground/70">
@@ -73,7 +73,7 @@ const Footer = () => {
               href="https://www.instagram.com/joaocastrof/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-body text-sm text-primary-foreground/50 hover:text-primary-foreground/80 transition-colors mt-2"
+              className="inline-flex items-center gap-1.5 font-body text-sm text-primary-foreground/80 hover:text-primary-foreground/80 transition-colors mt-2"
             >
               <Instagram className="w-4 h-4" />
               @joaocastrof
@@ -82,7 +82,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/10 mt-10 pt-6">
-          <p className="font-body text-xs text-primary-foreground/25 text-center">
+          <p className="font-body text-xs text-primary-foreground/60 text-center">
             © {COPYRIGHT_YEAR} Dr. João Pedro Castro Martins Farias — Todos os direitos reservados
           </p>
         </div>

@@ -12,7 +12,7 @@ const IntellectualSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-body text-xs uppercase tracking-[0.25em] text-primary-foreground/50 mb-5">
+            <p className="font-body text-xs uppercase tracking-[0.25em] text-primary-foreground/80 mb-5">
               Presença intelectual
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-normal text-primary-foreground leading-tight mb-8">
@@ -43,7 +43,7 @@ const IntellectualSection = () => {
                 className="brand-photo w-72 md:w-80 lg:w-[380px] aspect-[3/4] object-cover object-top"
                 loading="lazy"
               />
-              <p className="font-body text-xs text-primary-foreground/40 mt-4 text-center italic">
+              <p className="font-body text-xs text-primary-foreground/75 mt-4 text-center italic">
                 Psiquiatra e psicogeriatra. Residências pelo Odilon Behrens e HC/UFMG. Mestrando em Neurociências.
               </p>
             </div>

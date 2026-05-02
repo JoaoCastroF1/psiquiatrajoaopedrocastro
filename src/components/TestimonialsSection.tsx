@@ -51,10 +51,10 @@ const credentials = [
   "Belo Horizonte — MG",
 ];
 
-const Stars = () => (
-  <div className="flex gap-0.5 mb-3">
+const Stars = ({ className = "" }: { className?: string }) => (
+  <div className={`flex gap-0.5 ${className}`}>
     {[...Array(5)].map((_, i) => (
-      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+      <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
     ))}
   </div>
 );
@@ -106,18 +106,26 @@ const TestimonialsSection = () => {
           <CarouselContent className="-ml-4">
             {testimonials.map((t, i) => (
               <CarouselItem key={i} className="pl-4 md:basis-1/2 lg:basis-1/3">
-                <div className="bg-card border border-border p-8 h-full flex flex-col">
-                  <Stars />
-                  <p className="font-body text-sm text-foreground leading-relaxed mb-6 flex-1">
-                    "{t.text}"
+                <div className="bg-card border border-border p-8 pt-12 h-full flex flex-col relative">
+                  <span
+                    aria-hidden="true"
+                    className="font-display italic text-coral text-[5rem] md:text-[6rem] leading-[0.7] absolute top-4 left-6 select-none"
+                  >
+                    &ldquo;
+                  </span>
+                  <p className="font-display italic text-base md:text-[17px] text-foreground leading-relaxed mb-6 flex-1 mt-6">
+                    {t.text}
                   </p>
-                  <div>
-                    <p className="font-display text-sm font-medium text-foreground">
-                      {t.name}
-                    </p>
-                    <p className="font-body text-xs text-muted-foreground">
-                      {t.date}
-                    </p>
+                  <div className="flex items-end justify-between gap-4 pt-4 border-t border-border/50">
+                    <div>
+                      <p className="font-display italic text-sm text-foreground">
+                        {t.name}
+                      </p>
+                      <p className="font-body italic text-xs text-muted-foreground">
+                        {t.date}
+                      </p>
+                    </div>
+                    <Stars />
                   </div>
                 </div>
               </CarouselItem>

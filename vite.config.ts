@@ -23,4 +23,4 @@ export default defineConfig({
     script: "async",
     dirStyle: "nested",
   },
-} as any);
+});

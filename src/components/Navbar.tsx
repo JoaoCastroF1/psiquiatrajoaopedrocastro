@@ -73,7 +73,7 @@ const Navbar = () => {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-body text-xs uppercase tracking-[0.15em] bg-primary text-primary-foreground px-5 py-2.5 hover:opacity-90 transition-opacity"
+            className="btn btn-primary text-xs px-5 py-2.5"
           >
             Agendar
           </a>
@@ -114,7 +114,7 @@ const Navbar = () => {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="block font-body text-sm bg-primary text-primary-foreground text-center py-3 mt-4"
+            className="btn btn-primary block text-sm text-center mt-4 py-3"
           >
             Agendar Consulta
           </a>

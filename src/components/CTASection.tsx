@@ -39,7 +39,7 @@ const CTASection = () => {
               href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] bg-primary-foreground text-primary px-10 py-4 hover:opacity-90 transition-all hover:shadow-lg"
+              className="btn btn-lime text-sm px-10 py-4"
             >
               Agendar consulta
             </a>
@@ -47,7 +47,7 @@ const CTASection = () => {
               href={WA_LINK_PROJECTS}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] border border-primary-foreground/30 text-primary-foreground px-10 py-4 hover:bg-primary-foreground/10 transition-all"
+              className="btn text-sm px-10 py-4 border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
             >
               Empresas, palestras ou projetos
             </a>

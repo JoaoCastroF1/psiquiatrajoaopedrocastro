@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Logo } from "@/components/brand/Logo";
+import { MenuScribble } from "@/components/brand/scribbles/MenuScribble";
+import { CloseScribble } from "@/components/brand/scribbles/CloseScribble";
 
 const WA_LINK =
   "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
@@ -41,10 +42,10 @@ const Navbar = () => {
           <Link to="/" aria-label="Página inicial — Dr. João Pedro Castro">
             <Logo variant="light" size="md" highlightDr />
           </Link>
-          <span className="hidden md:block font-body text-[10px] uppercase tracking-[0.15em] text-muted-foreground/70 -mt-0.5">
+          <span className="hidden md:block font-body text-[10px] uppercase tracking-[0.15em] text-foreground/70 -mt-0.5">
             Psiquiatra · Psicogeriatra · CRM-MG 83920 · RQE 62148 / 66521
           </span>
-          <span className="md:hidden font-body text-[9px] uppercase tracking-[0.12em] text-muted-foreground/70 -mt-0.5">
+          <span className="md:hidden font-body text-[9px] uppercase tracking-[0.12em] text-foreground/70 -mt-0.5">
             CRM-MG 83920 · RQE 62148 / 66521
           </span>
         </div>
@@ -82,8 +83,10 @@ const Navbar = () => {
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-foreground"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
         >
-          {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {open ? <CloseScribble className="w-6 h-6" /> : <MenuScribble className="w-6 h-6" />}
         </button>
       </div>
 

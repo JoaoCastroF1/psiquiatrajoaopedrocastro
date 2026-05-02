@@ -166,15 +166,18 @@ const VestibulandoEspecialista = () => {
             className="max-w-3xl"
           >
             <Breadcrumbs items={[{ label: "Vestibulandos" }]} />
-            <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
-              Saúde mental para estudantes
-            </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-normal text-foreground leading-[1.1] mb-8">
-              Quando a pressão do vestibular passa do limite,{" "}
-              <em className="text-deep-green">é hora de avaliar.</em>
+            <span className="inline-block font-body text-[11px] uppercase tracking-[0.18em] bg-coral/15 text-coral px-3 py-1.5 mb-6">
+              Para vestibulandos e estudantes de medicina
+            </span>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-[3.75rem] font-normal text-foreground leading-[1.05] mb-8">
+              Estudar 12 horas por dia{" "}
+              <em className="text-deep-green">não é normal.</em>
+              <br />
+              Funcionar abaixo do potencial,{" "}
+              <em className="text-deep-green">também não.</em>
             </h1>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mb-4">
-              Ansiedade, dificuldade de concentração, insônia e esgotamento são queixas frequentes entre vestibulandos e universitários. Quando esses sintomas comprometem o rendimento, o sono e a qualidade de vida, uma avaliação psiquiátrica pode ajudar a entender o que está acontecendo — e indicar se existe um quadro clínico que merece tratamento.
+              Para vestibulandos e estudantes em fases intensas: ansiedade refratária, insônia crônica, TDAH não diagnosticado, depressão mascarada de cansaço. O objetivo do tratamento não é aumentar nota artificialmente — é tratar o que está atrapalhando funcionamento, sono, foco e estabilidade emocional.
             </p>
             <p className="font-body text-sm text-muted-foreground">
               Consultório em Lourdes, perto dos principais cursinhos de BH.

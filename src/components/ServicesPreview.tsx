@@ -2,21 +2,54 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const highlights: { label: string; href?: string }[] = [
-  { label: "Depressão e depressão resistente", href: "/depressao" },
-  { label: "Transtorno Bipolar", href: "/bipolaridade" },
-  { label: "Ansiedade, pânico e TOC", href: "/ansiedade" },
-  { label: "TDAH em adultos", href: "/tdah" },
-  { label: "Demências e Alzheimer", href: "/alzheimer" },
+const featured = [
+  {
+    title: "Depressão e depressão resistente",
+    description:
+      "Anedonia, isolamento, distimia. Quadros que já passaram por dois ou três antidepressivos sem resposta adequada.",
+    href: "/depressao",
+  },
+  {
+    title: "Transtorno Afetivo Bipolar",
+    description:
+      "Oscilações além do \"estou mal hoje\". Bipolar tipo II com hipomanias sutis. Ciclotimia.",
+    href: "/bipolaridade",
+  },
+  {
+    title: "Ansiedade, pânico, fobia social, TOC",
+    description:
+      "Preocupação que não desliga. Crises de pânico. TOC com pensamentos intrusivos e rituais.",
+    href: "/ansiedade",
+  },
+  {
+    title: "TDAH em adultos",
+    description:
+      "Procrastinação crônica que não é preguiça. Diagnóstico diferencial preciso entre TDAH, ansiedade e bipolaridade.",
+    href: "/tdah",
+  },
+  {
+    title: "Demências e Alzheimer",
+    description:
+      "Investigação cognitiva precoce. Acompanhamento de Alzheimer, demência vascular, frontotemporal e corpos de Lewy.",
+    href: "/alzheimer",
+  },
+  {
+    title: "Insônia e transtornos do sono",
+    description:
+      "Insônia crônica que deteriora humor e cognição. Hipersonia. Síndrome das pernas inquietas.",
+    href: "/insonia",
+  },
+];
+
+const additional: { label: string; href?: string }[] = [
+  { label: "Estresse pós-traumático", href: "/estresse-pos-traumatico" },
   { label: "Transtornos psicóticos" },
   { label: "Autismo em adultos" },
-  { label: "Insônia e transtornos do sono", href: "/insonia" },
   { label: "Transtornos de personalidade" },
-  { label: "Estresse pós-traumático", href: "/estresse-pos-traumatico" },
   { label: "Dependências químicas" },
   { label: "Transtornos alimentares" },
-  { label: "Psicogeriatria", href: "/alzheimer" },
   { label: "Saúde mental corporativa", href: "/empresas" },
+  { label: "Psicogeriatria", href: "/alzheimer" },
 ];
 
 const ServicesPreview = () => {
@@ -38,13 +71,54 @@ const ServicesPreview = () => {
           </h2>
         </motion.div>
 
+        {/* 6-card grid with lime rule accent */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 lg:gap-y-12 mb-16">
+          {featured.map((s, i) => {
+            const Inner = (
+              <>
+                <span
+                  aria-hidden="true"
+                  className="block w-12 h-[3px] bg-lime mb-5"
+                />
+                <h3 className="font-display text-xl md:text-[1.4rem] font-medium text-foreground leading-snug mb-3 group-hover:text-deep-green transition-colors">
+                  {s.title}
+                </h3>
+                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  {s.description}
+                </p>
+              </>
+            );
+            return (
+              <motion.div
+                key={s.title}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.06 }}
+              >
+                {s.href ? (
+                  <Link to={s.href} className="group block">
+                    {Inner}
+                  </Link>
+                ) : (
+                  <div className="group">{Inner}</div>
+                )}
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Additional conditions as chips */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex flex-wrap gap-3 mb-10"
+          className="flex flex-wrap gap-3 mb-10 pt-10 border-t border-border"
         >
-          {highlights.map((h, i) =>
+          <span className="font-body text-xs uppercase tracking-[0.18em] text-muted-foreground self-center mr-2">
+            Também atendo:
+          </span>
+          {additional.map((h, i) =>
             h.href ? (
               <Link
                 key={i}
@@ -56,7 +130,7 @@ const ServicesPreview = () => {
             ) : (
               <span
                 key={i}
-                className="font-body text-sm text-foreground border border-border px-4 py-2 hover:border-primary/30 transition-colors"
+                className="font-body text-sm text-foreground border border-border px-4 py-2 transition-colors"
               >
                 {h.label}
               </span>

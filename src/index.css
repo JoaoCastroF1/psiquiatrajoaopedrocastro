@@ -83,4 +83,9 @@
   .font-body {
     font-family: 'Times New Roman', 'Georgia', serif;
   }
+  /* DJP brand photo treatment: subtle desaturation + warm tint + slight contrast.
+     Aplicado em fotos do Dr. para harmonizar com a paleta cream/forest da marca. */
+  .brand-photo {
+    filter: saturate(0.88) sepia(0.07) contrast(1.04);
+  }
 }

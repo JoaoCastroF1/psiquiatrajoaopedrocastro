@@ -40,7 +40,7 @@ const IntellectualSection = () => {
               <img
                 src={jpCoat}
                 alt="Dr. João Pedro Castro — Mestrando em Neurociências pela UFMG, psiquiatra e psicogeriatra"
-                className="w-72 md:w-80 lg:w-[380px] aspect-[3/4] object-cover object-top grayscale-[15%] brightness-110"
+                className="brand-photo w-72 md:w-80 lg:w-[380px] aspect-[3/4] object-cover object-top"
                 loading="lazy"
               />
               <p className="font-body text-xs text-primary-foreground/40 mt-4 text-center italic">

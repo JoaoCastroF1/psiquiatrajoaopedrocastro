@@ -68,7 +68,7 @@ const HeroSection = () => {
                 src={jpPortrait}
                 alt="Dr. João Pedro Castro — Psiquiatra e Psicogeriatra em Belo Horizonte"
                 loading="eager"
-                className="w-full aspect-[3/4] object-cover object-top grayscale-[30%] contrast-[1.05]"
+                className="brand-photo w-full aspect-[3/4] object-cover object-top"
               />
               <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
             </div>

@@ -89,3 +89,21 @@
     filter: saturate(0.88) sepia(0.07) contrast(1.04);
   }
 }
+
+@layer components {
+  /* DJP button system. Padding/size sao customizaveis no uso (text-xs px-5 py-2.5
+     para nav, text-sm px-8 py-4 para CTAs, etc.) — esta camada define so a forma
+     editorial (sharp corners, uppercase tracking) e a paleta de cada variante. */
+  .btn {
+    @apply inline-flex items-center justify-center font-body uppercase tracking-[0.1em] transition-all;
+  }
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:opacity-90 hover:shadow-lg;
+  }
+  .btn-lime {
+    @apply bg-lime text-graphite hover:opacity-90 hover:shadow-lg;
+  }
+  .btn-ghost {
+    @apply bg-transparent border text-foreground border-foreground/30 hover:bg-foreground/5 hover:border-foreground/60;
+  }
+}

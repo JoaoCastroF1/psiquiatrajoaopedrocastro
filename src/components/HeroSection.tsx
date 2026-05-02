@@ -38,13 +38,13 @@ const HeroSection = () => {
                 href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] bg-primary text-primary-foreground px-8 py-4 hover:opacity-90 transition-all hover:shadow-lg"
+                className="btn btn-primary text-sm px-8 py-4"
               >
                 Agendar consulta
               </a>
               <a
                 href="#sobre"
-                className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] border border-foreground/20 text-foreground px-8 py-4 hover:bg-foreground/5 hover:border-foreground/30 transition-all"
+                className="btn btn-ghost text-sm px-8 py-4"
               >
                 Conheça minha abordagem
               </a>

@@ -4,9 +4,18 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHead from "@/components/PageHead";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 const WA_LINK_CORP =
   "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20programa%20de%20sa%C3%BAde%20mental%20corporativa.";
+
+const includedItems = [
+  "Diagnóstico situacional anônimo",
+  "Palestra in-company (60–90 min)",
+  "Trilha de capacitação para lideranças",
+  "Canal clínico de retaguarda",
+  "Relatórios trimestrais",
+];
 
 const services = [
   {
@@ -37,35 +46,71 @@ const Empresas = () => {
       />
       <Navbar />
 
-      {/* Hero */}
-      <section className="pt-28 md:pt-36 pb-16 bg-background">
+      {/* Hero — split layout with included-services dark card */}
+      <section className="pt-28 md:pt-36 pb-16 md:pb-24 bg-section-alt">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-3xl"
-          >
-            <Breadcrumbs items={[{ label: "Empresas" }]} />
-            <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
-              Saúde mental corporativa
-            </p>
-            <h1 className="font-display text-4xl md:text-5xl font-normal text-foreground leading-tight mb-6">
-              Programas de saúde mental para empresas com{" "}
-              <em className="text-deep-green">estrutura clínica e métricas de resultado</em>
-            </h1>
-            <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed max-w-2xl mb-8">
-              Burnout, ansiedade ocupacional e afastamentos por transtornos mentais custam caro e, em muitos casos, são evitáveis. A diferença entre uma ação de saúde mental que gera resultado e uma que gera apenas relatório está na estrutura clínica do que é oferecido.
-            </p>
-            <a
-              href={WA_LINK_CORP}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary text-sm px-10 py-4"
+          <Breadcrumbs items={[{ label: "Empresas" }]} />
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-start mt-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
             >
-              Solicitar proposta
-            </a>
-          </motion.div>
+              <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
+                Saúde mental corporativa
+              </p>
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal text-foreground leading-[1.05] mb-6">
+                Burnout não se resolve com{" "}
+                <em className="text-deep-green">workshop de mindfulness.</em>
+              </h1>
+              <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed max-w-xl mb-8">
+                Programas, palestras e consultoria para empresas que querem lidar com burnout, ansiedade ocupacional e afastamentos com embasamento clínico — não com pop-psicologia. Diagnóstico situacional, intervenções com lógica científica, resultados acompanháveis.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={WA_LINK_CORP}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary text-sm px-8 py-4"
+                >
+                  Solicitar proposta
+                </a>
+                <a
+                  href={WA_LINK_CORP}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-ghost text-sm px-8 py-4"
+                >
+                  Conversar antes
+                </a>
+              </div>
+            </motion.div>
+
+            <motion.aside
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.15 }}
+              className="bg-graphite text-cream p-8 md:p-10"
+              aria-label="O que está incluído nos programas"
+            >
+              <p className="font-body text-[11px] uppercase tracking-[0.18em] text-cream/55 mb-6">
+                O que está incluído
+              </p>
+              <ul className="divide-y divide-cream/10">
+                {includedItems.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center justify-between gap-4 py-4 first:pt-0 last:pb-0"
+                  >
+                    <span className="font-display italic text-base md:text-lg text-cream leading-snug">
+                      {item}
+                    </span>
+                    <ArrowRight className="w-4 h-4 text-lime shrink-0" aria-hidden="true" />
+                  </li>
+                ))}
+              </ul>
+            </motion.aside>
+          </div>
         </div>
       </section>
 

@@ -1,0 +1,200 @@
+/* Dr. João Pedro Castro — Design Tokens
+   Reverse-engineered from src/index.css + tailwind.config.ts
+   HSL values exactly as in the live site, plus harmonious extensions. */
+
+:root {
+  /* Core palette — original */
+  --bg: hsl(38 35% 92%);              /* cream */
+  --bg-alt: hsl(38 30% 89%);          /* section alt */
+  --card: hsl(38 35% 94%);
+  --fg: hsl(252 8% 17%);              /* graphite (foreground) */
+  --fg-muted: hsl(252 6% 40%);
+  --fg-subtle: hsl(252 6% 55%);
+  --border: hsl(38 18% 82%);
+
+  --primary: hsl(122 35% 17%);        /* deep green / forest */
+  --primary-fg: hsl(38 35% 92%);
+  --lime: hsl(67 95% 65%);            /* accent */
+  --coral: hsl(14 89% 62%);
+  --salmon: hsl(14 100% 87%);
+  --cyan: hsl(185 60% 67%);
+  --cream: hsl(38 35% 92%);
+  --graphite: hsl(252 8% 17%);
+
+  /* Typography */
+  --font-display: 'Times New Roman', 'Georgia', serif;
+  --font-body: 'Times New Roman', 'Georgia', serif;
+
+  --radius: 0; /* sharp corners — editorial */
+}
+
+/* Palette variants, swappable via Tweaks */
+.palette-classic {
+  --bg: hsl(38 35% 92%);
+  --bg-alt: hsl(38 30% 89%);
+  --card: hsl(38 35% 94%);
+  --fg: hsl(252 8% 17%);
+  --fg-muted: hsl(252 6% 40%);
+  --primary: hsl(122 35% 17%);
+  --primary-fg: hsl(38 35% 92%);
+  --lime: hsl(67 95% 65%);
+  --coral: hsl(14 89% 62%);
+  --border: hsl(38 18% 82%);
+}
+
+.palette-clinic {
+  /* lighter, calmer — bone + slate + muted teal */
+  --bg: hsl(40 25% 95%);
+  --bg-alt: hsl(40 20% 91%);
+  --card: hsl(40 25% 97%);
+  --fg: hsl(215 25% 18%);
+  --fg-muted: hsl(215 15% 40%);
+  --primary: hsl(195 35% 25%);
+  --primary-fg: hsl(40 25% 95%);
+  --lime: hsl(48 95% 70%);
+  --coral: hsl(8 75% 60%);
+  --border: hsl(40 15% 85%);
+}
+
+.palette-bold {
+  /* high contrast — almost monochrome with a single coral accent */
+  --bg: hsl(40 30% 94%);
+  --bg-alt: hsl(40 20% 88%);
+  --card: hsl(40 30% 96%);
+  --fg: hsl(0 0% 8%);
+  --fg-muted: hsl(0 0% 35%);
+  --primary: hsl(0 0% 8%);
+  --primary-fg: hsl(40 30% 94%);
+  --lime: hsl(50 100% 60%);
+  --coral: hsl(10 85% 55%);
+  --border: hsl(0 0% 80%);
+}
+
+.palette-dusk {
+  /* warm dark — for the bold/dusk hero variant */
+  --bg: hsl(120 15% 10%);
+  --bg-alt: hsl(120 12% 14%);
+  --card: hsl(120 12% 14%);
+  --fg: hsl(38 35% 92%);
+  --fg-muted: hsl(38 15% 70%);
+  --primary: hsl(67 95% 65%);
+  --primary-fg: hsl(120 15% 10%);
+  --lime: hsl(67 95% 65%);
+  --coral: hsl(14 89% 75%);
+  --border: hsl(120 10% 22%);
+}
+
+/* Type variants */
+.type-classic {
+  --font-display: 'Times New Roman', 'Georgia', serif;
+  --font-body: 'Times New Roman', 'Georgia', serif;
+}
+.type-modern {
+  --font-display: 'Fraunces', 'Times New Roman', serif;
+  --font-body: 'Inter', 'Helvetica', sans-serif;
+}
+.type-grotesk {
+  --font-display: 'GT Sectra', 'Times New Roman', serif;
+  --font-body: 'Söhne', 'Inter', sans-serif;
+}
+.type-mono {
+  --font-display: 'IBM Plex Serif', Georgia, serif;
+  --font-body: 'IBM Plex Mono', monospace;
+}
+
+/* Density */
+.density-roomy { --section-y: 7rem; --gap: 2.5rem; }
+.density-default { --section-y: 5rem; --gap: 2rem; }
+.density-compact { --section-y: 3.25rem; --gap: 1.25rem; }
+
+/* Shared element classes */
+.djp-body { font-family: var(--font-body); color: var(--fg); background: var(--bg); }
+.djp-display { font-family: var(--font-display); }
+
+.djp-eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--fg-muted);
+}
+
+.djp-h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--fg);
+}
+.djp-h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  line-height: 1.12;
+  color: var(--fg);
+}
+.djp-h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+.djp-em {
+  font-style: italic;
+  color: var(--primary);
+}
+
+.djp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  padding: 14px 28px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 200ms ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.djp-btn-primary {
+  background: var(--primary);
+  color: var(--primary-fg);
+}
+.djp-btn-primary:hover { opacity: 0.9; }
+.djp-btn-lime {
+  background: var(--lime);
+  color: var(--graphite);
+}
+.djp-btn-ghost {
+  background: transparent;
+  border-color: color-mix(in srgb, var(--fg) 30%, transparent);
+  color: var(--fg);
+}
+.djp-btn-ghost:hover { border-color: var(--fg); }
+
+.djp-rule {
+  width: 32px; height: 1px;
+  background: color-mix(in srgb, var(--primary) 40%, transparent);
+}
+
+/* Subtle paper grain to add warmth without imagery */
+.paper {
+  background-image:
+    radial-gradient(circle at 30% 40%, rgba(0,0,0,0.012) 1px, transparent 1px),
+    radial-gradient(circle at 70% 60%, rgba(0,0,0,0.012) 1px, transparent 1px);
+  background-size: 18px 18px, 22px 22px;
+}
+
+/* Brand photo treatment from the live site */
+.brand-photo {
+  filter: saturate(0.88) sepia(0.07) contrast(1.04);
+}
+
+::selection {
+  background: hsl(67 95% 65% / 0.45);
+  color: hsl(252 8% 17%);
+}

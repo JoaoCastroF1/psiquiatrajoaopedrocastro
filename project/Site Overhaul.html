@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<title>Dr. João Pedro Castro — Site Overhaul</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<style>
+  html, body { margin: 0; padding: 0; background: #f0eee9; }
+  body { font-family: var(--font-body); color: var(--fg); }
+  /* Reset for in-canvas artboards which are absolute-positioned screens */
+  .djp-body { background: var(--bg); position: relative; }
+  .djp-body.paper { background:
+    radial-gradient(ellipse at top, color-mix(in srgb, var(--bg) 100%, transparent) 0%, var(--bg) 60%);
+  }
+  /* photos */
+  .brand-photo {
+    filter: grayscale(0.15) contrast(1.02);
+    background: var(--bg-alt);
+  }
+  /* responsive guard inside artboards */
+  .djp-body * { box-sizing: border-box; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="shared.jsx"></script>
+<script type="text/babel" src="home-editorial.jsx"></script>
+<script type="text/babel" src="home-manuscript.jsx"></script>
+<script type="text/babel" src="home-clinical.jsx"></script>
+<script type="text/babel" src="subpages.jsx"></script>
+
+<script type="text/babel">
+const { useState } = React;
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "palette": "default",
+  "displayFont": "cormorant",
+  "bodyFont": "geist",
+  "showPhoto": true,
+  "heroCopy": "default",
+  "ctaPlacement": "left",
+  "density": "tight"
+}/*EDITMODE-END*/;
+
+function Frame({ children, label, w = 1280, h = 900 }) {
+  // Just renders the page mock at fixed size inside an artboard
+  return (
+    <div style={{
+      width: w, height: h, overflow: "hidden",
+      position: "relative", background: "var(--bg)",
+      isolation: "isolate",
+    }}>
+      <div style={{ position: "absolute", inset: 0, overflow: "auto" }}>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+  // Apply palette + font swaps via root vars
+  React.useEffect(() => {
+    const root = document.documentElement;
+    const palettes = {
+      default: { primary: "#1d3b1f", coral: "#c96442", lime: "#d8e94a", bg: "#f5f1e8" },
+      forest:  { primary: "#0f2f1a", coral: "#b85638", lime: "#cfe14e", bg: "#efeadd" },
+      mono:    { primary: "#1a1a1a", coral: "#666666", lime: "#dddddd", bg: "#fafafa" },
+      bold:    { primary: "#1d3b1f", coral: "#e85a3c", lime: "#e8ff00", bg: "#fff8e1" },
+    };
+    const p = palettes[tweaks.palette] || palettes.default;
+    root.style.setProperty("--primary", p.primary);
+    root.style.setProperty("--coral", p.coral);
+    root.style.setProperty("--lime", p.lime);
+    root.style.setProperty("--bg", p.bg);
+
+    const displayFonts = {
+      cormorant: "'Cormorant Garamond', Georgia, serif",
+      instrument: "'Instrument Serif', Georgia, serif",
+    };
+    const bodyFonts = {
+      geist: "'Geist', system-ui, sans-serif",
+      instrumentSans: "'Instrument Sans', system-ui, sans-serif",
+    };
+    root.style.setProperty("--font-display", displayFonts[tweaks.displayFont] || displayFonts.cormorant);
+    root.style.setProperty("--font-body", bodyFonts[tweaks.bodyFont] || bodyFonts.geist);
+    root.style.setProperty("--section-y", tweaks.density === "tight" ? "4rem" : tweaks.density === "loose" ? "7rem" : "5.5rem");
+  }, [tweaks]);
+
+  return (
+    <>
+      <DesignCanvas>
+        <DCSection id="home" title="Home — three directions" subtitle="Three takes on the front page. Same ingredients, different temperaments. The Tweaks panel changes brand-wide settings.">
+          <DCArtboard id="home-a" label="A · Editorial — refined current direction" width={1280} height={2400}>
+            <Frame w={1280} h={2400}><HomeEditorial tweaks={tweaks} /></Frame>
+          </DCArtboard>
+          <DCArtboard id="home-b" label="B · Manuscript — bold serif essay" width={1280} height={2400}>
+            <Frame w={1280} h={2400}><HomeManuscript tweaks={tweaks} /></Frame>
+          </DCArtboard>
+          <DCArtboard id="home-c" label="C · Clínica — split hero, pragmatic" width={1280} height={1100}>
+            <Frame w={1280} h={1100}><HomeClinical tweaks={tweaks} /></Frame>
+          </DCArtboard>
+        </DCSection>
+
+        <DCSection id="funnel" title="Patient funnel" subtitle="Avaliação inicial — a low-pressure step before WhatsApp. Replaces the generic contact form.">
+          <DCArtboard id="aval" label="Avaliação Inicial · 4-step intake" width={1280} height={1100}>
+            <Frame w={1280} h={1100}><AvaliacaoPage /></Frame>
+          </DCArtboard>
+        </DCSection>
+
+        <DCSection id="audiences" title="Audience pages" subtitle="Distinct entry points that the current site mostly buries on the home page.">
+          <DCArtboard id="empresas" label="Empresas — saúde mental corporativa" width={1280} height={1200}>
+            <Frame w={1280} h={1200}><EmpresasPage /></Frame>
+          </DCArtboard>
+          <DCArtboard id="vest" label="Vestibulandos & estudantes" width={1280} height={1200}>
+            <Frame w={1280} h={1200}><VestibulandosPage /></Frame>
+          </DCArtboard>
+          <DCArtboard id="cond" label="Área de atuação · Depressão (template)" width={1280} height={1300}>
+            <Frame w={1280} h={1300}><ConditionPage /></Frame>
+          </DCArtboard>
+        </DCSection>
+
+        <DCSection id="content" title="Content surfaces" subtitle="Blog and podcast — to support the authority claim, not just decorate it.">
+          <DCArtboard id="blog" label="Blog hub — clinical notes" width={1280} height={1300}>
+            <Frame w={1280} h={1300}><BlogHubPage /></Frame>
+          </DCArtboard>
+          <DCArtboard id="pod" label="Podcast — long-form interviews" width={1280} height={1300}>
+            <Frame w={1280} h={1300}><PodcastPage /></Frame>
+          </DCArtboard>
+        </DCSection>
+      </DesignCanvas>
+
+      <TweaksPanel title="Tweaks">
+        <TweakSection title="Brand">
+          <TweakRadio label="Palette" value={tweaks.palette} onChange={v => setTweak("palette", v)}
+            options={[
+              { value: "default", label: "Sage" },
+              { value: "forest",  label: "Forest" },
+              { value: "mono",    label: "Mono" },
+              { value: "bold",    label: "Bold" },
+            ]} />
+          <TweakRadio label="Display font" value={tweaks.displayFont} onChange={v => setTweak("displayFont", v)}
+            options={[
+              { value: "cormorant", label: "Cormorant" },
+              { value: "instrument", label: "Instrument" },
+            ]} />
+          <TweakRadio label="Body font" value={tweaks.bodyFont} onChange={v => setTweak("bodyFont", v)}
+            options={[
+              { value: "geist", label: "Geist" },
+              { value: "instrumentSans", label: "Instrument" },
+            ]} />
+          <TweakRadio label="Density" value={tweaks.density} onChange={v => setTweak("density", v)}
+            options={[
+              { value: "tight", label: "Tight" },
+              { value: "comfortable", label: "Comfort" },
+              { value: "loose", label: "Loose" },
+            ]} />
+        </TweakSection>
+        <TweakSection title="Home A · Editorial">
+          <TweakToggle label="Show portrait in hero" value={tweaks.showPhoto} onChange={v => setTweak("showPhoto", v)} />
+          <TweakSelect label="Hero copy" value={tweaks.heroCopy} onChange={v => setTweak("heroCopy", v)}
+            options={[
+              { value: "default", label: "Ciência + escuta" },
+              { value: "direct", label: "Tempo que exige" },
+              { value: "clinical", label: "1h, conduta explicada" },
+              { value: "family", label: "Para quem percebeu" },
+            ]} />
+          <TweakRadio label="CTA position" value={tweaks.ctaPlacement} onChange={v => setTweak("ctaPlacement", v)}
+            options={[
+              { value: "left", label: "Left" },
+              { value: "center", label: "Center" },
+            ]} />
+        </TweakSection>
+      </TweaksPanel>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>

@@ -27,8 +27,7 @@ const BlogSection = ({ showHeader = true }: BlogSectionProps) => {
               Conteúdo
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-              Informação com{" "}
-              <em className="text-deep-green">fundamento clínico</em>
+              Informação com <em>fundamento clínico</em>
             </h2>
           </motion.div>
         )}

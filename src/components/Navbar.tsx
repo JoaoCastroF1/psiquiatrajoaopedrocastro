@@ -38,25 +38,28 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <div className="flex flex-col">
+        <div className="flex flex-col min-w-0">
           <Link to="/" aria-label="Página inicial — Dr. João Pedro Castro">
             <Logo variant="light" size="md" highlightDr />
           </Link>
-          <span className="hidden md:block font-body text-[10px] uppercase tracking-[0.15em] text-foreground/70 -mt-0.5">
+          <span className="hidden xl:block font-body text-[10px] uppercase tracking-[0.15em] text-foreground/70 -mt-0.5 whitespace-nowrap">
             Psiquiatra · Psicogeriatra · CRM-MG 83920 · RQE 62148 / 66521
           </span>
-          <span className="md:hidden font-body text-[9px] uppercase tracking-[0.12em] text-foreground/70 -mt-0.5">
+          <span className="hidden lg:block xl:hidden font-body text-[10px] uppercase tracking-[0.15em] text-foreground/70 -mt-0.5 whitespace-nowrap">
+            CRM-MG 83920 · RQE 62148 / 66521
+          </span>
+          <span className="lg:hidden font-body text-[9px] uppercase tracking-[0.12em] text-foreground/70 -mt-0.5">
             CRM-MG 83920 · RQE 62148 / 66521
           </span>
         </div>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
           {links.map((l) =>
             l.isAnchor ? (
               <a
                 key={l.label}
                 href={l.href}
-                className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors"
+                className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
               >
                 {l.label}
               </a>
@@ -64,7 +67,7 @@ const Navbar = () => {
               <Link
                 key={l.label}
                 to={l.href}
-                className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors"
+                className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
               >
                 {l.label}
               </Link>
@@ -74,7 +77,7 @@ const Navbar = () => {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary text-xs px-5 py-2.5"
+            className="btn btn-primary text-xs px-5 py-2.5 whitespace-nowrap"
           >
             Agendar
           </a>
@@ -82,7 +85,7 @@ const Navbar = () => {
 
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-foreground"
+          className="lg:hidden text-foreground"
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
         >
@@ -91,7 +94,7 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="md:hidden bg-background border-t border-border px-4 pb-6">
+        <div className="lg:hidden bg-background border-t border-border px-4 pb-6">
           {links.map((l) =>
             l.isAnchor ? (
               <a

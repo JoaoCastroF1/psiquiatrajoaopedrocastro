@@ -21,8 +21,8 @@ const sizeClasses: Record<LogoSize, string> = {
 // closes the lockup — they are a visual pair in the manual and travel together.
 const variantStyle: Record<LogoVariant, { body: string; drDefault: string; drAccent: string }> = {
   light:  { body: "text-graphite",   drDefault: "text-graphite",   drAccent: "text-deep-green" },
-  dark:   { body: "text-cream",      drDefault: "text-cream",      drAccent: "text-lime" },
-  forest: { body: "text-lime",       drDefault: "text-lime",       drAccent: "text-lime" },
+  dark:   { body: "text-cream",      drDefault: "text-cream",      drAccent: "text-cream" },
+  forest: { body: "text-cream",      drDefault: "text-cream",      drAccent: "text-cream" },
   lime:   { body: "text-deep-green", drDefault: "text-deep-green", drAccent: "text-deep-green" },
 };
 

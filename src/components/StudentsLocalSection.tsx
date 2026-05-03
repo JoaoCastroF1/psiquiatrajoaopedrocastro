@@ -49,8 +49,7 @@ const StudentsLocalSection = () => {
             Lourdes e região
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-            Atendimento psiquiátrico perto dos principais{" "}
-            <em className="text-deep-green">cursinhos de Lourdes</em>
+            Atendimento psiquiátrico perto dos principais <em>cursinhos de Lourdes</em>
           </h2>
           <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed mt-6 max-w-xl">
             Se você estuda na região de Lourdes e sente que ansiedade,

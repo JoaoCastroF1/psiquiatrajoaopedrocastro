@@ -32,8 +32,7 @@ const Atuacao = () => {
               Áreas de atuação
             </p>
             <h1 className="font-display text-4xl md:text-5xl font-normal text-foreground leading-tight mb-6">
-              Condições tratadas com{" "}
-              <em className="text-deep-green">profundidade clínica</em>
+              Condições tratadas com <em>profundidade clínica</em>
             </h1>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl">
               Cada quadro psiquiátrico tem especificidades que mudam o diagnóstico e o tratamento. Conheça as condições acompanhadas nesta prática clínica.

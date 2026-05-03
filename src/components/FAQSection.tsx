@@ -80,8 +80,7 @@ const FAQSection = () => {
             Perguntas frequentes
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-            O que você precisa saber{" "}
-            <em className="text-deep-green">antes de agendar</em>
+            O que você precisa saber <em>antes de agendar</em>
           </h2>
         </motion.div>
 

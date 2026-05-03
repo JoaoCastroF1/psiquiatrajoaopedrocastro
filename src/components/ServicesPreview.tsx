@@ -66,8 +66,7 @@ const ServicesPreview = () => {
             Áreas de atuação
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-            Condições tratadas com{" "}
-            <em className="text-deep-green">profundidade clínica</em>
+            Condições tratadas com <em>profundidade clínica</em>
           </h2>
         </motion.div>
 
@@ -78,7 +77,7 @@ const ServicesPreview = () => {
               <>
                 <span
                   aria-hidden="true"
-                  className="block w-12 h-[3px] bg-lime mb-5"
+                  className="block w-12 h-[2px] bg-deep-green/40 mb-5"
                 />
                 <h3 className="font-display text-xl md:text-[1.4rem] font-medium text-foreground leading-snug mb-3 group-hover:text-deep-green transition-colors">
                   {s.title}

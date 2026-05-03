@@ -73,8 +73,7 @@ const TestimonialsSection = () => {
             Confiança
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-            O que dizem sobre{" "}
-            <em className="text-deep-green">este trabalho</em>
+            O que dizem sobre <em>este trabalho</em>
           </h2>
         </motion.div>
 

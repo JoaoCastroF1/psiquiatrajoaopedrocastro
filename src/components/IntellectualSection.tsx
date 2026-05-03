@@ -16,8 +16,7 @@ const IntellectualSection = () => {
               Presença intelectual
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-normal text-primary-foreground leading-tight mb-8">
-              Medicina, neurociência e uma{" "}
-              <em className="text-lime">visão multidimensional</em> da saúde mental
+              Medicina, neurociência e uma <em>visão multidimensional</em> da saúde mental
             </h2>
             <div className="space-y-5 font-body text-base text-primary-foreground/75 leading-[1.8]">
               <p>

@@ -25,14 +25,13 @@ const CTASection = () => {
           className="max-w-3xl mx-auto text-center"
         >
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-normal text-primary-foreground leading-tight mb-6">
-            Psiquiatria com a{" "}
-            <em className="text-lime">precisão que o seu caso merece</em>
+            Psiquiatria com a <em>precisão que o seu caso merece</em>
           </h2>
           <p className="font-body text-base md:text-lg text-primary-foreground/70 leading-relaxed mb-8 max-w-xl mx-auto">
             Se você carrega sintomas sem resposta, quer revisar um tratamento que não está funcionando, ou acompanha alguém com declínio cognitivo sem saber o que esperar: o primeiro passo é uma avaliação com tempo e profundidade suficientes para entender o que está acontecendo.
           </p>
 
-          <SpiralScribble className="text-lime w-12 h-12 mx-auto mb-8" />
+          <SpiralScribble className="text-primary-foreground/30 w-12 h-12 mx-auto mb-8" />
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

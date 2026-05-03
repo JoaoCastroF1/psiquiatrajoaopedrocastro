@@ -60,8 +60,7 @@ const Empresas = () => {
                 Saúde mental corporativa
               </p>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal text-foreground leading-[1.05] mb-6">
-                Burnout não se resolve com{" "}
-                <em className="text-deep-green">workshop de mindfulness.</em>
+                Burnout não se resolve com <em>workshop de mindfulness.</em>
               </h1>
               <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed max-w-xl mb-8">
                 Programas, palestras e consultoria para empresas que querem lidar com burnout, ansiedade ocupacional e afastamentos com embasamento clínico — não com pop-psicologia. Diagnóstico situacional, intervenções com lógica científica, resultados acompanháveis.
@@ -105,7 +104,7 @@ const Empresas = () => {
                     <span className="font-display italic text-base md:text-lg text-cream leading-snug">
                       {item}
                     </span>
-                    <ArrowRight className="w-4 h-4 text-lime shrink-0" aria-hidden="true" />
+                    <ArrowRight className="w-4 h-4 text-cream/60 shrink-0" aria-hidden="true" />
                   </li>
                 ))}
               </ul>
@@ -127,8 +126,7 @@ const Empresas = () => {
               Contexto
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight mb-8">
-              Por que saúde mental corporativa precisa de{" "}
-              <em className="text-deep-green">embasamento clínico</em>
+              Por que saúde mental corporativa precisa de <em>embasamento clínico</em>
             </h2>
             <div className="space-y-5 font-body text-base text-foreground/85 leading-[1.8]">
               <p>
@@ -158,8 +156,7 @@ const Empresas = () => {
               Serviços
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-              O que a empresa{" "}
-              <em className="text-deep-green">pode contratar</em>
+              O que a empresa <em>pode contratar</em>
             </h2>
           </motion.div>
 
@@ -195,8 +192,7 @@ const Empresas = () => {
             className="max-w-2xl mx-auto"
           >
             <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight mb-6">
-              Pronto para estruturar a saúde mental da sua{" "}
-              <em className="text-deep-green">equipe?</em>
+              Pronto para estruturar a saúde mental da sua <em>equipe?</em>
             </h2>
             <p className="font-body text-base text-foreground/85 leading-relaxed mb-10">
               Cada programa é desenhado a partir das necessidades da organização. O primeiro passo é uma conversa para entender o cenário e definir o escopo.

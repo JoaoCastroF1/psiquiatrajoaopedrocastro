@@ -28,7 +28,7 @@ const AboutSection = () => {
             Sobre
           </p>
           <h2 className="font-display text-[1.65rem] md:text-4xl lg:text-5xl font-normal text-foreground leading-[1.15] mb-3">
-            <em className="text-deep-green not-italic">Dr.</em> João Pedro Castro
+            <em>Dr.</em> João Pedro Castro
           </h2>
           <p className="font-body text-[10.5px] md:text-xs uppercase tracking-[0.18em] text-muted-foreground/80">
             Psiquiatria · Psicogeriatria

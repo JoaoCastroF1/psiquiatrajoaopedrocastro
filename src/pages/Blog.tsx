@@ -34,6 +34,7 @@ const Blog = () => {
         title="Blog — Dr. João Pedro Castro | Psiquiatra em BH"
         description="Artigos sobre saúde mental escritos com base na prática clínica e na literatura científica atual."
         url="https://drjoaopedrocastro.com.br/blog"
+        type="blog"
       />
       <JsonLd data={blogListJsonLd} />
       <Navbar />

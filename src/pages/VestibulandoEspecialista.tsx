@@ -72,7 +72,7 @@ const differentials = [
 
 const relatedArticles = [
   { slug: "ansiedade-no-vestibular", title: "Ansiedade no vestibular: quando preocupação vira transtorno" },
-  { slug: "tdah-adultos-jovens-estudos", title: "TDAH em adultos jovens e o impacto nos estudos" },
+  { slug: "tdah-adultos-diferenciar-ansiedade-depressao", title: "TDAH em adultos: diferenciar de ansiedade e depressão" },
   { slug: "sono-e-memoria-estudantes", title: "Sono e memória: o que estudantes precisam saber" },
   { slug: "crise-de-ansiedade-o-que-acontece-no-corpo", title: "Crise de ansiedade: o que acontece no corpo" },
   { slug: "como-saber-se-tenho-tdah", title: "Como saber se tenho TDAH?" },

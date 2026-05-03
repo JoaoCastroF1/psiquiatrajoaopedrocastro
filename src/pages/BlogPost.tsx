@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -7,6 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedArticles from "@/components/RelatedArticles";
+import NotFound from "@/pages/NotFound";
 import { blogPosts } from "@/data/blogPosts";
 import { blogHubs } from "@/data/blogHubs";
 import PageHead from "@/components/PageHead";
@@ -17,60 +18,86 @@ const WA_LINK =
   "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
 
 const SITE_URL = "https://drjoaopedrocastro.com.br";
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+const PUBLISHER_LOGO = `${SITE_URL}/android-chrome-512x512.png`;
+const AUTHOR_URL = `${SITE_URL}/atuacao`;
+const AUTHOR_NAME = "Dr. João Pedro Castro Martins Farias";
 
-const FAQ_SLUGS = new Set([
-  "quando-procurar-psiquiatra-bh",
-  "como-saber-se-tenho-tdah",
-  "psiquiatra-ou-psicologo-qual-procurar",
-  "ansiedade-e-doenca-ou-normal",
-  "depressao-tem-cura-ou-tratamento",
-  "qual-diferenca-tristeza-depressao-ansiedade",
-  "como-funciona-consulta-psiquiatrica",
-  "remedio-psiquiatrico-vicia",
-  "quanto-tempo-demora-antidepressivo-fazer-efeito",
-  "o-que-e-psicogeriatra-quando-consultar",
-]);
+const computeReadTime = (paragraphs: string[]): string => {
+  const words = paragraphs.join(" ").split(/\s+/).filter(Boolean).length;
+  const minutes = Math.max(1, Math.round(words / 200));
+  return `${minutes} min de leitura`;
+};
+
+const splitFirstSentence = (paragraph: string): [string, string] => {
+  const match = paragraph.match(/^([^.!?]+[.!?])\s*(.*)$/s);
+  if (!match) return [paragraph, ""];
+  return [match[1], match[2]];
+};
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = blogPosts.find((p) => p.slug === slug);
 
-  if (!post) return <Navigate to="/blog" replace />;
+  if (!post) return <NotFound />;
 
   const postUrl = `${SITE_URL}/blog/${post.slug}`;
-  const isoDate = brDateToIso(post.date);
+  const publishedIso = brDateToIso(post.date);
+  const modifiedIso = brDateToIso(post.lastModified ?? post.date);
   const hub = blogHubs.find((h) => h.tags.includes(post.tag));
+  const ogImage = post.image ?? DEFAULT_OG_IMAGE;
+  const description = post.metaDescription ?? post.excerpt;
+  const readTime = post.readTime ?? computeReadTime(post.content);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
     headline: post.title,
-    description: post.excerpt,
-    datePublished: isoDate,
-    dateModified: isoDate,
+    description,
+    datePublished: publishedIso,
+    dateModified: modifiedIso,
     inLanguage: "pt-BR",
     url: postUrl,
+    image: ogImage,
+    ...(post.keywords && post.keywords.length > 0 ? { keywords: post.keywords.join(", ") } : {}),
+    articleSection: post.tag,
     specialty: {
       "@type": "MedicalSpecialty",
       name: "Psychiatry",
     },
     author: {
       "@type": "Person",
-      name: "Dr. João Pedro Castro Martins Farias",
-      url: `${SITE_URL}/#sobre`,
+      name: AUTHOR_NAME,
+      url: AUTHOR_URL,
       jobTitle: "Psiquiatra e Psicogeriatra",
       description:
         "CRM-MG 83920 | RQE 62148 (Psiquiatria) | RQE 66521 (Psicogeriatria)",
-      alumniOf: {
-        "@type": "CollegeOrUniversity",
-        name: "Universidade Federal de Minas Gerais",
-      },
+      alumniOf: [
+        {
+          "@type": "CollegeOrUniversity",
+          name: "Universidade Federal de Minas Gerais (UFMG)",
+        },
+        {
+          "@type": "EducationalOrganization",
+          name: "Hospital Odilon Behrens",
+        },
+        {
+          "@type": "EducationalOrganization",
+          name: "Hospital das Clínicas da UFMG",
+        },
+      ],
       sameAs: ["https://www.instagram.com/joaocastrof/"],
     },
     publisher: {
       "@type": "Organization",
       name: "Dr. João Pedro Castro",
       url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: PUBLISHER_LOGO,
+        width: 512,
+        height: 512,
+      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -82,33 +109,21 @@ const BlogPost = () => {
     },
   };
 
-  const faqJsonLd = FAQ_SLUGS.has(post.slug)
-    ? {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: post.title,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: post.content.slice(0, 3).join(" "),
-            },
-          },
-        ],
-      }
-    : null;
-
   return (
     <div className="min-h-screen">
       <PageHead
         title={`${post.metaTitle ?? post.title} — Dr. João Pedro Castro`}
-        description={post.excerpt}
+        description={description}
         url={postUrl}
+        image={ogImage}
         type="article"
+        publishedTime={publishedIso}
+        modifiedTime={modifiedIso}
+        author={AUTHOR_NAME}
+        section={post.tag}
+        tags={post.keywords}
       />
       <JsonLd data={articleJsonLd} />
-      {faqJsonLd && <JsonLd data={faqJsonLd} />}
       <Navbar />
 
       <article className="pt-28 md:pt-36 pb-20 md:pb-28 bg-background">
@@ -143,7 +158,7 @@ const BlogPost = () => {
               </span>
               <span className="flex items-center gap-1.5 font-body text-xs text-muted-foreground">
                 <Clock className="w-3 h-3" />
-                {post.readTime}
+                {readTime}
               </span>
             </div>
 
@@ -152,9 +167,9 @@ const BlogPost = () => {
             </h1>
 
             <p className="font-body text-sm text-muted-foreground mb-12">
-              <time dateTime={isoDate}>{post.date}</time> · Por{" "}
+              <time dateTime={publishedIso}>{post.date}</time> · Por{" "}
               <Link
-                to="/#sobre"
+                to="/atuacao"
                 className="underline decoration-border underline-offset-2 hover:text-foreground transition-colors"
               >
                 Dr. João Pedro Castro
@@ -176,10 +191,22 @@ const BlogPost = () => {
                     </h2>
                   );
                 }
+                if (i === 0) {
+                  const [firstSentence, rest] = splitFirstSentence(paragraph);
+                  return (
+                    <p
+                      key={i}
+                      className="font-body text-base md:text-[17px] text-foreground/85 leading-[1.85]"
+                    >
+                      <span className="article-speakable-intro">{firstSentence}</span>
+                      {rest && ` ${rest}`}
+                    </p>
+                  );
+                }
                 return (
                   <p
                     key={i}
-                    className={`font-body text-base md:text-[17px] text-foreground/85 leading-[1.85]${i === 0 ? " article-speakable-intro" : ""}`}
+                    className="font-body text-base md:text-[17px] text-foreground/85 leading-[1.85]"
                   >
                     {paragraph}
                   </p>
@@ -214,7 +241,7 @@ const BlogPost = () => {
                     entre psiquiatria clínica e neurociências.
                   </p>
                   <Link
-                    to="/#sobre"
+                    to="/atuacao"
                     className="inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.15em] text-deep-green hover:gap-3 transition-all mt-4"
                   >
                     Conhecer o consultório

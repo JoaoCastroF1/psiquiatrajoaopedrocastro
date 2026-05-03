@@ -67,14 +67,14 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="py-24 md:py-32 bg-background relative overflow-hidden">
+    <section id="faq" className="py-16 md:py-20 bg-background relative overflow-hidden">
       <SpeechBubbleScribble className="hidden md:block absolute top-12 right-8 lg:right-16 text-graphite/15 w-28 h-28 lg:w-36 lg:h-36 pointer-events-none" />
       <div className="container mx-auto px-4 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-2xl mb-16"
+          className="max-w-2xl mb-10"
         >
           <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
             Perguntas frequentes

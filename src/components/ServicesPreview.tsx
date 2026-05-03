@@ -54,7 +54,7 @@ const additional: { label: string; href?: string }[] = [
 
 const ServicesPreview = () => {
   return (
-    <section id="atuacao" className="py-24 md:py-32 bg-background">
+    <section id="atuacao" className="py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -71,7 +71,7 @@ const ServicesPreview = () => {
         </motion.div>
 
         {/* 6-card grid with lime rule accent */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10 lg:gap-y-12 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8 lg:gap-y-10 mb-10">
           {featured.map((s, i) => {
             const Inner = (
               <>

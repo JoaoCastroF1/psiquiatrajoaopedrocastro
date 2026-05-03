@@ -183,13 +183,13 @@ const VestibulandoEspecialista = () => {
       </section>
 
       {/* Symptoms */}
-      <section className="py-20 md:py-28 bg-section-alt">
+      <section className="py-14 md:py-20 bg-section-alt">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-2xl mb-14"
+            className="max-w-2xl mb-10"
           >
             <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
               Sinais de alerta
@@ -228,7 +228,7 @@ const VestibulandoEspecialista = () => {
       </section>
 
       {/* Differentials + Location */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-14 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             <motion.div
@@ -322,13 +322,13 @@ const VestibulandoEspecialista = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 md:py-28 bg-section-alt">
+      <section className="py-14 md:py-20 bg-section-alt">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-2xl mb-14"
+            className="max-w-2xl mb-10"
           >
             <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
               Dúvidas frequentes
@@ -361,7 +361,7 @@ const VestibulandoEspecialista = () => {
       </section>
 
       {/* Related articles */}
-      <section className="py-20 md:py-28 bg-background">
+      <section className="py-14 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -404,7 +404,7 @@ const VestibulandoEspecialista = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 md:py-32 bg-primary relative overflow-hidden">
+      <section className="py-16 md:py-20 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" aria-hidden="true">
           <div
             className="absolute inset-0"

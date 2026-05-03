@@ -21,13 +21,13 @@ const steps = [
 
 const HowItWorksSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-background">
+    <section className="py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-2xl mb-16"
+          className="max-w-2xl mb-10"
         >
           <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
             Passo a passo
@@ -37,7 +37,7 @@ const HowItWorksSection = () => {
           </h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7 lg:gap-6">
           {steps.map((s, i) => (
             <motion.div
               key={i}
@@ -49,12 +49,12 @@ const HowItWorksSection = () => {
             >
               <span
                 aria-hidden="true"
-                className="font-display italic text-coral text-6xl md:text-7xl leading-none block mb-3"
+                className="font-display italic text-coral text-5xl md:text-6xl leading-none block mb-2"
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <div className="border-t border-foreground/15 mb-5" />
-              <h3 className="font-display text-lg md:text-xl font-medium text-foreground mb-3">
+              <div className="border-t border-foreground/15 mb-3" />
+              <h3 className="font-display text-lg md:text-xl font-medium text-foreground mb-2">
                 {s.title}
               </h3>
               <p className="font-body text-sm text-muted-foreground leading-relaxed">

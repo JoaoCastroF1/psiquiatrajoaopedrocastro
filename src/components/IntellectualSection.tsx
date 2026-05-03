@@ -3,7 +3,7 @@ import jpCoat from "@/assets/jp-coat.jpg";
 
 const IntellectualSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-graphite">
+    <section className="py-16 md:py-20 bg-graphite">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <motion.div

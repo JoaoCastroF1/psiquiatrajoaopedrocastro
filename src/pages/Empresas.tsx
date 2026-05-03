@@ -114,13 +114,13 @@ const Empresas = () => {
       </section>
 
       {/* Contexto */}
-      <section className="py-24 md:py-32 bg-section-alt">
+      <section className="py-16 md:py-20 bg-section-alt">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-3xl mb-16"
+            className="max-w-3xl mb-10"
           >
             <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
               Contexto
@@ -144,13 +144,13 @@ const Empresas = () => {
       </section>
 
       {/* Serviços */}
-      <section className="py-24 md:py-32 bg-background">
+      <section className="py-16 md:py-20 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-2xl mb-16"
+            className="max-w-2xl mb-10"
           >
             <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
               Serviços

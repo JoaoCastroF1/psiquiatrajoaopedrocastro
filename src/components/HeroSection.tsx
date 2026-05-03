@@ -13,14 +13,14 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
-            className="order-2 lg:order-1 lg:col-span-7"
+            className="order-2 lg:order-1 lg:col-span-8"
           >
             <p className="font-body text-xs uppercase tracking-[0.3em] text-deep-green mb-8">
               Psiquiatra · Psicogeriatria · Belo Horizonte
             </p>
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-normal leading-[0.95] text-foreground mb-10 -tracking-[0.005em]">
+            <h1 className="font-display text-[2.75rem] md:text-6xl lg:text-[4.25rem] xl:text-[4.75rem] font-normal leading-[1.05] text-foreground mb-10 -tracking-[0.005em]">
               Psiquiatria feita com{" "}
-              <em className="text-deep-green">ciência de ponta</em>
+              <em className="text-deep-green whitespace-nowrap">ciência de ponta</em>
               {" "}e a <em className="text-deep-green">escuta</em> que o seu caso{" "}
               <em>precisa</em>.
             </h1>
@@ -46,16 +46,16 @@ const HeroSection = () => {
                 Conheça minha abordagem
               </a>
             </div>
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-6 border-t border-foreground/10 max-w-xl">
-              <span className="font-display italic text-sm text-foreground/70">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-6 border-t border-foreground/10">
+              <span className="font-display italic text-xs lg:text-[13px] text-foreground/70 whitespace-nowrap">
                 Atendimento particular
               </span>
               <span className="text-foreground/30">·</span>
-              <span className="font-display italic text-sm text-foreground/70">
+              <span className="font-display italic text-xs lg:text-[13px] text-foreground/70 whitespace-nowrap">
                 Nota fiscal para reembolso em planos
               </span>
               <span className="text-foreground/30">·</span>
-              <span className="font-display italic text-sm text-foreground/70">
+              <span className="font-display italic text-xs lg:text-[13px] text-foreground/70 whitespace-nowrap">
                 Presencial · Telemedicina · Domiciliar
               </span>
             </div>
@@ -65,9 +65,9 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.3 }}
-            className="order-1 lg:order-2 lg:col-span-5 flex justify-center lg:justify-end"
+            className="order-1 lg:order-2 lg:col-span-4 flex justify-center lg:justify-end"
           >
-            <div className="relative w-72 md:w-80 lg:w-full lg:max-w-[440px]">
+            <div className="relative w-72 md:w-80 lg:w-full lg:max-w-[400px]">
               <img
                 src={jpPortrait}
                 alt="Dr. João Pedro Castro — Psiquiatra e Psicogeriatra em Belo Horizonte"

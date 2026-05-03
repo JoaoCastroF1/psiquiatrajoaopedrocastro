@@ -27,7 +27,8 @@ const AudienceSection = () => {
             Para quem é este trabalho
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-            Cuidado especializado para dois momentos <em>distintos da vida</em>
+            Cuidado especializado para dois momentos{" "}
+            <em className="text-deep-green">distintos da vida</em>
           </h2>
         </motion.div>
 

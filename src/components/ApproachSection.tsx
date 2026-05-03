@@ -29,7 +29,8 @@ const ApproachSection = () => {
             Abordagem
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-            Como funciona o <em>tratamento psiquiátrico</em> nesta prática
+            Como funciona o{" "}
+            <em className="text-deep-green">tratamento psiquiátrico</em> nesta prática
           </h2>
         </motion.div>
 

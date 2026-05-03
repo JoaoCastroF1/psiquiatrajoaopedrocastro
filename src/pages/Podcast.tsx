@@ -55,11 +55,11 @@ const Podcast = () => {
       <section className="pt-28 md:pt-36 pb-16 bg-background">
         <div className="container mx-auto px-4 max-w-3xl">
           <Breadcrumbs items={[{ label: "Podcast" }]} />
-          <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6 mt-2">
+          <p className="font-body text-xs uppercase tracking-[0.3em] text-deep-green mb-6 mt-2">
             Podcast · Orientação psicanalítica
           </p>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-normal text-foreground leading-[0.95] mb-8 -tracking-[0.005em]">
-            <em>Antivírus</em>
+            <em className="text-deep-green">Antivírus</em>
           </h1>
           <p className="font-display italic text-xl md:text-[1.4rem] text-foreground/85 leading-relaxed mb-6">
             Um podcast que contrapõe os discursos "fast food" sobre saúde mental.
@@ -86,7 +86,7 @@ const Podcast = () => {
             Catálogo
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight mb-12">
-            Episódios <em>disponíveis</em>
+            Episódios <em className="text-deep-green">disponíveis</em>
           </h2>
           <div className="space-y-6">
             {episodes.map((ep, i) => (

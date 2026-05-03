@@ -78,7 +78,8 @@ const ServicesSection = ({ showHeader = true }: ServicesSectionProps) => {
               Áreas de atuação
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-              Condições tratadas com <em>profundidade clínica</em>
+              Condições tratadas com{" "}
+              <em className="text-deep-green">profundidade clínica</em>
             </h2>
           </motion.div>
         )}

@@ -1,11 +1,32 @@
+export type BlogTag =
+  | "TDAH"
+  | "Ansiedade"
+  | "Depressão"
+  | "Sono"
+  | "Trauma"
+  | "Psicogeriatria"
+  | "Psiquiatria"
+  | "Saúde Mental"
+  | "Saúde da Mulher"
+  | "Transtorno Bipolar"
+  | "Dependência"
+  | "Tratamento"
+  | "Psicoeducação"
+  | "Evidência Científica"
+  | "Psicofarmacologia";
+
 export interface BlogPost {
   slug: string;
-  tag: string;
+  tag: BlogTag;
   title: string;
   metaTitle?: string;
+  metaDescription?: string;
   excerpt: string;
   date: string;
+  lastModified?: string;
   readTime: string;
+  image?: string;
+  keywords?: string[];
   content: string[];
 }
 
@@ -86,30 +107,12 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "tdah-em-adultos",
-    tag: "TDAH",
-    title: "TDAH em adultos: por que tantos diagnósticos chegam tarde",
-    excerpt:
-      "Procrastinação, impulsividade, foco que escapa. No adulto, o TDAH raramente parece a hiperatividade infantil clássica, e por isso o diagnóstico atrasa em anos.",
-    date: "10 Mar 2026",
-    readTime: "6 min de leitura",
-    content: [
-      "TDAH é transtorno do neurodesenvolvimento. Não desaparece na vida adulta, ao contrário do que se acreditava décadas atrás. Cerca de 60% das crianças com TDAH mantêm sintomas clinicamente significativos depois dos 18 anos, e boa parte chega ao consultório psiquiátrico sem nunca ter recebido o diagnóstico.",
-      "TDAH adulto tem rosto diferente do TDAH infantil. A criança sobe nas paredes; o adulto procrastina, esquece prazo, dispersa. Predomina desatenção: dificuldade em manter foco em tarefa longa ou repetitiva, procrastinação crônica, esquecimentos frequentes, problema crônico com organização. Bate uma sensação persistente de que o potencial não vira realização.",
-      "A hiperatividade, quando aparece, costuma ser interna. Inquietação que ninguém vê. Dificuldade de relaxar, impaciência em fila e em reunião, busca constante por estímulo. A impulsividade sai em decisões financeiras precipitadas, interrupção em conversas, troca frequente de emprego ou relacionamento, dificuldade em conter reação emocional.",
-      "Boa parte dos adultos com TDAH montou estratégias compensatórias ao longo da vida. São pessoas inteligentes que deram um jeito de funcionar até a demanda subir. Cargo novo, chegada do filho, acúmulo de responsabilidades, e o sistema de gambiarras desmonta. É nesse ponto de ruptura que a maioria procura ajuda.",
-      "O diagnóstico de TDAH em adultos é clínico. Não há exame de imagem nem teste laboratorial que confirme. A avaliação envolve história detalhada dos sintomas desde a infância, análise do impacto funcional atual, exclusão de outros quadros que mimetizam TDAH (ansiedade, depressão, bipolaridade, uso de substâncias, hipertireoidismo) e, com frequência, conversa com familiar que conhece a trajetória do paciente.",
-      "Tratamento bem indicado costuma ser transformador. A combinação de psicoeducação, estratégias comportamentais e medicação estimulante (quando indicada) muda atenção, organização e qualidade de vida. A resposta à medicação no TDAH é uma das mais robustas de toda a psiquiatria, com taxa de eficácia acima de 70%.",
-      "Se você se reconhece nesses padrões e percebe que eles cobram preço real na sua vida, uma avaliação psiquiátrica esclarece o terreno. Diagnóstico vira plano, e o plano abre caminho concreto de melhora.",
-    ],
-  },
-  {
     slug: "insonia-cronica-saude-mental",
     tag: "Sono",
     title: "Insônia crônica e saúde mental: o que veio primeiro?",
     excerpt:
       "Insônia costuma ser o primeiro sinal de que algo está fora de eixo, e o último a ser tratado a sério. Por que o sono merece atenção clínica dedicada.",
-    date: "5 Mar 2026",
+    date: "05 Mar 2026",
     readTime: "5 min de leitura",
     content: [
       "Insônia é o transtorno do sono mais prevalente na população adulta. Atinge 10 a 15% das pessoas em forma crônica. Vai além de noite ruim. Insônia persistente sobe o risco de depressão, ansiedade, hipertensão, diabetes e declínio cognitivo. Tratar como sintoma menor é erro clínico recorrente.",
@@ -126,7 +129,7 @@ export const blogPosts: BlogPost[] = [
     title: "Ansiedade no vestibular: quando é só pressão e quando é quadro clínico",
     excerpt:
       "Nervoso antes da prova é esperado. Quando a ansiedade trava o raciocínio, rouba o sono e paralisa a rotina, pode existir um quadro que merece avaliação.",
-    date: "2 Abr 2026",
+    date: "02 Abr 2026",
     readTime: "7 min de leitura",
     content: [
       "Sentir ansiedade diante de prova importante é resposta biológica saudável. O sistema nervoso reconhece a situação como relevante, libera adrenalina e cortisol, o corpo se prepara para responder. Em dose adequada, essa ativação melhora o estado de alerta e até favorece desempenho. O problema começa quando a ansiedade ultrapassa esse ponto e passa a atrapalhar exatamente o que deveria proteger.",
@@ -140,28 +143,11 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "tdah-adultos-jovens-estudos",
-    tag: "TDAH",
-    title: "TDAH em adultos jovens: como saber se está atrapalhando seus estudos",
-    excerpt:
-      "Procrastinação crônica, foco que não dura, sensação de estar sempre atrasado. Em muitos jovens, esses sinais apontam para um TDAH que nunca foi diagnosticado.",
-    date: "2 Abr 2026",
-    readTime: "8 min de leitura",
-    content: [
-      "TDAH em adultos jovens é uma das condições mais subdiagnosticadas da psiquiatria contemporânea. Vestibulando e universitário convivem por anos com dificuldades que atribuem à falta de disciplina, à preguiça, à desorganização pessoal. Em parte considerável desses casos, o que existe por trás é um transtorno do neurodesenvolvimento que afeta diretamente atenção, planejamento e execução.",
-      "Esquece a imagem da criança que não para quieta. No adulto jovem, o TDAH costuma se apresentar mais sutil. Predomina desatenção, dificuldade de organização, procrastinação crônica, sensação de sobrecarga diante de tarefa com muitas etapas, tendência a começar projeto e não terminar, e uma dificuldade persistente em estimar o tempo necessário para completar atividade.",
-      "No contexto de estudo intensivo, como preparação para Medicina e outros vestibulares concorridos, o TDAH cobra um preço alto. O estudante consegue se concentrar em assunto que lhe interessa (o chamado hiperfoco), e empaca quando precisa sustentar atenção em matéria monótona ou em revisão longa. Essa inconsistência gera frustração, culpa e, com o tempo, desmotivação. \"Eu sei que dou conta, mas não consigo me obrigar a sentar\" é a frase recorrente.",
-      "Outro padrão comum é a má gestão de tempo. Aula, simulado, revisão, exercício e descanso precisam caber numa semana. O estudante com TDAH subestima o tempo de cada tarefa, posterga o importante em favor da urgência menor, e chega ao fim do dia com a sensação de ter trabalhado muito e produzido pouco.",
-      "TDAH em jovens raramente vem sozinho. Coexiste com ansiedade, depressão, baixa autoestima crônica, dificuldade de regulação emocional. Essa sobreposição confunde o diagnóstico. Um estudante ansioso e desatento pode ter ansiedade primária prejudicando a concentração, TDAH gerando ansiedade secundária, ou os dois quadros juntos. Avaliação psiquiátrica cuidadosa é o que separa essas hipóteses.",
-      "O diagnóstico de TDAH no adulto é clínico, e exige história detalhada dos sintomas ao longo da vida. Não há exame de sangue ou imagem que confirme. A avaliação inclui revisão dos sintomas na infância e adolescência, análise do funcionamento atual em diferentes contextos, exclusão de condições que mimetizam o quadro, e com frequência uma conversa com familiar que conhece a trajetória.",
-      "Tratar TDAH em quem está estudando para vestibular muda jogo. A combinação de psicoeducação (entender o transtorno e como ele afeta seu funcionamento), estratégias de organização e planejamento, psicoterapia e medicação estimulante quando indicada, oferece resultado consistente. A resposta à medicação no TDAH é uma das mais robustas da psiquiatria, com eficácia acima de 70%.",
-      "Se você é estudante na região de Lourdes, em Belo Horizonte, e se reconhece nesse padrão, vale uma avaliação. O consultório fica na Rua dos Timbiras, 1940, sala 1515, a passos do Bernoulli, Hplus Med, SOMA, Determinante e Acerta. Cuidar da saúde mental durante a preparação devolve rendimento. Não é atalho. É infraestrutura.",
-    ],
-  },
-  {
     slug: "bipolaridade-ciclagem-rapida",
     tag: "Transtorno Bipolar",
     title: "Ciclagem rápida no transtorno bipolar: o subtipo que mais engana o diagnóstico",
+    metaDescription:
+      "Bipolares com ciclagem rápida alternam mania e depressão em dias. Padrão confundido com TAG, depressão maior ou borderline.",
     excerpt:
       "Alguns pacientes bipolares alternam entre mania e depressão em dias ou horas, não em meses. Entenda esse padrão e por que ele costuma ser confundido com outros quadros.",
     date: "28 Mar 2026",
@@ -261,7 +247,7 @@ export const blogPosts: BlogPost[] = [
     title: "Comportamento durante REM: transtornos do sono que precisam de investigação",
     excerpt:
       "Pesadelo recorrente, movimento agressivo durante o sono, acordar gritando assustado. Conheça os transtornos da fase REM e quando investigar.",
-    date: "8 Mar 2026",
+    date: "08 Mar 2026",
     readTime: "6 min de leitura",
     content: [
       "O sono se compõe de fases distintas com funções biológicas distintas. A fase REM (Rapid Eye Movement) concentra a maior parte dos sonhos vívidos, a consolidação da memória emocional e o processamento de experiências do dia. Transtornos que afetam essa fase têm manifestações bem específicas e costumam ser perturbadores para quem dorme e para quem dorme do lado.",
@@ -281,7 +267,7 @@ export const blogPosts: BlogPost[] = [
     title: "Timidez ou fobia social? A diferença entre traço de personalidade e transtorno",
     excerpt:
       "Ser introvertido e tímido é temperamento. Evitar situação social por medo intenso a ponto de perder oportunidades é transtorno, e tem tratamento eficaz.",
-    date: "5 Mar 2026",
+    date: "06 Mar 2026",
     readTime: "7 min de leitura",
     content: [
       "Timidez é traço temperamental. A pessoa tímida sente reticência diante de situação nova ou de gente desconhecida, ocupa um tempo até se soltar, e segue a vida participando. Não há medo paralisante, não há pensamento catastrófico automático, e, com familiarização, o desconforto cede.",
@@ -300,7 +286,7 @@ export const blogPosts: BlogPost[] = [
     title: "Autolesão não suicida: o que está por trás de quem machuca o próprio corpo",
     excerpt:
       "Corte, queimadura, soco em si mesmo. Quando alguém machuca o próprio corpo sem intenção de morrer, existe uma dinâmica psicológica que merece compreensão.",
-    date: "1 Mar 2026",
+    date: "01 Mar 2026",
     readTime: "7 min de leitura",
     content: [
       "Autolesão não suicida (a sigla técnica é NSSI) é a prática deliberada de causar dano físico ao próprio corpo sem intenção de morte. Inclui corte, queimadura, soco em si mesmo, arranhão até sangrar, arrancar cabelo (tricotilomania), entre outros. Contra o senso comum, quem se autolesiona em geral não está tentando morrer. Está, paradoxalmente, tentando se manter vivo dentro de uma dor psíquica que parece insuportável.",
@@ -356,6 +342,8 @@ export const blogPosts: BlogPost[] = [
     slug: "toc-transtorno-obsessivo-compulsivo",
     tag: "Ansiedade",
     title: "TOC: muito além da mania de limpeza",
+    metaDescription:
+      "TOC vai além de mania de limpeza. Pensamentos intrusivos e rituais exaustivos exigem TCC com prevenção de resposta e ISRS em dose alta.",
     excerpt:
       "Pensamentos intrusivos, rituais exaustivos, medo irracional de contaminação ou de causar danos. O TOC é um transtorno incapacitante que muitas vezes se esconde atrás de 'manias'.",
     date: "20 Fev 2026",
@@ -375,6 +363,8 @@ export const blogPosts: BlogPost[] = [
     slug: "psicofarmacos-mitos-verdades",
     tag: "Tratamento",
     title: "Psicofármacos: mitos e verdades sobre a medicação psiquiátrica",
+    metaDescription:
+      "Antidepressivo vicia? Muda a personalidade? Os mitos sobre medicação psiquiátrica afastam pessoas do tratamento. O que a ciência diz.",
     excerpt:
       "Vício, zumbificação, mudança de personalidade. Os mitos sobre medicação psiquiátrica afastam pessoas do tratamento que precisam. Veja o que a ciência realmente diz.",
     date: "15 Fev 2026",
@@ -394,6 +384,8 @@ export const blogPosts: BlogPost[] = [
     slug: "estresse-pos-traumatico",
     tag: "Trauma",
     title: "Transtorno de estresse pós-traumático: como o cérebro fica preso no passado",
+    metaDescription:
+      "Flashbacks, pesadelos e hipervigilância caracterizam o TEPT. Como o cérebro fica preso no trauma e por que TCC focada e ISRS funcionam.",
     excerpt:
       "Flashbacks, pesadelos, hipervigilância. Após um evento traumático, o TEPT mantém o cérebro em modo de sobrevivência constante. Entenda o diagnóstico e o tratamento.",
     date: "10 Fev 2026",
@@ -413,9 +405,11 @@ export const blogPosts: BlogPost[] = [
     slug: "sono-e-memoria-estudantes",
     tag: "Sono",
     title: "Sono e memória: por que dormir bem é a melhor estratégia de estudo",
+    metaDescription:
+      "Virar a noite estudando prejudica a consolidação da memória. Por que dormir bem é a melhor estratégia de estudo para vestibular.",
     excerpt:
       "Virar a noite estudando parece produtivo, mas prejudica exatamente o processo cerebral que transforma estudo em aprendizado duradouro. Entenda a ciência por trás do sono.",
-    date: "5 Fev 2026",
+    date: "05 Fev 2026",
     readTime: "6 min de leitura",
     content: [
       "A relação entre sono e aprendizado é uma das mais bem documentadas na neurociência. Durante o sono, especialmente nas fases de sono profundo (N3) e sono REM, o cérebro consolida memórias, fortalece conexões sinápticas relevantes e elimina informações irrelevantes. Sem sono adequado, esse processo é comprometido — e o estudo do dia anterior se perde parcialmente.",
@@ -432,6 +426,8 @@ export const blogPosts: BlogPost[] = [
     slug: "crise-de-ansiedade-o-que-acontece-no-corpo",
     tag: "Ansiedade",
     title: "Crise de ansiedade: o que acontece no corpo e como diferenciar de um infarto",
+    metaDescription:
+      "Crise de ansiedade simula infarto. Entenda a fisiologia do ataque de pânico, sinais que pedem cardiologista e como manejar a crise.",
     excerpt:
       "A crise de ansiedade simula sintomas cardiovasculares e pode levar o paciente ao pronto-socorro. Entenda a fisiologia por trás do ataque de pânico e quando a investigação cardiológica é necessária.",
     date: "05 Abr 2026",
@@ -450,9 +446,11 @@ export const blogPosts: BlogPost[] = [
     slug: "remedios-para-ansiedade-o-que-a-psiquiatria-usa",
     tag: "Psicofarmacologia",
     title: "Remédios para ansiedade: o que a psiquiatria realmente prescreve e por quê",
+    metaDescription:
+      "Antidepressivo, benzodiazepínico ou pregabalina? Entenda a lógica farmacológica por trás do tratamento dos transtornos de ansiedade.",
     excerpt:
       "Antidepressivos, benzodiazepínicos, pregabalina — cada classe tem indicação, tempo de ação e riscos específicos. Entenda a lógica farmacológica por trás do tratamento da ansiedade.",
-    date: "05 Abr 2026",
+    date: "27 Mar 2026",
     readTime: "9 min de leitura",
     content: [
       "Quando um paciente procura o psiquiatra por ansiedade, a expectativa costuma ser sair do consultório com um 'calmante'. Mas o tratamento farmacológico da ansiedade é mais nuançado do que simplesmente sedar. Existem diferentes classes de medicamentos, cada uma com mecanismo de ação, tempo para início de efeito e perfil de risco distintos. A escolha depende do diagnóstico específico, da gravidade, das comorbidades e do perfil do paciente.",
@@ -472,7 +470,7 @@ export const blogPosts: BlogPost[] = [
     title: "Tratamentos 'naturais' para ansiedade: o que a ciência diz sobre fitoterápicos, chás e suplementos",
     excerpt:
       "Passiflora, valeriana, magnésio, ashwagandha — são opções reais ou apenas placebo sofisticado? Uma análise das evidências disponíveis sem viés ideológico.",
-    date: "05 Abr 2026",
+    date: "26 Mar 2026",
     readTime: "8 min de leitura",
     content: [
       "A busca por tratamentos 'naturais' para a ansiedade é compreensível. A ideia de controlar um sintoma desconfortável sem os efeitos colaterais de medicamentos farmacêuticos é atraente. Mas 'natural' não é sinônimo de 'eficaz' nem de 'seguro' — e a decisão de usar ou não um fitoterápico deveria seguir a mesma lógica de qualquer intervenção médica: qual é a evidência?",
@@ -489,9 +487,11 @@ export const blogPosts: BlogPost[] = [
     slug: "florais-de-bach-ansiedade-evidencia-cientifica",
     tag: "Evidência Científica",
     title: "Florais de Bach para ansiedade: o que dizem os estudos científicos",
+    metaDescription:
+      "Florais de Bach para ansiedade: revisões sistemáticas mostram resultados indistinguíveis do placebo. O que dizem os estudos clínicos.",
     excerpt:
       "Os florais de Bach são amplamente vendidos para ansiedade, insônia e estresse. Mas quando submetidos ao rigor dos ensaios clínicos, seus resultados são indistinguíveis do placebo.",
-    date: "05 Abr 2026",
+    date: "24 Mar 2026",
     readTime: "7 min de leitura",
     content: [
       "Os florais de Bach foram desenvolvidos na década de 1930 pelo médico britânico Edward Bach, que abandonou a prática convencional para criar um sistema de 38 essências florais baseado na premissa de que doenças físicas têm origem em desequilíbrios emocionais. A ideia central é que a 'energia' de determinadas flores, transferida para água por exposição solar, corrigiria estados emocionais negativos. Não há mecanismo bioquímico ou farmacológico proposto — o sistema se baseia em conceitos vitalistas pré-científicos.",
@@ -506,7 +506,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "sertralina-antidepressivo-isrs",
-    tag: "Psicofarmacos",
+    tag: "Psicofarmacologia",
     title: "Sertralina: como funciona o antidepressivo mais prescrito no Brasil",
     excerpt:
       "Sertralina é o ISRS mais utilizado no tratamento de depressão e ansiedade. Entenda mecanismo, eficácia, efeitos colaterais e tempo de resposta.",
@@ -526,7 +526,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "fluoxetina-prozac-depressao",
-    tag: "Psicofarmacos",
+    tag: "Psicofarmacologia",
     title: "Fluoxetina (Prozac): ISRS de ação prolongada para depressão e ansiedade",
     excerpt:
       "Fluoxetina foi o primeiro ISRS no mercado. Conheça por que continua prescrita, meia-vida longa e aplicações clínicas.",
@@ -546,7 +546,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "paroxetina-ansiedade-panico",
-    tag: "Psicofarmacos",
+    tag: "Psicofarmacologia",
     title: "Paroxetina: ISRS de escolha para transtorno do pânico e fobia social",
     excerpt:
       "Paroxetina é especializada no tratamento de ansiedade aguda. Conheça sua eficácia, descontinuação e por que gera mais dependência que outros ISRS.",
@@ -566,7 +566,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "bupropiona-dopamina-depressao",
-    tag: "Psicofarmacos",
+    tag: "Psicofarmacologia",
     title: "Bupropiona: antidepressivo que aumenta dopamina sem disfunção sexual",
     excerpt:
       "Bupropiona é diferente de ISRS por agir em dopamina. Conheça seu uso em depressão, cessação de tabagismo e por que muitos preferem para disfunção sexual.",
@@ -586,7 +586,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "escitalopram-cipralex-ansiedade",
-    tag: "Psicofarmacos",
+    tag: "Psicofarmacologia",
     title: "Escitalopram: ISRS mais potente e seletivo para transtorno de ansiedade",
     excerpt:
       "Escitalopram é o isômero ativo da citalopram com maior potência. Conheça sua eficácia em ansiedade, doses seguras e por que é frequentemente prescrito.",
@@ -606,7 +606,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "venlafaxina-efexor-ansiedade-severa",
-    tag: "Psicofarmacos",
+    tag: "Psicofarmacologia",
     title: "Venlafaxina (Efexor): ISRN para ansiedade grave e depressão refratária",
     excerpt:
       "Venlafaxina age em serotonina e norepinefrina. Conheça sua potência em ansiedade moderada-severa, descontinuação difícil e quando é prescrita.",
@@ -626,7 +626,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "quetiapina-seroquel-bipolar-psicose",
-    tag: "Psicofarmacos",
+    tag: "Psicofarmacologia",
     title: "Quetiapina (Seroquel): antipsicótico atípico para bipolar e insônia severa",
     excerpt:
       "Quetiapina é frequentemente prescrita além de psicose. Conheça seu uso em transtorno bipolar, insônia refratária e metabolismo de peso.",
@@ -646,7 +646,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "litio-sal-bipolar-gold-standard",
-    tag: "Psicofarmacos",
+    tag: "Psicofarmacologia",
     title: "Lítio: sal mineral que revolucionou o tratamento de transtorno bipolar",
     excerpt:
       "Lítio é gold standard em bipolaridade. Conheça seu mecanismo, monitoramento de níveis séricos, efeitos colaterais e por que continua insubstituível.",
@@ -666,11 +666,11 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "alprazolam-xanax-panico",
-    tag: "Psicofarmacos",
+    tag: "Psicofarmacologia",
     title: "Alprazolam (Xanax): benzodiazepínico de ação rápida para ansiedade aguda",
     excerpt:
       "Alprazolam oferece alívio rápido de ansiedade aguda e pânico. Conheça seu uso, dependência, descontinuação e quando é apropriado prescrever.",
-    date: "14 Abr 2026",
+    date: "15 Abr 2026",
     readTime: "8 min de leitura",
     content: [
       "Alprazolam é um benzodiazepínico de ação rápida e meia-vida curta-intermediária (11-15 horas) que oferece ansiolítico e efeitos anti-pânico marcados. É um dos benzodiazepínicos mais prescritos mundialmente, frequentemente sob marca comercial Xanax.",
@@ -686,7 +686,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "melatonina-sono-sincronizacao",
-    tag: "Psicofarmacos",
+    tag: "Psicofarmacologia",
     title: "Melatonina: hormônio do sono para insônia, jet lag e transtornos do ritmo circadiano",
     excerpt:
       "Melatonina sincroniza o relógio circadiano. Conheça sua eficácia em insônia, jet lag, distúrbios de ritmo de trabalho e quando usar dosagem correta.",
@@ -708,6 +708,8 @@ export const blogPosts: BlogPost[] = [
     slug: "quando-procurar-psiquiatra-bh",
     tag: "Psiquiatria",
     title: "Quando procurar um psiquiatra em Belo Horizonte?",
+    metaDescription:
+      "Quando procurar psiquiatra em Belo Horizonte? Os três sinais clínicos que justificam avaliação: persistência, prejuízo e recorrência.",
     excerpt:
       "Muitas pessoas adiam a consulta psiquiátrica por dúvida, medo ou desinformação. Entenda os sinais que indicam a necessidade de avaliação e como funciona o atendimento psiquiátrico em BH.",
     date: "14 Abr 2026",
@@ -728,9 +730,11 @@ export const blogPosts: BlogPost[] = [
     slug: "como-saber-se-tenho-tdah",
     tag: "TDAH",
     title: "Como saber se tenho TDAH? Sinais, diagnóstico e o que fazer",
+    metaDescription:
+      "Como saber se tenho TDAH? Critérios do DSM-5, diagnóstico clínico em adultos e por que o autodiagnóstico via TikTok atrasa o tratamento.",
     excerpt:
       "Desatenção, procrastinação e dificuldade de organização fazem parte do TDAH ou são apenas hábitos? Entenda como o diagnóstico é feito e por que autodiagnóstico por vídeos pode ser perigoso.",
-    date: "14 Abr 2026",
+    date: "13 Abr 2026",
     readTime: "8 min de leitura",
     content: [
       "Saber se a dificuldade de concentração, a procrastinação crônica e a sensação de estar sempre atrasado são sinais de TDAH ou apenas hábitos é uma das dúvidas mais comuns que chegam ao consultório psiquiátrico atualmente. O tema viralizou nas redes sociais nos últimos anos, e vídeos curtos enumeram sintomas genéricos: esquecer onde colocou as chaves, não conseguir terminar séries, perder o foco em reuniões. Esse tipo de conteúdo produziu duas consequências distintas. Pessoas que de fato apresentam TDAH passaram a buscar avaliação, o que é positivo; pessoas que vivem dificuldades comuns de funcionamento sob estresse passaram a se convencer de que têm o transtorno, o que atrasa o diagnóstico correto.",
@@ -749,7 +753,7 @@ export const blogPosts: BlogPost[] = [
     title: "Psiquiatra ou psicólogo: qual profissional procurar?",
     excerpt:
       "Entenda a diferença entre psiquiatra e psicólogo, quando cada um é indicado e por que, em muitos casos, o tratamento mais eficaz combina os dois.",
-    date: "14 Abr 2026",
+    date: "11 Abr 2026",
     readTime: "6 min de leitura",
     content: [
       "Essa é uma das perguntas mais frequentes de quem percebe que precisa de ajuda para a saúde mental. A confusão é compreensível: os dois profissionais lidam com sofrimento psíquico, ambos atendem em consultório e, em muitos casos, trabalham juntos. Mas a formação, as ferramentas e o escopo de atuação são diferentes.",
@@ -768,7 +772,7 @@ export const blogPosts: BlogPost[] = [
     title: "Ansiedade é doença ou é normal? Como diferenciar",
     excerpt:
       "Toda pessoa sente ansiedade. Mas quando ela para de ser adaptativa e se torna um transtorno? Entenda os critérios clínicos e os sinais de alerta.",
-    date: "14 Abr 2026",
+    date: "09 Abr 2026",
     readTime: "7 min de leitura",
     content: [
       "Diferenciar ansiedade comum de transtorno de ansiedade é uma das dúvidas que mais leva pacientes ao consultório psiquiátrico, especialmente em uma época em que o termo 'ansiedade' aparece com frequência tanto em diagnósticos clínicos quanto em queixas cotidianas que descrevem qualquer desconforto emocional. Saber em que ponto a resposta normal vira quadro patológico tem implicação prática direta: define se o caminho é manejar com hábitos, com psicoterapia ou se o tratamento exige farmacologia estruturada.",
@@ -787,7 +791,7 @@ export const blogPosts: BlogPost[] = [
     title: "Depressão tem cura? O que a ciência diz sobre tratamento e recaída",
     excerpt:
       "Muitos pacientes perguntam se a depressão tem cura. A resposta depende do tipo de depressão, do número de episódios e de como o tratamento é conduzido.",
-    date: "14 Abr 2026",
+    date: "08 Abr 2026",
     readTime: "7 min de leitura",
     content: [
       "A pergunta 'depressão tem cura?' é uma das mais frequentes no consultório psiquiátrico. A resposta honesta é: depende. Depende do tipo de depressão, do número de episódios anteriores, da presença de comorbidades e de como o tratamento é conduzido.",
@@ -806,7 +810,7 @@ export const blogPosts: BlogPost[] = [
     title: "Qual a diferença entre tristeza, depressão e ansiedade?",
     excerpt:
       "Tristeza, depressão e ansiedade são frequentemente confundidas. Entenda o que cada uma significa clinicamente e quando justificam avaliação profissional.",
-    date: "14 Abr 2026",
+    date: "06 Abr 2026",
     readTime: "6 min de leitura",
     content: [
       "Tristeza, depressão e ansiedade são experiências distintas que frequentemente se sobrepõem e se confundem, tanto na linguagem cotidiana quanto na percepção de quem as vive. Distingui-las é o primeiro passo para saber quando é hora de procurar ajuda.",
@@ -824,7 +828,7 @@ export const blogPosts: BlogPost[] = [
     title: "Como funciona uma consulta psiquiátrica? O que esperar da primeira vez",
     excerpt:
       "Muitas pessoas adiam a consulta psiquiátrica por não saber o que esperar. Entenda como é a avaliação, quanto tempo dura e quando a medicação é indicada.",
-    date: "14 Abr 2026",
+    date: "04 Abr 2026",
     readTime: "6 min de leitura",
     content: [
       "O desconhecimento sobre o que acontece dentro de um consultório psiquiátrico é uma das razões mais frequentes para o adiamento da consulta. Muitas pessoas imaginam que vão sair com uma receita na mão em 15 minutos, ou que serão julgadas, ou que 'precisarão tomar remédio para o resto da vida'. Nenhuma dessas suposições corresponde a um atendimento psiquiátrico bem conduzido.",
@@ -841,9 +845,11 @@ export const blogPosts: BlogPost[] = [
     slug: "remedio-psiquiatrico-vicia",
     tag: "Psicofarmacologia",
     title: "Remédio psiquiátrico vicia? Mitos e verdades sobre dependência",
+    metaDescription:
+      "Antidepressivo vicia? Entenda a diferença entre dependência, tolerância e necessidade clínica continuada em medicação psiquiátrica.",
     excerpt:
       "Um dos maiores medos de quem inicia tratamento psiquiátrico é ficar dependente da medicação. Entenda a diferença entre dependência, tolerância e necessidade clínica.",
-    date: "14 Abr 2026",
+    date: "03 Abr 2026",
     readTime: "7 min de leitura",
     content: [
       "O medo de 'ficar viciado' é uma das razões mais citadas por pacientes que adiam ou recusam tratamento psiquiátrico. Esse receio, embora compreensível, é frequentemente baseado em uma confusão entre conceitos que a medicina diferencia com clareza: dependência química, tolerância farmacológica e necessidade clínica continuada.",
@@ -860,9 +866,11 @@ export const blogPosts: BlogPost[] = [
     slug: "quanto-tempo-demora-antidepressivo-fazer-efeito",
     tag: "Psicofarmacologia",
     title: "Quanto tempo demora para o antidepressivo fazer efeito?",
+    metaDescription:
+      "Antidepressivo demora de 2 a 6 semanas para fazer efeito. O que esperar nas primeiras semanas e por que muitos desistem cedo demais.",
     excerpt:
       "Muitos pacientes abandonam o tratamento antes do antidepressivo agir. Entenda o tempo real de resposta, o que esperar nas primeiras semanas e por que a paciência é parte do tratamento.",
-    date: "14 Abr 2026",
+    date: "01 Abr 2026",
     readTime: "6 min de leitura",
     content: [
       "Uma das frustrações mais comuns no início do tratamento com antidepressivos é a expectativa de melhora rápida. O paciente começa a tomar o medicamento, não sente diferença em três dias e conclui que 'não está funcionando'. Essa conclusão prematura é responsável por uma parcela significativa dos abandonos de tratamento.",
@@ -879,9 +887,11 @@ export const blogPosts: BlogPost[] = [
     slug: "o-que-e-psicogeriatra-quando-consultar",
     tag: "Psicogeriatria",
     title: "O que faz um psicogeriatra e quando consultar esse especialista?",
+    metaDescription:
+      "Psicogeriatria é psiquiatria do envelhecimento. Quando consultar esse especialista e por que tratar idoso exige abordagem diferente.",
     excerpt:
       "Psicogeriatria é a psiquiatria do envelhecimento. Entenda quando um idoso precisa desse especialista e por que o tratamento psiquiátrico no idoso exige abordagem diferente.",
-    date: "14 Abr 2026",
+    date: "30 Mar 2026",
     readTime: "7 min de leitura",
     content: [
       "O psicogeriatra é o psiquiatra especializado no envelhecimento cerebral. Sua formação inclui a residência médica em Psiquiatria seguida de especialização em Psicogeriatria (ou Psiquiatria Geriátrica), com treinamento específico para diagnosticar e tratar transtornos mentais em pessoas acima de 60 anos.",
@@ -896,7 +906,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "quetiapina-guia-completo",
-    tag: "Medicação",
+    tag: "Psicofarmacologia",
     title: "Quetiapina: Para que serve, efeitos colaterais e mitos sobre o uso em psiquiatria",
     excerpt:
       "A quetiapina é um antipsicótico atípico usado para esquizofrenia, transtorno bipolar e insônia. Entenda como funciona, suas indicações, riscos e benefícios.",
@@ -913,7 +923,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "trazodona-guia-completo",
-    tag: "Medicação",
+    tag: "Psicofarmacologia",
     title: "Trazodona: O que é, como funciona e quando é indicada para insônia e depressão",
     excerpt:
       "A trazodona é um antidepressivo atípico eficaz para insônia, depressão e ansiedade. Saiba mais sobre seu mecanismo de ação, indicações e efeitos colaterais.",

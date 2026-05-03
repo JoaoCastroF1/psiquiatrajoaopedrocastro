@@ -26,3 +26,6 @@ dist-ssr
 
 # Brand source binaries (Adobe Illustrator). PDFs in docs/brand/ are committed as reference.
 docs/brand/*.ai
+
+# Generated at build time by scripts/generate-sitemap.ts
+public/sitemap.xml

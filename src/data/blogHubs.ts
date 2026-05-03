@@ -1,10 +1,12 @@
+import type { BlogTag } from "./blogPosts";
+
 export interface BlogHub {
   slug: string;
   title: string;
   highlight: string;
   description: string;
   metaDescription: string;
-  tags: string[];
+  tags: BlogTag[];
 }
 
 export const blogHubs: BlogHub[] = [
@@ -46,6 +48,6 @@ export const blogHubs: BlogHub[] = [
       "Artigos sobre antidepressivos, estabilizadores de humor, ansiolíticos e outros psicofármacos: como funcionam, indicações e efeitos colaterais.",
     metaDescription:
       "Guia sobre medicações psiquiátricas: antidepressivos, benzodiazepínicos, estabilizadores de humor, pregabalina, quetiapina e trazodona.",
-    tags: ["Psicofarmacologia", "Psicofarmacos", "Medicação"],
+    tags: ["Psicofarmacologia"],
   },
 ];

@@ -8,7 +8,7 @@ const WA_LINK_PROJECTS =
 
 const CTASection = () => {
   return (
-    <section id="contato" className="py-16 md:py-20 bg-primary relative overflow-hidden">
+    <section id="contato" className="py-24 md:py-32 bg-primary relative overflow-hidden">
       {/* Subtle pattern overlay */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{

@@ -37,7 +37,7 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between h-14 md:h-16">
+      <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <div className="flex flex-col min-w-0">
           <Link to="/" aria-label="Página inicial — Dr. João Pedro Castro">
             <Logo variant="light" size="md" highlightDr />

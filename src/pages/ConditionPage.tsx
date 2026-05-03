@@ -104,7 +104,7 @@ const ConditionPage = () => {
       </section>
 
       {/* Symptoms */}
-      <section className="py-14 md:py-20 bg-muted/30">
+      <section className="py-20 md:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -130,7 +130,7 @@ const ConditionPage = () => {
       </section>
 
       {/* Approach */}
-      <section className="py-14 md:py-20 bg-background">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -158,7 +158,7 @@ const ConditionPage = () => {
       </section>
 
       {/* Differentials */}
-      <section className="py-14 md:py-20 bg-muted/30">
+      <section className="py-20 md:py-28 bg-muted/30">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -183,7 +183,7 @@ const ConditionPage = () => {
       </section>
 
       {/* FAQ */}
-      <section className="py-14 md:py-20 bg-background">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -215,7 +215,7 @@ const ConditionPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-14 md:py-20 bg-primary">
+      <section className="py-20 md:py-28 bg-primary">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -245,7 +245,7 @@ const ConditionPage = () => {
 
       {/* Related Conditions */}
       {relatedConditions.length > 0 && (
-        <section className="py-14 md:py-20 bg-background">
+        <section className="py-20 md:py-28 bg-background">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}

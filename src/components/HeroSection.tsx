@@ -6,54 +6,54 @@ const WA_LINK =
 
 const HeroSection = () => {
   return (
-    <section className="relative flex items-center bg-background overflow-hidden pt-20 lg:pt-24">
-      <div className="container mx-auto px-4 py-8 md:py-14 lg:py-16">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+    <section className="relative flex items-center bg-background overflow-hidden pt-24 lg:pt-28">
+      <div className="container mx-auto px-4 py-12 md:py-20 lg:py-24">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: "easeOut" }}
             className="order-2 lg:order-1 lg:col-span-7"
           >
-            <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground mb-5">
+            <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground mb-8">
               Psiquiatra · Psicogeriatria · Belo Horizonte
             </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-[4.5rem] font-normal leading-[0.98] text-foreground mb-6 -tracking-[0.005em]">
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-normal leading-[0.95] text-foreground mb-10 -tracking-[0.005em]">
               Psiquiatria feita com <em>ciência de ponta</em> e a{" "}
               <em>escuta</em> que o seu caso <em>precisa</em>.
             </h1>
-            <p className="font-display italic text-lg md:text-xl text-foreground/85 leading-relaxed max-w-2xl mb-5">
+            <p className="font-display italic text-xl md:text-[1.4rem] text-foreground/85 leading-relaxed max-w-2xl mb-8">
               Para adultos que convivem com depressão, ansiedade, TDAH, bipolaridade ou transtornos do humor. E para famílias que acompanham o declínio cognitivo de alguém que amam.
             </p>
-            <p className="font-body text-base text-muted-foreground leading-relaxed max-w-2xl mb-7">
+            <p className="font-body text-base text-muted-foreground leading-relaxed max-w-2xl mb-10">
               Diagnóstico preciso, farmacologia baseada em evidências e tempo de consulta suficiente para entender o que está acontecendo.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 mb-6">
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <a
                 href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-primary text-sm px-7 py-3.5"
+                className="btn btn-primary text-sm px-8 py-4"
               >
                 Agendar consulta
               </a>
               <a
                 href="#sobre"
-                className="btn btn-ghost text-sm px-7 py-3.5"
+                className="btn btn-ghost text-sm px-8 py-4"
               >
                 Conheça minha abordagem
               </a>
             </div>
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 pt-4 border-t border-foreground/10 max-w-xl">
-              <span className="font-display italic text-xs md:text-sm text-foreground/70">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-6 border-t border-foreground/10 max-w-xl">
+              <span className="font-display italic text-sm text-foreground/70">
                 Atendimento particular
               </span>
               <span className="text-foreground/30">·</span>
-              <span className="font-display italic text-xs md:text-sm text-foreground/70">
+              <span className="font-display italic text-sm text-foreground/70">
                 Nota fiscal para reembolso em planos
               </span>
               <span className="text-foreground/30">·</span>
-              <span className="font-display italic text-xs md:text-sm text-foreground/70">
+              <span className="font-display italic text-sm text-foreground/70">
                 Presencial · Telemedicina · Domiciliar
               </span>
             </div>
@@ -63,16 +63,16 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.3 }}
-            className="order-1 lg:order-2 lg:col-span-5 flex justify-start lg:justify-end"
+            className="order-1 lg:order-2 lg:col-span-5 flex justify-center lg:justify-end"
           >
-            <div className="relative w-56 md:w-64 lg:w-full lg:max-w-[400px]">
+            <div className="relative w-72 md:w-80 lg:w-full lg:max-w-[440px]">
               <img
                 src={jpPortrait}
                 alt="Dr. João Pedro Castro — Psiquiatra e Psicogeriatra em Belo Horizonte"
                 loading="eager"
                 className="brand-photo w-full aspect-[3/4] object-cover object-top"
               />
-              <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
             </div>
           </motion.div>
         </div>

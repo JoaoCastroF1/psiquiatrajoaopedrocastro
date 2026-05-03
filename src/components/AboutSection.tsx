@@ -14,7 +14,7 @@ const credentials = [
 
 const AboutSection = () => {
   return (
-    <section id="sobre" className="py-14 md:py-20 bg-background">
+    <section id="sobre" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
         {/* Header — full width, antes da foto */}
         <motion.div
@@ -22,7 +22,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl mb-8 md:mb-10"
+          className="max-w-3xl mb-10 md:mb-14"
         >
           <p className="font-body text-[11px] md:text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">
             Sobre

@@ -14,14 +14,14 @@ const BlogSection = ({ showHeader = true }: BlogSectionProps) => {
   const remaining = rest.slice(6);
 
   return (
-    <section className="py-16 md:py-20 bg-background">
+    <section className="py-24 md:py-32 bg-background">
       <div className="container mx-auto px-4">
         {showHeader && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-2xl mb-10"
+            className="max-w-2xl mb-16"
           >
             <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
               Conteúdo
@@ -33,7 +33,7 @@ const BlogSection = ({ showHeader = true }: BlogSectionProps) => {
         )}
 
         {/* Featured + list grid */}
-        <div className="grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14 mb-10 lg:mb-12">
+        <div className="grid lg:grid-cols-[1.4fr_1fr] gap-10 lg:gap-14 mb-16 lg:mb-20">
           <motion.article
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}

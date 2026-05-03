@@ -41,7 +41,8 @@ const ProjectsSection = () => {
             Projetos e visão
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-            Além da clínica, <em>uma obra em construção</em>
+            Além da clínica,{" "}
+            <em className="text-deep-green">uma obra em construção</em>
           </h2>
         </motion.div>
 

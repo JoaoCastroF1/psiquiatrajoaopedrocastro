@@ -159,7 +159,8 @@ const Avaliacao = () => {
                 Triagem inicial
               </p>
               <h1 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight mb-4">
-                Avaliação de <em>sintomas</em>
+                Avaliação de{" "}
+                <em className="text-deep-green">sintomas</em>
               </h1>
               <p className="font-body text-sm text-muted-foreground leading-relaxed">
                 Responda às perguntas abaixo para nos ajudar a entender melhor o

@@ -33,7 +33,8 @@ const HowItWorksSection = () => {
             Passo a passo
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-            Como funciona a <em>consulta</em>
+            Como funciona a{" "}
+            <em className="text-deep-green">consulta</em>
           </h2>
         </motion.div>
 

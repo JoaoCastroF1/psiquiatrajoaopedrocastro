@@ -147,13 +147,15 @@ const VestibulandoEspecialista = () => {
             className="max-w-3xl"
           >
             <Breadcrumbs items={[{ label: "Vestibulandos" }]} />
-            <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground mb-6 mt-2">
+            <p className="font-body text-xs uppercase tracking-[0.3em] text-deep-green mb-6 mt-2">
               Para vestibulandos e estudantes de medicina
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal text-foreground leading-[1.05] mb-8 -tracking-[0.005em]">
-              Estudar 12 horas por dia <em>não é normal.</em>
+              Estudar 12 horas por dia{" "}
+              <em className="text-deep-green">não é normal.</em>
               <br />
-              Funcionar abaixo do potencial, <em>também não.</em>
+              Funcionar abaixo do potencial,{" "}
+              <em className="text-deep-green">também não.</em>
             </h1>
             <p className="font-display italic text-xl md:text-[1.4rem] text-foreground/85 leading-relaxed max-w-2xl mb-6">
               Para vestibulandos e estudantes em fases intensas: ansiedade refratária, insônia crônica, TDAH não diagnosticado, depressão mascarada de cansaço.
@@ -195,7 +197,8 @@ const VestibulandoEspecialista = () => {
               Sinais de alerta
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-              Quando o problema pode ser <em>mais do que estresse</em>
+              Quando o problema pode ser{" "}
+              <em className="text-deep-green">mais do que estresse</em>
             </h2>
             <p className="font-body text-base text-foreground/80 leading-relaxed mt-5 max-w-xl">
               Alguns sintomas são esperados em fases de pressão. Mas quando se tornam persistentes, intensos ou incapacitantes, podem indicar um quadro que precisa de atenção clínica.
@@ -241,7 +244,8 @@ const VestibulandoEspecialista = () => {
                 Abordagem clínica
               </p>
               <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight mb-6">
-                Como funciona o <em>atendimento</em>
+                Como funciona o{" "}
+                <em className="text-deep-green">atendimento</em>
               </h2>
               <p className="font-body text-base text-foreground/80 leading-relaxed">
                 O objetivo é entender o que está acontecendo antes de prescrever qualquer coisa. Uma avaliação bem feita evita diagnósticos precipitados, medicações desnecessárias e tratamentos genéricos.
@@ -281,7 +285,8 @@ const VestibulandoEspecialista = () => {
                   Localização
                 </p>
                 <h3 className="font-display text-xl md:text-2xl font-medium text-foreground mb-4">
-                  Perto da sua <em>rotina de estudos</em>
+                  Perto da sua{" "}
+                  <em className="text-deep-green">rotina de estudos</em>
                 </h3>
                 <p className="font-body text-sm text-foreground/85 leading-relaxed mb-6">
                   O consultório fica na <strong className="text-foreground">Rua dos Timbiras, 1940, sala 1515, Lourdes</strong> — a poucos minutos dos principais cursinhos da região, facilitando o cuidado com a saúde mental sem deslocamentos longos.
@@ -334,7 +339,8 @@ const VestibulandoEspecialista = () => {
               Dúvidas frequentes
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-              Perguntas de quem está <em>passando por isso</em>
+              Perguntas de quem está{" "}
+              <em className="text-deep-green">passando por isso</em>
             </h2>
           </motion.div>
 
@@ -373,7 +379,8 @@ const VestibulandoEspecialista = () => {
               Leitura recomendada
             </p>
             <h2 className="font-display text-2xl md:text-3xl font-normal text-foreground leading-tight">
-              Artigos para entender <em>o que você sente</em>
+              Artigos para entender{" "}
+              <em className="text-deep-green">o que você sente</em>
             </h2>
           </motion.div>
 

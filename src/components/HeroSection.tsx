@@ -15,12 +15,14 @@ const HeroSection = () => {
             transition={{ duration: 0.9, ease: "easeOut" }}
             className="order-2 lg:order-1 lg:col-span-7"
           >
-            <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground mb-8">
+            <p className="font-body text-xs uppercase tracking-[0.3em] text-deep-green mb-8">
               Psiquiatra · Psicogeriatria · Belo Horizonte
             </p>
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-[5.5rem] font-normal leading-[0.95] text-foreground mb-10 -tracking-[0.005em]">
-              Psiquiatria feita com <em>ciência de ponta</em> e a{" "}
-              <em>escuta</em> que o seu caso <em>precisa</em>.
+              Psiquiatria feita com{" "}
+              <em className="text-deep-green">ciência de ponta</em>
+              {" "}e a <em className="text-deep-green">escuta</em> que o seu caso{" "}
+              <em>precisa</em>.
             </h1>
             <p className="font-display italic text-xl md:text-[1.4rem] text-foreground/85 leading-relaxed max-w-2xl mb-8">
               Para adultos que convivem com depressão, ansiedade, TDAH, bipolaridade ou transtornos do humor. E para famílias que acompanham o declínio cognitivo de alguém que amam.

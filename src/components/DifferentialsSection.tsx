@@ -41,7 +41,8 @@ const DifferentialsSection = () => {
             Diferenciais
           </p>
           <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight">
-            O que define esta <em>prática clínica</em>
+            O que define esta{" "}
+            <em className="text-deep-green">prática clínica</em>
           </h2>
         </motion.div>
 

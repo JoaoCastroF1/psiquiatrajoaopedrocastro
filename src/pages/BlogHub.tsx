@@ -75,7 +75,8 @@ const BlogHub = () => {
               {hub.highlight}
             </p>
             <h1 className="font-display text-4xl md:text-5xl font-normal text-foreground leading-tight mb-6">
-              Artigos sobre <em>{hub.title.toLowerCase()}</em>
+              Artigos sobre{" "}
+              <em className="text-deep-green">{hub.title.toLowerCase()}</em>
             </h1>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl">
               {hub.description}

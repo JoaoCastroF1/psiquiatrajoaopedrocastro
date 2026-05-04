@@ -919,27 +919,6 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "remedio-psiquiatrico-vicia",
-    tag: "Psicofarmacologia",
-    title: "Remédio psiquiátrico vicia? Mitos e verdades sobre dependência",
-    metaDescription:
-      "Antidepressivo vicia? Entenda a diferença entre dependência, tolerância e necessidade clínica continuada em medicação psiquiátrica.",
-    excerpt:
-      "Um dos maiores medos de quem inicia tratamento psiquiátrico é ficar dependente da medicação. Entenda a diferença entre dependência, tolerância e necessidade clínica.",
-    date: "03 Abr 2026",
-    readTime: "7 min de leitura",
-    content: [
-      "O medo de 'ficar viciado' é uma das razões mais citadas por pacientes que adiam ou recusam tratamento psiquiátrico. Esse receio, embora compreensível, é frequentemente baseado em uma confusão entre conceitos que a medicina diferencia com clareza: dependência química, tolerância farmacológica e necessidade clínica continuada.",
-      "Dependência química (ou adicção) é um padrão compulsivo de uso de uma substância apesar de consequências negativas. Envolve perda de controle, busca compulsiva e, em muitos casos, uso crescente para obter o mesmo efeito (tolerância). Drogas como álcool, cocaína e opioides produzem dependência porque ativam diretamente o sistema de recompensa cerebral, gerando reforço positivo imediato.",
-      "Antidepressivos (ISRS, IRSN, tricíclicos) não ativam o sistema de recompensa. Ninguém toma sertralina para sentir prazer, euforia ou relaxamento imediato. Esses medicamentos levam semanas para produzir efeito terapêutico e não geram compulsão por uso. Portanto, antidepressivos não viciam. O que pode acontecer é uma síndrome de descontinuação se o medicamento for interrompido abruptamente — sintomas como tontura, irritabilidade e sensação de 'choque elétrico' que são desconfortáveis mas não perigosos e desaparecem com a retirada gradual.",
-      "Benzodiazepínicos (clonazepam, alprazolam, diazepam) merecem atenção separada. Esses medicamentos agem no receptor GABA e podem, sim, gerar tolerância e dependência quando usados por períodos prolongados. Por isso, na prática psiquiátrica atual, os benzodiazepínicos são prescritos com parcimônia: para uso pontual em crises agudas ou como ponte até o antidepressivo fazer efeito. O uso crônico de benzodiazepínicos é evitado sempre que possível.",
-      "Estabilizadores de humor (lítio, valproato, lamotrigina) e antipsicóticos atípicos (quetiapina, risperidona, olanzapina) também não geram dependência no sentido de adicção. São medicamentos que o paciente pode precisar usar por longos períodos — às vezes indefinidamente — para controlar transtornos como bipolaridade ou esquizofrenia. Isso não é vício; é tratamento de uma condição crônica, da mesma forma que um diabético usa insulina sem ser considerado dependente.",
-      "A confusão entre 'precisar do remédio' e 'ser viciado no remédio' é semântica, mas tem consequências graves. Pacientes que interrompem estabilizadores de humor por medo de dependência têm risco elevado de recaída, hospitalização e, em casos extremos, comportamento suicida.",
-      "A decisão sobre quanto tempo manter um medicamento psiquiátrico é clínica e individualizada. Depende do tipo de transtorno, do número de episódios, da gravidade e da resposta ao tratamento. Em muitos casos, a medicação pode ser descontinuada gradualmente após um período adequado de estabilidade. Em outros, o benefício de manter supera amplamente o desconforto de tomar um comprimido diário.",
-      "Se você tem receio sobre medicação psiquiátrica, converse abertamente com seu psiquiatra. Um bom profissional vai explicar o que está prescrevendo, por quanto tempo e qual o plano para eventual descontinuação. Informação reduz medo; medo sem informação atrasa tratamento.",
-    ],
-  },
-  {
     slug: "quanto-tempo-demora-antidepressivo-fazer-efeito",
     tag: "Psicofarmacologia",
     title: "Quanto tempo demora para o antidepressivo fazer efeito?",

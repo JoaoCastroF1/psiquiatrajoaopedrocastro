@@ -11,6 +11,7 @@
     { "source": "/artigos/:slug", "destination": "/blog/:slug", "permanent": true },
     { "source": "/blog/categoria/:slug", "destination": "/blog/tema/:slug", "permanent": true },
     { "source": "/blog/tdah-em-adultos", "destination": "/blog/tdah-adultos-diferenciar-ansiedade-depressao", "permanent": true },
-    { "source": "/blog/tdah-adultos-jovens-estudos", "destination": "/blog/tdah-adultos-diferenciar-ansiedade-depressao", "permanent": true }
+    { "source": "/blog/tdah-adultos-jovens-estudos", "destination": "/blog/tdah-adultos-diferenciar-ansiedade-depressao", "permanent": true },
+    { "source": "/blog/remedio-psiquiatrico-vicia", "destination": "/blog/psicofarmacos-mitos-verdades", "permanent": true }
   ]
 }

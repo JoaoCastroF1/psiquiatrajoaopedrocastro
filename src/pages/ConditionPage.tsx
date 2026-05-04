@@ -105,7 +105,7 @@ const ConditionPage = () => {
               {condition.headline}{" "}
               <em className="text-deep-green">{condition.headlineAccent}</em>
             </h1>
-            <p className="font-body text-sm uppercase tracking-[0.15em] text-steel mb-8">
+            <p className="font-body text-sm uppercase tracking-[0.15em] text-graphite/70 mb-8">
               {condition.subtitle}
             </p>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mb-8">
@@ -244,8 +244,7 @@ const ConditionPage = () => {
             className="max-w-2xl mx-auto"
           >
             <h2 className="font-display text-3xl md:text-4xl font-normal text-primary-foreground leading-tight mb-6">
-              O primeiro passo é uma avaliação com{" "}
-              <em className="text-lime">tempo e profundidade</em>
+              O primeiro passo é uma avaliação com <em>tempo e profundidade</em>
             </h2>
             <p className="font-body text-base text-primary-foreground/70 leading-relaxed mb-10">
               Se você se identificou com o que leu, o caminho começa por uma

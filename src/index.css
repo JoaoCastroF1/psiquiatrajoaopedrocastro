@@ -4,44 +4,46 @@
 
 @layer base {
   :root {
-    --background: 38 30% 95%;
-    --foreground: 220 8% 18%;
+    --background: 38 35% 92%;
+    --foreground: 252 8% 17%;
 
-    --card: 38 25% 97%;
-    --card-foreground: 220 8% 18%;
+    --card: 38 35% 94%;
+    --card-foreground: 252 8% 17%;
 
-    --popover: 38 25% 97%;
-    --popover-foreground: 220 8% 18%;
+    --popover: 38 35% 94%;
+    --popover-foreground: 252 8% 17%;
 
-    --primary: 160 35% 20%;
-    --primary-foreground: 38 30% 95%;
+    --primary: 122 35% 17%;
+    --primary-foreground: 38 35% 92%;
 
-    --secondary: 38 18% 90%;
-    --secondary-foreground: 220 8% 18%;
+    --secondary: 38 25% 88%;
+    --secondary-foreground: 252 8% 17%;
 
-    --muted: 38 15% 88%;
-    --muted-foreground: 220 6% 44%;
+    --muted: 38 20% 86%;
+    --muted-foreground: 252 6% 40%;
 
-    --accent: 68 72% 55%;
-    --accent-foreground: 220 8% 18%;
+    --accent: 67 95% 65%;
+    --accent-foreground: 252 8% 17%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 14 89% 62%;
+    --destructive-foreground: 38 35% 92%;
 
-    --border: 38 15% 85%;
-    --input: 38 15% 85%;
-    --ring: 160 35% 20%;
+    --border: 38 18% 82%;
+    --input: 38 18% 82%;
+    --ring: 122 35% 17%;
 
     --radius: 0.5rem;
 
-    --section-alt: 38 22% 93%;
-    --warm: 20 65% 80%;
-    --salmon: 20 65% 80%;
-    --steel: 205 29% 39%;
-    --lime: 68 72% 55%;
-    --graphite: 220 8% 18%;
-    --deep-green: 160 40% 17%;
-    --sand: 38 25% 88%;
+    --section-alt: 38 30% 89%;
+    --warm: 14 100% 87%;
+    --salmon: 14 100% 87%;
+    --lime: 67 95% 65%;
+    --graphite: 252 8% 17%;
+    --deep-green: 122 35% 17%;
+    --sand: 38 30% 89%;
+    --coral: 14 89% 62%;
+    --cyan: 185 60% 67%;
+    --cream: 38 35% 92%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -59,6 +61,12 @@
     @apply border-border;
   }
 
+  html,
+  body {
+    overflow-x: clip;
+    max-width: 100vw;
+  }
+
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Times New Roman', 'Georgia', serif;
@@ -69,7 +77,8 @@
   }
 
   ::selection {
-    background: hsl(68 72% 55% / 0.25);
+    background: hsl(67 95% 65% / 0.35);
+    color: hsl(252 8% 17%);
   }
 }
 
@@ -79,5 +88,28 @@
   }
   .font-body {
     font-family: 'Times New Roman', 'Georgia', serif;
+  }
+  /* DJP brand photo treatment: subtle desaturation + warm tint + slight contrast.
+     Aplicado em fotos do Dr. para harmonizar com a paleta cream/forest da marca. */
+  .brand-photo {
+    filter: saturate(0.88) sepia(0.07) contrast(1.04);
+  }
+}
+
+@layer components {
+  /* DJP button system. Padding/size sao customizaveis no uso (text-xs px-5 py-2.5
+     para nav, text-sm px-8 py-4 para CTAs, etc.) — esta camada define so a forma
+     editorial (sharp corners, uppercase tracking) e a paleta de cada variante. */
+  .btn {
+    @apply inline-flex items-center justify-center font-body uppercase tracking-[0.1em] transition-all;
+  }
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:opacity-90 hover:shadow-lg;
+  }
+  .btn-lime {
+    @apply bg-cream text-graphite hover:opacity-90 hover:shadow-lg;
+  }
+  .btn-ghost {
+    @apply bg-transparent border text-foreground border-foreground/30 hover:bg-foreground/5 hover:border-foreground/60;
   }
 }

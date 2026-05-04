@@ -1,25 +1,12 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import {
-  Brain,
-  Moon,
-  Clock3,
-  AlertCircle,
-  MapPin,
-  BookOpen,
-  HeartPulse,
-  ArrowRight,
-  Zap,
-  ShieldCheck,
-  MessageCircle,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
 import PageHead from "@/components/PageHead";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { Button } from "@/components/ui/button";
 
 const WA_LINK =
   "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20sou%20vestibulando%20e%20gostaria%20de%20agendar%20uma%20consulta.";
@@ -34,37 +21,31 @@ const nearbyCourses = [
 
 const symptoms = [
   {
-    icon: Brain,
     title: "Ansiedade intensa antes de provas",
     description:
       "Taquicardia, tremores, brancos na hora da prova, sensação constante de que vai dar errado. A ansiedade de desempenho pode comprometer o rendimento mesmo de quem estudou bem.",
   },
   {
-    icon: Clock3,
     title: "Dificuldade de concentração e organização",
     description:
       "Não conseguir manter o foco em aulas longas, procrastinar tarefas importantes, dificuldade de seguir cronogramas e completar simulados. Pode ser hábito — mas também pode indicar TDAH.",
   },
   {
-    icon: Moon,
     title: "Insônia e rotina desregulada",
     description:
       "Dormir tarde, acordar exausto, noites de sono fragmentado. A privação de sono piora atenção, memória de trabalho, regulação emocional e tolerância ao estresse.",
   },
   {
-    icon: HeartPulse,
     title: "Crises de pânico e somatização",
     description:
       "Episódios súbitos de medo intenso, falta de ar, dor no peito, tontura. Sintomas físicos sem causa médica aparente que se intensificam em períodos de pressão acadêmica.",
   },
   {
-    icon: Zap,
     title: "Esgotamento e perda de motivação",
     description:
       "Sensação de não aguentar mais, perda de prazer em atividades que antes eram satisfatórias, irritabilidade constante. O esgotamento pode evoluir para um quadro depressivo.",
   },
   {
-    icon: BookOpen,
     title: "Queda de rendimento inexplicável",
     description:
       "Estudar muito e não render, esquecer conteúdo já revisado, não conseguir articular raciocínios em redações ou questões abertas. Quando o esforço não se traduz em resultado, pode haver um componente clínico.",
@@ -91,7 +72,7 @@ const differentials = [
 
 const relatedArticles = [
   { slug: "ansiedade-no-vestibular", title: "Ansiedade no vestibular: quando preocupação vira transtorno" },
-  { slug: "tdah-adultos-jovens-estudos", title: "TDAH em adultos jovens e o impacto nos estudos" },
+  { slug: "tdah-adultos-diferenciar-ansiedade-depressao", title: "TDAH em adultos: diferenciar de ansiedade e depressão" },
   { slug: "sono-e-memoria-estudantes", title: "Sono e memória: o que estudantes precisam saber" },
   { slug: "crise-de-ansiedade-o-que-acontece-no-corpo", title: "Crise de ansiedade: o que acontece no corpo" },
   { slug: "como-saber-se-tenho-tdah", title: "Como saber se tenho TDAH?" },
@@ -166,29 +147,38 @@ const VestibulandoEspecialista = () => {
             className="max-w-3xl"
           >
             <Breadcrumbs items={[{ label: "Vestibulandos" }]} />
-            <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
-              Saúde mental para estudantes
+            <p className="font-body text-xs uppercase tracking-[0.3em] text-deep-green mb-6 mt-2">
+              Para vestibulandos e estudantes de medicina
             </p>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-normal text-foreground leading-[1.1] mb-8">
-              Quando a pressão do vestibular passa do limite,{" "}
-              <em className="text-deep-green">é hora de avaliar.</em>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-normal text-foreground leading-[1.05] mb-8 -tracking-[0.005em]">
+              Estudar 12 horas por dia{" "}
+              <em className="text-deep-green">não é normal.</em>
+              <br />
+              Funcionar abaixo do potencial,{" "}
+              <em className="text-deep-green">também não.</em>
             </h1>
-            <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mb-4">
-              Ansiedade, dificuldade de concentração, insônia e esgotamento são queixas frequentes entre vestibulandos e universitários. Quando esses sintomas comprometem o rendimento, o sono e a qualidade de vida, uma avaliação psiquiátrica pode ajudar a entender o que está acontecendo — e indicar se existe um quadro clínico que merece tratamento.
+            <p className="font-display italic text-xl md:text-[1.4rem] text-foreground/85 leading-relaxed max-w-2xl mb-6">
+              Para vestibulandos e estudantes em fases intensas: ansiedade refratária, insônia crônica, TDAH não diagnosticado, depressão mascarada de cansaço.
             </p>
-            <p className="font-body text-sm text-muted-foreground">
+            <p className="font-body text-base text-foreground/80 leading-relaxed max-w-2xl mb-4">
+              O objetivo do tratamento não é aumentar nota artificialmente — é tratar o que está atrapalhando funcionamento, sono, foco e estabilidade emocional.
+            </p>
+            <p className="font-body italic text-sm text-foreground/70">
               Consultório em Lourdes, perto dos principais cursinhos de BH.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 mt-10">
-              <Button asChild size="lg">
-                <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
-                  Agendar consulta
-                </a>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link to="/avaliacao">Fazer avaliação de sintomas</Link>
-              </Button>
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary text-sm px-8 py-4"
+              >
+                Agendar consulta
+              </a>
+              <Link to="/avaliacao" className="btn btn-ghost text-sm px-8 py-4">
+                Fazer avaliação de sintomas
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -210,14 +200,14 @@ const VestibulandoEspecialista = () => {
               Quando o problema pode ser{" "}
               <em className="text-deep-green">mais do que estresse</em>
             </h2>
-            <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed mt-5 max-w-xl">
+            <p className="font-body text-base text-foreground/80 leading-relaxed mt-5 max-w-xl">
               Alguns sintomas são esperados em fases de pressão. Mas quando se tornam persistentes, intensos ou incapacitantes, podem indicar um quadro que precisa de atenção clínica.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {symptoms.map((item, i) => {
-              const Icon = item.icon;
+              const cardBg = ["bg-card", "bg-background", "bg-salmon/25"][i % 3];
               return (
                 <motion.div
                   key={i}
@@ -225,13 +215,12 @@ const VestibulandoEspecialista = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.06 }}
-                  className="bg-card border border-border p-6 md:p-8"
+                  className={`p-6 md:p-8 ${cardBg}`}
                 >
-                  <Icon className="h-5 w-5 text-deep-green mb-4" />
-                  <h3 className="font-display text-lg font-medium text-foreground mb-3">
+                  <h3 className="font-display text-lg md:text-xl font-medium text-foreground mb-3">
                     {item.title}
                   </h3>
-                  <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                  <p className="font-body text-sm text-foreground/85 leading-relaxed">
                     {item.description}
                   </p>
                 </motion.div>
@@ -241,7 +230,7 @@ const VestibulandoEspecialista = () => {
         </div>
       </section>
 
-      {/* Differentials */}
+      {/* Differentials + Location */}
       <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
@@ -258,7 +247,7 @@ const VestibulandoEspecialista = () => {
                 Como funciona o{" "}
                 <em className="text-deep-green">atendimento</em>
               </h2>
-              <p className="font-body text-sm md:text-base text-muted-foreground leading-relaxed">
+              <p className="font-body text-base text-foreground/80 leading-relaxed">
                 O objetivo é entender o que está acontecendo antes de prescrever qualquer coisa. Uma avaliação bem feita evita diagnósticos precipitados, medicações desnecessárias e tratamentos genéricos.
               </p>
 
@@ -270,11 +259,12 @@ const VestibulandoEspecialista = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: i * 0.08 }}
+                    className="border-l-2 border-deep-green/40 pl-6"
                   >
-                    <h3 className="font-display text-base md:text-lg font-medium text-foreground mb-2">
+                    <h3 className="font-display text-lg md:text-xl font-medium text-foreground mb-2">
                       {d.title}
                     </h3>
-                    <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                    <p className="font-body text-sm text-foreground/85 leading-relaxed">
                       {d.description}
                     </p>
                   </motion.div>
@@ -290,23 +280,26 @@ const VestibulandoEspecialista = () => {
               transition={{ delay: 0.1 }}
               className="space-y-8"
             >
-              <div className="bg-card border border-border p-6 md:p-8 rounded-lg">
-                <div className="flex items-center gap-3 mb-5">
-                  <MapPin className="h-5 w-5 text-deep-green" />
-                  <h3 className="font-display text-lg md:text-xl font-medium text-foreground">
-                    Perto da sua rotina de estudos
-                  </h3>
-                </div>
-                <p className="font-body text-sm text-muted-foreground leading-relaxed mb-6">
-                  O consultório fica na <strong>Rua dos Timbiras, 1940, sala 1515, Lourdes</strong> — a poucos minutos dos principais cursinhos da região, facilitando o cuidado com a saúde mental sem deslocamentos longos.
+              <div className="bg-card p-8 md:p-10">
+                <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-3">
+                  Localização
                 </p>
-                <ul className="space-y-3">
+                <h3 className="font-display text-xl md:text-2xl font-medium text-foreground mb-4">
+                  Perto da sua{" "}
+                  <em className="text-deep-green">rotina de estudos</em>
+                </h3>
+                <p className="font-body text-sm text-foreground/85 leading-relaxed mb-6">
+                  O consultório fica na <strong className="text-foreground">Rua dos Timbiras, 1940, sala 1515, Lourdes</strong> — a poucos minutos dos principais cursinhos da região, facilitando o cuidado com a saúde mental sem deslocamentos longos.
+                </p>
+                <ul className="space-y-3 border-t border-foreground/10 pt-5">
                   {nearbyCourses.map((course, index) => (
-                    <li key={index} className="flex items-start gap-3 text-sm font-body">
-                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-deep-green shrink-0" />
+                    <li key={index} className="flex items-baseline gap-3 text-sm font-body">
+                      <span className="font-display italic text-deep-green text-xs w-6">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
                       <span>
                         <span className="font-medium text-foreground">{course.name}</span>
-                        <span className="text-muted-foreground"> — {course.address}</span>
+                        <span className="text-foreground/70"> — {course.address}</span>
                       </span>
                     </li>
                   ))}
@@ -314,20 +307,19 @@ const VestibulandoEspecialista = () => {
               </div>
 
               {/* Ethical disclaimer */}
-              <div className="flex gap-3 bg-muted/50 rounded-md p-4">
-                <AlertCircle className="h-4 w-4 text-muted-foreground shrink-0 mt-0.5" />
-                <p className="font-body text-xs text-muted-foreground leading-relaxed">
-                  O acompanhamento psiquiátrico não substitui estudo, organização pedagógica ou preparação acadêmica. Seu papel é avaliar e tratar condições de saúde mental que podem comprometer funcionamento, constância, sono e concentração quando existe indicação clínica.
-                </p>
-              </div>
+              <p className="font-display italic text-sm text-foreground/70 leading-relaxed border-l-2 border-foreground/20 pl-5">
+                O acompanhamento psiquiátrico não substitui estudo, organização pedagógica ou preparação acadêmica. Seu papel é avaliar e tratar condições de saúde mental que podem comprometer funcionamento, constância, sono e concentração quando existe indicação clínica.
+              </p>
 
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button asChild size="lg">
-                  <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="w-4 h-4 mr-2" />
-                    Agendar consulta
-                  </a>
-                </Button>
+                <a
+                  href={WA_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary text-sm px-8 py-4"
+                >
+                  Agendar consulta
+                </a>
               </div>
             </motion.div>
           </div>
@@ -360,12 +352,12 @@ const VestibulandoEspecialista = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="border border-border bg-card p-6 md:p-8"
+                className="bg-card p-6 md:p-8"
               >
                 <h3 className="font-display text-base md:text-lg font-medium text-foreground mb-3">
                   {item.q}
                 </h3>
-                <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                <p className="font-body text-sm text-foreground/85 leading-relaxed">
                   {item.a}
                 </p>
               </motion.div>
@@ -403,9 +395,9 @@ const VestibulandoEspecialista = () => {
               >
                 <Link
                   to={`/blog/${article.slug}`}
-                  className="group block border border-border p-6 hover:border-primary/20 transition-colors h-full"
+                  className="group block bg-card p-6 md:p-8 transition-colors hover:bg-card/70 h-full"
                 >
-                  <h3 className="font-display text-base md:text-lg font-medium text-foreground mb-4 leading-snug">
+                  <h3 className="font-display text-base md:text-lg font-medium text-foreground mb-4 leading-snug group-hover:text-deep-green transition-colors">
                     {article.title}
                   </h3>
                   <span className="inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.15em] text-deep-green group-hover:gap-3 transition-all">
@@ -420,7 +412,7 @@ const VestibulandoEspecialista = () => {
 
       {/* Final CTA */}
       <section className="py-24 md:py-32 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-5" aria-hidden="true">
           <div
             className="absolute inset-0"
             style={{
@@ -438,10 +430,9 @@ const VestibulandoEspecialista = () => {
             className="max-w-3xl mx-auto text-center"
           >
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-normal text-primary-foreground leading-tight mb-6">
-              Se os sintomas estão atrapalhando,{" "}
-              <em className="text-lime">vale investigar.</em>
+              Se os sintomas estão atrapalhando, <em>vale investigar.</em>
             </h2>
-            <p className="font-body text-base md:text-lg text-primary-foreground/70 leading-relaxed mb-12 max-w-xl mx-auto">
+            <p className="font-body text-base md:text-lg text-primary-foreground/85 leading-relaxed mb-12 max-w-xl mx-auto">
               Uma avaliação psiquiátrica bem feita pode distinguir o que é esperado do que precisa de tratamento — e devolver estabilidade, foco e qualidade de vida.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -449,13 +440,13 @@ const VestibulandoEspecialista = () => {
                 href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] bg-primary-foreground text-primary px-10 py-4 hover:opacity-90 transition-all hover:shadow-lg"
+                className="btn btn-lime text-sm px-10 py-4"
               >
                 Agendar consulta
               </a>
               <Link
                 to="/avaliacao"
-                className="inline-flex items-center justify-center font-body text-sm uppercase tracking-[0.1em] border border-primary-foreground/30 text-primary-foreground px-10 py-4 hover:bg-primary-foreground/10 transition-all"
+                className="btn text-sm px-10 py-4 border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
               >
                 Fazer avaliação de sintomas
               </Link>

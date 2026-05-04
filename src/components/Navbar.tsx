@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import { Logo } from "@/components/brand/Logo";
+import { MenuScribble } from "@/components/brand/scribbles/MenuScribble";
+import { CloseScribble } from "@/components/brand/scribbles/CloseScribble";
 
 const WA_LINK =
   "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
@@ -37,13 +39,13 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <div className="flex flex-col">
-          <Link to="/" className="font-display text-xl md:text-2xl text-foreground tracking-tight leading-tight">
-            <em className="text-deep-green">Dr.</em> João Pedro Castro
+          <Link to="/" aria-label="Página inicial — Dr. João Pedro Castro">
+            <Logo variant="light" size="md" highlightDr />
           </Link>
-          <span className="hidden md:block font-body text-[10px] uppercase tracking-[0.15em] text-muted-foreground/70 -mt-0.5">
+          <span className="hidden md:block font-body text-[10px] uppercase tracking-[0.15em] text-foreground/70 -mt-0.5">
             Psiquiatra · Psicogeriatra · CRM-MG 83920 · RQE 62148 / 66521
           </span>
-          <span className="md:hidden font-body text-[9px] uppercase tracking-[0.12em] text-muted-foreground/70 -mt-0.5">
+          <span className="md:hidden font-body text-[9px] uppercase tracking-[0.12em] text-foreground/70 -mt-0.5">
             CRM-MG 83920 · RQE 62148 / 66521
           </span>
         </div>
@@ -72,7 +74,7 @@ const Navbar = () => {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-body text-xs uppercase tracking-[0.15em] bg-primary text-primary-foreground px-5 py-2.5 hover:opacity-90 transition-opacity"
+            className="btn btn-primary text-xs px-5 py-2.5"
           >
             Agendar
           </a>
@@ -81,8 +83,10 @@ const Navbar = () => {
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-foreground"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
         >
-          {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {open ? <CloseScribble className="w-6 h-6" /> : <MenuScribble className="w-6 h-6" />}
         </button>
       </div>
 
@@ -113,7 +117,7 @@ const Navbar = () => {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="block font-body text-sm bg-primary text-primary-foreground text-center py-3 mt-4"
+            className="btn btn-primary block text-sm text-center mt-4 py-3"
           >
             Agendar Consulta
           </a>

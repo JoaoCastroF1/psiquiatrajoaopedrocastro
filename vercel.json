@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/sobre", "destination": "/atuacao", "permanent": true },
+    { "source": "/servicos", "destination": "/atuacao", "permanent": true },
+    { "source": "/contato", "destination": "/avaliacao", "permanent": true },
+    { "source": "/agendamento", "destination": "/avaliacao", "permanent": true },
+    { "source": "/artigos", "destination": "/blog", "permanent": true },
+    { "source": "/artigos/:slug", "destination": "/blog/:slug", "permanent": true },
+    { "source": "/blog/categoria/:slug", "destination": "/blog/tema/:slug", "permanent": true },
+    { "source": "/blog/tdah-em-adultos", "destination": "/blog/tdah-adultos-diferenciar-ansiedade-depressao", "permanent": true },
+    { "source": "/blog/tdah-adultos-jovens-estudos", "destination": "/blog/tdah-adultos-diferenciar-ansiedade-depressao", "permanent": true }
+  ]
+}

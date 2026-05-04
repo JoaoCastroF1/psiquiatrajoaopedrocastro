@@ -84,25 +84,27 @@ const ServicesSection = ({ showHeader = true }: ServicesSectionProps) => {
           </motion.div>
         )}
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-10">
-          {areas.map((a, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="group"
-            >
-              <div className="w-8 h-px bg-primary/40 mb-5 group-hover:w-12 transition-all duration-300" />
-              <h3 className="font-display text-lg md:text-xl font-medium text-foreground mb-2">
-                {a.title}
-              </h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                {a.desc}
-              </p>
-            </motion.div>
-          ))}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {areas.map((a, i) => {
+            const cardBg = ["bg-card", "bg-section-alt/60", "bg-salmon/25"][i % 3];
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.05 }}
+                className={`p-6 md:p-8 ${cardBg}`}
+              >
+                <h3 className="font-display text-lg md:text-xl font-medium text-foreground mb-3">
+                  {a.title}
+                </h3>
+                <p className="font-body text-sm text-foreground/85 leading-relaxed">
+                  {a.desc}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

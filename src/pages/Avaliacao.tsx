@@ -7,6 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHead from "@/components/PageHead";
+import { trackEvent } from "@/lib/analytics";
 
 const WA_NUMBER = "5531991315958";
 
@@ -103,7 +104,12 @@ const Avaliacao = () => {
   const currentQuestion = questions[currentStep];
 
   const handleSelect = (questionId: string, value: string) => {
+    const isFirstAnswer = Object.keys(answers).length === 0;
     setAnswers((prev) => ({ ...prev, [questionId]: value }));
+
+    if (isFirstAnswer) {
+      trackEvent("avaliacao_iniciada");
+    }
 
     // Auto-advance after brief delay
     setTimeout(() => {
@@ -111,6 +117,7 @@ const Avaliacao = () => {
         setCurrentStep((s) => s + 1);
       } else {
         setCompleted(true);
+        trackEvent("avaliacao_concluida");
       }
     }, 400);
   };
@@ -259,6 +266,7 @@ const Avaliacao = () => {
                           setCurrentStep((s) => s + 1);
                         } else {
                           setCompleted(true);
+                          trackEvent("avaliacao_concluida");
                         }
                       }}
                       className="inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.15em] text-deep-green hover:gap-3 transition-all"
@@ -323,6 +331,7 @@ const Avaliacao = () => {
                     href={buildWhatsAppMessage()}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => trackEvent("avaliacao_cta_whatsapp")}
                     className="inline-flex items-center gap-3 font-body text-sm uppercase tracking-[0.1em] bg-primary text-primary-foreground px-8 py-4 hover:opacity-90 transition-opacity w-full justify-center md:w-auto"
                   >
                     <MessageCircle className="w-4 h-4" />

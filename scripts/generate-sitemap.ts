@@ -1,62 +1,36 @@
 import { writeFileSync } from "node:fs";
-import { resolve } from "node:path";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { blogPosts } from "../src/data/blogPosts";
 import { blogHubs } from "../src/data/blogHubs";
-import { brDateToIso } from "../src/lib/blogDates";
+import { conditions } from "../src/data/conditions";
 
-const SITE = "https://drjoaopedrocastro.com.br";
-const TODAY = new Date().toISOString().slice(0, 10);
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const SITE_ORIGIN = "https://drjoaopedrocastro.com.br";
+const today = new Date().toISOString().slice(0, 10);
 
-interface UrlEntry {
-  loc: string;
-  lastmod: string;
-  priority: string;
-}
-
-const staticRoutes: UrlEntry[] = [
-  { loc: "/", lastmod: TODAY, priority: "1.0" },
-  { loc: "/atuacao", lastmod: TODAY, priority: "0.9" },
-  { loc: "/avaliacao", lastmod: TODAY, priority: "0.9" },
-  { loc: "/empresas", lastmod: TODAY, priority: "0.8" },
-  { loc: "/podcast", lastmod: TODAY, priority: "0.7" },
-  { loc: "/vestibulandos", lastmod: TODAY, priority: "0.8" },
-  { loc: "/depressao", lastmod: TODAY, priority: "0.8" },
-  { loc: "/ansiedade", lastmod: TODAY, priority: "0.8" },
-  { loc: "/tdah", lastmod: TODAY, priority: "0.8" },
-  { loc: "/bipolaridade", lastmod: TODAY, priority: "0.8" },
-  { loc: "/alzheimer", lastmod: TODAY, priority: "0.8" },
-  { loc: "/insonia", lastmod: TODAY, priority: "0.8" },
-  { loc: "/estresse-pos-traumatico", lastmod: TODAY, priority: "0.8" },
-  { loc: "/blog", lastmod: TODAY, priority: "0.8" },
+const STATIC_ROUTES: Array<{ path: string; priority: string }> = [
+  { path: "/", priority: "1.0" },
+  { path: "/atuacao", priority: "0.8" },
+  { path: "/empresas", priority: "0.8" },
+  { path: "/podcast", priority: "0.8" },
+  { path: "/avaliacao", priority: "0.8" },
+  { path: "/blog", priority: "0.8" },
+  { path: "/vestibulandos", priority: "0.8" },
 ];
 
-const hubEntries: UrlEntry[] = blogHubs.map((h) => ({
-  loc: `/blog/tema/${h.slug}`,
-  lastmod: TODAY,
-  priority: "0.7",
-}));
+const urlEntry = (path: string, priority: string) =>
+  `  <url>\n    <loc>${SITE_ORIGIN}${path}</loc>\n    <lastmod>${today}</lastmod>\n    <priority>${priority}</priority>\n  </url>`;
 
-const postEntries: UrlEntry[] = blogPosts.map((p) => ({
-  loc: `/blog/${p.slug}`,
-  lastmod: brDateToIso(p.lastModified ?? p.date),
-  priority: "0.6",
-}));
+const entries: string[] = [
+  ...STATIC_ROUTES.map((r) => urlEntry(r.path, r.priority)),
+  ...conditions.map((c) => urlEntry(`/${c.slug}`, "0.7")),
+  ...blogHubs.map((h) => urlEntry(`/blog/tema/${h.slug}`, "0.8")),
+  ...blogPosts.map((p) => urlEntry(`/blog/${p.slug}`, "0.7")),
+];
 
-const allEntries = [...staticRoutes, ...hubEntries, ...postEntries];
+const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries.join("\n")}\n</urlset>\n`;
 
-const xml = [
-  '<?xml version="1.0" encoding="UTF-8"?>',
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-  ...allEntries.map(
-    (e) =>
-      `  <url>\n    <loc>${SITE}${e.loc}</loc>\n    <lastmod>${e.lastmod}</lastmod>\n    <priority>${e.priority}</priority>\n  </url>`,
-  ),
-  "</urlset>",
-  "",
-].join("\n");
-
-const outPath = resolve(process.cwd(), "public/sitemap.xml");
-writeFileSync(outPath, xml, "utf8");
-console.log(
-  `sitemap.xml gerado: ${allEntries.length} URLs (${staticRoutes.length} estáticas, ${hubEntries.length} hubs, ${postEntries.length} posts)`,
-);
+const outputPath = resolve(__dirname, "../public/sitemap.xml");
+writeFileSync(outputPath, xml, "utf-8");
+console.log(`sitemap.xml written: ${entries.length} URLs`);

@@ -24,8 +24,7 @@ dist-ssr
 *.sw?
 .env
 
-# Brand source binaries (Adobe Illustrator). PDFs in docs/brand/ are committed as reference.
-docs/brand/*.ai
-
-# Generated at build time by scripts/generate-sitemap.ts
-public/sitemap.xml
+# Skills installed via `npx skills add` — content is auto-installed
+# from skills-lock.json, similar to node_modules.
+.agents/
+.claude/

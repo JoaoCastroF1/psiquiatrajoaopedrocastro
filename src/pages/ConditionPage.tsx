@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useLocation, Navigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -7,6 +8,7 @@ import PageHead from "@/components/PageHead";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { getConditionBySlug, conditions, WA_LINK } from "@/data/conditions";
+import { trackEvent } from "@/lib/analytics";
 import {
   Accordion,
   AccordionContent,
@@ -19,6 +21,12 @@ const ConditionPage = () => {
   const location = useLocation();
   const slug = location.pathname.replace("/", "");
   const condition = getConditionBySlug(slug);
+
+  useEffect(() => {
+    if (condition) {
+      trackEvent("condicao_view", { condition: condition.slug });
+    }
+  }, [condition]);
 
   if (!condition) return <Navigate to="/atuacao" replace />;
 
@@ -42,6 +50,7 @@ const ConditionPage = () => {
     name: condition.metaTitle,
     description: condition.metaDescription,
     url: `https://drjoaopedrocastro.com.br/${condition.slug}`,
+    inLanguage: "pt-BR",
     author: {
       "@type": "Physician",
       name: "Dr. João Pedro Castro",
@@ -50,6 +59,16 @@ const ConditionPage = () => {
     about: {
       "@type": "MedicalCondition",
       name: condition.title,
+      alternateName: condition.tagLabel,
+      description: condition.intro,
+      signOrSymptom: condition.symptoms.map((s) => ({
+        "@type": "MedicalSignOrSymptom",
+        name: s,
+      })),
+      possibleTreatment: condition.approach.map((step) => ({
+        "@type": "MedicalTherapy",
+        description: step,
+      })),
     },
   };
 

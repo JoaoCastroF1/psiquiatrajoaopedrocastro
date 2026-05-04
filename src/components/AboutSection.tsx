@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
-import jpWriting from "@/assets/jp-writing.jpg";
+import jpWritingJpg from "@/assets/jp-writing.jpg";
+import jpWritingWebp from "@/assets/jp-writing.webp";
 
 const credentials = [
   "Graduação em Medicina pela UFMG",
@@ -45,12 +46,16 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <img
-              src={jpWriting}
-              alt="Dr. João Pedro Castro — Psiquiatra e Psicogeriatra formado pela UFMG"
-              className="brand-photo w-full aspect-[4/5] object-cover"
-              loading="lazy"
-            />
+            <picture>
+              <source srcSet={jpWritingWebp} type="image/webp" />
+              <img
+                src={jpWritingJpg}
+                alt="Dr. João Pedro Castro — Psiquiatra e Psicogeriatra formado pela UFMG"
+                className="w-full aspect-[4/5] object-cover grayscale-[20%]"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
           </motion.div>
 
           <motion.div

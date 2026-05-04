@@ -6,7 +6,7 @@ import sharp from "sharp";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ASSETS_DIR = resolve(__dirname, "../src/assets");
 
-const TARGETS = ["jp-portrait", "jp-writing"];
+const TARGETS = ["jp-portrait", "jp-writing", "jp-coat"];
 const MAX_WIDTH = 1600;
 const JPG_QUALITY = 82;
 const WEBP_QUALITY = 80;

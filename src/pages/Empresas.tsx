@@ -105,7 +105,7 @@ const Empresas = () => {
                     <span className="font-display italic text-base md:text-lg text-cream leading-snug">
                       {item}
                     </span>
-                    <ArrowRight className="w-4 h-4 text-lime shrink-0" aria-hidden="true" />
+                    <ArrowRight className="w-4 h-4 text-cream/60 shrink-0" aria-hidden="true" />
                   </li>
                 ))}
               </ul>

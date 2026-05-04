@@ -1,4 +1,4 @@
-import { useParams, Navigate, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import NotFound from "@/pages/NotFound";
 import { blogPosts } from "@/data/blogPosts";
 import { blogHubs } from "@/data/blogHubs";
 import PageHead from "@/components/PageHead";
@@ -14,7 +15,7 @@ const BlogHub = () => {
   const { hubSlug } = useParams<{ hubSlug: string }>();
   const hub = blogHubs.find((h) => h.slug === hubSlug);
 
-  if (!hub) return <Navigate to="/blog" replace />;
+  if (!hub) return <NotFound />;
 
   const posts = blogPosts.filter((p) => hub.tags.includes(p.tag));
   const hubUrl = `https://drjoaopedrocastro.com.br/blog/tema/${hub.slug}`;
@@ -25,7 +26,6 @@ const BlogHub = () => {
     name: `${hub.title} — Dr. João Pedro Castro`,
     description: hub.metaDescription,
     url: hubUrl,
-    specialty: { "@type": "MedicalSpecialty", name: "Psychiatry" },
     mainEntity: {
       "@type": "ItemList",
       itemListElement: posts.map((post, i) => ({
@@ -52,6 +52,7 @@ const BlogHub = () => {
         title={`${hub.title} — Blog | Dr. João Pedro Castro`}
         description={hub.metaDescription}
         url={hubUrl}
+        type="blog"
       />
       <JsonLd data={hubJsonLd} />
       <Navbar />
@@ -81,7 +82,7 @@ const BlogHub = () => {
               {hub.description}
             </p>
             <p className="font-body text-sm text-muted-foreground mt-4">
-              {posts.length} artigos disponíveis
+              {posts.length === 1 ? "1 artigo disponível" : `${posts.length} artigos disponíveis`}
             </p>
           </motion.div>
         </div>

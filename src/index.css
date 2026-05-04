@@ -107,7 +107,7 @@
     @apply bg-primary text-primary-foreground hover:opacity-90 hover:shadow-lg;
   }
   .btn-lime {
-    @apply bg-lime text-graphite hover:opacity-90 hover:shadow-lg;
+    @apply bg-cream text-graphite hover:opacity-90 hover:shadow-lg;
   }
   .btn-ghost {
     @apply bg-transparent border text-foreground border-foreground/30 hover:bg-foreground/5 hover:border-foreground/60;

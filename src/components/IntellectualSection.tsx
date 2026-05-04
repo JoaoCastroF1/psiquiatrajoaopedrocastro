@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import jpCoat from "@/assets/jp-coat.jpg";
+import jpCoatJpg from "@/assets/jp-coat.jpg";
+import jpCoatWebp from "@/assets/jp-coat.webp";
 
 const IntellectualSection = () => {
   return (
@@ -36,12 +37,16 @@ const IntellectualSection = () => {
             className="flex justify-center lg:justify-end"
           >
             <div className="relative">
-              <img
-                src={jpCoat}
-                alt="Dr. João Pedro Castro — Mestrando em Neurociências pela UFMG, psiquiatra e psicogeriatra"
-                className="brand-photo w-72 md:w-80 lg:w-[380px] aspect-[3/4] object-cover object-top"
-                loading="lazy"
-              />
+              <picture>
+                <source srcSet={jpCoatWebp} type="image/webp" />
+                <img
+                  src={jpCoatJpg}
+                  alt="Dr. João Pedro Castro — Mestrando em Neurociências pela UFMG, psiquiatra e psicogeriatra"
+                  className="brand-photo w-72 md:w-80 lg:w-[380px] aspect-[3/4] object-cover object-top"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
               <p className="font-body text-xs text-primary-foreground/75 mt-4 text-center italic">
                 Psiquiatra e psicogeriatra. Residências pelo Odilon Behrens e HC/UFMG. Mestrando em Neurociências.
               </p>

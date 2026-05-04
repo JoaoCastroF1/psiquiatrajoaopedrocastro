@@ -1,21 +1,15 @@
-import { Head } from "vite-react-ssg";
+import { useEffect } from "react";
 
 interface PageHeadProps {
   title: string;
   description: string;
   url: string;
   image?: string;
-  type?: "website" | "article" | "blog";
-  twitterSite?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
-  tags?: string[];
+  type?: string;
 }
 
-const DEFAULT_IMAGE = "https://drjoaopedrocastro.com.br/og-image.jpg";
-const DEFAULT_TWITTER = "@joaocastrof";
+const DEFAULT_IMAGE =
+  "https://storage.googleapis.com/gpt-engineer-file-uploads/yFToYCs0UngFU2k1vSPCMcxcOri1/social-images/social-1774294559691-109195.webp";
 
 const PageHead = ({
   title,
@@ -23,48 +17,64 @@ const PageHead = ({
   url,
   image = DEFAULT_IMAGE,
   type = "website",
-  twitterSite = DEFAULT_TWITTER,
-  publishedTime,
-  modifiedTime,
-  author,
-  section,
-  tags,
 }: PageHeadProps) => {
-  const isArticle = type === "article";
-  return (
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:type" content={type} />
-      <meta property="og:locale" content="pt_BR" />
-      <meta property="og:site_name" content="Dr. João Pedro Castro" />
-      {isArticle && publishedTime && (
-        <meta property="article:published_time" content={publishedTime} />
-      )}
-      {isArticle && modifiedTime && (
-        <meta property="article:modified_time" content={modifiedTime} />
-      )}
-      {isArticle && author && <meta property="article:author" content={author} />}
-      {isArticle && section && <meta property="article:section" content={section} />}
-      {isArticle &&
-        tags?.map((tag) => (
-          <meta key={tag} property="article:tag" content={tag} />
-        ))}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content={twitterSite} />
-      <meta name="twitter:creator" content={twitterSite} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={url} />
-    </Head>
-  );
+  useEffect(() => {
+    document.title = title;
+
+    const metaTags: Record<string, string> = {
+      description,
+      "og:title": title,
+      "og:description": description,
+      "og:url": url,
+      "og:image": image,
+      "og:type": type,
+      "og:locale": "pt_BR",
+      "og:site_name": "Dr. João Pedro Castro",
+      "twitter:card": "summary_large_image",
+      "twitter:title": title,
+      "twitter:description": description,
+      "twitter:image": image,
+    };
+
+    const elements: HTMLMetaElement[] = [];
+
+    Object.entries(metaTags).forEach(([key, value]) => {
+      const isOgOrTwitter = key.startsWith("og:") || key.startsWith("twitter:");
+      const attr = isOgOrTwitter ? "property" : "name";
+
+      let el = document.querySelector<HTMLMetaElement>(
+        `meta[${attr}="${key}"]`
+      );
+
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+        elements.push(el);
+      }
+
+      el.setAttribute("content", value);
+    });
+
+    // Set canonical
+    let canonical = document.querySelector<HTMLLinkElement>(
+      'link[rel="canonical"]'
+    );
+    const hadCanonical = !!canonical;
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute("href", url);
+
+    return () => {
+      elements.forEach((el) => el.remove());
+      if (!hadCanonical && canonical) canonical.remove();
+    };
+  }, [title, description, url, image, type]);
+
+  return null;
 };
 
 export default PageHead;

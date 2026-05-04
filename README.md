@@ -76,8 +76,7 @@ src/
 ├── lib/                 # utils, analytics
 ├── assets/              # imagens (jpg + variantes webp)
 ├── test/                # setup Vitest + testes
-├── routes.tsx           # rotas (incl. getStaticPaths para blog/temas)
-├── Layout.tsx
+├── App.tsx              # router principal (rotas)
 └── main.tsx
 public/                  # favicons, manifest, sitemap.xml
 supabase/                # config.toml + migrations SQL

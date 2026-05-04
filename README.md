@@ -67,6 +67,9 @@ src/
 ├── pages/               # Index, Atuacao, Empresas, Podcast, Avaliacao,
 │                        # VestibulandoEspecialista, ConditionPage,
 │                        # Blog, BlogHub, BlogPost, NotFound
+├── layouts/
+│   └── MainLayout.tsx   # Navbar + <Outlet /> + Footer + WhatsAppButton
+├── modules/             # sub-apps autocontidos (ver "Módulos" abaixo)
 ├── components/          # Seções da home, Navbar, Footer, WhatsAppButton, JsonLd, etc.
 │   └── ui/              # primitives shadcn/ui
 ├── data/                # blogPosts.ts, blogHubs.ts, conditions.ts (conteúdo estático)
@@ -76,7 +79,7 @@ src/
 ├── lib/                 # utils, analytics
 ├── assets/              # imagens (jpg + variantes webp)
 ├── test/                # setup Vitest + testes
-├── App.tsx              # router principal (rotas)
+├── App.tsx              # router principal (rotas lazy + MainLayout)
 └── main.tsx
 public/                  # favicons, manifest, sitemap.xml
 supabase/                # config.toml + migrations SQL
@@ -93,6 +96,37 @@ Rotas: `/`, `/atuacao`, `/empresas`, `/podcast`, `/avaliacao`, `/vestibulandos`,
 - **Avaliação de sintomas** (`/avaliacao`) — questionário que finaliza encaminhando as respostas para o WhatsApp do Dr.
 - **Empresas** (`/empresas`) — programas corporativos (NR-1, palestras, diagnóstico).
 - **Vestibulandos** (`/vestibulandos`) — programa para estudantes em preparação.
+
+## Módulos
+
+`src/modules/<nome>/` é a convenção para sub-apps acoplados ao site (ex.: ferramentas próprias do Dr.). Cada módulo é uma pasta autocontida e plugada em `src/App.tsx` como sub-rota lazy-loaded.
+
+Layout esperado:
+
+```
+src/modules/<nome>/
+├── index.tsx         # exporta o <Module /> raiz (rotas internas)
+├── components/       # UI específica do módulo
+├── hooks/            # hooks específicos
+├── lib/              # regras de negócio, helpers
+└── data/             # dados estáticos do módulo
+```
+
+Como plugar uma rota nova em `src/App.tsx`:
+
+```tsx
+const MeuModulo = lazy(() => import("./modules/meu-modulo"));
+// ...
+<Route path="/meu-modulo/*" element={<MeuModulo />} />
+```
+
+Diretrizes:
+
+- Reuse `src/components/ui/*` (shadcn) e os tokens em `tailwind.config.ts` para manter coerência visual.
+- Use `src/components/PageHead.tsx` por rota interna do módulo (meta/canonical/OG).
+- Use o `QueryClient` global (já em `App.tsx`) e o cliente Supabase em `src/integrations/supabase/client.ts`. Não instancie clientes paralelos.
+- Schema de banco do módulo vai em `supabase/migrations/` com prefixo (ex.: `divida_*`, `sono_*`) e RLS por `auth.uid()`.
+- Se o módulo tiver landing pública + área autenticada, separe em sub-rotas (`/meu-modulo` aberta, `/meu-modulo/app` atrás de auth).
 
 ## SEO
 

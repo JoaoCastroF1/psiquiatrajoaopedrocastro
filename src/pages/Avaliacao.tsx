@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ArrowLeft, MessageCircle, CheckCircle2 } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHead from "@/components/PageHead";
@@ -141,14 +138,13 @@ const Avaliacao = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <>
       <PageHead
         title="Avaliação de Sintomas — Dr. João Pedro Castro | Psiquiatra em BH"
         description="Faça uma avaliação rápida dos seus sintomas e descubra se é hora de procurar um psiquiatra. Questionário orientativo gratuito."
         url="https://drjoaopedrocastro.com.br/avaliacao"
       />
       <JsonLd data={assessmentJsonLd} />
-      <Navbar />
 
       <section className="pt-28 md:pt-36 pb-20 md:pb-28 bg-background">
         <div className="container mx-auto px-4">
@@ -360,9 +356,7 @@ const Avaliacao = () => {
         </div>
       </section>
 
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    </>
   );
 };
 

@@ -1,9 +1,6 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, Clock } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -59,7 +56,7 @@ const BlogPost = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <>
       <PageHead
         title={`${post.title} — Dr. João Pedro Castro`}
         description={post.excerpt}
@@ -67,7 +64,6 @@ const BlogPost = () => {
         type="article"
       />
       <JsonLd data={articleJsonLd} />
-      <Navbar />
 
       <article className="pt-28 md:pt-36 pb-20 md:pb-28 bg-background">
         <div className="container mx-auto px-4">
@@ -144,10 +140,7 @@ const BlogPost = () => {
           </motion.div>
         </div>
       </article>
-
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    </>
   );
 };
 

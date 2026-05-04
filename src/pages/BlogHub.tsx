@@ -1,12 +1,8 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import NotFound from "@/pages/NotFound";
 import { blogPosts } from "@/data/blogPosts";
 import { blogHubs } from "@/data/blogHubs";
 import PageHead from "@/components/PageHead";
@@ -15,7 +11,7 @@ const BlogHub = () => {
   const { hubSlug } = useParams<{ hubSlug: string }>();
   const hub = blogHubs.find((h) => h.slug === hubSlug);
 
-  if (!hub) return <NotFound />;
+  if (!hub) return <Navigate to="/blog" replace />;
 
   const posts = blogPosts.filter((p) => hub.tags.includes(p.tag));
   const hubUrl = `https://drjoaopedrocastro.com.br/blog/tema/${hub.slug}`;
@@ -47,7 +43,7 @@ const BlogHub = () => {
   const otherHubs = blogHubs.filter((h) => h.slug !== hub.slug);
 
   return (
-    <div className="min-h-screen">
+    <>
       <PageHead
         title={`${hub.title} — Blog | Dr. João Pedro Castro`}
         description={hub.metaDescription}
@@ -55,7 +51,6 @@ const BlogHub = () => {
         type="blog"
       />
       <JsonLd data={hubJsonLd} />
-      <Navbar />
 
       <section className="pt-28 md:pt-36 pb-16 bg-background">
         <div className="container mx-auto px-4">
@@ -162,9 +157,7 @@ const BlogHub = () => {
         </div>
       </section>
 
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    </>
   );
 };
 

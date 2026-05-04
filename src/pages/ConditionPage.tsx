@@ -1,9 +1,6 @@
 import { useEffect } from "react";
 import { useLocation, Navigate, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import PageHead from "@/components/PageHead";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -73,7 +70,7 @@ const ConditionPage = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <>
       <PageHead
         title={condition.metaTitle}
         description={condition.metaDescription}
@@ -81,7 +78,6 @@ const ConditionPage = () => {
       />
       <JsonLd data={faqJsonLd} />
       <JsonLd data={medicalJsonLd} />
-      <Navbar />
 
       {/* Hero */}
       <section className="pt-28 md:pt-36 pb-16 bg-background">
@@ -298,9 +294,7 @@ const ConditionPage = () => {
         </section>
       )}
 
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    </>
   );
 };
 

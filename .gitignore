@@ -22,7 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Variaveis de ambiente — NUNCA comitar valores reais.
+# `.env.example` e a unica excecao (template sem valores).
 .env
+.env.*
+!.env.example
 
 # Brand source binaries (Adobe Illustrator). PDFs in docs/brand/ are committed as reference.
 docs/brand/*.ai

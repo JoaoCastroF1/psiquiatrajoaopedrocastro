@@ -1,6 +1,3 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import PageHead from "@/components/PageHead";
 import { motion } from "framer-motion";
@@ -38,13 +35,12 @@ const services = [
 
 const Empresas = () => {
   return (
-    <div className="min-h-screen">
+    <>
       <PageHead
         title="Saúde Mental Corporativa — Dr. João Pedro Castro | Psiquiatra em BH"
         description="Programas de saúde mental para empresas: diagnóstico situacional, NR-1, palestras e acompanhamento. Consultoria psiquiátrica especializada."
         url="https://drjoaopedrocastro.com.br/empresas"
       />
-      <Navbar />
 
       {/* Hero — split layout with included-services dark card */}
       <section className="pt-28 md:pt-36 pb-16 md:pb-24 bg-section-alt">
@@ -213,9 +209,7 @@ const Empresas = () => {
         </div>
       </section>
 
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    </>
   );
 };
 

@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
 import PageHead from "@/components/PageHead";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -128,14 +125,13 @@ const pageJsonLd = {
 
 const VestibulandoEspecialista = () => {
   return (
-    <div className="min-h-screen">
+    <>
       <PageHead
         title="Psiquiatra para Vestibulandos em BH — Ansiedade, TDAH, Insônia | Dr. João Pedro Castro"
         description="Atendimento psiquiátrico para vestibulandos e estudantes em Belo Horizonte. Avaliação de ansiedade, TDAH, insônia e esgotamento. Consultório em Lourdes, perto dos principais cursinhos."
         url="https://drjoaopedrocastro.com.br/vestibulandos"
       />
       <JsonLd data={pageJsonLd} />
-      <Navbar />
 
       {/* Hero */}
       <section className="pt-28 md:pt-36 pb-16 md:pb-24 bg-background">
@@ -455,9 +451,7 @@ const VestibulandoEspecialista = () => {
         </div>
       </section>
 
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    </>
   );
 };
 

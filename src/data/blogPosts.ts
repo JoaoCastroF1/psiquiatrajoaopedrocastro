@@ -762,26 +762,6 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "quetiapina-seroquel-bipolar-psicose",
-    tag: "Psicofarmacologia",
-    title: "Quetiapina (Seroquel): antipsicótico atípico para bipolar e insônia severa",
-    excerpt:
-      "Quetiapina é frequentemente prescrita além de psicose. Conheça seu uso em transtorno bipolar, insônia refratária e metabolismo de peso.",
-    date: "18 Abr 2026",
-    readTime: "8 min de leitura",
-    content: [
-      "Quetiapina é um antipsicótico atípico com ação antagonista em receptores dopamina e serotonina. Diferente dos antipsicóticos típicos antigos, tem risco significativamente menor de efeitos extrapiramidais (tremor, rigidez, discinesia). É prescrita não apenas em psicose mas em diversos diagnósticos psiquiátricos.",
-      "A indicação mais comum de quetiapina é transtorno bipolar — tanto em fase maníaca quanto depressiva. Em mania, quetiapina rapidamente reduz agitação, psicose e sintomas de grandiosidade. Em depressão bipolar, oferece benefício específico comparado a apenas antidepressivos (que podem precipitar virada maníaca).",
-      "Quetiapina também é prescrita off-label para insônia severa refratária a outros tratamentos. Em doses baixas (25-100 mg à noite), oferece sedação profunda frequentemente efetiva quando hipnóticos tradicionais falham. Essa aplicação é controversa entre psiquiatras mas generalizada na prática.",
-      "A meia-vida de quetiapina é curta (6 horas), necessitando frequentemente dosagem 2-3 vezes diárias para efeito terapêutico completo — embora formulações de liberação prolongada (XR) ofereçam dosagem uma vez diária. Doses variam de 150 a 750 mg diários dependendo da indicação.",
-      "O efeito colateral mais significativo de quetiapina é ganho de peso — em torno de 3-4 kg em média em primeiro ano de tratamento, com alguns pacientes ganhando mais. Esse ganho de peso se correlaciona com dismetabolismo: aumento de riscos para diabetes tipo 2, síndrome metabólica e dislipidemia. Monitoramento de peso, glicemia e lipídios é recomendado.",
-      "Quetiapina causa sedação pronunciada em muitos pacientes, especialmente durante titulação inicial. Tolerância à sedação frequentemente se desenvolve ao longo de semanas, permitindo dosagem diurna completa sem sonolência excessiva. Pacientes são aconselhados a não dirigir ou operar máquinas até tolerância se estabeleça.",
-      "Outro efeito colateral é ortostase — queda de pressão arterial ao ficar de pé rapidamente, causando tontura. Idosos são particularmente vulneráveis. Titulação lenta — começando com 25 mg e aumentando gradualmente — minimiza ortostase.",
-      "Quetiapina é metabolizada hepaticamente, com potencial para interações. Não deve ser combinada com álcool (aumenta risco de sedação e ortostase). Pacientes com história de glaucoma de ângulo fechado devem evitar quetiapina.",
-      "Se você foi diagnosticado com transtorno bipolar ou insônia severa refratária e seu psiquiatra prescreveu quetiapina, a compreensão de seus benefícios, monitoramento necessário de peso e metabolismo, e paciência com tolerabilidade inicial contribuem a sucesso do tratamento.",
-    ],
-  },
-  {
     slug: "litio-sal-bipolar-gold-standard",
     tag: "Psicofarmacologia",
     title: "Lítio: sal mineral que revolucionou o tratamento de transtorno bipolar",
@@ -997,27 +977,6 @@ export const blogPosts: BlogPost[] = [
       "A dose importa. Muitos pacientes recebem doses subterapêuticas por medo de efeitos colaterais e permanecem nelas indefinidamente. O efeito antidepressivo é dose-dependente: uma dose baixa pode ser insuficiente mesmo que o medicamento seja o correto para aquele paciente.",
       "Outro ponto relevante: a melhora geralmente é percebida primeiro por pessoas próximas antes do próprio paciente. Familiares relatam que a pessoa 'parece mais disposta' ou 'voltou a se interessar por coisas' antes de o paciente reconhecer a mudança. Isso acontece porque a depressão distorce a percepção de si mesmo.",
       "O tratamento antidepressivo exige paciência informada. Saber que o tempo de resposta é de semanas (não dias) e que os efeitos colaterais iniciais tendem a diminuir ajuda o paciente a atravessar a fase mais difícil sem abandonar prematuramente uma medicação que pode funcionar.",
-    ],
-  },
-  {
-    slug: "o-que-e-psicogeriatra-quando-consultar",
-    tag: "Psicogeriatria",
-    title: "O que faz um psicogeriatra e quando consultar esse especialista?",
-    metaDescription:
-      "Psicogeriatria é psiquiatria do envelhecimento. Quando consultar esse especialista e por que tratar idoso exige abordagem diferente.",
-    excerpt:
-      "Psicogeriatria é a psiquiatria do envelhecimento. Entenda quando um idoso precisa desse especialista e por que o tratamento psiquiátrico no idoso exige abordagem diferente.",
-    date: "30 Mar 2026",
-    readTime: "7 min de leitura",
-    content: [
-      "O psicogeriatra é o psiquiatra especializado no envelhecimento cerebral. Sua formação inclui a residência médica em Psiquiatria seguida de especialização em Psicogeriatria (ou Psiquiatria Geriátrica), com treinamento específico para diagnosticar e tratar transtornos mentais em pessoas acima de 60 anos.",
-      "A necessidade dessa especialização existe porque o cérebro envelhecido não é simplesmente um cérebro adulto mais velho. Com o envelhecimento, ocorrem mudanças na estrutura e na função cerebral: redução do volume de substância cinzenta, alterações na conectividade entre regiões cerebrais, diminuição de neurotransmissores e maior vulnerabilidade a insultos vasculares. Essas mudanças alteram como os transtornos psiquiátricos se manifestam e como os medicamentos agem.",
-      "Quando consultar um psicogeriatra? Quando um idoso apresenta queixas de memória progressivas (esquecimentos que vão além do normal para a idade), mudanças de comportamento ou personalidade, episódios de confusão mental, agitação ou agressividade sem causa aparente, apatia marcante, depressão de início tardio (após os 60 anos) ou suspeita de demência.",
-      "Outro cenário comum é quando o idoso está em uso de múltiplos medicamentos psiquiátricos prescritos ao longo dos anos por diferentes médicos, sem revisão do conjunto. Polifarmácia no idoso é perigosa: interações medicamentosas são mais frequentes, efeitos colaterais são mais intensos e medicamentos que eram seguros na idade adulta podem se tornar arriscados após os 70 anos.",
-      "A avaliação psicogeriatria inclui rastreio cognitivo com instrumentos validados (Mini-Exame do Estado Mental, Teste do Relógio, MoCA), avaliação funcional (capacidade de realizar atividades do dia a dia), revisão completa de medicamentos e avaliação do contexto social e familiar. Frequentemente, exames complementares são solicitados: ressonância magnética de crânio, exames laboratoriais e, em alguns casos, avaliação neuropsicológica detalhada.",
-      "A diferença entre o envelhecimento cognitivo normal e o início de uma demência pode ser sutil. Uma pessoa saudável de 75 anos pode ter dificuldade para lembrar nomes ou encontrar palavras com mais frequência do que antes — isso é esperado. Quando os esquecimentos passam a comprometer atividades que antes eram automáticas (pagar contas, tomar medicamentos, dirigir com segurança), a investigação é necessária.",
-      "O tratamento psicogeriatria é sempre individualizado e leva em conta não apenas o paciente, mas sua família e seus cuidadores. Orientar a família sobre o que esperar, como manejar sintomas comportamentais e quando acionar o médico é parte essencial do trabalho do psicogeriatra.",
-      "Se você tem um familiar idoso com mudanças cognitivas, emocionais ou comportamentais, a avaliação psicogeriatria pode oferecer diagnóstico preciso, planejamento terapêutico adequado e orientação familiar estruturada.",
     ],
   },
   {

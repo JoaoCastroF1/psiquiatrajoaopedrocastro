@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, Clock } from "lucide-react";
+import type { ReactNode } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -33,6 +34,49 @@ const splitFirstSentence = (paragraph: string): [string, string] => {
   const match = paragraph.match(/^([^.!?]+[.!?])\s*(.*)$/s);
   if (!match) return [paragraph, ""];
   return [match[1], match[2]];
+};
+
+const INLINE_LINK_REGEX = /\[([^\]]+)\]\(([^)]+)\)/g;
+const INLINE_LINK_CLASS =
+  "underline decoration-border underline-offset-2 hover:text-foreground transition-colors";
+
+const renderInline = (text: string, keyPrefix = "il"): ReactNode => {
+  const nodes: ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  const regex = new RegExp(INLINE_LINK_REGEX.source, "g");
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      nodes.push(text.slice(lastIndex, match.index));
+    }
+    const [, label, url] = match;
+    if (url.startsWith("/")) {
+      nodes.push(
+        <Link key={`${keyPrefix}-${key++}`} to={url} className={INLINE_LINK_CLASS}>
+          {label}
+        </Link>,
+      );
+    } else {
+      nodes.push(
+        <a
+          key={`${keyPrefix}-${key++}`}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={INLINE_LINK_CLASS}
+        >
+          {label}
+        </a>,
+      );
+    }
+    lastIndex = regex.lastIndex;
+  }
+  if (lastIndex < text.length) {
+    nodes.push(text.slice(lastIndex));
+  }
+  return nodes.length === 0 ? text : nodes;
 };
 
 const BlogPost = () => {
@@ -198,8 +242,10 @@ const BlogPost = () => {
                       key={i}
                       className="font-body text-base md:text-[17px] text-foreground/85 leading-[1.85]"
                     >
-                      <span className="article-speakable-intro">{firstSentence}</span>
-                      {rest && ` ${rest}`}
+                      <span className="article-speakable-intro">
+                        {renderInline(firstSentence, `p${i}-fs`)}
+                      </span>
+                      {rest && <> {renderInline(rest, `p${i}-rest`)}</>}
                     </p>
                   );
                 }
@@ -208,7 +254,7 @@ const BlogPost = () => {
                     key={i}
                     className="font-body text-base md:text-[17px] text-foreground/85 leading-[1.85]"
                   >
-                    {paragraph}
+                    {renderInline(paragraph, `p${i}`)}
                   </p>
                 );
               })}

@@ -12,6 +12,8 @@
     { "source": "/blog/categoria/:slug", "destination": "/blog/tema/:slug", "permanent": true },
     { "source": "/blog/tdah-em-adultos", "destination": "/blog/tdah-adultos-diferenciar-ansiedade-depressao", "permanent": true },
     { "source": "/blog/tdah-adultos-jovens-estudos", "destination": "/blog/tdah-adultos-diferenciar-ansiedade-depressao", "permanent": true },
-    { "source": "/blog/remedio-psiquiatrico-vicia", "destination": "/blog/psicofarmacos-mitos-verdades", "permanent": true }
+    { "source": "/blog/remedio-psiquiatrico-vicia", "destination": "/blog/psicofarmacos-mitos-verdades", "permanent": true },
+    { "source": "/blog/quetiapina-seroquel-bipolar-psicose", "destination": "/blog/quetiapina-guia-completo", "permanent": true },
+    { "source": "/blog/o-que-e-psicogeriatra-quando-consultar", "destination": "/blog/o-que-e-psicogeriatria", "permanent": true }
   ]
 }

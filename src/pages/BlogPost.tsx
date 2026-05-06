@@ -181,6 +181,16 @@ const BlogPost = () => {
 
             <div className="space-y-6">
               {post.content.map((paragraph, i) => {
+                if (paragraph.startsWith("### ")) {
+                  return (
+                    <h3
+                      key={i}
+                      className="font-display text-lg md:text-xl font-medium text-foreground leading-snug pt-4 mb-0.5"
+                    >
+                      {paragraph.slice(4)}
+                    </h3>
+                  );
+                }
                 if (paragraph.startsWith("## ")) {
                   return (
                     <h2

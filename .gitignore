@@ -22,7 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Variaveis de ambiente — NUNCA comitar valores reais.
+# `.env.example` e a unica excecao (template sem valores).
 .env
+.env.*
+!.env.example
 
 # Skills installed via `npx skills add` — content is auto-installed
 # from skills-lock.json, similar to node_modules.

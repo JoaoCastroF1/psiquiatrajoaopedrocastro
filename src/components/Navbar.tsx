@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Logo } from "@/components/brand/Logo";
 import { MenuScribble } from "@/components/brand/scribbles/MenuScribble";
 import { CloseScribble } from "@/components/brand/scribbles/CloseScribble";
+import SiteSearch from "@/components/SiteSearch";
 
 const WA_LINK =
   "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
@@ -70,6 +71,7 @@ const Navbar = () => {
               </Link>
             )
           )}
+          <SiteSearch />
           <a
             href={WA_LINK}
             target="_blank"
@@ -80,14 +82,17 @@ const Navbar = () => {
           </a>
         </div>
 
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-foreground"
-          aria-label={open ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={open}
-        >
-          {open ? <CloseScribble className="w-6 h-6" /> : <MenuScribble className="w-6 h-6" />}
-        </button>
+        <div className="md:hidden flex items-center gap-1">
+          <SiteSearch />
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-foreground p-2"
+            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={open}
+          >
+            {open ? <CloseScribble className="w-6 h-6" /> : <MenuScribble className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {open && (

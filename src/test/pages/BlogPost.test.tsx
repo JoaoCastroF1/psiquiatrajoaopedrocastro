@@ -14,14 +14,14 @@ describe("BlogPost page", () => {
     expect(h1.textContent).toBe(post.title);
   });
 
-  it("injects an Article JSON-LD", () => {
+  it("injects a MedicalWebPage JSON-LD", () => {
     const post = blogPosts[0];
     const { container } = renderRoute(<BlogPost />, {
       path: "/blog/:slug",
       initialPath: `/blog/${post.slug}`,
     });
     const ld = container.querySelector('script[type="application/ld+json"]');
-    expect(ld?.textContent ?? "").toContain('"@type":"Article"');
+    expect(ld?.textContent ?? "").toContain('"@type":"MedicalWebPage"');
   });
 
   it("redirects to /blog when the slug is unknown", () => {

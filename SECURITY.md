@@ -26,6 +26,15 @@ para ficar pública** desde que as policies de Row Level Security (RLS) no
 Supabase estejam configuradas. A chave `service_role` **nunca** deve ser
 exposta no cliente nem comitada.
 
+### Chave IndexNow — pública por design
+
+A constante `INDEXNOW_KEY` em `src/lib/indexnow-key.ts` e o arquivo
+`public/<chave>.txt` **não são segredo**. O protocolo IndexNow exige que a
+chave seja servida em `https://drjoaopedrocastro.com.br/<chave>.txt` para
+provar a propriedade do domínio antes de aceitar pings de novas URLs. Pode
+ser comitada e versionada normalmente. Não confundir com chave de API: ela
+não autentica chamadas privilegiadas, apenas vincula um host a uma string.
+
 ## Se um segredo vazar
 
 Vazamento de chave em repositório público é tratado como **comprometida no

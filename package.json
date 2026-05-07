@@ -7,6 +7,7 @@
     "dev": "vite",
     "prebuild": "tsx scripts/generate-sitemap.ts",
     "build": "vite-react-ssg build",
+    "postbuild": "tsx scripts/notify-indexnow.ts",
     "build:dev": "vite-react-ssg build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",

@@ -20,9 +20,8 @@ const WA_LINK =
 
 const SITE_URL = "https://drjoaopedrocastro.com.br";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
-const PUBLISHER_LOGO = `${SITE_URL}/android-chrome-512x512.png`;
-const AUTHOR_URL = `${SITE_URL}/atuacao`;
 const AUTHOR_NAME = "Dr. João Pedro Castro Martins Farias";
+const PHYSICIAN_ID = `${SITE_URL}/#physician`;
 
 const computeReadTime = (paragraphs: string[]): string => {
   const words = paragraphs.join(" ").split(/\s+/).filter(Boolean).length;
@@ -95,7 +94,7 @@ const BlogPost = () => {
 
   const articleJsonLd = {
     "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
+    "@type": "Article",
     headline: post.title,
     description,
     datePublished: publishedIso,
@@ -105,44 +104,8 @@ const BlogPost = () => {
     image: ogImage,
     ...(post.keywords && post.keywords.length > 0 ? { keywords: post.keywords.join(", ") } : {}),
     articleSection: post.tag,
-    specialty: {
-      "@type": "MedicalSpecialty",
-      name: "Psychiatry",
-    },
-    author: {
-      "@type": "Person",
-      name: AUTHOR_NAME,
-      url: AUTHOR_URL,
-      jobTitle: "Psiquiatra e Psicogeriatra",
-      description:
-        "CRM-MG 83920 | RQE 62148 (Psiquiatria) | RQE 66521 (Psicogeriatria)",
-      alumniOf: [
-        {
-          "@type": "CollegeOrUniversity",
-          name: "Universidade Federal de Minas Gerais (UFMG)",
-        },
-        {
-          "@type": "EducationalOrganization",
-          name: "Hospital Odilon Behrens",
-        },
-        {
-          "@type": "EducationalOrganization",
-          name: "Hospital das Clínicas da UFMG",
-        },
-      ],
-      sameAs: ["https://www.instagram.com/joaocastrof/"],
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Dr. João Pedro Castro",
-      url: SITE_URL,
-      logo: {
-        "@type": "ImageObject",
-        url: PUBLISHER_LOGO,
-        width: 512,
-        height: 512,
-      },
-    },
+    author: { "@id": PHYSICIAN_ID },
+    publisher: { "@id": PHYSICIAN_ID },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": postUrl,
@@ -151,6 +114,26 @@ const BlogPost = () => {
       "@type": "SpeakableSpecification",
       cssSelector: [".article-speakable-intro", ".article-speakable-title"],
     },
+  };
+
+  const breadcrumbItems: { name: string; item: string }[] = [
+    { name: "Home", item: SITE_URL },
+    { name: "Blog", item: `${SITE_URL}/blog` },
+    ...(hub
+      ? [{ name: hub.title, item: `${SITE_URL}/blog/tema/${hub.slug}` }]
+      : []),
+    { name: post.title, item: postUrl },
+  ];
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbItems.map((b, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: b.name,
+      item: b.item,
+    })),
   };
 
   return (
@@ -168,6 +151,7 @@ const BlogPost = () => {
         tags={post.keywords}
       />
       <JsonLd data={articleJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       <Navbar />
 
       <article className="pt-28 md:pt-36 pb-20 md:pb-28 bg-background">

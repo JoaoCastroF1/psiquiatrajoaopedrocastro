@@ -20,6 +20,7 @@ export interface ConditionData {
   faq: ConditionFAQ[];
   relatedSlugs: string[];
   tagLabel: string;
+  alternateNames?: string[];
 }
 
 const WA_LINK =
@@ -82,6 +83,13 @@ export const conditions: ConditionData[] = [
       },
     ],
     relatedSlugs: ["ansiedade", "bipolaridade", "insonia", "tdah"],
+    alternateNames: [
+      "Depressão maior",
+      "Transtorno depressivo maior",
+      "Distimia",
+      "Depressão resistente",
+      "Episódio depressivo",
+    ],
   },
   {
     slug: "ansiedade",
@@ -137,6 +145,15 @@ export const conditions: ConditionData[] = [
       },
     ],
     relatedSlugs: ["depressao", "insonia", "tdah", "estresse-pos-traumatico"],
+    alternateNames: [
+      "Transtorno de ansiedade generalizada",
+      "TAG",
+      "Síndrome do pânico",
+      "Transtorno de pânico",
+      "Fobia social",
+      "TOC",
+      "Transtorno obsessivo-compulsivo",
+    ],
   },
   {
     slug: "tdah",
@@ -191,6 +208,12 @@ export const conditions: ConditionData[] = [
       },
     ],
     relatedSlugs: ["ansiedade", "depressao", "insonia", "bipolaridade"],
+    alternateNames: [
+      "Transtorno de Déficit de Atenção e Hiperatividade",
+      "TDAH em adultos",
+      "Déficit de atenção",
+      "ADHD",
+    ],
   },
   {
     slug: "bipolaridade",
@@ -245,6 +268,14 @@ export const conditions: ConditionData[] = [
       },
     ],
     relatedSlugs: ["depressao", "tdah", "ansiedade", "insonia"],
+    alternateNames: [
+      "Transtorno bipolar",
+      "Bipolaridade",
+      "Bipolar tipo I",
+      "Bipolar tipo II",
+      "Ciclotimia",
+      "Transtorno afetivo bipolar",
+    ],
   },
   {
     slug: "alzheimer",
@@ -301,6 +332,14 @@ export const conditions: ConditionData[] = [
       },
     ],
     relatedSlugs: ["depressao", "insonia", "ansiedade"],
+    alternateNames: [
+      "Doença de Alzheimer",
+      "Demência",
+      "Demência vascular",
+      "Demência com corpos de Lewy",
+      "Demência frontotemporal",
+      "Comprometimento cognitivo leve",
+    ],
   },
   {
     slug: "insonia",
@@ -356,6 +395,12 @@ export const conditions: ConditionData[] = [
       },
     ],
     relatedSlugs: ["depressao", "ansiedade", "tdah", "alzheimer"],
+    alternateNames: [
+      "Insônia crônica",
+      "Insônia primária",
+      "Transtorno do sono",
+      "Distúrbio do sono",
+    ],
   },
   {
     slug: "estresse-pos-traumatico",
@@ -406,6 +451,14 @@ export const conditions: ConditionData[] = [
       },
     ],
     relatedSlugs: ["depressao", "ansiedade", "insonia"],
+    alternateNames: [
+      "Transtorno de estresse pós-traumático",
+      "TEPT",
+      "Estresse pós-traumático",
+      "Trauma complexo",
+      "TEPT complexo",
+      "PTSD",
+    ],
   },
 ];
 

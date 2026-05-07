@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+  Placeholder de verificacao do Bing Webmaster Tools.
+
+  Como ativar:
+  1. Acesse https://www.bing.com/webmasters e adicione a propriedade
+     https://drjoaopedrocastro.com.br
+  2. Escolha o metodo "XML File Authentication"
+  3. Baixe o BingSiteAuth.xml fornecido pelo Bing e SUBSTITUA o conteudo
+     deste arquivo pelo conteudo baixado (manter o caminho /public/BingSiteAuth.xml).
+  4. Faca commit e deploy. Em seguida, clique em "Verify" no Bing Webmaster Tools.
+
+  Enquanto este placeholder estiver presente, a verificacao falha.
+-->
+<users>
+    <user>SUBSTITUA_PELO_CODIGO_DO_BING_WEBMASTER_TOOLS</user>
+</users>

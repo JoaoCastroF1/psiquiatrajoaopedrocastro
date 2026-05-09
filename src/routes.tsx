@@ -18,6 +18,7 @@ export const routes: RouteRecord[] = [
     children: [
       { index: true, lazy: lazyDefault(() => import("./pages/Index")) },
       { path: "atuacao", lazy: lazyDefault(() => import("./pages/Atuacao")) },
+      { path: "curriculo", lazy: lazyDefault(() => import("./pages/Curriculo")) },
       { path: "empresas", lazy: lazyDefault(() => import("./pages/Empresas")) },
       { path: "podcast", lazy: lazyDefault(() => import("./pages/Podcast")) },
       { path: "avaliacao", lazy: lazyDefault(() => import("./pages/Avaliacao")) },

@@ -4,11 +4,11 @@ import jpWriting from "@/assets/jp-writing.jpg";
 
 const credentials = [
   "Graduação em Medicina pela UFMG",
-  "Residência em Psiquiatria — Hospital Odilon Behrens (RQE 62148)",
-  "Residência em Psicogeriatria — HC/UFMG (RQE 66521)",
-  "Mestrando em Neurociências — UFMG, com pesquisa em psicopatologia e psicofarmacologia",
+  "Residência em Psiquiatria, Hospital Odilon Behrens (RQE 62148)",
+  "Residência em Psicogeriatria, HC-UFMG/Ebserh (RQE 66521)",
+  "Mestrando em Neurociências, UFMG, com pesquisa em psicopatologia e psicofarmacologia",
   "Pós-graduação Lato Sensu em Terapia Cognitivo-Comportamental",
-  "Formação teórico-prática em Estimulação Magnética Transcraniana (Clínica Mangabeiras)",
+  "Fellowship em Estimulação Magnética Transcraniana, UFMG e Clínica Mangabeiras (2024)",
   "Formação complementar em Psicogeriatria, Transtornos do Sono e Psicoterapia Assistida por Psicodélicos",
 ];
 

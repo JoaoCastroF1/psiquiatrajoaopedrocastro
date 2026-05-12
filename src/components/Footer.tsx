@@ -45,6 +45,12 @@ const Footer = () => {
             <p className="font-body text-xs text-primary-foreground/85 uppercase tracking-[0.15em]">
               RQE 66521 (Psicogeriatria)
             </p>
+            <Link
+              to="/curriculo"
+              className="inline-block mt-4 font-body text-xs text-primary-foreground/70 hover:text-primary-foreground transition-colors uppercase tracking-[0.15em] underline-offset-4 hover:underline"
+            >
+              Currículo
+            </Link>
           </div>
 
           {/* Location */}

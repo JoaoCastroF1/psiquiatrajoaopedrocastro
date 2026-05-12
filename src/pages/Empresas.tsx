@@ -185,6 +185,34 @@ const Empresas = () => {
         </div>
       </section>
 
+      {/* Palestras já realizadas */}
+      <section className="pb-24 md:pb-32 bg-background">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl"
+          >
+            <p className="font-body text-xs uppercase tracking-[0.25em] text-muted-foreground mb-5">
+              Palestras corporativas
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl font-normal text-foreground leading-tight mb-8">
+              Algumas das apresentações já realizadas
+            </h2>
+            <p className="font-body text-base text-foreground/85 leading-[1.8]">
+              Atua como palestrante em ambientes corporativos e
+              institucionais, com conteúdo elaborado a partir do briefing de
+              cada contratante. Entre as apresentações já realizadas estão a
+              fala no Project Management Institute (PMI), sobre burnout e
+              saúde mental no trabalho, e a palestra{" "}
+              <em>Mente em Movimento</em>, no Banco Fibra, sobre estresse,
+              cortisol, eixo HPA e estratégias de regulação.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 bg-section-alt">
         <div className="container mx-auto px-4 text-center">

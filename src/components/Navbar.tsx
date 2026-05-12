@@ -43,12 +43,34 @@ const Navbar = () => {
           <Link to="/" aria-label="Página inicial — Dr. João Pedro Castro">
             <Logo variant="light" size="md" highlightDr />
           </Link>
-          <span className="hidden md:block font-body text-[10px] uppercase tracking-[0.15em] text-foreground/70 -mt-0.5">
-            Psiquiatra · Psicogeriatra · CRM-MG 83920 · RQE 62148 / 66521
-          </span>
-          <span className="md:hidden font-body text-[9px] uppercase tracking-[0.12em] text-foreground/70 -mt-0.5">
-            CRM-MG 83920 · RQE 62148 / 66521
-          </span>
+          <div className="hidden md:flex items-center gap-2 -mt-0.5">
+            <span className="font-body text-[10px] uppercase tracking-[0.15em] text-foreground/70">
+              Psiquiatra · Psicogeriatra · CRM-MG 83920 · RQE 62148 / 66521
+            </span>
+            <span className="font-body text-[10px] text-foreground/30" aria-hidden="true">
+              |
+            </span>
+            <Link
+              to="/curriculo"
+              className="font-body text-[10px] uppercase tracking-[0.15em] text-foreground/70 hover:text-foreground transition-colors"
+            >
+              Currículo
+            </Link>
+          </div>
+          <div className="md:hidden flex items-center gap-1.5 -mt-0.5">
+            <span className="font-body text-[9px] uppercase tracking-[0.12em] text-foreground/70">
+              CRM-MG 83920 · RQE 62148 / 66521
+            </span>
+            <span className="font-body text-[9px] text-foreground/30" aria-hidden="true">
+              |
+            </span>
+            <Link
+              to="/curriculo"
+              className="font-body text-[9px] uppercase tracking-[0.12em] text-foreground/70 hover:text-foreground transition-colors"
+            >
+              Currículo
+            </Link>
+          </div>
         </div>
 
         <div className="hidden md:flex items-center gap-8">

@@ -65,7 +65,7 @@ const Footer = () => {
               Lourdes · Belo Horizonte, MG
             </p>
             <p className="font-body text-sm text-primary-foreground/80 mt-2">
-              Seg–Sex · 8h às 18h
+              Seg a Sex · 8h às 18h
             </p>
           </div>
 

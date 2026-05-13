@@ -11,7 +11,7 @@ const WA_LINK_CORP =
 
 const includedItems = [
   "Diagnóstico situacional anônimo",
-  "Palestra in-company (60–90 min)",
+  "Palestra in-company (60 a 90 min)",
   "Trilha de capacitação para lideranças",
   "Canal clínico de retaguarda",
   "Relatórios trimestrais",

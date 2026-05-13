@@ -278,7 +278,7 @@ const BlogPost = () => {
               <div className="flex flex-col sm:flex-row gap-5 sm:gap-6">
                 <img
                   src={jpAvatar}
-                  alt="Dr. João Pedro Castro Martins Farias — Psiquiatra e Psicogeriatra em Belo Horizonte"
+                  alt="Dr. João Pedro Castro Martins Farias, Psiquiatra e Psicogeriatra em Belo Horizonte"
                   className="w-20 h-20 sm:w-24 sm:h-24 object-cover shrink-0"
                   loading="lazy"
                 />

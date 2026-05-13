@@ -40,7 +40,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <div className="flex flex-col">
-          <Link to="/" aria-label="Página inicial — Dr. João Pedro Castro">
+          <Link to="/" aria-label="Página inicial, Dr. João Pedro Castro">
             <Logo variant="light" size="md" highlightDr />
           </Link>
           <div className="hidden md:flex items-center gap-2 -mt-0.5">

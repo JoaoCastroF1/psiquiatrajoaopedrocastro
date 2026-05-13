@@ -47,7 +47,7 @@ const AboutSection = () => {
           >
             <img
               src={jpWriting}
-              alt="Dr. João Pedro Castro — Psiquiatra e Psicogeriatra formado pela UFMG"
+              alt="Dr. João Pedro Castro, Psiquiatra e Psicogeriatra formado pela UFMG"
               className="brand-photo w-full aspect-[4/5] object-cover"
               loading="lazy"
             />

@@ -12,10 +12,7 @@ import {
   monographs,
   scientificEvents,
 } from "@/data/curriculum";
-import {
-  personSchema,
-  scholarlyArticleSchemas,
-} from "@/data/structured-data";
+import { scholarlyArticleSchemas } from "@/data/structured-data";
 
 const fadeIn = {
   initial: { opacity: 0, y: 16 },
@@ -32,7 +29,6 @@ const Curriculo = () => {
         description="Formação, atuação institucional, palestras corporativas, produção científica e eventos científicos do Dr. João Pedro Castro Martins Farias. CRM-MG 83920, RQE 62148, RQE 66521."
         url="https://drjoaopedrocastro.com.br/curriculo"
       />
-      <JsonLd data={personSchema} />
       {scholarlyArticleSchemas.map((schema, i) => (
         <JsonLd key={i} data={schema} />
       ))}

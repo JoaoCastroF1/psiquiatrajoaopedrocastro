@@ -64,7 +64,7 @@ const Empresas = () => {
                 <em className="text-deep-green">workshop de mindfulness.</em>
               </h1>
               <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed max-w-xl mb-8">
-                Programas, palestras e consultoria para empresas que querem lidar com burnout, ansiedade ocupacional e afastamentos com embasamento clínico — não com pop-psicologia. Diagnóstico situacional, intervenções com lógica científica, resultados acompanháveis.
+                Programas, palestras e consultoria para empresas que querem lidar com burnout, ansiedade ocupacional e afastamentos com embasamento clínico, sem cair na pop-psicologia. Diagnóstico situacional, intervenções com lógica científica, resultados acompanháveis.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a

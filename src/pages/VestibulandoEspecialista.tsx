@@ -28,7 +28,7 @@ const symptoms = [
   {
     title: "Dificuldade de concentração e organização",
     description:
-      "Não conseguir manter o foco em aulas longas, procrastinar tarefas importantes, dificuldade de seguir cronogramas e completar simulados. Pode ser hábito — mas também pode indicar TDAH.",
+      "Não conseguir manter o foco em aulas longas, procrastinar tarefas importantes, dificuldade de seguir cronogramas e completar simulados. Pode ser hábito; também pode indicar TDAH.",
   },
   {
     title: "Insônia e rotina desregulada",
@@ -86,7 +86,7 @@ const faqItems = [
   },
   {
     q: "Tomar medicação psiquiátrica vai me deixar lento ou prejudicar os estudos?",
-    a: "Esse é um dos mitos mais comuns. A escolha do medicamento leva em conta justamente o impacto cognitivo. Em muitos casos, tratar adequadamente um quadro de ansiedade ou TDAH melhora — e não piora — a capacidade de concentração, memória e constância.",
+    a: "Esse é um dos mitos mais comuns. A escolha do medicamento leva em conta justamente o impacto cognitivo. Em muitos casos, tratar adequadamente um quadro de ansiedade ou TDAH melhora a capacidade de concentração, memória e constância.",
   },
   {
     q: "Como funciona a primeira consulta?",
@@ -98,7 +98,7 @@ const faqItems = [
   },
   {
     q: "O consultório é perto do meu cursinho?",
-    a: "O consultório fica na Rua dos Timbiras, 1940, sala 1515 — no coração de Lourdes, a poucos minutos do Bernoulli, Hplus Med, SOMA, Determinante e Acerta. A ideia é facilitar o cuidado com a saúde mental sem deslocamentos longos.",
+    a: "O consultório fica na Rua dos Timbiras, 1940, sala 1515, no coração de Lourdes, a poucos minutos do Bernoulli, Hplus Med, SOMA, Determinante e Acerta. A ideia é facilitar o cuidado com a saúde mental sem deslocamentos longos.",
   },
 ];
 
@@ -161,7 +161,7 @@ const VestibulandoEspecialista = () => {
               Para vestibulandos e estudantes em fases intensas: ansiedade refratária, insônia crônica, TDAH não diagnosticado, depressão mascarada de cansaço.
             </p>
             <p className="font-body text-base text-foreground/80 leading-relaxed max-w-2xl mb-4">
-              O objetivo do tratamento não é aumentar nota artificialmente — é tratar o que está atrapalhando funcionamento, sono, foco e estabilidade emocional.
+              O objetivo do tratamento é atuar sobre o que está atrapalhando funcionamento, sono, foco e estabilidade emocional. Aumento artificial de desempenho não faz parte do escopo.
             </p>
             <p className="font-body italic text-sm text-foreground/70">
               Consultório em Lourdes, perto dos principais cursinhos de BH.
@@ -289,7 +289,7 @@ const VestibulandoEspecialista = () => {
                   <em className="text-deep-green">rotina de estudos</em>
                 </h3>
                 <p className="font-body text-sm text-foreground/85 leading-relaxed mb-6">
-                  O consultório fica na <strong className="text-foreground">Rua dos Timbiras, 1940, sala 1515, Lourdes</strong> — a poucos minutos dos principais cursinhos da região, facilitando o cuidado com a saúde mental sem deslocamentos longos.
+                  O consultório fica na <strong className="text-foreground">Rua dos Timbiras, 1940, sala 1515, Lourdes</strong>, a poucos minutos dos principais cursinhos da região, facilitando o cuidado com a saúde mental sem deslocamentos longos.
                 </p>
                 <ul className="space-y-3 border-t border-foreground/10 pt-5">
                   {nearbyCourses.map((course, index) => (
@@ -299,7 +299,7 @@ const VestibulandoEspecialista = () => {
                       </span>
                       <span>
                         <span className="font-medium text-foreground">{course.name}</span>
-                        <span className="text-foreground/70"> — {course.address}</span>
+                        <span className="text-foreground/70">, {course.address}</span>
                       </span>
                     </li>
                   ))}
@@ -433,7 +433,7 @@ const VestibulandoEspecialista = () => {
               Se os sintomas estão atrapalhando, <em>vale investigar.</em>
             </h2>
             <p className="font-body text-base md:text-lg text-primary-foreground/85 leading-relaxed mb-12 max-w-xl mx-auto">
-              Uma avaliação psiquiátrica bem feita pode distinguir o que é esperado do que precisa de tratamento — e devolver estabilidade, foco e qualidade de vida.
+              Uma avaliação psiquiátrica bem feita pode distinguir o que é esperado do que precisa de tratamento, e devolver estabilidade, foco e qualidade de vida.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

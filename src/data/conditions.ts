@@ -37,7 +37,7 @@ export const conditions: ConditionData[] = [
     headline: "Quando o humor deprimido vira",
     headlineAccent: "uma síndrome clínica com curso próprio.",
     subtitle: "Psiquiatra especialista em depressão em Belo Horizonte",
-    intro: "Anedonia, fadiga que o sono não desfaz, lentidão de pensamento, retraimento progressivo. Em quadros instalados, a energia para pedir ajuda também desaparece — o sintoma passa a sustentar a própria doença. A avaliação determina o subtipo (unipolar, bipolar, atípica, resistente), investiga causas orgânicas que podem imitar ou agravar o quadro e, a partir disso, organiza o tratamento.",
+    intro: "Anedonia, fadiga que o sono não desfaz, lentidão de pensamento, retraimento progressivo. Em quadros instalados, a energia para pedir ajuda também desaparece, e o sintoma passa a sustentar a própria doença. A avaliação determina o subtipo (unipolar, bipolar, atípica, resistente), investiga causas orgânicas que podem imitar ou agravar o quadro e, a partir disso, organiza o tratamento.",
     symptoms: [
       "Tristeza persistente ou sensação de vazio que dura semanas",
       "Perda de prazer em atividades que antes eram significativas",
@@ -201,7 +201,7 @@ export const conditions: ConditionData[] = [
     headline: "O ponto crítico do diagnóstico",
     headlineAccent: "é reconhecer a fase elevada.",
     subtitle: "Psiquiatra especialista em transtorno bipolar em Belo Horizonte",
-    intro: "Períodos de energia, produtividade e impulso que parecem boas fases, seguidos por quedas que imobilizam por semanas. No tipo II, a hipomania é sutil o suficiente para passar anos sem nome — e o paciente é tratado como depressão unipolar, com antidepressivos isolados que podem agravar o curso. Identificar o padrão bipolar muda a base do tratamento: estabilizadores de humor entram, e a farmacoterapia ganha critério.",
+    intro: "Períodos de energia, produtividade e impulso que parecem boas fases, seguidos por quedas que imobilizam por semanas. No tipo II, a hipomania é sutil o suficiente para passar anos sem nome, com o paciente tratado como depressão unipolar e antidepressivos isolados que podem agravar o curso. Identificar o padrão bipolar muda a base do tratamento: estabilizadores de humor entram, e a farmacoterapia ganha critério.",
     symptoms: [
       "Oscilações de humor que vão de euforia ou irritabilidade intensa a depressão profunda",
       "Períodos de energia excessiva, redução da necessidade de sono e aumento de atividades",
@@ -255,7 +255,7 @@ export const conditions: ConditionData[] = [
     headline: "Mudanças cognitivas no idoso",
     headlineAccent: "merecem investigação, não apenas observação.",
     subtitle: "Psicogeriatra especialista em Alzheimer e demências em Belo Horizonte",
-    intro: "Lapsos que saem do esperado para a idade, mudança de personalidade, agitação noturna, apatia ou agressividade sem causa visível. Parte dos quadros de declínio cognitivo tem causas reversíveis — tireoide, B12, depressão, medicamentos —, e parte exige diferenciar Alzheimer, demência vascular, corpos de Lewy e frontotemporal. O diagnóstico precoce muda o prognóstico, o planejamento familiar e a qualidade de vida de quem está ao redor.",
+    intro: "Lapsos que saem do esperado para a idade, mudança de personalidade, agitação noturna, apatia ou agressividade sem causa visível. Parte dos quadros de declínio cognitivo tem causas reversíveis, como tireoide, B12, depressão e medicamentos, e parte exige diferenciar Alzheimer, demência vascular, corpos de Lewy e frontotemporal. O diagnóstico precoce muda o prognóstico, o planejamento familiar e a qualidade de vida de quem está ao redor.",
     symptoms: [
       "Esquecimentos progressivos que comprometem atividades do dia a dia",
       "Dificuldade para realizar tarefas que antes eram automáticas",
@@ -366,7 +366,7 @@ export const conditions: ConditionData[] = [
     headline: "Trauma muda a regulação",
     headlineAccent: "do sistema de alerta do cérebro.",
     subtitle: "Psiquiatra especialista em estresse pós-traumático em Belo Horizonte",
-    intro: "Memórias intrusivas, hipervigilância constante, evitação que vai limitando a vida. O TEPT chega frequentemente disfarçado de depressão ou ansiedade generalizada — e o paciente pode passar anos em tratamento sem que o trauma seja reconhecido como origem do quadro. Quando bem identificado, tem abordagens específicas com bom suporte de evidência, articuladas com psicoterapia focada em trauma.",
+    intro: "Memórias intrusivas, hipervigilância constante, evitação que vai limitando a vida. O TEPT chega frequentemente disfarçado de depressão ou ansiedade generalizada, e o paciente pode passar anos em tratamento sem que o trauma seja reconhecido como origem do quadro. Quando bem identificado, tem abordagens específicas com bom suporte de evidência, articuladas com psicoterapia focada em trauma.",
     symptoms: [
       "Revivências intrusivas: flashbacks, pesadelos ou memórias que voltam sem aviso",
       "Hipervigilância: estado constante de alerta, sobressalto fácil",

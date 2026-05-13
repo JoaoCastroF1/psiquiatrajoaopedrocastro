@@ -13,7 +13,7 @@ import PageHead from "@/components/PageHead";
 const blogListJsonLd = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  name: "Blog — Dr. João Pedro Castro",
+  name: "Blog · Dr. João Pedro Castro",
   description: "Artigos sobre saúde mental escritos com base na prática clínica e na literatura científica atual.",
   url: "https://drjoaopedrocastro.com.br/blog",
   mainEntity: {
@@ -31,7 +31,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen">
       <PageHead
-        title="Blog — Dr. João Pedro Castro | Psiquiatra em BH"
+        title="Blog · Dr. João Pedro Castro | Psiquiatra em BH"
         description="Artigos sobre saúde mental escritos com base na prática clínica e na literatura científica atual."
         url="https://drjoaopedrocastro.com.br/blog"
         type="blog"

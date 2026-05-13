@@ -25,7 +25,7 @@ const Curriculo = () => {
   return (
     <div className="min-h-screen">
       <PageHead
-        title="Currículo — Dr. João Pedro Castro Martins Farias | Psiquiatria e Psicogeriatria"
+        title="Currículo · Dr. João Pedro Castro Martins Farias | Psiquiatria e Psicogeriatria"
         description="Formação, atuação institucional, palestras corporativas, produção científica e eventos científicos do Dr. João Pedro Castro Martins Farias. CRM-MG 83920, RQE 62148, RQE 66521."
         url="https://drjoaopedrocastro.com.br/curriculo"
       />

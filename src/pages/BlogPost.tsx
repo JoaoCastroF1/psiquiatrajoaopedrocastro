@@ -156,7 +156,7 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen">
       <PageHead
-        title={`${post.metaTitle ?? post.title} — Dr. João Pedro Castro`}
+        title={`${post.metaTitle ?? post.title} · Dr. João Pedro Castro`}
         description={description}
         url={postUrl}
         image={ogImage}

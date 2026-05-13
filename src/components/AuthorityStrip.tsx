@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 const credentials = [
   "Medicina pela UFMG",
-  "Residência em Psiquiatria — HOB",
-  "Residência em Psicogeriatria — HC/UFMG",
+  "Residência em Psiquiatria, HOB",
+  "Residência em Psicogeriatria, HC-UFMG/Ebserh",
   "Mestrando em Neurociências",
 ];
 

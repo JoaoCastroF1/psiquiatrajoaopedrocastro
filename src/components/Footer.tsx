@@ -62,7 +62,7 @@ const Footer = () => {
               Rua dos Timbiras, 1940, sala 1515
             </p>
             <p className="font-body text-sm text-primary-foreground/70">
-              Lourdes · Belo Horizonte — MG
+              Lourdes · Belo Horizonte, MG
             </p>
             <p className="font-body text-sm text-primary-foreground/80 mt-2">
               Seg–Sex · 8h às 18h
@@ -118,7 +118,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/10 mt-8 pt-6">
           <p className="font-body text-xs text-primary-foreground/60 text-center">
-            © {COPYRIGHT_YEAR} Dr. João Pedro Castro Martins Farias — Todos os direitos reservados
+            © {COPYRIGHT_YEAR} Dr. João Pedro Castro Martins Farias · Todos os direitos reservados
           </p>
         </div>
       </div>

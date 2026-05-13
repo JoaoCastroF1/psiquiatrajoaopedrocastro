@@ -16,7 +16,7 @@ const AboutSection = () => {
   return (
     <section id="sobre" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
-        {/* Header — full width, antes da foto */}
+        {/* Header em largura total, antes da foto */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

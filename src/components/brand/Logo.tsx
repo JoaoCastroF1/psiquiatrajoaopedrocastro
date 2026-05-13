@@ -18,7 +18,7 @@ const sizeClasses: Record<LogoSize, string> = {
 };
 
 // `body` colors "João Pedro Castro". `dr` colors "Dr." plus the underscore that
-// closes the lockup — they are a visual pair in the manual and travel together.
+// closes the lockup; they are a visual pair in the manual and travel together.
 const variantStyle: Record<LogoVariant, { body: string; drDefault: string; drAccent: string }> = {
   light:  { body: "text-graphite",   drDefault: "text-graphite",   drAccent: "text-deep-green" },
   dark:   { body: "text-cream",      drDefault: "text-cream",      drAccent: "text-cream" },

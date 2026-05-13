@@ -46,7 +46,7 @@ const Empresas = () => {
       />
       <Navbar />
 
-      {/* Hero — split layout with included-services dark card */}
+      {/* Hero split layout with included-services dark card */}
       <section className="pt-28 md:pt-36 pb-16 md:pb-24 bg-section-alt">
         <div className="container mx-auto px-4">
           <Breadcrumbs items={[{ label: "Empresas" }]} />

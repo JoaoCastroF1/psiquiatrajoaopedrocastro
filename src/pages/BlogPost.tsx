@@ -270,7 +270,7 @@ const BlogPost = () => {
               })}
             </div>
 
-            {/* Author bio — E-E-A-T */}
+            {/* Author bio for E-E-A-T */}
             <aside className="mt-16 pt-10 border-t border-border">
               <p className="font-body text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-5">
                 Sobre o autor

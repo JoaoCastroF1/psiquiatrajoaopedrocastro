@@ -59,6 +59,8 @@ lembrado quando começar a usar dados (conversa de 2026-05-04).
 ### Branches
 - Trabalho do Claude: `claude/<descrição-em-kebab>-<sufixo>`
 - PRs criados como **draft** por padrão.
+- **Sempre** enviar ao usuário o link do preview do Vercel a cada deploy
+  de PR (o usuário pediu explicitamente — conversa de 2026-05-16).
 
 ### Commits
 - Convencional commits em pt-BR: `feat:`, `fix:`, `chore:`, `docs:`,

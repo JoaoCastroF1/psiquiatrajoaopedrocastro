@@ -27,6 +27,7 @@ const Navbar = () => {
     { label: "Podcast", href: "/podcast", isAnchor: false },
     { label: "Vestibulandos", href: "/vestibulandos", isAnchor: false },
     { label: "Blog", href: "/blog", isAnchor: false },
+    { label: "Currículo", href: "/curriculo", isAnchor: false },
     { label: "Contato", href: isHome ? "#contato" : "/#contato", isAnchor: isHome },
   ];
 
@@ -43,43 +44,21 @@ const Navbar = () => {
           <Link to="/" aria-label="Página inicial, Dr. João Pedro Castro">
             <Logo variant="light" size="md" highlightDr />
           </Link>
-          <div className="hidden md:flex items-center gap-2 -mt-0.5">
-            <span className="font-body text-[10px] uppercase tracking-[0.15em] text-foreground/70">
-              Psiquiatra · Psicogeriatra · CRM-MG 83920 · RQE 62148 / 66521
-            </span>
-            <span className="font-body text-[10px] text-foreground/30" aria-hidden="true">
-              |
-            </span>
-            <Link
-              to="/curriculo"
-              className="font-body text-[10px] uppercase tracking-[0.15em] text-foreground/70 hover:text-foreground transition-colors"
-            >
-              Currículo
-            </Link>
-          </div>
-          <div className="md:hidden flex items-center gap-1.5 -mt-0.5">
-            <span className="font-body text-[9px] uppercase tracking-[0.12em] text-foreground/70">
-              CRM-MG 83920 · RQE 62148 / 66521
-            </span>
-            <span className="font-body text-[9px] text-foreground/30" aria-hidden="true">
-              |
-            </span>
-            <Link
-              to="/curriculo"
-              className="font-body text-[9px] uppercase tracking-[0.12em] text-foreground/70 hover:text-foreground transition-colors"
-            >
-              Currículo
-            </Link>
-          </div>
+          <span className="hidden md:block font-body text-[10px] uppercase tracking-[0.15em] text-foreground/70 -mt-0.5">
+            Psiquiatra · Psicogeriatra · CRM-MG 83920 · RQE 62148 / 66521
+          </span>
+          <span className="md:hidden font-body text-[9px] uppercase tracking-[0.12em] text-foreground/70 -mt-0.5">
+            CRM-MG 83920 · RQE 62148 / 66521
+          </span>
         </div>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-x-4 lg:gap-x-6 xl:gap-x-8">
           {links.map((l) =>
             l.isAnchor ? (
               <a
                 key={l.label}
                 href={l.href}
-                className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors"
+                className="font-body text-[11px] lg:text-xs uppercase tracking-[0.12em] lg:tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
               >
                 {l.label}
               </a>
@@ -87,7 +66,7 @@ const Navbar = () => {
               <Link
                 key={l.label}
                 to={l.href}
-                className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors"
+                className="font-body text-[11px] lg:text-xs uppercase tracking-[0.12em] lg:tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
               >
                 {l.label}
               </Link>
@@ -98,7 +77,7 @@ const Navbar = () => {
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary text-xs px-5 py-2.5"
+            className="btn btn-primary text-xs px-5 py-2.5 whitespace-nowrap"
           >
             Agendar
           </a>

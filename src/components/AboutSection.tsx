@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
-import jpWriting from "@/assets/jp-writing.jpg";
+import jpWriting from "@/assets/jp-writing.webp";
 
 const credentials = [
   "Graduação em Medicina pela UFMG",

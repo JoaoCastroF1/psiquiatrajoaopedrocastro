@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import jpCoat from "@/assets/jp-coat.jpg";
+import jpCoat from "@/assets/jp-coat.webp";
 
 const IntellectualSection = () => {
   return (

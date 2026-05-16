@@ -9,6 +9,7 @@
     "build": "vite-react-ssg build",
     "build:dev": "vite-react-ssg build --mode development",
     "lint": "eslint .",
+    "typecheck": "tsc -b",
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest"

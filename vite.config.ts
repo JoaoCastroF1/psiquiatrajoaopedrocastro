@@ -1,6 +1,14 @@
 import { defineConfig } from "vite";
+import type { ViteReactSSGOptions } from "vite-react-ssg";
 import react from "@vitejs/plugin-react";
 import path from "path";
+
+const ssgOptions: ViteReactSSGOptions = {
+  formatting: "none",
+  crittersOptions: false,
+  script: "async",
+  dirStyle: "nested",
+};
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -17,10 +25,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  ssgOptions: {
-    formatting: "none",
-    crittersOptions: false,
-    script: "async",
-    dirStyle: "nested",
-  },
+  ssgOptions,
 });

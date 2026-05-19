@@ -28,7 +28,6 @@ export const personSchema = {
   jobTitle: ["Médico Psiquiatra", "Médico Psicogeriatra"],
   medicalSpecialty: ["Psychiatry", "Geriatric Psychiatry"],
   url: `${SITE_URL}/curriculo`,
-  mainEntityOfPage: `${SITE_URL}/curriculo`,
   image: `${SITE_URL}/og-image.jpg`,
   sameAs: [curriculumProfile.lattesUrl, curriculumProfile.instagram],
   identifier: [

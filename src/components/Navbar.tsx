@@ -3,7 +3,14 @@ import { Link, useLocation } from "react-router-dom";
 import { Logo } from "@/components/brand/Logo";
 import { MenuScribble } from "@/components/brand/scribbles/MenuScribble";
 import { CloseScribble } from "@/components/brand/scribbles/CloseScribble";
+import { DotsScribble } from "@/components/brand/scribbles/DotsScribble";
 import SiteSearch from "@/components/SiteSearch";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
 const WA_LINK =
   "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
@@ -30,6 +37,8 @@ const Navbar = () => {
     { label: "Contato", href: isHome ? "#contato" : "/#contato", isAnchor: isHome },
   ];
 
+  const secondaryLinks = [{ label: "Currículo", href: "/curriculo" }];
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -40,46 +49,24 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
         <div className="flex flex-col">
-          <Link to="/" aria-label="Página inicial — Dr. João Pedro Castro">
+          <Link to="/" aria-label="Página inicial, Dr. João Pedro Castro">
             <Logo variant="light" size="md" highlightDr />
           </Link>
-          <div className="hidden md:flex items-center gap-2 -mt-0.5">
-            <span className="font-body text-[10px] uppercase tracking-[0.15em] text-foreground/70">
-              Psiquiatra · Psicogeriatra · CRM-MG 83920 · RQE 62148 / 66521
-            </span>
-            <span className="font-body text-[10px] text-foreground/30" aria-hidden="true">
-              |
-            </span>
-            <Link
-              to="/curriculo"
-              className="font-body text-[10px] uppercase tracking-[0.15em] text-foreground/70 hover:text-foreground transition-colors"
-            >
-              Currículo
-            </Link>
-          </div>
-          <div className="md:hidden flex items-center gap-1.5 -mt-0.5">
-            <span className="font-body text-[9px] uppercase tracking-[0.12em] text-foreground/70">
-              CRM-MG 83920 · RQE 62148 / 66521
-            </span>
-            <span className="font-body text-[9px] text-foreground/30" aria-hidden="true">
-              |
-            </span>
-            <Link
-              to="/curriculo"
-              className="font-body text-[9px] uppercase tracking-[0.12em] text-foreground/70 hover:text-foreground transition-colors"
-            >
-              Currículo
-            </Link>
-          </div>
+          <span className="hidden md:block font-body text-[10px] uppercase tracking-[0.15em] text-foreground/70 -mt-0.5">
+            Psiquiatra · Psicogeriatra · CRM-MG 83920 · RQE 62148 / 66521
+          </span>
+          <span className="md:hidden font-body text-[9px] uppercase tracking-[0.12em] text-foreground/70 -mt-0.5">
+            CRM-MG 83920 · RQE 62148 / 66521
+          </span>
         </div>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-x-4 lg:gap-x-6 xl:gap-x-8">
           {links.map((l) =>
             l.isAnchor ? (
               <a
                 key={l.label}
                 href={l.href}
-                className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors"
+                className="font-body text-[11px] lg:text-xs uppercase tracking-[0.12em] lg:tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
               >
                 {l.label}
               </a>
@@ -87,18 +74,38 @@ const Navbar = () => {
               <Link
                 key={l.label}
                 to={l.href}
-                className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors"
+                className="font-body text-[11px] lg:text-xs uppercase tracking-[0.12em] lg:tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
               >
                 {l.label}
               </Link>
             )
           )}
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              aria-label="Mais"
+              className="text-muted-foreground hover:text-foreground transition-colors p-1 outline-none focus-visible:ring-1 focus-visible:ring-ring rounded-sm"
+            >
+              <DotsScribble className="w-5 h-5" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="min-w-[10rem]">
+              {secondaryLinks.map((l) => (
+                <DropdownMenuItem asChild key={l.label}>
+                  <Link
+                    to={l.href}
+                    className="w-full font-body text-[11px] uppercase tracking-[0.15em] text-muted-foreground cursor-pointer"
+                  >
+                    {l.label}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
           <SiteSearch />
           <a
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary text-xs px-5 py-2.5"
+            className="btn btn-primary text-xs px-5 py-2.5 whitespace-nowrap"
           >
             Agendar
           </a>
@@ -140,6 +147,16 @@ const Navbar = () => {
               </Link>
             )
           )}
+          {secondaryLinks.map((l) => (
+            <Link
+              key={l.label}
+              to={l.href}
+              onClick={() => setOpen(false)}
+              className="block font-body text-sm text-muted-foreground hover:text-foreground py-3 border-b border-border/50"
+            >
+              {l.label}
+            </Link>
+          ))}
           <a
             href={WA_LINK}
             target="_blank"

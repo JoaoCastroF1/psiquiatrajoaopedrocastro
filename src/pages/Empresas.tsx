@@ -11,7 +11,7 @@ const WA_LINK_CORP =
 
 const includedItems = [
   "Diagnóstico situacional anônimo",
-  "Palestra in-company (60–90 min)",
+  "Palestra in-company (60 a 90 min)",
   "Trilha de capacitação para lideranças",
   "Canal clínico de retaguarda",
   "Relatórios trimestrais",
@@ -40,13 +40,13 @@ const Empresas = () => {
   return (
     <div className="min-h-screen">
       <PageHead
-        title="Saúde Mental Corporativa — Dr. João Pedro Castro | Psiquiatra em BH"
+        title="Saúde Mental Corporativa · Dr. João Pedro Castro | Psiquiatra em BH"
         description="Programas de saúde mental para empresas: diagnóstico situacional, NR-1, palestras e acompanhamento. Consultoria psiquiátrica especializada."
         url="https://drjoaopedrocastro.com.br/empresas"
       />
       <Navbar />
 
-      {/* Hero — split layout with included-services dark card */}
+      {/* Hero split layout with included-services dark card */}
       <section className="pt-28 md:pt-36 pb-16 md:pb-24 bg-section-alt">
         <div className="container mx-auto px-4">
           <Breadcrumbs items={[{ label: "Empresas" }]} />
@@ -64,7 +64,7 @@ const Empresas = () => {
                 <em className="text-deep-green">workshop de mindfulness.</em>
               </h1>
               <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed max-w-xl mb-8">
-                Programas, palestras e consultoria para empresas que querem lidar com burnout, ansiedade ocupacional e afastamentos com embasamento clínico — não com pop-psicologia. Diagnóstico situacional, intervenções com lógica científica, resultados acompanháveis.
+                Programas, palestras e consultoria para empresas que querem lidar com burnout, ansiedade ocupacional e afastamentos com embasamento clínico, sem cair na pop-psicologia. Diagnóstico situacional, intervenções com lógica científica, resultados acompanháveis.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a

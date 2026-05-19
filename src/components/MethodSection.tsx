@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const pillars = [
   {
     title: "Diagnóstico aprofundado",
-    text: "História clínica detalhada, revisão de hipóteses anteriores e instrumentos de rastreio quando indicados. Quadros sobrepostos — ansiedade que esconde TDAH, depressão sobreposta a demência inicial — exigem esse nível de atenção.",
+    text: "História clínica detalhada, revisão de hipóteses anteriores e instrumentos de rastreio quando indicados. Quadros sobrepostos, como ansiedade que esconde TDAH ou depressão sobreposta a demência inicial, exigem esse nível de atenção.",
   },
   {
     title: "Farmacologia com critério",

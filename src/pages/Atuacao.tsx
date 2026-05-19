@@ -14,7 +14,7 @@ const Atuacao = () => {
   return (
     <div className="min-h-screen">
       <PageHead
-        title="Áreas de Atuação — Dr. João Pedro Castro | Psiquiatra em BH"
+        title="Áreas de Atuação · Dr. João Pedro Castro | Psiquiatra em BH"
         description="Depressão, ansiedade, bipolaridade, esquizofrenia, TDAH, autismo em adultos, demências e Alzheimer. Diagnóstico preciso e farmacologia baseada em evidências."
         url="https://drjoaopedrocastro.com.br/atuacao"
       />

@@ -48,7 +48,7 @@ const credentials = [
   "Atendimento particular",
   "Nota fiscal para reembolso",
   "Presencial, telemedicina e domiciliar",
-  "Belo Horizonte — MG",
+  "Belo Horizonte, MG",
 ];
 
 const Stars = ({ className = "" }: { className?: string }) => (

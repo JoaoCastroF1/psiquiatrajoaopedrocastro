@@ -156,7 +156,7 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen">
       <PageHead
-        title={`${post.metaTitle ?? post.title} — Dr. João Pedro Castro`}
+        title={`${post.metaTitle ?? post.title} · Dr. João Pedro Castro`}
         description={description}
         url={postUrl}
         image={ogImage}
@@ -270,7 +270,7 @@ const BlogPost = () => {
               })}
             </div>
 
-            {/* Author bio — E-E-A-T */}
+            {/* Author bio for E-E-A-T */}
             <aside className="mt-16 pt-10 border-t border-border">
               <p className="font-body text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-5">
                 Sobre o autor
@@ -278,7 +278,7 @@ const BlogPost = () => {
               <div className="flex flex-col sm:flex-row gap-5 sm:gap-6">
                 <img
                   src={jpAvatar}
-                  alt="Dr. João Pedro Castro Martins Farias — Psiquiatra e Psicogeriatra em Belo Horizonte"
+                  alt="Dr. João Pedro Castro Martins Farias, Psiquiatra e Psicogeriatra em Belo Horizonte"
                   className="w-20 h-20 sm:w-24 sm:h-24 object-cover shrink-0"
                   loading="lazy"
                 />

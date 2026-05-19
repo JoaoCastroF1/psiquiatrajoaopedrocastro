@@ -18,7 +18,7 @@ const staticPages: Array<Omit<SearchItem, "haystack" | "kind" | "kindLabel"> & {
 }> = [
   {
     title: "Início",
-    description: "Página inicial — Dr. João Pedro Castro, psiquiatra e psicogeriatra em BH.",
+    description: "Página inicial. Dr. João Pedro Castro, psiquiatra e psicogeriatra em BH.",
     url: "/",
     keywords: ["home", "inicio", "psiquiatra bh"],
   },

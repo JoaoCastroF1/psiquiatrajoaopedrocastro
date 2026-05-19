@@ -23,7 +23,7 @@ const BlogHub = () => {
   const hubJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: `${hub.title} — Dr. João Pedro Castro`,
+    name: `${hub.title} · Dr. João Pedro Castro`,
     description: hub.metaDescription,
     url: hubUrl,
     mainEntity: {
@@ -49,7 +49,7 @@ const BlogHub = () => {
   return (
     <div className="min-h-screen">
       <PageHead
-        title={`${hub.title} — Blog | Dr. João Pedro Castro`}
+        title={`${hub.title} · Blog | Dr. João Pedro Castro`}
         description={hub.metaDescription}
         url={hubUrl}
         type="blog"

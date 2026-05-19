@@ -98,7 +98,7 @@
 
 @layer components {
   /* DJP button system. Padding/size sao customizaveis no uso (text-xs px-5 py-2.5
-     para nav, text-sm px-8 py-4 para CTAs, etc.) — esta camada define so a forma
+     para nav, text-sm px-8 py-4 para CTAs, etc.). Esta camada define so a forma
      editorial (sharp corners, uppercase tracking) e a paleta de cada variante. */
   .btn {
     @apply inline-flex items-center justify-center font-body uppercase tracking-[0.1em] transition-all;

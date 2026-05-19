@@ -16,7 +16,7 @@ const AboutSection = () => {
   return (
     <section id="sobre" className="py-20 md:py-32 bg-background">
       <div className="container mx-auto px-4">
-        {/* Header — full width, antes da foto */}
+        {/* Header em largura total, antes da foto */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ const AboutSection = () => {
           >
             <img
               src={jpWriting}
-              alt="Dr. João Pedro Castro — Psiquiatra e Psicogeriatra formado pela UFMG"
+              alt="Dr. João Pedro Castro, Psiquiatra e Psicogeriatra formado pela UFMG"
               className="brand-photo w-full aspect-[4/5] object-cover"
               loading="lazy"
             />
@@ -80,7 +80,7 @@ const AboutSection = () => {
                 Atuo na interface entre psiquiatria clínica e neurociências, com interesse particular em transtornos do humor, ansiedade, TDAH no adulto, esquizofrenia, neuropsiquiatria e síndromes demenciais. Minha prática integra rigor diagnóstico, psicofarmacologia baseada em evidências e investigação de quadros que frequentemente passam despercebidos em avaliações superficiais.
               </p>
               <p>
-                Já realizei mais de 3.000 consultas psiquiátricas, com passagem por todos os níveis da Rede de Atenção Psicossocial de Belo Horizonte — urgência, ambulatório e consultório particular. Tenho produção científica publicada em periódicos nacionais e internacionais, incluindo trabalho apresentado no <em>International Psychogeriatrics Congress</em> em Buenos Aires.
+                Já realizei mais de 3.000 consultas psiquiátricas, com passagem por todos os níveis da Rede de Atenção Psicossocial de Belo Horizonte: urgência, ambulatório e consultório particular. Tenho produção científica publicada em periódicos nacionais e internacionais, incluindo trabalho apresentado no <em>International Psychogeriatrics Congress</em> em Buenos Aires.
               </p>
               <p>
                 Acompanho a literatura em áreas ainda pouco exploradas na clínica convencional, como neuromodulação não invasiva e psicoterapia assistida por psicodélicos, e realizo consultas domiciliares para pacientes com dificuldade de deslocamento, especialmente idosos. O objetivo é sempre direto: que cada paciente, e quando necessário cada família, compreenda o que está acontecendo e encontre um caminho concreto de melhora.

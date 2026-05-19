@@ -11,7 +11,7 @@ const steps = [
   },
   {
     title: "Plano de tratamento personalizado",
-    text: "Com base na avaliação, é definido um plano terapêutico individualizado — com farmacologia explicada, metas claras e cronograma de acompanhamento.",
+    text: "Com base na avaliação, é definido um plano terapêutico individualizado, com farmacologia explicada, metas claras e cronograma de acompanhamento.",
   },
   {
     title: "Suporte contínuo",

@@ -82,7 +82,7 @@ const questions: Question[] = [
 const assessmentJsonLd = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  name: "Avaliação de Sintomas — Dr. João Pedro Castro",
+  name: "Avaliação de Sintomas · Dr. João Pedro Castro",
   description:
     "Questionário de triagem para identificar sintomas que merecem avaliação psiquiátrica. Não substitui consulta médica.",
   url: "https://drjoaopedrocastro.com.br/avaliacao",
@@ -136,7 +136,7 @@ const Avaliacao = () => {
   return (
     <div className="min-h-screen">
       <PageHead
-        title="Avaliação de Sintomas — Dr. João Pedro Castro | Psiquiatra em BH"
+        title="Avaliação de Sintomas · Dr. João Pedro Castro | Psiquiatra em BH"
         description="Faça uma avaliação rápida dos seus sintomas e descubra se é hora de procurar um psiquiatra. Questionário orientativo gratuito."
         url="https://drjoaopedrocastro.com.br/avaliacao"
       />

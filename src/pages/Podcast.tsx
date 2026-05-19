@@ -20,7 +20,7 @@ const episodes = [
   {
     title: "O diagnóstico psiquiátrico é uma sentença?",
     description:
-      "Neste episódio piloto, abrimos a caixa-preta da saúde mental contemporânea. Vivemos uma era de rótulos fáceis, diagnósticos em alta velocidade e identidades moldadas por manuais. Combinando clínica, crítica e escuta, discutimos a história do diagnóstico, o biopoder por trás da medicalização do sofrimento, as diferenças entre o olhar psiquiátrico e a escuta psicanalítica — e por que, muitas vezes, a cura começa quando o sintoma deixa de ser um inimigo.",
+      "Neste episódio piloto, abrimos a caixa-preta da saúde mental contemporânea. Vivemos uma era de rótulos fáceis, diagnósticos em alta velocidade e identidades moldadas por manuais. Combinando clínica, crítica e escuta, discutimos a história do diagnóstico, o biopoder por trás da medicalização do sofrimento, as diferenças entre o olhar psiquiátrico e a escuta psicanalítica, e por que, muitas vezes, a cura começa quando o sintoma deixa de ser um inimigo.",
     date: "30 de maio de 2025",
     duration: "51 min",
     url: "https://open.spotify.com/episode/6DeSZkJPJKbgsr7GeRiJP1",
@@ -32,7 +32,7 @@ const podcastJsonLd = {
   "@type": "PodcastSeries",
   name: "Antivírus",
   description:
-    "Podcast de orientação psicanalítica que contrapõe os discursos 'fast food' sobre saúde mental. Diagnóstico não é sentença — é ponto de partida para pensar.",
+    "Podcast de orientação psicanalítica que contrapõe os discursos 'fast food' sobre saúde mental. Diagnóstico funciona como ponto de partida para pensar.",
   url: SPOTIFY_SHOW_URL,
   author: {
     "@type": "Person",
@@ -44,7 +44,7 @@ const Podcast = () => {
   return (
     <div className="min-h-screen">
       <PageHead
-        title="Podcast Antivírus — Dr. João Pedro Castro | Psiquiatra em BH"
+        title="Podcast Antivírus · Dr. João Pedro Castro | Psiquiatra em BH"
         description="Podcast sobre saúde mental, psiquiatria e psicanálise. Conversas sobre diagnóstico, medicação, sofrimento e os desafios da mente contemporânea."
         url="https://drjoaopedrocastro.com.br/podcast"
       />
@@ -65,7 +65,7 @@ const Podcast = () => {
             Um podcast que contrapõe os discursos "fast food" sobre saúde mental.
           </p>
           <p className="font-body text-base md:text-lg text-foreground/80 leading-relaxed mb-8">
-            Aqui, diagnóstico não é sentença — é ponto de partida para pensar. Um espaço de conversa crítica, acolhedora e instigante sobre sofrimento, identidade e desejo.
+            Aqui, diagnóstico funciona como ponto de partida para pensar. Um espaço de conversa crítica, acolhedora e instigante sobre sofrimento, identidade e desejo.
           </p>
           <a
             href={SPOTIFY_SHOW_URL}

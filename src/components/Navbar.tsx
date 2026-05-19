@@ -3,7 +3,14 @@ import { Link, useLocation } from "react-router-dom";
 import { Logo } from "@/components/brand/Logo";
 import { MenuScribble } from "@/components/brand/scribbles/MenuScribble";
 import { CloseScribble } from "@/components/brand/scribbles/CloseScribble";
+import { DotsScribble } from "@/components/brand/scribbles/DotsScribble";
 import SiteSearch from "@/components/SiteSearch";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 
 const WA_LINK =
   "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
@@ -27,9 +34,10 @@ const Navbar = () => {
     { label: "Podcast", href: "/podcast", isAnchor: false },
     { label: "Vestibulandos", href: "/vestibulandos", isAnchor: false },
     { label: "Blog", href: "/blog", isAnchor: false },
-    { label: "Currículo", href: "/curriculo", isAnchor: false },
     { label: "Contato", href: isHome ? "#contato" : "/#contato", isAnchor: isHome },
   ];
+
+  const secondaryLinks = [{ label: "Currículo", href: "/curriculo" }];
 
   return (
     <nav
@@ -72,6 +80,26 @@ const Navbar = () => {
               </Link>
             )
           )}
+          <DropdownMenu>
+            <DropdownMenuTrigger
+              aria-label="Mais"
+              className="text-muted-foreground hover:text-foreground transition-colors p-1 outline-none focus-visible:ring-1 focus-visible:ring-ring rounded-sm"
+            >
+              <DotsScribble className="w-5 h-5" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="min-w-[10rem]">
+              {secondaryLinks.map((l) => (
+                <DropdownMenuItem asChild key={l.label}>
+                  <Link
+                    to={l.href}
+                    className="w-full font-body text-[11px] uppercase tracking-[0.15em] text-muted-foreground cursor-pointer"
+                  >
+                    {l.label}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
           <SiteSearch />
           <a
             href={WA_LINK}
@@ -119,6 +147,16 @@ const Navbar = () => {
               </Link>
             )
           )}
+          {secondaryLinks.map((l) => (
+            <Link
+              key={l.label}
+              to={l.href}
+              onClick={() => setOpen(false)}
+              className="block font-body text-sm text-muted-foreground hover:text-foreground py-3 border-b border-border/50"
+            >
+              {l.label}
+            </Link>
+          ))}
           <a
             href={WA_LINK}
             target="_blank"

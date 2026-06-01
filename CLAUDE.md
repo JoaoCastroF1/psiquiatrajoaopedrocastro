@@ -83,6 +83,27 @@ npm run lint       # eslint
 npm run test       # vitest
 ```
 
+## Bing / IndexNow
+
+- **Chave IndexNow**: definida em `src/lib/indexnow-key.ts` e hospedada em
+  `public/<chave>.txt` (ambas precisam casar exatamente). É pública por design
+  — não é segredo (ver `SECURITY.md`).
+- **Verificação no Bing Webmaster Tools**: `public/BingSiteAuth.xml` está como
+  placeholder. Para verificar a propriedade, adicione
+  `https://drjoaopedrocastro.com.br` em https://www.bing.com/webmasters,
+  escolha "XML File Authentication", baixe o XML e substitua o conteúdo do
+  placeholder. Alternativa: importar do Google Search Console.
+- **Notificação automática**: `npm run build` executa o pipeline
+  `prebuild` (gera `public/sitemap.xml`) → `build` (vite-react-ssg) →
+  `postbuild` (`scripts/notify-indexnow.ts`). O script compara
+  `dist/sitemap.xml` com `.indexnow-cache.json` (gitignored) e envia para
+  `api.indexnow.org` apenas as URLs novas/alteradas. Falhas são tratadas como
+  warning — IndexNow é fire-and-forget.
+- **Primeiro run**: o cache não existe, então o ping é pulado e só o snapshot
+  é gravado, evitando spam das ~65 URLs de uma vez.
+- **Limitação**: URLs fora do sitemap (improvável neste projeto) não são
+  detectadas — nesses casos, dispare manualmente um POST para o endpoint.
+
 ## Documentos relacionados
 
 - `SECURITY.md` — segredos, rotação, RLS, LGPD

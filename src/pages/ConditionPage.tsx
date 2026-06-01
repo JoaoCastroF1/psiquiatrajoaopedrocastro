@@ -53,6 +53,19 @@ const ConditionPage = () => {
     },
   };
 
+  const conditionJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalCondition",
+    name: condition.title,
+    ...(condition.alternateNames && condition.alternateNames.length > 0
+      ? { alternateName: condition.alternateNames }
+      : {}),
+    possibleTreatment: {
+      "@type": "MedicalTherapy",
+      name: "Tratamento psiquiátrico individualizado",
+    },
+  };
+
   return (
     <div className="min-h-screen">
       <PageHead
@@ -62,6 +75,7 @@ const ConditionPage = () => {
       />
       <JsonLd data={faqJsonLd} />
       <JsonLd data={medicalJsonLd} />
+      <JsonLd data={conditionJsonLd} />
       <Navbar />
 
       {/* Hero */}

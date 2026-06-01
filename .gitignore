@@ -35,3 +35,7 @@ docs/brand/*.ai
 
 # Generated at build time by scripts/generate-sitemap.ts
 public/sitemap.xml
+
+# Snapshot do sitemap usado por scripts/notify-indexnow.ts para detectar
+# URLs novas/alteradas entre builds. Gerado no postbuild.
+.indexnow-cache.json

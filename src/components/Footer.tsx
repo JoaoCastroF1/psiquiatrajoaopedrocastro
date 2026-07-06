@@ -6,6 +6,16 @@ import { blogHubs } from "@/data/blogHubs";
 
 const COPYRIGHT_YEAR = new Date().getFullYear();
 
+const conditionLinks = [
+  { slug: "depressao", label: "Depressão" },
+  { slug: "ansiedade", label: "Ansiedade" },
+  { slug: "tdah", label: "TDAH adulto" },
+  { slug: "bipolaridade", label: "Bipolaridade" },
+  { slug: "insonia", label: "Insônia" },
+  { slug: "alzheimer", label: "Alzheimer e demências" },
+  { slug: "estresse-pos-traumatico", label: "Estresse pós-traumático" },
+];
+
 const Footer = () => {
   return (
     <footer className="bg-graphite">
@@ -86,11 +96,40 @@ const Footer = () => {
               <Instagram className="w-4 h-4" />
               @joaocastrof
             </a>
+            <p className="mt-3">
+              <Link
+                to="/avaliacao"
+                className="font-body text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors underline-offset-4 hover:underline"
+              >
+                Como funciona a avaliação
+              </Link>
+            </p>
           </div>
         </div>
 
-        {/* Blog hubs */}
+        {/* Condições tratadas */}
         <div className="border-t border-primary-foreground/10 mt-10 pt-8">
+          <p className="font-body text-[11px] uppercase tracking-[0.2em] text-primary-foreground/75 text-center md:text-left mb-4">
+            Condições tratadas
+          </p>
+          <nav
+            aria-label="Condições tratadas"
+            className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2"
+          >
+            {conditionLinks.map((c) => (
+              <Link
+                key={c.slug}
+                to={`/${c.slug}`}
+                className="font-body text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              >
+                {c.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        {/* Blog hubs */}
+        <div className="border-t border-primary-foreground/10 mt-8 pt-8">
           <p className="font-body text-[11px] uppercase tracking-[0.2em] text-primary-foreground/75 text-center md:text-left mb-4">
             Conteúdo do blog
           </p>

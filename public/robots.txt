@@ -66,4 +66,4 @@ Allow: /
 User-agent: Diffbot
 Allow: /
 
-Sitemap: https://drjoaopedrocastro.com.br/sitemap.xml
+Sitemap: https://www.drjoaopedrocastro.com.br/sitemap.xml

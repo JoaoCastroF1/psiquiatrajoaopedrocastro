@@ -42,7 +42,7 @@ const Empresas = () => {
       <PageHead
         title="Saúde Mental Corporativa · Dr. João Pedro Castro | Psiquiatra em BH"
         description="Programas de saúde mental para empresas: diagnóstico situacional, NR-1, palestras e acompanhamento. Consultoria psiquiátrica especializada."
-        url="https://drjoaopedrocastro.com.br/empresas"
+        url="https://www.drjoaopedrocastro.com.br/empresas"
       />
       <Navbar />
 

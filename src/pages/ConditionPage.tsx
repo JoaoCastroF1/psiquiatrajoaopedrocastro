@@ -41,7 +41,7 @@ const ConditionPage = () => {
     "@type": "MedicalWebPage",
     name: condition.metaTitle,
     description: condition.metaDescription,
-    url: `https://drjoaopedrocastro.com.br/${condition.slug}`,
+    url: `https://www.drjoaopedrocastro.com.br/${condition.slug}`,
     author: {
       "@type": "Physician",
       name: "Dr. João Pedro Castro",
@@ -58,7 +58,7 @@ const ConditionPage = () => {
       <PageHead
         title={condition.metaTitle}
         description={condition.metaDescription}
-        url={`https://drjoaopedrocastro.com.br/${condition.slug}`}
+        url={`https://www.drjoaopedrocastro.com.br/${condition.slug}`}
       />
       <JsonLd data={faqJsonLd} />
       <JsonLd data={medicalJsonLd} />

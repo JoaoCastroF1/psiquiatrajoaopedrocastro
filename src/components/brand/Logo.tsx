@@ -68,17 +68,18 @@ export function Logo({
     <span
       aria-label={ariaLabel}
       className={cn(
-        "inline-flex items-center whitespace-nowrap font-display font-normal leading-none tracking-[-0.01em]",
+        "inline-flex items-baseline whitespace-nowrap font-display font-normal leading-none tracking-[-0.01em]",
         sizeClasses[size],
         className,
       )}
     >
       <span className={drClass}>Dr.</span>
       <span className={cn("ml-[0.28em]", v.body)}>João Pedro Castro</span>
-      {/* Underscore da marca: encosta na base do texto, nunca centralizado */}
+      {/* Underscore da marca ("conversa em aberto"): na baseline da escrita,
+          ~0.09em abaixo, com ~1.4em de comprimento — proporcoes do manual */}
       <span
         aria-hidden="true"
-        className={cn("ml-[0.45em] h-px w-[2.3em] shrink-0 self-end", barClass)}
+        className={cn("ml-[0.3em] h-px w-[1.4em] shrink-0 translate-y-[0.09em]", barClass)}
       />
     </span>
   );

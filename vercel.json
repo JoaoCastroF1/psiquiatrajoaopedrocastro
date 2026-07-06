@@ -1,20 +1,86 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
-    { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/home", "destination": "/", "permanent": true },
-    { "source": "/sobre", "destination": "/atuacao", "permanent": true },
-    { "source": "/servicos", "destination": "/atuacao", "permanent": true },
-    { "source": "/contato", "destination": "/avaliacao", "permanent": true },
-    { "source": "/agendamento", "destination": "/avaliacao", "permanent": true },
-    { "source": "/artigos", "destination": "/blog", "permanent": true },
-    { "source": "/artigos/:slug", "destination": "/blog/:slug", "permanent": true },
-    { "source": "/blog/categoria/:slug", "destination": "/blog/tema/:slug", "permanent": true },
-    { "source": "/blog/tdah-em-adultos", "destination": "/blog/tdah-adultos-diferenciar-ansiedade-depressao", "permanent": true },
-    { "source": "/blog/tdah-adultos-jovens-estudos", "destination": "/blog/tdah-adultos-diferenciar-ansiedade-depressao", "permanent": true },
-    { "source": "/blog/remedio-psiquiatrico-vicia", "destination": "/blog/psicofarmacos-mitos-verdades", "permanent": true },
-    { "source": "/blog/quetiapina-seroquel-bipolar-psicose", "destination": "/blog/quetiapina-guia-completo", "permanent": true },
-    { "source": "/blog/o-que-e-psicogeriatra-quando-consultar", "destination": "/blog/o-que-e-psicogeriatria", "permanent": true }
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sobre",
+      "destination": "/atuacao",
+      "permanent": true
+    },
+    {
+      "source": "/servicos",
+      "destination": "/atuacao",
+      "permanent": true
+    },
+    {
+      "source": "/contato",
+      "destination": "/avaliacao",
+      "permanent": true
+    },
+    {
+      "source": "/agendamento",
+      "destination": "/avaliacao",
+      "permanent": true
+    },
+    {
+      "source": "/artigos",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/artigos/:slug",
+      "destination": "/blog/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/blog/categoria/:slug",
+      "destination": "/blog/tema/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tdah-em-adultos",
+      "destination": "/blog/tdah-adultos-diferenciar-ansiedade-depressao",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tdah-adultos-jovens-estudos",
+      "destination": "/blog/tdah-adultos-diferenciar-ansiedade-depressao",
+      "permanent": true
+    },
+    {
+      "source": "/blog/remedio-psiquiatrico-vicia",
+      "destination": "/blog/psicofarmacos-mitos-verdades",
+      "permanent": true
+    },
+    {
+      "source": "/blog/quetiapina-seroquel-bipolar-psicose",
+      "destination": "/blog/quetiapina-guia-completo",
+      "permanent": true
+    },
+    {
+      "source": "/blog/o-que-e-psicogeriatra-quando-consultar",
+      "destination": "/blog/o-que-e-psicogeriatria",
+      "permanent": true
+    },
+    {
+      "source": "/blog/lítio-sal-bipolar-gold-standard",
+      "destination": "/blog/litio-sal-bipolar-gold-standard",
+      "permanent": true
+    },
+    {
+      "source": "/blog/alprazolam-xanax-panico-anxiety",
+      "destination": "/blog/alprazolam-xanax-panico",
+      "permanent": true
+    }
   ],
   "headers": [
     {
@@ -24,9 +90,18 @@
           "key": "Strict-Transport-Security",
           "value": "max-age=63072000; includeSubDomains; preload"
         },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
         {
           "key": "Permissions-Policy",
           "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"

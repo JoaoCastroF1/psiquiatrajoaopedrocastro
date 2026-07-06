@@ -1,4 +1,4 @@
-import type { BlogTag } from "./blogPosts";
+import type { BlogTag } from "./blogIndex";
 
 export interface BlogHub {
   slug: string;

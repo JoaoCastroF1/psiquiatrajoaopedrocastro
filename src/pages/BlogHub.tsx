@@ -7,7 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import NotFound from "@/pages/NotFound";
-import { blogPosts } from "@/data/blogPosts";
+import { blogIndex } from "@/data/blogIndex";
 import { blogHubs } from "@/data/blogHubs";
 import PageHead from "@/components/PageHead";
 
@@ -17,8 +17,8 @@ const BlogHub = () => {
 
   if (!hub) return <NotFound />;
 
-  const posts = blogPosts.filter((p) => hub.tags.includes(p.tag));
-  const hubUrl = `https://drjoaopedrocastro.com.br/blog/tema/${hub.slug}`;
+  const posts = blogIndex.filter((p) => hub.tags.includes(p.tag));
+  const hubUrl = `https://www.drjoaopedrocastro.com.br/blog/tema/${hub.slug}`;
 
   const hubJsonLd = {
     "@context": "https://schema.org",
@@ -31,7 +31,7 @@ const BlogHub = () => {
       itemListElement: posts.map((post, i) => ({
         "@type": "ListItem",
         position: i + 1,
-        url: `https://drjoaopedrocastro.com.br/blog/${post.slug}`,
+        url: `https://www.drjoaopedrocastro.com.br/blog/${post.slug}`,
         name: post.title,
       })),
     },

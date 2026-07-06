@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Search, X } from "lucide-react";
-import { searchSite, type SearchResult } from "@/lib/searchIndex";
+import type { searchSite, SearchResult } from "@/lib/searchIndex";
+
+type SearchFn = typeof searchSite;
 
 interface SiteSearchProps {
   variant?: "icon" | "inline";
@@ -15,7 +17,25 @@ const SiteSearch = ({ variant = "icon", onNavigate }: SiteSearchProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
 
-  const results: SearchResult[] = useMemo(() => searchSite(query), [query]);
+  // O indice de busca inclui o texto integral do blog; carrega sob demanda
+  // para nao entrar no bundle inicial de todas as paginas.
+  const [searchFn, setSearchFn] = useState<SearchFn | null>(null);
+
+  useEffect(() => {
+    if (!open || searchFn) return;
+    let cancelled = false;
+    import("@/lib/searchIndex").then((mod) => {
+      if (!cancelled) setSearchFn(() => mod.searchSite);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [open, searchFn]);
+
+  const results: SearchResult[] = useMemo(
+    () => (searchFn ? searchFn(query) : []),
+    [searchFn, query],
+  );
 
   useEffect(() => {
     setActiveIndex(0);

@@ -12,7 +12,7 @@ const HeroSection = () => {
       </Head>
       <div className="container mx-auto px-4 py-12 md:py-20 lg:py-24">
         <div className="grid md:grid-cols-12 gap-10 md:gap-8 lg:gap-12 items-start">
-          <div className="order-2 md:order-1 md:col-span-7 lg:col-span-8">
+          <div className="md:col-span-7 lg:col-span-8">
             <p className="font-body text-xs uppercase tracking-[0.3em] text-deep-green mb-8">
               Psiquiatra · Psicogeriatria · Belo Horizonte
             </p>
@@ -45,6 +45,14 @@ const HeroSection = () => {
               </a>
             </div>
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-6 border-t border-foreground/10">
+              <a
+                href="#depoimentos"
+                className="font-display italic text-xs lg:text-[13px] text-foreground/80 whitespace-nowrap hover:text-deep-green transition-colors"
+              >
+                <span aria-hidden="true" className="not-italic text-deep-green">★</span> 5,0 nas
+                avaliações do Google
+              </a>
+              <span className="text-foreground/30">·</span>
               <span className="font-display italic text-xs lg:text-[13px] text-foreground/70 whitespace-nowrap">
                 Atendimento particular
               </span>
@@ -59,7 +67,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="order-1 md:order-2 md:col-span-5 lg:col-span-4 flex justify-center md:justify-end">
+          <div className="md:col-span-5 lg:col-span-4 flex justify-center md:justify-end">
             <div className="relative w-72 md:w-full md:max-w-[340px] lg:max-w-[400px]">
               <img
                 src={jpPortrait}

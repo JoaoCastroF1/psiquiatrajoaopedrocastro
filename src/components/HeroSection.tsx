@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { Head } from "vite-react-ssg";
 import jpPortrait from "@/assets/jp-portrait.webp";
 
 const WA_LINK =
@@ -7,14 +7,12 @@ const WA_LINK =
 const HeroSection = () => {
   return (
     <section className="relative flex items-center bg-background overflow-hidden pt-24 md:pt-28">
+      <Head>
+        <link rel="preload" as="image" href={jpPortrait} />
+      </Head>
       <div className="container mx-auto px-4 py-12 md:py-20 lg:py-24">
         <div className="grid md:grid-cols-12 gap-10 md:gap-8 lg:gap-12 items-start">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-            className="order-2 md:order-1 md:col-span-7 lg:col-span-8"
-          >
+          <div className="order-2 md:order-1 md:col-span-7 lg:col-span-8">
             <p className="font-body text-xs uppercase tracking-[0.3em] text-deep-green mb-8">
               Psiquiatra · Psicogeriatria · Belo Horizonte
             </p>
@@ -59,14 +57,9 @@ const HeroSection = () => {
                 Presencial · Telemedicina · Domiciliar
               </span>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, delay: 0.3 }}
-            className="order-1 md:order-2 md:col-span-5 lg:col-span-4 flex justify-center md:justify-end"
-          >
+          <div className="order-1 md:order-2 md:col-span-5 lg:col-span-4 flex justify-center md:justify-end">
             <div className="relative w-72 md:w-full md:max-w-[340px] lg:max-w-[400px]">
               <img
                 src={jpPortrait}
@@ -76,7 +69,7 @@ const HeroSection = () => {
               />
               <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -21,7 +21,7 @@ const Breadcrumbs = ({ items }: BreadcrumbsProps) => {
       position: i + 1,
       name: item.label,
       ...(item.href
-        ? { item: `https://drjoaopedrocastro.com.br${item.href}` }
+        ? { item: `https://www.drjoaopedrocastro.com.br${item.href}` }
         : {}),
     })),
   };

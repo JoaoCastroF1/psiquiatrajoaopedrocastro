@@ -46,7 +46,7 @@ const Podcast = () => {
       <PageHead
         title="Podcast Antivírus · Dr. João Pedro Castro | Psiquiatra em BH"
         description="Podcast sobre saúde mental, psiquiatria e psicanálise. Conversas sobre diagnóstico, medicação, sofrimento e os desafios da mente contemporânea."
-        url="https://drjoaopedrocastro.com.br/podcast"
+        url="https://www.drjoaopedrocastro.com.br/podcast"
       />
       <JsonLd data={podcastJsonLd} />
       <Navbar />

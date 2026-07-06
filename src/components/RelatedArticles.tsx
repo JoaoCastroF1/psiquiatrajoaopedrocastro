@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { blogPosts, BlogPost } from "@/data/blogPosts";
+import { blogIndex, type BlogPostMeta } from "@/data/blogIndex";
 
 interface RelatedArticlesProps {
   currentSlug: string;
@@ -9,10 +9,10 @@ interface RelatedArticlesProps {
 
 const RelatedArticles = ({ currentSlug, currentTag }: RelatedArticlesProps) => {
   // First try same tag, then fill with other posts
-  const sameTag = blogPosts.filter(
+  const sameTag = blogIndex.filter(
     (p) => p.tag === currentTag && p.slug !== currentSlug
   );
-  const others = blogPosts.filter(
+  const others = blogIndex.filter(
     (p) => p.tag !== currentTag && p.slug !== currentSlug
   );
   const related = [...sameTag, ...others].slice(0, 3);

@@ -18,7 +18,7 @@ import jpAvatar from "@/assets/jp-portrait.webp";
 const WA_LINK =
   "https://wa.me/5531991315958?text=Ol%C3%A1%2C%20vim%20do%20seu%20site%20e%20gostaria%20de%20agendar%20uma%20consulta.";
 
-const SITE_URL = "https://drjoaopedrocastro.com.br";
+const SITE_URL = "https://www.drjoaopedrocastro.com.br";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 const PUBLISHER_LOGO = `${SITE_URL}/android-chrome-512x512.png`;
 const AUTHOR_URL = `${SITE_URL}/atuacao`;
@@ -95,7 +95,7 @@ const BlogPost = () => {
 
   const articleJsonLd = {
     "@context": "https://schema.org",
-    "@type": "MedicalWebPage",
+    "@type": ["BlogPosting", "MedicalWebPage"],
     headline: post.title,
     description,
     datePublished: publishedIso,

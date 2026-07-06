@@ -109,7 +109,7 @@ const Index = () => {
       <PageHead
         title="Dr. João Pedro Castro · Psiquiatra e Psicogeriatra em BH"
         description="Psiquiatra e psicogeriatra em Belo Horizonte. Atendimento para depressão, ansiedade, TDAH, bipolaridade, demências e Alzheimer. CRM 83920."
-        url="https://drjoaopedrocastro.com.br/"
+        url="https://www.drjoaopedrocastro.com.br/"
       />
       <JsonLd data={faqJsonLd} />
       <Navbar />

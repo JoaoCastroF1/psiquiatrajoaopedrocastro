@@ -108,7 +108,7 @@ const pageJsonLd = {
   name: "Saúde Mental para Vestibulandos e Estudantes · Dr. João Pedro Castro",
   description:
     "Atendimento psiquiátrico especializado para vestibulandos e universitários em Belo Horizonte. Ansiedade, TDAH, insônia, esgotamento e crises de pânico.",
-  url: "https://drjoaopedrocastro.com.br/vestibulandos",
+  url: "https://www.drjoaopedrocastro.com.br/vestibulandos",
   specialty: { "@type": "MedicalSpecialty", name: "Psychiatry" },
   about: [
     { "@type": "MedicalCondition", name: "Ansiedade de desempenho" },
@@ -132,7 +132,7 @@ const VestibulandoEspecialista = () => {
       <PageHead
         title="Psiquiatra para Vestibulandos em BH · Ansiedade, TDAH, Insônia | Dr. João Pedro Castro"
         description="Atendimento psiquiátrico para vestibulandos e estudantes em Belo Horizonte. Avaliação de ansiedade, TDAH, insônia e esgotamento. Consultório em Lourdes, perto dos principais cursinhos."
-        url="https://drjoaopedrocastro.com.br/vestibulandos"
+        url="https://www.drjoaopedrocastro.com.br/vestibulandos"
       />
       <JsonLd data={pageJsonLd} />
       <Navbar />

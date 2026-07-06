@@ -1,7 +1,7 @@
 import type { ComponentType } from "react";
 import type { RouteRecord } from "vite-react-ssg";
 import Layout from "./Layout";
-import { blogPosts } from "./data/blogPosts";
+import { blogIndex } from "./data/blogIndex";
 import { blogHubs } from "./data/blogHubs";
 
 const lazyDefault =
@@ -41,7 +41,7 @@ export const routes: RouteRecord[] = [
         path: "blog/:slug",
         lazy: lazyDefault(() => import("./pages/BlogPost")),
         entry: "src/pages/BlogPost.tsx",
-        getStaticPaths: () => blogPosts.map((p) => `/blog/${p.slug}`),
+        getStaticPaths: () => blogIndex.map((p) => `/blog/${p.slug}`),
       },
       {
         path: "blog/tema/:hubSlug",

@@ -85,7 +85,7 @@ const assessmentJsonLd = {
   name: "Avaliação de Sintomas · Dr. João Pedro Castro",
   description:
     "Questionário de triagem para identificar sintomas que merecem avaliação psiquiátrica. Não substitui consulta médica.",
-  url: "https://drjoaopedrocastro.com.br/avaliacao",
+  url: "https://www.drjoaopedrocastro.com.br/avaliacao",
   author: {
     "@type": "Person",
     name: "Dr. João Pedro Castro Martins Farias",
@@ -138,7 +138,7 @@ const Avaliacao = () => {
       <PageHead
         title="Avaliação de Sintomas · Dr. João Pedro Castro | Psiquiatra em BH"
         description="Faça uma avaliação rápida dos seus sintomas e descubra se é hora de procurar um psiquiatra. Questionário orientativo gratuito."
-        url="https://drjoaopedrocastro.com.br/avaliacao"
+        url="https://www.drjoaopedrocastro.com.br/avaliacao"
       />
       <JsonLd data={assessmentJsonLd} />
       <Navbar />

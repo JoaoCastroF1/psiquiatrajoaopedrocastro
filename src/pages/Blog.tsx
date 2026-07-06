@@ -6,7 +6,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { motion } from "framer-motion";
-import { blogPosts } from "@/data/blogPosts";
+import { blogIndex } from "@/data/blogIndex";
 import { blogHubs } from "@/data/blogHubs";
 import PageHead from "@/components/PageHead";
 
@@ -15,13 +15,13 @@ const blogListJsonLd = {
   "@type": "CollectionPage",
   name: "Blog · Dr. João Pedro Castro",
   description: "Artigos sobre saúde mental escritos com base na prática clínica e na literatura científica atual.",
-  url: "https://drjoaopedrocastro.com.br/blog",
+  url: "https://www.drjoaopedrocastro.com.br/blog",
   mainEntity: {
     "@type": "ItemList",
-    itemListElement: blogPosts.map((post, i) => ({
+    itemListElement: blogIndex.map((post, i) => ({
       "@type": "ListItem",
       position: i + 1,
-      url: `https://drjoaopedrocastro.com.br/blog/${post.slug}`,
+      url: `https://www.drjoaopedrocastro.com.br/blog/${post.slug}`,
       name: post.title,
     })),
   },
@@ -33,7 +33,7 @@ const Blog = () => {
       <PageHead
         title="Blog · Dr. João Pedro Castro | Psiquiatra em BH"
         description="Artigos sobre saúde mental escritos com base na prática clínica e na literatura científica atual."
-        url="https://drjoaopedrocastro.com.br/blog"
+        url="https://www.drjoaopedrocastro.com.br/blog"
         type="blog"
       />
       <JsonLd data={blogListJsonLd} />

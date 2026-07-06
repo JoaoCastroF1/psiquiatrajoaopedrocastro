@@ -14,7 +14,7 @@ interface PageHeadProps {
   tags?: string[];
 }
 
-const DEFAULT_IMAGE = "https://drjoaopedrocastro.com.br/og-image.jpg";
+const DEFAULT_IMAGE = "https://www.drjoaopedrocastro.com.br/og-image.jpg";
 const DEFAULT_TWITTER = "@joaocastrof";
 
 const PageHead = ({

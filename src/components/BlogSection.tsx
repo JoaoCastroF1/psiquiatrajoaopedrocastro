@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { blogPosts } from "@/data/blogPosts";
+import { blogIndex } from "@/data/blogIndex";
 
 interface BlogSectionProps {
   showHeader?: boolean;
 }
 
 const BlogSection = ({ showHeader = true }: BlogSectionProps) => {
-  const [featured, ...rest] = blogPosts;
+  const [featured, ...rest] = blogIndex;
   const listItems = rest.slice(0, 3);
   const smallItems = rest.slice(3, 6);
   const remaining = rest.slice(6);

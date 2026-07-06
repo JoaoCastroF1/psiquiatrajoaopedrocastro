@@ -5,7 +5,7 @@ import {
   journalArticles,
 } from "./curriculum";
 
-const SITE_URL = "https://drjoaopedrocastro.com.br";
+const SITE_URL = "https://www.drjoaopedrocastro.com.br";
 
 const authorsToPersonArray = (authorsString: string) =>
   authorsString

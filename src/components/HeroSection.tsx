@@ -56,14 +56,6 @@ const HeroSection = () => {
               </a>
             </div>
             <div className="order-7 flex flex-col items-start gap-y-1.5 md:flex-row md:flex-wrap md:items-center md:gap-x-3 md:gap-y-1 pt-6 border-t border-foreground/10">
-              <a
-                href="#depoimentos"
-                className="font-display italic text-xs lg:text-[13px] text-foreground/80 whitespace-nowrap hover:text-deep-green transition-colors"
-              >
-                <span aria-hidden="true" className="not-italic text-deep-green">★</span> 5,0 nas
-                avaliações do Google
-              </a>
-              <span className="hidden md:inline text-foreground/30">·</span>
               <span className="font-display italic text-xs lg:text-[13px] text-foreground/70 whitespace-nowrap">
                 Atendimento particular
               </span>

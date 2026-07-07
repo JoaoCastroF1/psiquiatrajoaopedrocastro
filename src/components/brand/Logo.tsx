@@ -75,11 +75,11 @@ export function Logo({
     >
       <span className={drClass}>Dr.</span>
       <span className={cn("ml-[0.28em]", v.body)}>João Pedro Castro</span>
-      {/* Underscore da marca ("conversa em aberto"): na baseline da escrita,
-          ~0.09em abaixo, com ~1.4em de comprimento — proporcoes do manual */}
+      {/* Underscore da marca ("conversa em aberto"): colado na última letra,
+          na baseline da escrita, ~0.09em abaixo, ~1.4em de comprimento */}
       <span
         aria-hidden="true"
-        className={cn("ml-[0.3em] h-px w-[1.4em] shrink-0 translate-y-[0.09em]", barClass)}
+        className={cn("ml-[0.06em] h-px w-[1.4em] shrink-0 translate-y-[0.09em]", barClass)}
       />
     </span>
   );

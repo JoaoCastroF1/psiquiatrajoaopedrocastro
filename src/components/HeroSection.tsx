@@ -24,14 +24,14 @@ const HeroSection = () => {
               {" "}e a <em className="text-deep-green">escuta</em> que o seu caso{" "}
               <em>precisa</em>.
             </h1>
-            <div className="order-3 md:hidden relative mb-6">
+            <div className="order-3 md:hidden relative w-64 mx-auto mb-6">
               <img
                 src={jpPortrait}
                 alt="Dr. João Pedro Castro, Psiquiatra e Psicogeriatra em Belo Horizonte"
                 loading="eager"
-                className="brand-photo w-full aspect-[16/10] object-cover object-[50%_18%]"
+                className="brand-photo w-full aspect-[3/4] object-cover object-top"
               />
-              <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent" />
             </div>
             <p className="order-5 font-display italic text-base md:text-xl lg:text-[1.4rem] text-foreground/85 leading-relaxed max-w-2xl mb-8">
               Para adultos que convivem com depressão, ansiedade, TDAH, bipolaridade ou transtornos do humor. E para famílias que acompanham o declínio cognitivo de alguém que amam.
@@ -55,7 +55,7 @@ const HeroSection = () => {
                 Conheça minha abordagem
               </a>
             </div>
-            <div className="order-7 flex flex-wrap items-center gap-x-3 gap-y-1 pt-6 border-t border-foreground/10">
+            <div className="order-7 flex flex-col items-start gap-y-1.5 md:flex-row md:flex-wrap md:items-center md:gap-x-3 md:gap-y-1 pt-6 border-t border-foreground/10">
               <a
                 href="#depoimentos"
                 className="font-display italic text-xs lg:text-[13px] text-foreground/80 whitespace-nowrap hover:text-deep-green transition-colors"
@@ -64,15 +64,15 @@ const HeroSection = () => {
                 avaliações do Google
               </a>
               <span className="hidden md:inline text-foreground/30">·</span>
-              <span className="hidden md:inline font-display italic text-xs lg:text-[13px] text-foreground/70 whitespace-nowrap">
+              <span className="font-display italic text-xs lg:text-[13px] text-foreground/70 whitespace-nowrap">
                 Atendimento particular
               </span>
               <span className="hidden md:inline text-foreground/30">·</span>
-              <span className="hidden md:inline font-display italic text-xs lg:text-[13px] text-foreground/70 whitespace-nowrap">
+              <span className="font-display italic text-xs lg:text-[13px] text-foreground/70 whitespace-nowrap">
                 Nota fiscal para reembolso em planos
               </span>
               <span className="hidden md:inline text-foreground/30">·</span>
-              <span className="hidden md:inline font-display italic text-xs lg:text-[13px] text-foreground/70 whitespace-nowrap">
+              <span className="font-display italic text-xs lg:text-[13px] text-foreground/70 whitespace-nowrap">
                 Presencial · Telemedicina · Domiciliar
               </span>
             </div>

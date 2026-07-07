@@ -77,6 +77,11 @@
       "permanent": true
     },
     {
+      "source": "/blog/l%C3%ADtio-sal-bipolar-gold-standard",
+      "destination": "/blog/litio-sal-bipolar-gold-standard",
+      "permanent": true
+    },
+    {
       "source": "/blog/alprazolam-xanax-panico-anxiety",
       "destination": "/blog/alprazolam-xanax-panico",
       "permanent": true

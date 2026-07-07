@@ -17,14 +17,8 @@ const sizeClasses: Record<LogoSize, string> = {
   lg: "text-2xl md:text-3xl",
 };
 
-const barWidth: Record<LogoSize, string> = {
-  sm: "w-2.5",
-  md: "w-3.5",
-  lg: "w-5",
-};
-
-// `body` colors "João Pedro Castro". `dr` colors "Dr." and the closing bar;
-// they are a visual pair in the manual and travel together.
+// `body` colors "João Pedro Castro". `dr` colors "Dr." and the closing
+// underscore; they are a visual pair in the manual and travel together.
 const variantStyle: Record<
   LogoVariant,
   { body: string; drDefault: string; drAccent: string; barDefault: string; barAccent: string }
@@ -74,16 +68,18 @@ export function Logo({
     <span
       aria-label={ariaLabel}
       className={cn(
-        "inline-flex items-center whitespace-nowrap font-display font-normal leading-none tracking-[-0.01em]",
+        "inline-flex items-baseline whitespace-nowrap font-display font-normal leading-none tracking-[-0.01em]",
         sizeClasses[size],
         className,
       )}
     >
       <span className={drClass}>Dr.</span>
       <span className={cn("ml-[0.28em]", v.body)}>João Pedro Castro</span>
+      {/* Underscore da marca ("conversa em aberto"): colado na última letra,
+          na baseline da escrita, ~0.09em abaixo, ~1.4em de comprimento */}
       <span
         aria-hidden="true"
-        className={cn("ml-[0.45em] h-px shrink-0", barWidth[size], barClass)}
+        className={cn("ml-[0.06em] h-px w-[1.4em] shrink-0 translate-y-[0.09em]", barClass)}
       />
     </span>
   );

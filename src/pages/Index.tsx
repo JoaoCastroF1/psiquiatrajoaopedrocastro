@@ -117,11 +117,11 @@ const Index = () => {
       <AuthorityStrip />
       <HowItWorksSection />
       <AboutSection />
+      <TestimonialsSection />
       <AudienceSection />
       <StudentsLocalSection />
       <ServicesPreview />
       <MethodSection />
-      <TestimonialsSection />
       <FAQSection />
       <CTASection />
       

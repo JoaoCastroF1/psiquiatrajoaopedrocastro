@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const credentials = [
   "Medicina pela UFMG",
   "Residência em Psiquiatria, HOB",
-  "Residência em Psicogeriatria, HC-UFMG/Ebserh",
+  "Residência em Psicogeriatria, HC-UFMG",
   "Mestrando em Neurociências",
 ];
 
@@ -21,7 +21,7 @@ const AuthorityStrip = () => {
           {credentials.map((c, i) => (
             <span
               key={i}
-              className="font-body text-[11px] md:text-xs text-primary-foreground/70 uppercase tracking-[0.15em]"
+              className="font-body text-[11px] md:text-xs text-primary-foreground/70 uppercase tracking-[0.15em] text-center"
             >
               {c}
             </span>

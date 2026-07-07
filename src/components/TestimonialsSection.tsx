@@ -61,7 +61,7 @@ const Stars = ({ className = "" }: { className?: string }) => (
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-section-alt">
+    <section id="depoimentos" className="scroll-mt-24 py-24 md:py-32 bg-section-alt">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

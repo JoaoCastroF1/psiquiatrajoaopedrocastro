@@ -84,6 +84,18 @@ export const blogIndex: BlogPostMeta[] = [
     "tag": "TDAH",
     "title": "TDAH em adultos: como diferenciar de ansiedade, depressão ou só falta de foco",
     "metaTitle": "TDAH em adultos: como diferenciar de ansiedade e depressão",
+    "metaDescription": "Procrastinação e falta de foco nem sempre são TDAH. Como o psiquiatra diferencia TDAH adulto de ansiedade, depressão e bipolaridade, e como é o diagnóstico.",
+    "keywords": [
+      "TDAH em adultos",
+      "TDAH adulto sintomas",
+      "TDAH ou ansiedade",
+      "TDAH ou depressão",
+      "diagnóstico TDAH adulto",
+      "disfunção executiva",
+      "hiperfoco",
+      "TDAH tratamento adulto",
+      "psiquiatra TDAH belo horizonte"
+    ],
     "excerpt": "Procrastinação, mente acelerada e dificuldade de concentração nem sempre são TDAH. O que separa o quadro de ansiedade, depressão e cansaço crônico.",
     "date": "02 Mai 2026",
     "readTime": "9 min de leitura"
@@ -92,6 +104,17 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "depressao-ou-tristeza",
     "tag": "Depressão",
     "title": "Depressão ou tristeza passageira? Como saber e quando procurar um psiquiatra",
+    "metaTitle": "Depressão ou tristeza: como diferenciar e quando tratar",
+    "metaDescription": "Tristeza cede em dias; depressão persiste por semanas, derruba sono, apetite e funcionamento. Os critérios clínicos que separam os dois quadros e quando procurar ajuda.",
+    "keywords": [
+      "depressão ou tristeza",
+      "como saber se estou com depressão",
+      "sintomas de depressão",
+      "tristeza profunda",
+      "depressão sem choro",
+      "luto ou depressão",
+      "quando procurar psiquiatra depressão"
+    ],
     "excerpt": "Tristeza prolongada nem sempre é depressão. E depressão nem sempre vem com choro. Entenda os sinais que separam o luto comum do quadro clínico.",
     "date": "20 Mar 2026",
     "readTime": "6 min de leitura"
@@ -100,6 +123,17 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "o-que-e-psicogeriatria",
     "tag": "Psicogeriatria",
     "title": "O que é psicogeriatria e por que ela importa depois dos 60",
+    "metaTitle": "Psicogeriatria: o que é e quando procurar",
+    "metaDescription": "Psicogeriatria é a psiquiatria do idoso: depressão que parece demência, medicação em dose certa para o cérebro envelhecido e manejo dos sintomas das demências.",
+    "keywords": [
+      "psicogeriatria",
+      "psiquiatra geriátrico",
+      "psiquiatra para idoso",
+      "depressão no idoso",
+      "pseudodemência depressiva",
+      "sintomas comportamentais demência",
+      "psicogeriatra belo horizonte"
+    ],
     "excerpt": "O cérebro envelhecido funciona diferente: muda como sente, como responde à medicação e como adoece. A psicogeriatria existe para tratar essas diferenças.",
     "date": "15 Mar 2026",
     "readTime": "7 min de leitura"
@@ -108,6 +142,18 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "insonia-cronica-saude-mental",
     "tag": "Sono",
     "title": "Insônia crônica e saúde mental: o que veio primeiro?",
+    "metaTitle": "Insônia crônica: causas, riscos e tratamento",
+    "metaDescription": "Insônia crônica atinge 10 a 15% dos adultos e dobra o risco de depressão. Por que a TCC-I é o tratamento de primeira linha e quando a medicação entra.",
+    "keywords": [
+      "insônia crônica",
+      "insônia e depressão",
+      "insônia e ansiedade",
+      "tratamento insônia",
+      "TCC-I",
+      "remédio para dormir",
+      "não consigo dormir",
+      "psiquiatra insônia"
+    ],
     "excerpt": "Insônia costuma ser o primeiro sinal de que algo está fora de eixo, e o último a ser tratado a sério. Por que o sono merece atenção clínica dedicada.",
     "date": "05 Mar 2026",
     "readTime": "5 min de leitura"
@@ -116,6 +162,16 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "ansiedade-no-vestibular",
     "tag": "Ansiedade",
     "title": "Ansiedade no vestibular: quando é só pressão e quando é quadro clínico",
+    "metaTitle": "Ansiedade no vestibular: quando procurar ajuda",
+    "metaDescription": "Nervosismo pré-prova é esperado. Quando a ansiedade trava o raciocínio, rouba o sono e derruba o desempenho do vestibulando, pode haver quadro clínico tratável.",
+    "keywords": [
+      "ansiedade no vestibular",
+      "ansiedade de prova",
+      "branco na prova",
+      "vestibulando ansiedade",
+      "ansiedade enem",
+      "psiquiatra para vestibulando"
+    ],
     "excerpt": "Nervoso antes da prova é esperado. Quando a ansiedade trava o raciocínio, rouba o sono e paralisa a rotina, pode existir um quadro que merece avaliação.",
     "date": "02 Abr 2026",
     "readTime": "7 min de leitura"
@@ -133,6 +189,16 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "comportamento-impulsivo-regulacao-emocional",
     "tag": "Saúde Mental",
     "title": "Comportamento impulsivo e desregulação emocional: temperamento ou diagnóstico?",
+    "metaTitle": "Impulsividade e desregulação emocional: quando é diagnóstico",
+    "metaDescription": "Explosões de raiva, compras impulsivas, decisões sem freio. Quando a impulsividade é traço de temperamento e quando indica TDAH, bipolaridade ou borderline.",
+    "keywords": [
+      "impulsividade",
+      "desregulação emocional",
+      "explosão de raiva",
+      "descontrole emocional",
+      "impulsividade tratamento",
+      "transtorno explosivo intermitente"
+    ],
     "excerpt": "Explodir de raiva, comprar sem pensar, agir sem medir consequência. Às vezes é jeito de ser. Às vezes é quadro clínico que se beneficia de tratamento.",
     "date": "25 Mar 2026",
     "readTime": "6 min de leitura"
@@ -141,6 +207,17 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "medicacao-psiquiatrica-gravidez",
     "tag": "Saúde da Mulher",
     "title": "Medicação psiquiátrica na gravidez: o que as evidências dizem sobre risco e benefício",
+    "metaTitle": "Antidepressivo na gravidez: riscos e evidências",
+    "metaDescription": "Parar antidepressivo na gravidez por medo pode expor mãe e bebê a risco maior que o de continuar. O que os dados mostram sobre ISRS, gestação e amamentação.",
+    "keywords": [
+      "antidepressivo na gravidez",
+      "medicação psiquiátrica gravidez",
+      "sertralina gravidez",
+      "grávida pode tomar antidepressivo",
+      "depressão na gravidez",
+      "antidepressivo amamentação",
+      "psiquiatra gestante"
+    ],
     "excerpt": "Parar antidepressivo ou ansiolítico na gravidez por medo pode expor mãe e bebê a um risco maior do que o de continuar. O que dizem os dados.",
     "date": "22 Mar 2026",
     "readTime": "8 min de leitura"
@@ -149,6 +226,16 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "transtorno-adaptativo-estresse",
     "tag": "Saúde Mental",
     "title": "Transtorno adaptativo: quando a reação ao estresse vira diagnóstico",
+    "metaTitle": "Transtorno adaptativo: sintomas e tratamento",
+    "metaDescription": "Demissão, divórcio, luto. Quando a reação ao estressor persiste além do esperado e compromete o funcionamento, pode ser transtorno adaptativo, que tem tratamento.",
+    "keywords": [
+      "transtorno adaptativo",
+      "transtorno de ajustamento",
+      "estresse crise",
+      "reação ao estresse",
+      "tristeza após demissão",
+      "sofrimento após separação"
+    ],
     "excerpt": "Demissão, divórcio, luto. Reagir com tristeza e ansiedade é esperado. Quando a reação persiste e atrapalha o funcionamento, pode ser transtorno adaptativo.",
     "date": "18 Mar 2026",
     "readTime": "6 min de leitura"
@@ -157,6 +244,17 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "uso-substancias-saude-mental",
     "tag": "Dependência",
     "title": "Álcool e outras substâncias: a automedicação de transtornos mentais que ninguém diagnosticou",
+    "metaTitle": "Álcool como automedicação: a ligação com ansiedade e depressão",
+    "metaDescription": "Boa parte do uso crônico de álcool e outras drogas é tentativa de tratar ansiedade, depressão ou TDAH sem diagnóstico. Como funciona a sobreposição e o tratamento.",
+    "keywords": [
+      "álcool e ansiedade",
+      "álcool e depressão",
+      "automedicação álcool",
+      "dependência química tratamento",
+      "beber para dormir",
+      "uso de substâncias saúde mental",
+      "psiquiatra dependência"
+    ],
     "excerpt": "Boa parte dos usuários crônicos de álcool ou outras drogas está tentando tratar depressão, ansiedade ou TDAH por conta própria. Entenda a sobreposição.",
     "date": "12 Mar 2026",
     "readTime": "7 min de leitura"
@@ -165,6 +263,16 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "transtorno-sono-paradoxal",
     "tag": "Sono",
     "title": "Comportamento durante REM: transtornos do sono que precisam de investigação",
+    "metaTitle": "Transtornos do sono REM: pesadelos e movimentos anormais",
+    "metaDescription": "Pesadelos recorrentes, gritos e movimentos agressivos durante o sono podem indicar transtorno comportamental do REM, que merece investigação especializada.",
+    "keywords": [
+      "transtorno comportamental do sono REM",
+      "pesadelos recorrentes",
+      "falar dormindo",
+      "movimentos durante o sono",
+      "acordar gritando",
+      "polissonografia"
+    ],
     "excerpt": "Pesadelo recorrente, movimento agressivo durante o sono, acordar gritando assustado. Conheça os transtornos da fase REM e quando investigar.",
     "date": "08 Mar 2026",
     "readTime": "6 min de leitura"
@@ -173,6 +281,16 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "fobia-social-timidez",
     "tag": "Ansiedade",
     "title": "Timidez ou fobia social? A diferença entre traço de personalidade e transtorno",
+    "metaTitle": "Fobia social ou timidez: como diferenciar e tratar",
+    "metaDescription": "Timidez é temperamento; fobia social é medo intenso que faz evitar apresentações, entrevistas e convívio, com prejuízo real. A diferença clínica e o tratamento.",
+    "keywords": [
+      "fobia social",
+      "transtorno de ansiedade social",
+      "timidez excessiva",
+      "medo de falar em público",
+      "fobia social tratamento",
+      "fobia social ou timidez"
+    ],
     "excerpt": "Ser introvertido e tímido é temperamento. Evitar situação social por medo intenso a ponto de perder oportunidades é transtorno, e tem tratamento eficaz.",
     "date": "06 Mar 2026",
     "readTime": "7 min de leitura"
@@ -181,6 +299,16 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "automutilacao-nao-suicida",
     "tag": "Saúde Mental",
     "title": "Autolesão não suicida: o que está por trás de quem machuca o próprio corpo",
+    "metaTitle": "Autolesão: por que acontece e como ajudar",
+    "metaDescription": "Autolesão não suicida costuma ser tentativa de regular dor emocional intensa, não busca de atenção. O que está por trás do comportamento e como o tratamento age.",
+    "keywords": [
+      "autolesão",
+      "automutilação",
+      "filho se cortando o que fazer",
+      "autolesão adolescente",
+      "por que as pessoas se cortam",
+      "autolesão tratamento"
+    ],
     "excerpt": "Corte, queimadura, soco em si mesmo. Quando alguém machuca o próprio corpo sem intenção de morrer, existe uma dinâmica psicológica que merece compreensão.",
     "date": "01 Mar 2026",
     "readTime": "7 min de leitura"
@@ -189,6 +317,17 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "burnout-esgotamento-profissional",
     "tag": "Saúde Mental",
     "title": "Burnout: quando o esgotamento no trabalho vira problema psiquiátrico",
+    "metaTitle": "Burnout: sintomas, diagnóstico e tratamento",
+    "metaDescription": "Exaustão constante, cinismo com o trabalho e queda de desempenho definem o burnout. Quando o esgotamento vira depressão e como é feito o tratamento.",
+    "keywords": [
+      "burnout",
+      "síndrome de burnout",
+      "burnout sintomas",
+      "esgotamento profissional",
+      "burnout ou depressão",
+      "burnout tratamento",
+      "afastamento do trabalho saúde mental"
+    ],
     "excerpt": "Exaustão constante, cinismo com o trabalho, queda de desempenho. Burnout vai além de cansaço, e quando não é tratado, costuma evoluir para depressão.",
     "date": "28 Fev 2026",
     "readTime": "7 min de leitura"
@@ -197,6 +336,17 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "demencia-sinais-precoces",
     "tag": "Psicogeriatria",
     "title": "Sinais precoces de demência: quando o esquecimento deixa de ser normal",
+    "metaTitle": "Sinais de demência: esquecimento normal ou Alzheimer?",
+    "metaDescription": "Esquecer onde deixou a chave é normal; esquecer para que ela serve, não. Os sinais precoces que diferenciam envelhecimento saudável de demência e quando investigar.",
+    "keywords": [
+      "sinais de demência",
+      "Alzheimer sintomas iniciais",
+      "esquecimento idoso",
+      "perda de memória quando se preocupar",
+      "declínio cognitivo leve",
+      "demência diagnóstico precoce",
+      "avaliação cognitiva idoso"
+    ],
     "excerpt": "Esquecer onde deixou a chave é uma coisa. Esquecer para que serve a chave é outra. Veja o que separa envelhecimento normal de declínio cognitivo patológico.",
     "date": "25 Fev 2026",
     "readTime": "8 min de leitura"
@@ -265,6 +415,17 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "tratamentos-naturais-ansiedade-evidencias",
     "tag": "Evidência Científica",
     "title": "Tratamentos 'naturais' para ansiedade: o que a ciência diz sobre fitoterápicos, chás e suplementos",
+    "metaTitle": "Tratamento natural para ansiedade funciona? A evidência",
+    "metaDescription": "Passiflora, valeriana, magnésio, ashwagandha: o que os ensaios clínicos mostram sobre cada opção natural para ansiedade, sem viés ideológico.",
+    "keywords": [
+      "tratamento natural ansiedade",
+      "fitoterápico para ansiedade",
+      "passiflora funciona",
+      "valeriana ansiedade",
+      "ashwagandha evidência",
+      "magnésio ansiedade",
+      "calmante natural funciona"
+    ],
     "excerpt": "Passiflora, valeriana, magnésio, ashwagandha: são opções reais ou apenas placebo sofisticado? Uma análise das evidências disponíveis sem viés ideológico.",
     "date": "26 Mar 2026",
     "readTime": "8 min de leitura"
@@ -440,7 +601,17 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "quando-procurar-psiquiatra-bh",
     "tag": "Psiquiatria",
     "title": "Quando procurar um psiquiatra em Belo Horizonte?",
+    "metaTitle": "Quando procurar psiquiatra em BH: sinais que justificam consulta",
     "metaDescription": "Quando procurar psiquiatra em Belo Horizonte? Os três sinais clínicos que justificam avaliação: persistência, prejuízo e recorrência.",
+    "keywords": [
+      "quando procurar psiquiatra",
+      "psiquiatra belo horizonte",
+      "psiquiatra bh",
+      "preciso de psiquiatra",
+      "sinais que preciso de psiquiatra",
+      "consulta psiquiatra bh",
+      "psiquiatra particular bh"
+    ],
     "excerpt": "Muitas pessoas adiam a consulta psiquiátrica por dúvida, medo ou desinformação. Entenda os sinais que indicam a necessidade de avaliação e como funciona o atendimento psiquiátrico em BH.",
     "date": "14 Abr 2026",
     "readTime": "7 min de leitura"
@@ -449,7 +620,17 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "como-saber-se-tenho-tdah",
     "tag": "TDAH",
     "title": "Como saber se tenho TDAH? Sinais, diagnóstico e o que fazer",
+    "metaTitle": "Como saber se tenho TDAH? Sinais e diagnóstico",
     "metaDescription": "Como saber se tenho TDAH? Critérios do DSM-5, diagnóstico clínico em adultos e por que o autodiagnóstico via TikTok atrasa o tratamento.",
+    "keywords": [
+      "como saber se tenho TDAH",
+      "teste TDAH adulto",
+      "sintomas de TDAH",
+      "diagnóstico TDAH",
+      "TDAH adulto",
+      "quem diagnostica TDAH",
+      "psiquiatra TDAH"
+    ],
     "excerpt": "Desatenção, procrastinação e dificuldade de organização fazem parte do TDAH ou são apenas hábitos? Entenda como o diagnóstico é feito e por que autodiagnóstico por vídeos pode ser perigoso.",
     "date": "13 Abr 2026",
     "readTime": "8 min de leitura"
@@ -458,6 +639,16 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "psiquiatra-ou-psicologo-qual-procurar",
     "tag": "Psiquiatria",
     "title": "Psiquiatra ou psicólogo: qual profissional procurar?",
+    "metaTitle": "Psiquiatra ou psicólogo: qual a diferença e qual procurar",
+    "metaDescription": "Psiquiatra é médico e prescreve; psicólogo conduz psicoterapia. Quando procurar cada um, quando combinar os dois e por que a dupla costuma ser o tratamento ideal.",
+    "keywords": [
+      "psiquiatra ou psicólogo",
+      "diferença psiquiatra psicólogo",
+      "qual procurar primeiro psiquiatra ou psicólogo",
+      "psicólogo pode prescrever remédio",
+      "quando procurar psiquiatra",
+      "psicoterapia e medicação"
+    ],
     "excerpt": "Entenda a diferença entre psiquiatra e psicólogo, quando cada um é indicado e por que, em muitos casos, o tratamento mais eficaz combina os dois.",
     "date": "11 Abr 2026",
     "readTime": "6 min de leitura"
@@ -466,6 +657,16 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "ansiedade-e-doenca-ou-normal",
     "tag": "Ansiedade",
     "title": "Ansiedade é doença ou é normal? Como diferenciar",
+    "metaTitle": "Ansiedade normal ou transtorno? Critérios para diferenciar",
+    "metaDescription": "Toda pessoa sente ansiedade. Ela vira transtorno quando é desproporcional, persistente e compromete o funcionamento. Os critérios clínicos e os sinais de alerta.",
+    "keywords": [
+      "ansiedade é doença",
+      "ansiedade normal ou patológica",
+      "transtorno de ansiedade sintomas",
+      "quando a ansiedade vira doença",
+      "sinais de transtorno de ansiedade",
+      "ansiedade tratamento"
+    ],
     "excerpt": "Toda pessoa sente ansiedade. Mas quando ela para de ser adaptativa e se torna um transtorno? Entenda os critérios clínicos e os sinais de alerta.",
     "date": "09 Abr 2026",
     "readTime": "7 min de leitura"
@@ -474,6 +675,16 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "depressao-tem-cura-ou-tratamento",
     "tag": "Depressão",
     "title": "Depressão tem cura? O que a ciência diz sobre tratamento e recaída",
+    "metaTitle": "Depressão tem cura? Remissão, recaída e tratamento",
+    "metaDescription": "Depressão tem tratamento eficaz e remissão completa é meta realista. O que os dados dizem sobre cura, risco de recaída e por que a manutenção importa.",
+    "keywords": [
+      "depressão tem cura",
+      "depressão tratamento",
+      "remissão depressão",
+      "recaída depressão",
+      "quanto tempo dura tratamento depressão",
+      "depressão volta depois do tratamento"
+    ],
     "excerpt": "Muitos pacientes perguntam se a depressão tem cura. A resposta depende do tipo de depressão, do número de episódios e de como o tratamento é conduzido.",
     "date": "08 Abr 2026",
     "readTime": "7 min de leitura"
@@ -482,6 +693,15 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "qual-diferenca-tristeza-depressao-ansiedade",
     "tag": "Psicoeducação",
     "title": "Qual a diferença entre tristeza, depressão e ansiedade?",
+    "metaTitle": "Tristeza, depressão e ansiedade: qual a diferença?",
+    "metaDescription": "Tristeza é emoção passageira; depressão e ansiedade são transtornos com critérios próprios. O que cada termo significa clinicamente e quando buscar avaliação.",
+    "keywords": [
+      "diferença entre tristeza e depressão",
+      "diferença entre ansiedade e depressão",
+      "ansiedade e depressão juntas",
+      "sintomas de depressão e ansiedade",
+      "transtorno misto ansioso depressivo"
+    ],
     "excerpt": "Tristeza, depressão e ansiedade são frequentemente confundidas. Entenda o que cada uma significa clinicamente e quando justificam avaliação profissional.",
     "date": "06 Abr 2026",
     "readTime": "6 min de leitura"
@@ -490,6 +710,16 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "como-funciona-consulta-psiquiatrica",
     "tag": "Psiquiatria",
     "title": "Como funciona uma consulta psiquiátrica? O que esperar da primeira vez",
+    "metaTitle": "Primeira consulta com psiquiatra: como funciona",
+    "metaDescription": "O que acontece na primeira consulta psiquiátrica: quanto tempo dura, o que o médico pergunta, se sai com receita e como se preparar para aproveitar melhor.",
+    "keywords": [
+      "como funciona consulta psiquiátrica",
+      "primeira consulta psiquiatra",
+      "o que falar na consulta com psiquiatra",
+      "consulta psiquiatra o que esperar",
+      "quanto tempo dura consulta psiquiátrica",
+      "psiquiatra primeira vez"
+    ],
     "excerpt": "Muitas pessoas adiam a consulta psiquiátrica por não saber o que esperar. Entenda como é a avaliação, quanto tempo dura e quando a medicação é indicada.",
     "date": "04 Abr 2026",
     "readTime": "6 min de leitura"
@@ -498,7 +728,16 @@ export const blogIndex: BlogPostMeta[] = [
     "slug": "quanto-tempo-demora-antidepressivo-fazer-efeito",
     "tag": "Psicofarmacologia",
     "title": "Quanto tempo demora para o antidepressivo fazer efeito?",
+    "metaTitle": "Quanto tempo o antidepressivo demora para fazer efeito?",
     "metaDescription": "Antidepressivo demora de 2 a 6 semanas para fazer efeito. O que esperar nas primeiras semanas e por que muitos desistem cedo demais.",
+    "keywords": [
+      "quanto tempo antidepressivo faz efeito",
+      "antidepressivo não está fazendo efeito",
+      "primeiras semanas antidepressivo",
+      "efeitos colaterais início antidepressivo",
+      "sertralina quanto tempo para fazer efeito",
+      "escitalopram quanto tempo para fazer efeito"
+    ],
     "excerpt": "Muitos pacientes abandonam o tratamento antes do antidepressivo agir. Entenda o tempo real de resposta, o que esperar nas primeiras semanas e por que a paciência é parte do tratamento.",
     "date": "01 Abr 2026",
     "readTime": "6 min de leitura"

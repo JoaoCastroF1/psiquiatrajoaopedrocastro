@@ -41,6 +41,36 @@ export const blogHubs: BlogHub[] = [
     tags: ["TDAH"],
   },
   {
+    slug: "depressao",
+    title: "Depressão",
+    highlight: "Entenda a depressão",
+    description:
+      "Artigos sobre depressão: sintomas, diferença para tristeza, depressão resistente, distimia, depressão em homens e tratamentos baseados em evidência.",
+    metaDescription:
+      "Guia completo sobre depressão: sintomas, diagnóstico, distimia, depressão resistente, depressão em homens e o que a ciência diz sobre o tratamento.",
+    tags: ["Depressão"],
+  },
+  {
+    slug: "sono",
+    title: "Sono",
+    highlight: "Sono e saúde mental",
+    description:
+      "Artigos sobre insônia, higiene do sono, apneia, melatonina e a relação de mão dupla entre dormir mal e adoecer psiquicamente.",
+    metaDescription:
+      "Guia sobre sono e saúde mental: insônia crônica, como dormir melhor, apneia do sono, melatonina, zolpidem e TCC-I como tratamento de primeira linha.",
+    tags: ["Sono"],
+  },
+  {
+    slug: "saude-da-mulher",
+    title: "Saúde da Mulher",
+    highlight: "Psiquiatria da mulher",
+    description:
+      "Artigos sobre saúde mental da mulher: depressão pós-parto, TDPM, menopausa, medicação na gravidez e amamentação.",
+    metaDescription:
+      "Saúde mental da mulher: depressão pós-parto, TDPM, perimenopausa e ansiedade, medicação psiquiátrica na gravidez e na amamentação.",
+    tags: ["Saúde da Mulher"],
+  },
+  {
     slug: "psicofarmacologia",
     title: "Psicofarmacologia",
     highlight: "Medicações psiquiátricas",

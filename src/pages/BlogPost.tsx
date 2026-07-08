@@ -11,6 +11,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 import NotFound from "@/pages/NotFound";
 import { blogPosts } from "@/data/blogPosts";
 import { blogHubs } from "@/data/blogHubs";
+import { blogFaqs } from "@/data/blogFaqs";
 import PageHead from "@/components/PageHead";
 import { brDateToIso } from "@/lib/blogDates";
 import jpAvatar from "@/assets/jp-portrait.webp";
@@ -92,6 +93,7 @@ const BlogPost = () => {
   const ogImage = post.image ?? DEFAULT_OG_IMAGE;
   const description = post.metaDescription ?? post.excerpt;
   const readTime = post.readTime ?? computeReadTime(post.content);
+  const faq = blogFaqs[post.slug];
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -153,6 +155,23 @@ const BlogPost = () => {
     },
   };
 
+  const faqJsonLd =
+    faq && faq.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          inLanguage: "pt-BR",
+          mainEntity: faq.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+        }
+      : null;
+
   return (
     <div className="min-h-screen">
       <PageHead
@@ -168,6 +187,7 @@ const BlogPost = () => {
         tags={post.keywords}
       />
       <JsonLd data={articleJsonLd} />
+      {faqJsonLd && <JsonLd data={faqJsonLd} />}
       <Navbar />
 
       <article className="pt-28 md:pt-36 pb-20 md:pb-28 bg-background">
@@ -269,6 +289,27 @@ const BlogPost = () => {
                 );
               })}
             </div>
+
+            {/* FAQ (schema FAQPage) */}
+            {faq && faq.length > 0 && (
+              <section className="mt-16 pt-10 border-t border-border">
+                <h2 className="font-display text-2xl md:text-[1.75rem] font-normal text-foreground leading-tight mb-8">
+                  Perguntas frequentes
+                </h2>
+                <dl className="space-y-8">
+                  {faq.map((item) => (
+                    <div key={item.question}>
+                      <dt className="font-display text-lg md:text-xl font-medium text-foreground leading-snug mb-2">
+                        {item.question}
+                      </dt>
+                      <dd className="font-body text-base md:text-[17px] text-foreground/85 leading-[1.85]">
+                        {item.answer}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </section>
+            )}
 
             {/* Author bio for E-E-A-T */}
             <aside className="mt-16 pt-10 border-t border-border">

@@ -318,26 +318,73 @@ em.accent { font-style: italic; color: var(--primary); }
   align-items: center;
 }
 .hero__grid--no-photo { grid-template-columns: 1fr; }
-.hero .eyebrow { margin-bottom: 24px; }
+.hero__content > * {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.hero__content > *:nth-child(1) { animation-delay: 0.05s; }
+.hero__content > *:nth-child(2) { animation-delay: 0.15s; }
+.hero__content > *:nth-child(3) { animation-delay: 0.28s; }
+.hero__content > *:nth-child(4) { animation-delay: 0.4s; }
+.hero__content > *:nth-child(5) { animation-delay: 0.5s; }
+.hero__content > *:nth-child(6) { animation-delay: 0.6s; }
+@keyframes hero-rise {
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__content > * {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+.hero__eyebrow {
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+}
+.hero__eyebrow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 1px;
+  background: color-mix(in srgb, var(--primary) 55%, transparent);
+}
 .hero__title { margin-bottom: 28px; }
 .hero__body {
   font-size: 17px;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--fg-muted);
   max-width: 580px;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
 }
 .hero__badges {
   display: flex;
-  gap: 24px;
-  margin-bottom: 32px;
+  gap: 18px;
+  margin-bottom: 36px;
   flex-wrap: wrap;
+  align-items: center;
 }
 .hero__badge {
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   color: color-mix(in srgb, var(--fg) 70%, transparent);
+  position: relative;
+}
+.hero__badge + .hero__badge::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--primary) 45%, transparent);
+  margin-right: 18px;
+  vertical-align: middle;
 }
 .hero__ctas {
   display: flex;
@@ -345,13 +392,42 @@ em.accent { font-style: italic; color: var(--primary); }
   flex-wrap: wrap;
   margin-bottom: 16px;
 }
+.hero__ctas .btn--primary {
+  position: relative;
+  transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 240ms ease,
+              opacity 240ms ease;
+}
+.hero__ctas .btn--primary:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px -12px color-mix(in srgb, var(--primary) 65%, transparent);
+}
+.hero__ctas .btn--ghost {
+  transition: border-color 220ms ease, background 220ms ease, transform 240ms ease;
+}
+.hero__ctas .btn--ghost:hover {
+  background: color-mix(in srgb, var(--fg) 4%, transparent);
+  transform: translateY(-1px);
+}
 .hero__fine {
   font-size: 10px;
   color: var(--fg-subtle);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   margin-top: 8px;
 }
-.hero__photo { position: relative; }
+.hero__photo {
+  position: relative;
+  opacity: 0;
+  animation: hero-photo-in 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.25s forwards;
+}
+@keyframes hero-photo-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__photo { opacity: 1; animation: none; }
+}
 .hero__photo img {
   width: 100%;
   aspect-ratio: 3/4;
@@ -363,6 +439,47 @@ em.accent { font-style: italic; color: var(--primary); }
   bottom: 0; left: 0; right: 0;
   height: 96px;
   background: linear-gradient(to top, var(--bg), transparent);
+}
+.hero__scroll-indicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  animation: hero-fade-in 1.2s ease 1.4s forwards;
+  pointer-events: none;
+}
+.hero__scroll-indicator span:first-child {
+  font-family: var(--font-body);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: color-mix(in srgb, var(--fg-muted) 55%, transparent);
+}
+.hero__scroll-line {
+  display: block;
+  width: 1px;
+  height: 32px;
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--fg-muted) 45%, transparent), transparent);
+  animation: hero-scroll-hint 2.4s ease-in-out infinite;
+}
+@keyframes hero-fade-in {
+  to { opacity: 1; }
+}
+@keyframes hero-scroll-hint {
+  0%, 100% { transform: translateY(0); opacity: 0.85; }
+  50% { transform: translateY(6px); opacity: 0.35; }
+}
+@media (max-width: 1024px) {
+  .hero__scroll-indicator { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__scroll-indicator { opacity: 1; animation: none; }
+  .hero__scroll-line { animation: none; }
 }
 
 /* ── Authority strip ─────────────────────────────────────────── */

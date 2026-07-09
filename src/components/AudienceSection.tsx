@@ -1,6 +1,14 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
-const audiences = [
+interface Audience {
+  title: string;
+  description: string;
+  link?: { to: string; label: string };
+}
+
+const audiences: Audience[] = [
   {
     title: "Adultos",
     description:
@@ -8,6 +16,7 @@ const audiences = [
   },
   {
     title: "Idosos e famílias",
+    link: { to: "/psicogeriatria", label: "Conhecer a psicogeriatria" },
     description:
       "Para famílias que percebem que algo mudou. Os esquecimentos ficaram mais frequentes, o comportamento alterou, a pessoa ficou mais irritável, apática, ou simplesmente diferente. A psicogeriatria investiga e acompanha Alzheimer, demências, depressão no envelhecimento, psicose tardia e alterações cognitivas. O paciente recebe cuidado clínico especializado. A família recebe orientação sobre o que está acontecendo e o que vem pela frente. Consultas domiciliares disponíveis quando o deslocamento não é possível.",
   },
@@ -48,6 +57,18 @@ const AudienceSection = () => {
               <p className="font-body text-sm md:text-base text-foreground/85 leading-relaxed">
                 {a.description}
               </p>
+              {a.link && (
+                <Link
+                  to={a.link.to}
+                  className="group inline-flex items-center gap-2 mt-5 font-body text-sm text-deep-green hover:underline underline-offset-4"
+                >
+                  {a.link.label}
+                  <ArrowRight
+                    className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  />
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>

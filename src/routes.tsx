@@ -23,6 +23,10 @@ export const routes: RouteRecord[] = [
       { path: "podcast", lazy: lazyDefault(() => import("./pages/Podcast")) },
       { path: "avaliacao", lazy: lazyDefault(() => import("./pages/Avaliacao")) },
       {
+        path: "psicogeriatria",
+        lazy: lazyDefault(() => import("./pages/Psicogeriatria")),
+      },
+      {
         path: "vestibulandos",
         lazy: lazyDefault(() => import("./pages/VestibulandoEspecialista")),
       },

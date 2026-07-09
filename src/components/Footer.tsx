@@ -7,6 +7,7 @@ import { blogHubs } from "@/data/blogHubs";
 const COPYRIGHT_YEAR = new Date().getFullYear();
 
 const conditionLinks = [
+  { slug: "psicogeriatria", label: "Psicogeriatria" },
   { slug: "depressao", label: "Depressão" },
   { slug: "ansiedade", label: "Ansiedade" },
   { slug: "tdah", label: "TDAH adulto" },
@@ -107,13 +108,13 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Condições tratadas */}
+        {/* Condições e especialidades */}
         <div className="border-t border-primary-foreground/10 mt-10 pt-8">
           <p className="font-body text-[11px] uppercase tracking-[0.2em] text-primary-foreground/75 text-center md:text-left mb-4">
-            Condições tratadas
+            Condições e especialidades
           </p>
           <nav
-            aria-label="Condições tratadas"
+            aria-label="Condições e especialidades"
             className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2"
           >
             {conditionLinks.map((c) => (

@@ -40,6 +40,12 @@ const staticPages: Array<Omit<SearchItem, "haystack" | "kind" | "kindLabel"> & {
     url: "/podcast",
   },
   {
+    title: "Psicogeriatria",
+    description: "Especialidade: saúde mental do idoso. Memória, demências, Alzheimer, depressão e ansiedade no envelhecimento.",
+    url: "/psicogeriatria",
+    keywords: ["psicogeriatra", "psiquiatra do idoso", "memória", "demência", "consulta domiciliar"],
+  },
+  {
     title: "Avaliação",
     description: "Como funciona a avaliação psiquiátrica completa.",
     url: "/avaliacao",

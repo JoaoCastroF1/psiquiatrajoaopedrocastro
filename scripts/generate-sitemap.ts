@@ -21,6 +21,7 @@ const staticRoutes: UrlEntry[] = [
   { loc: "/atuacao", lastmod: STATIC_LASTMOD, priority: "0.9" },
   { loc: "/avaliacao", lastmod: STATIC_LASTMOD, priority: "0.9" },
   { loc: "/curriculo", lastmod: STATIC_LASTMOD, priority: "0.7" },
+  { loc: "/psicogeriatria", lastmod: "2026-07-07", priority: "0.9" },
   { loc: "/empresas", lastmod: STATIC_LASTMOD, priority: "0.8" },
   { loc: "/podcast", lastmod: STATIC_LASTMOD, priority: "0.7" },
   { loc: "/vestibulandos", lastmod: STATIC_LASTMOD, priority: "0.8" },

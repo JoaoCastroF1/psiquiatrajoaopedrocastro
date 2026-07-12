@@ -9,6 +9,7 @@ import ServicesPreview from "@/components/ServicesPreview";
 import MethodSection from "@/components/MethodSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FAQSection from "@/components/FAQSection";
+import BlogPreviewSection from "@/components/BlogPreviewSection";
 import CTASection from "@/components/CTASection";
 
 import Footer from "@/components/Footer";
@@ -123,6 +124,7 @@ const Index = () => {
       <ServicesPreview />
       <MethodSection />
       <FAQSection />
+      <BlogPreviewSection />
       <CTASection />
       
       <Footer />
